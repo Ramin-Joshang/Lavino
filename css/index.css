@@ -1,0 +1,300 @@
+/* -------------------------------------------------------------------------- */
+/*                                   Header                                   */
+/* -------------------------------------------------------------------------- */
+.header {
+  width: 100%;
+  height: 620px;
+  margin-bottom: 50px;
+  background: linear-gradient(99.87deg, rgba(27, 26, 31, 0.96) 1.39%, rgba(34, 33, 39, 0.96) 28.4%, rgba(23, 23, 27, 0.96) 66.7%, rgba(27, 26, 31, 0.96) 98.14%), url(../images/banner.png) no-repeat right;
+  background-size: cover;
+}
+
+.header .navbar {
+  height: 100px;
+  background-color: transparent !important;
+}
+
+.header .navbar ul {
+  margin: 0 auto;
+}
+
+.header .navbar ul a {
+  color: #ffffff;
+  opacity: 70%;
+  margin-left: 30px;
+  font-size: 15px;
+}
+
+.header .navbar .contact-us {
+  color: #ffffff;
+  background-color: #3C3A3F;
+  padding: 13px 30px;
+  border-radius: 25px;
+  font-size: 15px;
+}
+
+.header .header-content {
+  width: 100%;
+  height: 520px;
+  position: relative;
+}
+
+.header .header-content p.header-trust {
+  color: #ffffff;
+  font-family: "Gilroy";
+  word-spacing: 3px;
+}
+
+.header .header-content p.header-trust span {
+  color: #08C0F8;
+}
+
+.header .header-content .header-title {
+  font-size: 50px;
+  margin: 25px 0;
+  color: #ffffff;
+  font-family: "Kalameh";
+}
+
+.header .header-content .header-desc {
+  width: 580px;
+  font-size: 15px;
+  color: #A09CAD;
+  line-height: 1.8;
+  margin-bottom: 50px;
+}
+
+.header .header-content .header-btn {
+  color: #ffffff;
+  background-color: #08C0F8;
+  padding: 13px 30px;
+  border-radius: 25px;
+  font-size: 15px;
+}
+
+.header .header-content .header-btn svg {
+  margin: 5px 0 0 10px;
+}
+
+.header .header-content .header-img {
+  position: absolute;
+  bottom: -35px;
+  left: 0;
+}
+
+.header .header-content .header-img .img-border {
+  position: absolute;
+  width: 408px;
+  height: 473px;
+  left: 16px;
+  bottom: 35px;
+  border: 2.5px solid #ffffff;
+  border-radius: 250px 250px 0px 0px;
+  opacity: 10%;
+}
+
+.header .header-content .header-img img {
+  z-index: 2;
+}
+
+.header .header-content .header-mouse {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  box-shadow: 0px 30px 35px rgba(42, 43, 74, 0.07);
+  padding: 20px 15px;
+  border-radius: 25px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  About us                                  */
+/* -------------------------------------------------------------------------- */
+.about-us {
+  padding-bottom: 100px;
+}
+
+.about-us .about-img {
+  position: relative;
+}
+
+.about-us .about-img .img-border {
+  position: absolute;
+  width: 408px;
+  height: 510px;
+  left: 5px;
+  bottom: -15px;
+  border: 2.5px solid #F5AD57;
+  border-radius: 250px 250px 0px 0px;
+  opacity: 60%;
+  z-index: -1;
+}
+
+.about-us .about-content h2 {
+  font-size: 38px;
+  color: #1B1A1FFA;
+  align-items: right;
+  font-family: "Kalameh";
+}
+
+.about-us .about-content p {
+  font-size: 15px;
+  margin: 25px 0;
+  text-align: justify;
+  line-height: 1.8;
+  color: #A09CAD;
+}
+
+.about-us .about-content ul {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.about-us .about-content ul li {
+  font-size: 17px;
+  font-weight: 700;
+  color: #2A292F;
+}
+
+.about-us .about-content ul li img {
+  margin-left: 10px;
+}
+
+.about-us .about-content .lavino {
+  color: #ffffff;
+  background-color: #F5AD57;
+  padding: 13px 30px;
+  border-radius: 25px;
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.about-us .about-content .questions {
+  color: #1C1C1F;
+  background-color: #F7F9FC;
+  padding: 13px 30px;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.consulting-form {
+  height: 660px;
+  padding: 60px 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)), url(../images/consulting.png) no-repeat bottom left;
+  background-size: cover;
+}
+
+.consulting-form .consulting-title {
+  text-align: center;
+}
+
+.consulting-form .consulting-title h2 {
+  font-size: 34px;
+  color: #1B1A1FFA;
+  align-items: right;
+  font-family: "Kalameh";
+}
+
+.consulting-form .consulting-title span {
+  position: relative;
+  font-size: 14px;
+  color: #5B5B6B;
+  font-family: "Yekan Bakh";
+}
+
+.consulting-form .consulting-title span::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-65%);
+  width: 94px;
+  border-bottom: 2px solid #F5AD57;
+  border-radius: 50%;
+}
+
+.consulting-form form {
+  width: 60%;
+  margin: 65px auto 0 auto;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    fontS                                   */
+/* -------------------------------------------------------------------------- */
+@font-face {
+  font-family: 'Yekan Bakh';
+  src: url("../fonts/Yekan-Bakh/YekanBakh-Medium.eot") format("eot"), url("../fonts/Yekan-Bakh/YekanBakh-Medium.ttf") format("ttf"), url("../fonts/Yekan-Bakh/YekanBakh-Medium.woff") format("woff"), url("../fonts/Yekan-Bakh/YekanBakh-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Kalameh';
+  src: url("../fonts/Kalameh/Kalameh-Bold.eot") format("eot"), url("../fonts/Kalameh/Kalameh-Bold.ttf") format("ttf"), url("../fonts/Kalameh/Kalameh-Bold.woff") format("woff"), url("../fonts/Kalameh/Kalameh-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url("../fonts/Gilroy/Gilroy-Medium.eot") format("eot"), url("../fonts/Gilroy/Gilroy-Medium.ttf") format("ttf"), url("../fonts/Gilroy/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy/Gilroy-Medium.woff2") format("woff2");
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                Reset Styles                                */
+/* -------------------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  direction: rtl;
+}
+
+p {
+  font-family: "Yekan Bakh" !important;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0 !important;
+  font-family: "Yekan Bakh";
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Yekan Bakh" !important;
+}
+
+button {
+  border: 0 !important;
+  outline: 0 !important;
+  cursor: pointer;
+  font-family: "Yekan Bakh" !important;
+}
+
+input {
+  border: 0;
+  outline: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+img {
+  cursor: pointer;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 Base Styles                                */
+/* -------------------------------------------------------------------------- */
+/*# sourceMappingURL=index.css.map */

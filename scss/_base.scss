@@ -1,0 +1,44 @@
+// Theme color
+$darkTitle:#1B1A1FFA;
+$dark:#1C1C1F;
+$listItem:#2A292F;
+$gray:#5B5B6B;
+$darkGray:#878793;
+$lightGray:#A09CAD;
+$lightBtn:#F7F9FC;
+$white:#ffffff;
+$primary:#08C0F8;
+$warning:#F5AD57;
+
+// Fonts
+$Yekan:'Yekan Bakh';
+$Kalameh:'Kalameh';
+$Gilroy:'Gilroy';
+
+// Mixin
+@mixin btn($color, $bgColor, $opacity:100%) {
+    color: $color;
+    background-color: $bgColor;
+    // opacity: $opacity;
+    padding: 13px 30px;
+    border-radius: 25px;
+    font-size: 15px;
+}
+
+@mixin border($height, $left, $bottom, $color, $opacity:100%) {
+    position: absolute;
+    width: 408px;
+    height: $height;
+    left: $left;
+    bottom: $bottom;
+    border: 2.5px solid $color;
+    border-radius: 250px 250px 0px 0px;
+    opacity: $opacity;
+}
+
+@mixin main-title($font, $color, $align:right) {
+    font-size: $font;
+    color: $color;
+    align-items: $align;
+    font-family: $Kalameh;
+}
