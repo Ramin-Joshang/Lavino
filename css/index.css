@@ -134,8 +134,8 @@
 .about-us .about-content h2 {
   font-size: 38px;
   color: #1B1A1FFA;
-  align-items: right;
   font-family: "Kalameh";
+  text-align: right;
 }
 
 .about-us .about-content p {
@@ -195,8 +195,8 @@
 .consulting-form .consulting-title h2 {
   font-size: 34px;
   color: #1B1A1FFA;
-  align-items: right;
   font-family: "Kalameh";
+  text-align: center;
 }
 
 .consulting-form .consulting-title span {
@@ -220,6 +220,330 @@
 .consulting-form form {
   width: 60%;
   margin: 65px auto 0 auto;
+}
+
+.consulting-form form span {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-left: none;
+  border-color: #E0E3EB;
+  border-radius: 2px !important;
+}
+
+.consulting-form form span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 1.3px;
+  height: 30px;
+  background-color: #d2d5db;
+}
+
+.consulting-form form input {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-right: none;
+  border-color: #E0E3EB;
+  border-radius: 2px !important;
+}
+
+.consulting-form form input::placeholder {
+  font-size: 15px;
+  color: rgba(31, 30, 35, 0.3);
+  font-family: "Yekan Bakh";
+}
+
+.consulting-form form input:focus {
+  border-color: #E0E3EB;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.consulting-form form select {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-right: none;
+  border-color: #E0E3EB;
+  border-radius: 2px !important;
+  font-size: 15px !important;
+  color: rgba(31, 30, 35, 0.3);
+  font-family: "Yekan Bakh";
+}
+
+.consulting-form form select::placeholder {
+  font-size: 15px;
+  color: rgba(31, 30, 35, 0.3);
+  font-family: "Yekan Bakh";
+}
+
+.consulting-form form select:focus {
+  border-color: #E0E3EB;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.consulting-form form textarea {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-right: none;
+  border-color: #E0E3EB;
+  border-radius: 2px !important;
+  border: solid 1px #E0E3EB;
+}
+
+.consulting-form form textarea::placeholder {
+  font-size: 15px;
+  color: rgba(31, 30, 35, 0.3);
+  font-family: "Yekan Bakh";
+}
+
+.consulting-form form textarea:focus {
+  border-color: #E0E3EB;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.consulting-form form button {
+  color: #ffffff;
+  background-color: #F5AD57;
+  padding: 13px 30px;
+  border-radius: 25px;
+  font-size: 15px;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  Products                                  */
+/* -------------------------------------------------------------------------- */
+.products {
+  padding: 60px 0;
+}
+
+.products .products-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.products .products-title h2 {
+  font-size: 34px;
+  color: #1B1A1FFA;
+  font-family: "Kalameh";
+  text-align: center;
+}
+
+.products .products-title span {
+  position: relative;
+  font-size: 14px;
+  color: #5B5B6B;
+  font-family: "Yekan Bakh";
+}
+
+.products .products-title span::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-65%);
+  width: 94px;
+  border-bottom: 2px solid #08C0F8;
+  border-radius: 50%;
+}
+
+.products .products-item {
+  width: fit-content;
+  padding: 35px 70px 30px 70px;
+  border: 1.3px solid #EFF1F8;
+}
+
+.products .products-item .products-img {
+  position: relative;
+}
+
+.products .products-item .products-img .img-desc {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 99%;
+  height: 40px;
+  background-color: #151822BF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Gilroy";
+  color: #ffffff;
+  letter-spacing: 3px;
+  border-radius: 0 0 5px 5px;
+}
+
+.products .products-item h3 {
+  margin: 30px 0 15px 0;
+  font-size: 18px;
+  color: #1C1C1F;
+  font-family: "Yekan Bakh";
+  font-weight: 700;
+}
+
+.products .products-item span {
+  font-size: 17px;
+  color: #08C0F8;
+  font-family: "Yekan Bakh";
+}
+
+.products button {
+  color: #ffffff;
+  background-color: #08C0F8;
+  padding: 13px 30px;
+  border-radius: 25px;
+  font-size: 15px;
+  margin-top: 70px;
+}
+
+.feedback {
+  height: 500px;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(../images/feedback.png) no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(14px);
+  padding: 50px 0;
+}
+
+.feedback .feedback-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.feedback .feedback-title h2 {
+  font-size: 38px;
+  color: #1C1C1F;
+  font-family: "Kalameh";
+  text-align: center;
+}
+
+.feedback .feedback-title span {
+  position: relative;
+  font-size: 14px;
+  color: #5B5B6B;
+  font-family: "Yekan Bakh";
+}
+
+.feedback .feedback-title span::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-65%);
+  width: 94px;
+  border-bottom: 2px solid #F5AD57;
+  border-radius: 50%;
+}
+
+.feedback .feedback-item {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.feedback .feedback-item .feedback-desc {
+  width: 100%;
+  padding: 30px 30px 40px 30px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 2px solid #ffffff;
+  box-shadow: 0px 10px 75px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(15px);
+}
+
+.feedback .feedback-item .feedback-desc p {
+  font-size: 16px;
+  font-family: "Yekan Bakh";
+  color: #5B5B6B;
+  line-height: 1.8;
+}
+
+.feedback .feedback-item .feedback-author {
+  position: relative;
+  margin-top: -35px;
+}
+
+.feedback .feedback-item .feedback-author img {
+  padding: 5px;
+  border: 2px solid #F5AD57;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.feedback .feedback-item .feedback-author h5 {
+  font-family: "Yekan Bakh";
+  font-size: 16px;
+  color: #1B1A1FFA;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.feedback .feedback-item .feedback-author span {
+  font-family: "Yekan Bakh";
+  font-size: 12px;
+  color: #F5AD57;
+}
+
+.departments {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.departments .departments-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.departments .departments-title h2 {
+  font-size: 34px;
+  color: #1B1A1FFA;
+  font-family: "Kalameh";
+  text-align: center;
+}
+
+.departments .departments-title span {
+  position: relative;
+  font-size: 14px;
+  color: #5B5B6B;
+  font-family: "Yekan Bakh";
+}
+
+.departments .departments-title span::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-65%);
+  width: 94px;
+  border-bottom: 2px solid #08C0F8;
+  border-radius: 50%;
+}
+
+.departments .departments-item {
+  text-align: center;
+  background: #ffffff;
+  border: 1.3px solid #EFF1F8;
+  padding: 30px 60px 35px 60px;
+  margin-bottom: 35px;
+}
+
+.departments .departments-item img {
+  padding: 20px;
+  border: 1.4px solid #EFF1F8;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+.departments .departments-item h3 {
+  font-family: "Yekan Bakh";
+  font-size: 18px;
+  color: #1C1C1F;
+  font-weight: 700;
+}
+
+.departments button {
+  color: #ffffff;
+  background-color: #08C0F8;
+  padding: 13px 30px;
+  border-radius: 25px;
+  font-size: 15px;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -281,9 +605,12 @@ button {
   font-family: "Yekan Bakh" !important;
 }
 
-input {
+input,
+select,
+textarea {
   border: 0;
-  outline: 0;
+  outline: 0 !important;
+  box-shadow: none !important;
 }
 
 textarea {

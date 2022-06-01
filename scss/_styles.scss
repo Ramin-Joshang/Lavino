@@ -176,25 +176,11 @@
         text-align: center;
 
         h2 {
-            @include main-title(34px, $darkTitle)
+            @include main-title(34px, $darkTitle, center)
         }
 
         span {
-            position: relative;
-            font-size: 14px;
-            color: $gray;
-            font-family: $Yekan;
-
-            &::after {
-                content: '';
-                position: absolute;
-                bottom: -20px;
-                left: 50%;
-                transform: translateX(-65%);
-                width: 94px;
-                border-bottom: 2px solid $warning;
-                border-radius: 50%;
-            }
+            @include main-title-desc($warning)
         }
     }
 
@@ -202,5 +188,229 @@
         width: 60%;
         // margin-top: 60px;
         margin: 65px auto 0 auto;
+
+        span {
+            position: relative;
+            background-color: $form;
+            border-left: none;
+            border-color: #E0E3EB;
+            border-radius: 2px !important;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                width: 1.3px;
+                height: 30px;
+                background-color: #d2d5db;
+            }
+        }
+
+        input {
+            @include input;
+        }
+
+        select {
+            @include input;
+            font-size: 15px !important;
+            color: $placeholder;
+            font-family: $Yekan;
+        }
+
+        textarea {
+            @include input;
+            border: solid 1px $inputBorder
+        }
+
+        button {
+            @include btn($white, $warning);
+            width: fit-content;
+            margin: 0 auto;
+        }
     }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  Products                                  */
+/* -------------------------------------------------------------------------- */
+
+.products {
+    padding: 60px 0;
+
+    .products-title {
+        text-align: center;
+        margin-bottom: 60px;
+
+        h2 {
+            @include main-title(34px, $darkTitle, center);
+        }
+
+        span {
+            @include main-title-desc($primary)
+        }
+    }
+
+    .products-item {
+        width: fit-content;
+        padding: 35px 70px 30px 70px;
+        border: 1.3px solid $sliderBorder;
+
+        .products-img {
+            position: relative;
+
+
+            .img-desc {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 99%;
+                height: 40px;
+                background-color: $img-desc;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: $Gilroy;
+                color: $white;
+                letter-spacing: 3px;
+                border-radius: 0 0 5px 5px;
+            }
+        }
+
+        h3 {
+            margin: 30px 0 15px 0;
+            font-size: 18px;
+            color: $dark;
+            font-family: $Yekan;
+            font-weight: 700;
+        }
+
+        span {
+            font-size: 17px;
+            color: $primary;
+            font-family: $Yekan;
+        }
+    }
+
+    button {
+        @include btn($white, $primary);
+        margin-top: 70px;
+
+    }
+}
+
+.feedback {
+    height: 500px;
+    background: linear-gradient(rgba(256, 256, 256, .9), rgba(256, 256, 256, .9)), url(../images/feedback.png) no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(14px);
+    padding: 50px 0;
+
+    .feedback-title {
+        text-align: center;
+        margin-bottom: 60px;
+
+        h2 {
+            @include main-title(38px, $dark, center)
+        }
+
+        span {
+            @include main-title-desc($warning)
+        }
+    }
+
+    .feedback-item {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+
+        .feedback-desc {
+            width: 100%;
+            padding: 30px 30px 40px 30px;
+            background: rgba(255, 255, 255, 0.75);
+            border: 2px solid $white;
+            box-shadow: 0px 10px 75px rgba(0, 0, 0, 0.06);
+            backdrop-filter: blur(15px);
+
+            p {
+                font-size: 16px;
+                font-family: $Yekan;
+                color: $gray;
+                line-height: 1.8;
+            }
+        }
+
+        .feedback-author {
+            position: relative;
+            margin-top: -35px;
+
+            img {
+                padding: 5px;
+                border: 2px solid $warning;
+                border-radius: 50%;
+                margin-bottom: 20px;
+            }
+
+            h5 {
+                font-family: $Yekan;
+                font-size: 16px;
+                color: $darkTitle;
+                font-weight: 700;
+                margin-bottom: 0;
+            }
+
+            span {
+                font-family: $Yekan;
+                font-size: 12px;
+                color: $warning;
+            }
+        }
+    }
+
+}
+
+.departments {
+    padding: 60px 0;
+    text-align: center;
+
+    .departments-title {
+        text-align: center;
+        margin-bottom: 60px;
+
+        h2 {
+            @include main-title(34px, $darkTitle, center)
+        }
+
+        span {
+            @include main-title-desc($primary)
+        }
+    }
+
+    .departments-item {
+        text-align: center;
+        background: $white;
+        border: 1.3px solid $sliderBorder;
+        padding: 30px 60px 35px 60px;
+        margin-bottom: 35px;
+
+        img {
+            padding: 20px;
+            border: 1.4px solid $sliderBorder;
+            border-radius: 50%;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            font-family: $Yekan;
+            font-size: 18px;
+            color: $dark;
+            font-weight: 700;
+        }
+    }
+
+    button {
+        @include btn($white, $primary);
+    }
+
 }

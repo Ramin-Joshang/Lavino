@@ -71,9 +71,13 @@ button {
     font-family: $Yekan !important;
 }
 
-input {
+input,
+select,
+textarea {
     border: 0;
-    outline: 0;
+    outline: 0 !important;
+    box-shadow: none !important;
+
 }
 
 textarea {

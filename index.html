@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>وکیلتو</title>
+    <title>لاوینو</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.rtl.min.css"
         integrity="sha384-dc2NSrAXbAkjrdm9IYrX10fQq9SDG6Vjz7nQVKdKcJl3pC+k37e7qJR5MVSCS+wR" crossorigin="anonymous">
 </head>
 
-<body dir="rtl">
+< dir="rtl">
     <!-- ----------------------------------------------------------------------- -->
     <!--                                 Header                                  -->
     <!-- ----------------------------------------------------------------------- -->
@@ -74,7 +76,7 @@
                         <img src="./images/header-img.png" alt="court">
                     </section>
                     <section class="header-mouse">
-                        <img src="./images/mouse.png" alt="mouse">
+                        <img src="./images/Icons/mouse.png" alt="mouse">
                     </section>
                 </div>
             </div>
@@ -134,10 +136,10 @@
                         مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه
                         درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد.</p>
                     <ul>
-                        <li class="mb-4"><img src="./images/check.png" alt="check"> بیش از هفت سال تجربه</li>
-                        <li class="bb-4"><img src="./images/check.png" alt="check"> بیش از هفت سال تجربه</li>
-                        <li><img src="./images/check.png" alt="check"> بیش از هفت سال تجربه</li>
-                        <li><img src="./images/check.png" alt="check"> بیش از هفت سال تجربه</li>
+                        <li class="mb-4"><img src="./images/Icons/check.png" alt="check"> بیش از هفت سال تجربه</li>
+                        <li class="bb-4"><img src="./images/Icons/check.png" alt="check"> بیش از هفت سال تجربه</li>
+                        <li><img src="./images/Icons/check.png" alt="check"> بیش از هفت سال تجربه</li>
+                        <li><img src="./images/Icons/check.png" alt="check"> بیش از هفت سال تجربه</li>
                     </ul>
                     <section class="mt-5">
                         <button class="lavino">لاوینو چیست؟</button>
@@ -150,7 +152,9 @@
     <!-- ----------------------------------------------------------------------- -->
     <!--                                About us                                 -->
     <!-- ----------------------------------------------------------------------- -->
-
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                             Consulting form                             -->
+    <!-- ----------------------------------------------------------------------- -->
     <section class="consulting-form">
         <div class="container">
             <div class="row">
@@ -159,32 +163,297 @@
                     <span>لاوینو اینجاست ! هرزمان که نیاز به مشاوره دارید</span>
                 </section>
                 <form action="">
-                    <div class="row">
+                    <div class="row mb-3">
                         <div class="col input-group input-group-lg">
-                            <span class="input-group-text" id="basic-addon1">@</span>
-                            <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                            <span class="input-group-text" id="basic-addon1">
+                                <img src="./images/Icons/user.png" alt="">
+                            </span>
+                            <input type="text" class="form-control" placeholder="نام و نام خانوادگی..."
+                                aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="col input-group input-group-lg">
+                            <span class="input-group-text" id="basic-addon1">
+                                <img src="./images/Icons/psot.png" alt="">
+                            </span>
+                            <input type="text" class="form-control" placeholder="آدرس ایمیل" aria-label="Username"
                                 aria-describedby="basic-addon1">
                         </div>
-                        <div class="col input-group">
-                            <span class="input-group-text" id="basic-addon1">@</span>
-                            <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col input-group input-group-lg input-group-lg">
+                            <span class="input-group-text" id="basic-addon1">
+                                <img src="./images/Icons/phone.png" alt="">
+                            </span>
+                            <input type="text" class="form-control" placeholder="شماره تلفن..." aria-label="Username"
                                 aria-describedby="basic-addon1">
                         </div>
+                        <div class="col input-group input-group-lg">
+                            <span class="input-group-text" id="basic-addon1">
+                                <img src="./images/Icons/list.png" alt="">
+                            </span>
+                            <select class="form-select" aria-label="Default select example">
+                                <option value="" selected hidden>موضوع درخواست</option>
+                                <option value="1">درخواست شماره 1</option>
+                                <option value="2">درخواست شماره 2</option>
+                                <option value="3">درخواست شماره 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="input-group">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="9"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button>ارسال درخواست</button>
                     </div>
                 </form>
             </div>
         </div>
     </section>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                             Consulting form                             -->
+    <!-- ----------------------------------------------------------------------- -->
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                                Products                                 -->
+    <!-- ----------------------------------------------------------------------- -->
+    <section class='products'>
+        <div class='container'>
+            <div class="row">
+                <section class="products-title">
+                    <h2>محصولات لاویتو</h2>
+                    <span>محصولات آموزشی ما در زمینه های مختلف در دسترس هستند</span>
+                </section>
+            </div>
+            <div class="row text-center position-relative">
+                <section class="slider">
+                    <!-- Swiper -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <section class="products-item">
+                                    <section class="products-img">
+                                        <img src="./images/p-slider-1.png" alt='products'>
+                                        <section class="img-desc">PDF</section>
+                                    </section>
+                                    <h3>فایل متخصص لاویتو</h3>
+                                    <span>۵۰۰،۰۰۰ تومان</span>
+                                </section>
+                            </div>
+                            <div class="swiper-slide">
+                                <section class="products-item">
+                                    <section class="products-img">
+                                        <img src="./images/p-slider-2.png" alt='products'>
+                                        <section class="img-desc">PDF</section>
+                                    </section>
+                                    <h3>فایل متخصص لاویتو</h3>
+                                    <span>۵۰۰،۰۰۰ تومان</span>
+                                </section>
+                            </div>
+                            <div class="swiper-slide">
+                                <section class="products-item">
+                                    <section class="products-img">
+                                        <img src="./images/p-slider-3.png" alt='products'>
+                                        <section class="img-desc">PDF</section>
+                                    </section>
+                                    <h3>فایل متخصص لاویتو</h3>
+                                    <span>۵۰۰،۰۰۰ تومان</span>
+                                </section>
+                            </div>
+                            <div class="swiper-slide">
+                                <section class="products-item">
+                                    <section class="products-img">
+                                        <img src="./images/p-slider-4.png" alt='products'>
+                                        <section class="img-desc">PDF</section>
+                                    </section>
+                                    <h3>فایل متخصص لاویتو</h3>
+                                    <span>۵۰۰،۰۰۰ تومان</span>
+                                </section>
+                            </div>
+                            <!-- <div class="swiper-slide">
+                            <section class="products-item">
+                                <section class="products-img">
+                                    <img src="./images/p-slider-1.png" alt='products'>
+                                    <section class="img-desc">PDF</section>
+                                </section>
+                                <h3>فایل متخصص لاویتو</h3>
+                                <span>۵۰۰،۰۰۰ تومان</span>
+                            </section>
+                        </div>
+                        <div class="swiper-slide">
+                            <section class="products-item">
+                                <section class="products-img">
+                                    <img src="./images/p-slider-2.png" alt='products'>
+                                    <section class="img-desc">PDF</section>
+                                </section>
+                                <h3>فایل متخصص لاویتو</h3>
+                                <span>۵۰۰،۰۰۰ تومان</span>
+                            </section>
+                        </div> -->
+                        </div>
+                    </div>
+                    <button>مشاهده همه محصولات</button>
+                </section>
+                <div class="swiper-pagination" style="bottom:80px ;"></div>
+            </div>
+    </section>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                                Products                                 -->
+    <!-- ----------------------------------------------------------------------- -->
+    <section class="feedback">
+        <div class="container">
+            <div class="row">
+                <div class="row">
+                    <section class="feedback-title">
+                        <h2>کاربران در مورد ما چه میگویند</h2>
+                        <span>کاربران ما نماد اعتماد و کیفیت ما هستند</span>
+                    </section>
+                </div>
+            </div>
+            <div class="row">
+                <section class="slider">
+                    <!-- Swiper -->
+                    <div class="swiper myFeedback" style="width: 60%;">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <section class="feedback-item">
+                                    <section class="feedback-desc">
+                                        <p>
+                                            در سال ۱۹۸۶ میلادی، کونامی اولین نسخه از بازی‌های کسلوینیا را برای کنسول‌های
+                                            فمیکام‌دیسک‌سیستم روانه بازار می‌کند تا سهمی از بازارِ بازی‌های کنسول موفق
+                                            نینتندو را عاید خود کرده باشد. بازی‌های کسلوینیا از همان ابتدا با فرمول‌های
+                                            آشنا و تا حدی تکراری بازی‌های آن روزگار تفاوت داشتند.
+                                        </p>
+                                    </section>
+                                    <section class="feedback-author">
+                                        <section class="author-img">
+                                            <img src="./images/author.png" alt="author">
+                                        </section>
+                                        <h5>نیلوفر ابراهیمیان</h5>
+                                        <span>مدیرعامل شرکت ایروپهباد</span>
+                                    </section>
+                                </section>
+                            </div>
+                            <div class="swiper-slide">
+                                <section class="feedback-item">
+                                    <section class="feedback-desc">
+                                        <p>
+                                            در سال ۱۹۸۶ میلادی، کونامی اولین نسخه از بازی‌های کسلوینیا را برای کنسول‌های
+                                            فمیکام‌دیسک‌سیستم روانه بازار می‌کند تا سهمی از بازارِ بازی‌های کنسول موفق
+                                            نینتندو را عاید خود کرده باشد. بازی‌های کسلوینیا از همان ابتدا با فرمول‌های
+                                            آشنا و تا حدی تکراری بازی‌های آن روزگار تفاوت داشتند.
+                                        </p>
+                                    </section>
+                                    <section class="feedback-author">
+                                        <section class="author-img">
+                                            <img src="./images/author.png" alt="author">
+                                        </section>
+                                        <h5>نیلوفر ابراهیمیان</h5>
+                                        <span>مدیرعامل شرکت ایروپهباد</span>
+                                    </section>
+                                </section>
+                            </div>
+                            <div class="swiper-slide">
+                                <section class="feedback-item">
+                                    <section class="feedback-desc">
+                                        <p>
+                                            در سال ۱۹۸۶ میلادی، کونامی اولین نسخه از بازی‌های کسلوینیا را برای کنسول‌های
+                                            فمیکام‌دیسک‌سیستم روانه بازار می‌کند تا سهمی از بازارِ بازی‌های کنسول موفق
+                                            نینتندو را عاید خود کرده باشد. بازی‌های کسلوینیا از همان ابتدا با فرمول‌های
+                                            آشنا و تا حدی تکراری بازی‌های آن روزگار تفاوت داشتند.
+                                        </p>
+                                    </section>
+                                    <section class="feedback-author">
+                                        <section class="author-img">
+                                            <img src="./images/author.png" alt="author">
+                                        </section>
+                                        <h5>نیلوفر ابراهیمیان</h5>
+                                        <span>مدیرعامل شرکت ایروپهباد</span>
+                                    </section>
+                                </section>
+                            </div>
+                            <div class="swiper-slide">
+                                <section class="feedback-item">
+                                    <section class="feedback-desc">
+                                        <p>
+                                            در سال ۱۹۸۶ میلادی، کونامی اولین نسخه از بازی‌های کسلوینیا را برای کنسول‌های
+                                            فمیکام‌دیسک‌سیستم روانه بازار می‌کند تا سهمی از بازارِ بازی‌های کنسول موفق
+                                            نینتندو را عاید خود کرده باشد. بازی‌های کسلوینیا از همان ابتدا با فرمول‌های
+                                            آشنا و تا حدی تکراری بازی‌های آن روزگار تفاوت داشتند.
+                                        </p>
+                                    </section>
+                                    <section class="feedback-author">
+                                        <section class="author-img">
+                                            <img src="./images/author.png" alt="author">
+                                        </section>
+                                        <h5>نیلوفر ابراهیمیان</h5>
+                                        <span>مدیرعامل شرکت ایروپهباد</span>
+                                    </section>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
 
-</body>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
-    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
-    integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.4.2/js/all.min.js"
-    integrity="sha512-IqeQ6271Vq75Nf4OOwCEYi4tIAyT2J7vtKrmOU9WCezb+YkxqAu+igEi2CuLEnA7cqtvFDHsQhXbpZXx/evxrw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <section class="departments">
+        <div class="container">
+            <div class="row">
+                <section class="departments-title">
+                    <h2>دپارتمان ها</h2>
+                    <span>بهترین و جامع ترین محصولات را از ما بخواهید</span>
+                </section>
+            </div>
+            <div class="row gx-3">
+                <section class="col">
+                    <section class="departments-item">
+                        <img src="./images/Icons/settings.png" alt="">
+                        <h3>دپارتمان بازرگانی</h3>
+                    </section>
+                </section>
+                <section class="col">
+                    <section class="departments-item">
+                        <img src="./images/Icons/settings.png" alt="">
+                        <h3>دپارتمان بازرگانی</h3>
+                    </section>
+                </section>
+                <section class="col">
+                    <section class="departments-item">
+                        <img src="./images/Icons/settings.png" alt="">
+                        <h3>دپارتمان بازرگانی</h3>
+                    </section>
+                </section>
+                <section class="col">
+                    <section class="departments-item">
+                        <img src="./images/Icons/settings.png" alt="">
+                        <h3>دپارتمان بازرگانی</h3>
+                    </section>
+                </section>
+                <section class="col">
+                    <section class="departments-item">
+                        <img src="./images/Icons/settings.png" alt="">
+                        <h3>دپارتمان بازرگانی</h3>
+                    </section>
+                </section>
+            </div>
+            <button>مشاهده بیشتر...</button>
+        </div>
+    </section>
+
+    </body>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.4.2/js/all.min.js"
+        integrity="sha512-IqeQ6271Vq75Nf4OOwCEYi4tIAyT2J7vtKrmOU9WCezb+YkxqAu+igEi2CuLEnA7cqtvFDHsQhXbpZXx/evxrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/script.js"></script>
 
 </html>

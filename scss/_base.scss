@@ -2,10 +2,15 @@
 $darkTitle:#1B1A1FFA;
 $dark:#1C1C1F;
 $listItem:#2A292F;
+$img-desc: #151822BF;
 $gray:#5B5B6B;
 $darkGray:#878793;
 $lightGray:#A09CAD;
 $lightBtn:#F7F9FC;
+$form:rgba(255, 255, 255, 0.5);
+$sliderBorder:#EFF1F8;
+$inputBorder:#E0E3EB;
+$placeholder:rgba(31, 30, 35, .3);
 $white:#ffffff;
 $primary:#08C0F8;
 $warning:#F5AD57;
@@ -39,6 +44,43 @@ $Gilroy:'Gilroy';
 @mixin main-title($font, $color, $align:right) {
     font-size: $font;
     color: $color;
-    align-items: $align;
     font-family: $Kalameh;
+    text-align: $align;
+}
+
+@mixin main-title-desc($borderColor) {
+    position: relative;
+    font-size: 14px;
+    color: $gray;
+    font-family: $Yekan;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-65%);
+        width: 94px;
+        border-bottom: 2px solid $borderColor;
+        border-radius: 50%;
+    }
+}
+
+@mixin input {
+    background-color: $form;
+    border-right: none;
+    border-color: $inputBorder;
+    border-radius: 2px !important;
+
+    &::placeholder {
+        font-size: 15px;
+        color: $placeholder;
+        font-family: $Yekan;
+        // opacity: .3;
+    }
+
+    &:focus {
+        border-color: $inputBorder;
+        background-color: $form;
+    }
 }
