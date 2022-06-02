@@ -31,7 +31,7 @@
             }
         }
 
-        .contact-us {
+        .contact-us-btn {
             @include btn($white, #3C3A3F, 10%)
         }
     }
@@ -413,4 +413,278 @@
         @include btn($white, $primary);
     }
 
+}
+
+.permissions {
+    padding: 60px;
+    text-align: center;
+
+    .permissions-title {
+        margin-bottom: 60px;
+
+        h2 {
+            @include main-title(34px, $darkTitle, center)
+        }
+
+        span {
+            @include main-title-desc($warning)
+        }
+    }
+
+    .permissions-item {
+        padding: 20px 18px 20px 28px;
+        border: 1.3px solid $sliderBorder;
+        border-radius: 2px;
+        display: flex;
+        align-items: center;
+        // margin-bottom: 35px;
+
+        .permissions-img {
+            padding: 20px 18px;
+            background-color: rgba(245, 173, 87, .12);
+            border-radius: 2px;
+        }
+
+        .permissions-desc {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-right: 20px;
+            text-align: start;
+
+            h5 {
+                font-size: 17px;
+                font-weight: 700;
+                color: $dark;
+                font-family: $Yekan;
+            }
+
+            span {
+                font-size: 14px;
+                color: $warning;
+                font-family: $Yekan
+            }
+
+            a {
+                @extend span;
+            }
+        }
+    }
+
+    button {
+        @include btn($white, $warning)
+    }
+}
+
+.blog {
+    padding: 60px;
+    text-align: center;
+
+    .blog-title {
+        margin-bottom: 60px;
+
+        h2 {
+            @include main-title(34px, $darkTitle, center)
+        }
+
+        span {
+            @include main-title-desc($primary)
+        }
+    }
+
+    .blog-item {
+
+        h5 {
+            font-size: 19px;
+            font-family: $Yekan;
+            color: $dark;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: $darkGray;
+            font-size: 13px;
+            line-height: 24px;
+        }
+
+        a {
+            font-size: 13px;
+            color: $primary;
+        }
+    }
+
+    button {
+        @include btn($white, $primary)
+    }
+}
+
+.contact-us {
+    padding: 50px 0;
+    background: url(../images/contact-us.png) no-repeat;
+    background-color: rgb(8, 192, 248);
+    background-size: cover;
+
+    .contact-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h5 {
+            font-size: 22px;
+            font-family: $Yekan;
+            color: $white;
+        }
+
+        span {
+            font-size: 11px;
+            font-family: $Gilroy;
+            color: $white;
+            letter-spacing: .05em;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+
+            .info-item:first-child {
+                margin-left: 70px;
+            }
+
+            .info-item {
+                display: flex;
+                align-items: center;
+                text-align: end;
+
+                img {
+                    padding: 16px;
+                    border: 1.4px solid $white;
+                    border-radius: 50%;
+                }
+
+                section {
+                    margin-left: 20px;
+
+                    p {
+                        font-size: 14px;
+                        color: $white;
+                        font-size: $Gilroy;
+                        letter-spacing: .1em;
+                        margin-bottom: 0;
+                    }
+
+                    a {
+                        font-size: 22px;
+                        color: $white;
+                        letter-spacing: .06em;
+                        font-family: $Gilroy;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    padding: 80px 0;
+    background: linear-gradient(99.87deg,
+            rgba(27, 26, 31, 0.98) 1.39%,
+            rgba(34, 33, 39, 0.98) 28.4%,
+            rgba(23, 23, 27, 0.98) 66.7%,
+            rgba(27, 26, 31, 0.98) 98.14%);
+
+    .footer-desc {
+
+        .desc-title {
+            padding-right: 20px;
+            border-right: 3px solid $primary;
+
+            h3 {
+                @include main-title(30px, $white);
+                margin-bottom: 0;
+            }
+
+            span {
+                @include main-title(18px, $white);
+            }
+        }
+
+        p {
+            font-size: 16px;
+            margin: 20px 0;
+            color: #908C9C;
+            line-height: 26px;
+            text-align: justify;
+        }
+
+        a {
+            font-size: 13px;
+            color: $primary;
+        }
+    }
+
+    .quick-access {
+        text-align: start;
+
+        h5 {
+            font-size: 16px;
+            font-family: $Yekan;
+            color: $white;
+            margin-bottom: 25px;
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+
+            li {
+                width: 45%;
+                font-size: 15px;
+                font-family: $Yekan;
+                opacity: .7;
+                margin-bottom: 20px;
+
+                a {
+                    color: $white;
+                }
+            }
+        }
+
+    }
+
+    .connect {
+        border: 1.5px dashed #47464A;
+        border-radius: 7px;
+        padding: 35px 30px;
+
+        .connect-info {
+
+            h3 {
+                font-size: 20px;
+                font-family: $Yekan;
+                color: $white;
+                margin-bottom: 25px;
+            }
+
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+
+                li:last-child {
+                    margin-right: 40px;
+                }
+
+                a {
+                    margin-left: 15px;
+                    font-size: 17px;
+                    color: 17px;
+                    letter-spacing: .05em;
+                    color: $white;
+                    font-family: $Gilroy !important;
+                }
+            }
+        }
+    }
 }

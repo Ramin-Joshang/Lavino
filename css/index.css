@@ -25,7 +25,7 @@
   font-size: 15px;
 }
 
-.header .navbar .contact-us {
+.header .navbar .contact-us-btn {
   color: #ffffff;
   background-color: #3C3A3F;
   padding: 13px 30px;
@@ -45,7 +45,7 @@
   word-spacing: 3px;
 }
 
-.header .header-content p.header-trust span {
+.header .header-content p.header-trust span, .header .header-content p.header-trust .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .header .header-content p.header-trust a {
   color: #08C0F8;
 }
 
@@ -199,14 +199,14 @@
   text-align: center;
 }
 
-.consulting-form .consulting-title span {
+.consulting-form .consulting-title span, .consulting-form .consulting-title .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .consulting-form .consulting-title a {
   position: relative;
   font-size: 14px;
   color: #5B5B6B;
   font-family: "Yekan Bakh";
 }
 
-.consulting-form .consulting-title span::after {
+.consulting-form .consulting-title span::after, .consulting-form .consulting-title .permissions .permissions-item .permissions-desc a::after, .permissions .permissions-item .permissions-desc .consulting-form .consulting-title a::after {
   content: '';
   position: absolute;
   bottom: -20px;
@@ -222,7 +222,7 @@
   margin: 65px auto 0 auto;
 }
 
-.consulting-form form span {
+.consulting-form form span, .consulting-form form .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .consulting-form form a {
   position: relative;
   background-color: rgba(255, 255, 255, 0.5);
   border-left: none;
@@ -230,7 +230,7 @@
   border-radius: 2px !important;
 }
 
-.consulting-form form span::after {
+.consulting-form form span::after, .consulting-form form .permissions .permissions-item .permissions-desc a::after, .permissions .permissions-item .permissions-desc .consulting-form form a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -326,14 +326,14 @@
   text-align: center;
 }
 
-.products .products-title span {
+.products .products-title span, .products .products-title .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .products .products-title a {
   position: relative;
   font-size: 14px;
   color: #5B5B6B;
   font-family: "Yekan Bakh";
 }
 
-.products .products-title span::after {
+.products .products-title span::after, .products .products-title .permissions .permissions-item .permissions-desc a::after, .permissions .permissions-item .permissions-desc .products .products-title a::after {
   content: '';
   position: absolute;
   bottom: -20px;
@@ -379,7 +379,7 @@
   font-weight: 700;
 }
 
-.products .products-item span {
+.products .products-item span, .products .products-item .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .products .products-item a {
   font-size: 17px;
   color: #08C0F8;
   font-family: "Yekan Bakh";
@@ -414,14 +414,14 @@
   text-align: center;
 }
 
-.feedback .feedback-title span {
+.feedback .feedback-title span, .feedback .feedback-title .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .feedback .feedback-title a {
   position: relative;
   font-size: 14px;
   color: #5B5B6B;
   font-family: "Yekan Bakh";
 }
 
-.feedback .feedback-title span::after {
+.feedback .feedback-title span::after, .feedback .feedback-title .permissions .permissions-item .permissions-desc a::after, .permissions .permissions-item .permissions-desc .feedback .feedback-title a::after {
   content: '';
   position: absolute;
   bottom: -20px;
@@ -475,7 +475,7 @@
   margin-bottom: 0;
 }
 
-.feedback .feedback-item .feedback-author span {
+.feedback .feedback-item .feedback-author span, .feedback .feedback-item .feedback-author .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .feedback .feedback-item .feedback-author a {
   font-family: "Yekan Bakh";
   font-size: 12px;
   color: #F5AD57;
@@ -498,14 +498,14 @@
   text-align: center;
 }
 
-.departments .departments-title span {
+.departments .departments-title span, .departments .departments-title .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .departments .departments-title a {
   position: relative;
   font-size: 14px;
   color: #5B5B6B;
   font-family: "Yekan Bakh";
 }
 
-.departments .departments-title span::after {
+.departments .departments-title span::after, .departments .departments-title .permissions .permissions-item .permissions-desc a::after, .permissions .permissions-item .permissions-desc .departments .departments-title a::after {
   content: '';
   position: absolute;
   bottom: -20px;
@@ -544,6 +544,309 @@
   padding: 13px 30px;
   border-radius: 25px;
   font-size: 15px;
+}
+
+.permissions {
+  padding: 60px;
+  text-align: center;
+}
+
+.permissions .permissions-title {
+  margin-bottom: 60px;
+}
+
+.permissions .permissions-title h2 {
+  font-size: 34px;
+  color: #1B1A1FFA;
+  font-family: "Kalameh";
+  text-align: center;
+}
+
+.permissions .permissions-title span, .permissions .permissions-title .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .permissions-title a {
+  position: relative;
+  font-size: 14px;
+  color: #5B5B6B;
+  font-family: "Yekan Bakh";
+}
+
+.permissions .permissions-title span::after, .permissions .permissions-title .permissions-item .permissions-desc a::after, .permissions .permissions-item .permissions-desc .permissions-title a::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-65%);
+  width: 94px;
+  border-bottom: 2px solid #F5AD57;
+  border-radius: 50%;
+}
+
+.permissions .permissions-item {
+  padding: 20px 18px 20px 28px;
+  border: 1.3px solid #EFF1F8;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.permissions .permissions-item .permissions-img {
+  padding: 20px 18px;
+  background-color: rgba(245, 173, 87, 0.12);
+  border-radius: 2px;
+}
+
+.permissions .permissions-item .permissions-desc {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 20px;
+  text-align: start;
+}
+
+.permissions .permissions-item .permissions-desc h5 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1C1C1F;
+  font-family: "Yekan Bakh";
+}
+
+.permissions .permissions-item .permissions-desc span, .permissions .permissions-item .permissions-desc a {
+  font-size: 14px;
+  color: #F5AD57;
+  font-family: "Yekan Bakh";
+}
+
+.permissions button {
+  color: #ffffff;
+  background-color: #F5AD57;
+  padding: 13px 30px;
+  border-radius: 25px;
+  font-size: 15px;
+}
+
+.blog {
+  padding: 60px;
+  text-align: center;
+}
+
+.blog .blog-title {
+  margin-bottom: 60px;
+}
+
+.blog .blog-title h2 {
+  font-size: 34px;
+  color: #1B1A1FFA;
+  font-family: "Kalameh";
+  text-align: center;
+}
+
+.blog .blog-title span, .blog .blog-title .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .blog .blog-title a {
+  position: relative;
+  font-size: 14px;
+  color: #5B5B6B;
+  font-family: "Yekan Bakh";
+}
+
+.blog .blog-title span::after, .blog .blog-title .permissions .permissions-item .permissions-desc a::after, .permissions .permissions-item .permissions-desc .blog .blog-title a::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-65%);
+  width: 94px;
+  border-bottom: 2px solid #08C0F8;
+  border-radius: 50%;
+}
+
+.blog .blog-item h5 {
+  font-size: 19px;
+  font-family: "Yekan Bakh";
+  color: #1C1C1F;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.blog .blog-item p {
+  color: #878793;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.blog .blog-item a {
+  font-size: 13px;
+  color: #08C0F8;
+}
+
+.blog button {
+  color: #ffffff;
+  background-color: #08C0F8;
+  padding: 13px 30px;
+  border-radius: 25px;
+  font-size: 15px;
+}
+
+.contact-us {
+  padding: 50px 0;
+  background: url(../images/contact-us.png) no-repeat;
+  background-color: #08c0f8;
+  background-size: cover;
+}
+
+.contact-us .contact-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-us .contact-content h5 {
+  font-size: 22px;
+  font-family: "Yekan Bakh";
+  color: #ffffff;
+}
+
+.contact-us .contact-content span, .contact-us .contact-content .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .contact-us .contact-content a {
+  font-size: 11px;
+  font-family: "Gilroy";
+  color: #ffffff;
+  letter-spacing: .05em;
+}
+
+.contact-us .contact-content .contact-info {
+  display: flex;
+  align-items: center;
+}
+
+.contact-us .contact-content .contact-info .info-item:first-child {
+  margin-left: 70px;
+}
+
+.contact-us .contact-content .contact-info .info-item {
+  display: flex;
+  align-items: center;
+  text-align: end;
+}
+
+.contact-us .contact-content .contact-info .info-item img {
+  padding: 16px;
+  border: 1.4px solid #ffffff;
+  border-radius: 50%;
+}
+
+.contact-us .contact-content .contact-info .info-item section {
+  margin-left: 20px;
+}
+
+.contact-us .contact-content .contact-info .info-item section p {
+  font-size: 14px;
+  color: #ffffff;
+  font-size: "Gilroy";
+  letter-spacing: .1em;
+  margin-bottom: 0;
+}
+
+.contact-us .contact-content .contact-info .info-item section a {
+  font-size: 22px;
+  color: #ffffff;
+  letter-spacing: .06em;
+  font-family: "Gilroy";
+}
+
+.footer {
+  padding: 80px 0;
+  background: linear-gradient(99.87deg, rgba(27, 26, 31, 0.98) 1.39%, rgba(34, 33, 39, 0.98) 28.4%, rgba(23, 23, 27, 0.98) 66.7%, rgba(27, 26, 31, 0.98) 98.14%);
+}
+
+.footer .footer-desc .desc-title {
+  padding-right: 20px;
+  border-right: 3px solid #08C0F8;
+}
+
+.footer .footer-desc .desc-title h3 {
+  font-size: 30px;
+  color: #ffffff;
+  font-family: "Kalameh";
+  text-align: right;
+  margin-bottom: 0;
+}
+
+.footer .footer-desc .desc-title span, .footer .footer-desc .desc-title .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .footer .footer-desc .desc-title a {
+  font-size: 18px;
+  color: #ffffff;
+  font-family: "Kalameh";
+  text-align: right;
+}
+
+.footer .footer-desc p {
+  font-size: 16px;
+  margin: 20px 0;
+  color: #908C9C;
+  line-height: 26px;
+  text-align: justify;
+}
+
+.footer .footer-desc a {
+  font-size: 13px;
+  color: #08C0F8;
+}
+
+.footer .quick-access {
+  text-align: start;
+}
+
+.footer .quick-access h5 {
+  font-size: 16px;
+  font-family: "Yekan Bakh";
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+
+.footer .quick-access ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer .quick-access ul li {
+  width: 45%;
+  font-size: 15px;
+  font-family: "Yekan Bakh";
+  opacity: .7;
+  margin-bottom: 20px;
+}
+
+.footer .quick-access ul li a {
+  color: #ffffff;
+}
+
+.footer .connect {
+  border: 1.5px dashed #47464A;
+  border-radius: 7px;
+  padding: 35px 30px;
+}
+
+.footer .connect .connect-info h3 {
+  font-size: 20px;
+  font-family: "Yekan Bakh";
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+
+.footer .connect .connect-info ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.footer .connect .connect-info ul li:last-child {
+  margin-right: 40px;
+}
+
+.footer .connect .connect-info ul a {
+  margin-left: 15px;
+  font-size: 17px;
+  color: 17px;
+  letter-spacing: .05em;
+  color: #ffffff;
+  font-family: "Gilroy" !important;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -593,7 +896,7 @@ ol {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
   cursor: pointer;
   font-family: "Yekan Bakh" !important;
 }
@@ -619,6 +922,10 @@ textarea {
 
 img {
   cursor: pointer;
+}
+
+p {
+  font-family: "Yekan Bakh" !important;
 }
 
 /* -------------------------------------------------------------------------- */

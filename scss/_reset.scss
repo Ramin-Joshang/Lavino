@@ -59,7 +59,7 @@ ol {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
     cursor: pointer;
     font-family: $Yekan !important;
 }
@@ -86,6 +86,10 @@ textarea {
 
 img {
     cursor: pointer;
+}
+
+p {
+    font-family: $Yekan !important;
 }
 
 /* -------------------------------------------------------------------------- */
