@@ -1,4 +1,86 @@
 /* -------------------------------------------------------------------------- */
+/*                                    fontS                                   */
+/* -------------------------------------------------------------------------- */
+@font-face {
+  font-family: 'Yekan Bakh';
+  src: url("../fonts/Yekan-Bakh/YekanBakh-Medium.eot") format("eot"), url("../fonts/Yekan-Bakh/YekanBakh-Medium.ttf") format("ttf"), url("../fonts/Yekan-Bakh/YekanBakh-Medium.woff") format("woff"), url("../fonts/Yekan-Bakh/YekanBakh-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Kalameh';
+  src: url("../fonts/Kalameh/Kalameh-Bold.eot") format("eot"), url("../fonts/Kalameh/Kalameh-Bold.ttf") format("ttf"), url("../fonts/Kalameh/Kalameh-Bold.woff") format("woff"), url("../fonts/Kalameh/Kalameh-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url("../fonts/Gilroy/Gilroy-Medium.eot") format("eot"), url("../fonts/Gilroy/Gilroy-Medium.ttf") format("ttf"), url("../fonts/Gilroy/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy/Gilroy-Medium.woff2") format("woff2");
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                Reset Styles                                */
+/* -------------------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  direction: rtl;
+}
+
+p {
+  font-family: "Yekan Bakh" !important;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0 !important;
+  font-family: "Yekan Bakh";
+}
+
+a {
+  text-decoration: none !important;
+  cursor: pointer;
+  font-family: "Yekan Bakh" !important;
+}
+
+button {
+  border: 0 !important;
+  outline: 0 !important;
+  cursor: pointer;
+  font-family: "Yekan Bakh" !important;
+}
+
+input,
+select,
+textarea {
+  border: 0;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+textarea {
+  resize: none;
+}
+
+img {
+  cursor: pointer;
+}
+
+p {
+  font-family: "Yekan Bakh" !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 Base Styles                                */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
 /*                                   Header                                   */
 /* -------------------------------------------------------------------------- */
 .header {
@@ -181,6 +263,9 @@
   font-weight: 700;
 }
 
+/* ----------------------------------------------------------------------- */
+/*                             Consulting form                             */
+/* ----------------------------------------------------------------------- */
 .consulting-form {
   height: 660px;
   padding: 60px 0;
@@ -394,6 +479,9 @@
   margin-top: 70px;
 }
 
+/* ----------------------------------------------------------------------- */
+/*                                Feedback                                 */
+/* ----------------------------------------------------------------------- */
 .feedback {
   height: 500px;
   background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(../images/feedback.png) no-repeat;
@@ -432,14 +520,18 @@
   border-radius: 50%;
 }
 
-.feedback .feedback-item {
+.feedback .slider {
+  position: relative;
+}
+
+.feedback .slider .feedback-item {
   position: relative;
   width: 100%;
   margin: 0 auto;
   text-align: center;
 }
 
-.feedback .feedback-item .feedback-desc {
+.feedback .slider .feedback-item .feedback-desc {
   width: 100%;
   padding: 30px 30px 40px 30px;
   background: rgba(255, 255, 255, 0.75);
@@ -448,26 +540,26 @@
   backdrop-filter: blur(15px);
 }
 
-.feedback .feedback-item .feedback-desc p {
+.feedback .slider .feedback-item .feedback-desc p {
   font-size: 16px;
   font-family: "Yekan Bakh";
   color: #5B5B6B;
   line-height: 1.8;
 }
 
-.feedback .feedback-item .feedback-author {
+.feedback .slider .feedback-item .feedback-author {
   position: relative;
   margin-top: -35px;
 }
 
-.feedback .feedback-item .feedback-author img {
+.feedback .slider .feedback-item .feedback-author img {
   padding: 5px;
   border: 2px solid #F5AD57;
   border-radius: 50%;
   margin-bottom: 20px;
 }
 
-.feedback .feedback-item .feedback-author h5 {
+.feedback .slider .feedback-item .feedback-author h5 {
   font-family: "Yekan Bakh";
   font-size: 16px;
   color: #1B1A1FFA;
@@ -475,12 +567,37 @@
   margin-bottom: 0;
 }
 
-.feedback .feedback-item .feedback-author span, .feedback .feedback-item .feedback-author .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .feedback .feedback-item .feedback-author a {
+.feedback .slider .feedback-item .feedback-author span, .feedback .slider .feedback-item .feedback-author .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .feedback .slider .feedback-item .feedback-author a {
   font-family: "Yekan Bakh";
   font-size: 12px;
   color: #F5AD57;
 }
 
+.feedback .slider button {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F5AD57;
+  border-radius: 50%;
+  color: #ffffff;
+}
+
+.feedback .slider .prev {
+  top: 65px;
+  left: 165px;
+}
+
+.feedback .slider .next {
+  top: 65px;
+  right: 165px;
+}
+
+/* ----------------------------------------------------------------------- */
+/*                               Departments                                */
+/* ----------------------------------------------------------------------- */
 .departments {
   padding: 60px 0;
   text-align: center;
@@ -520,7 +637,7 @@
   text-align: center;
   background: #ffffff;
   border: 1.3px solid #EFF1F8;
-  padding: 30px 60px 35px 60px;
+  padding: 30px 40px 35px 40px;
   margin-bottom: 35px;
 }
 
@@ -546,6 +663,9 @@
   font-size: 15px;
 }
 
+/* ----------------------------------------------------------------------- */
+/*                               Permissions                               */
+/* ----------------------------------------------------------------------- */
 .permissions {
   padding: 60px;
   text-align: center;
@@ -624,6 +744,9 @@
   font-size: 15px;
 }
 
+/* ----------------------------------------------------------------------- */
+/*                                  Blog                                   */
+/* ----------------------------------------------------------------------- */
 .blog {
   padding: 60px;
   text-align: center;
@@ -685,6 +808,9 @@
   font-size: 15px;
 }
 
+/* ----------------------------------------------------------------------- */
+/*                               Contact-us                                */
+/* ----------------------------------------------------------------------- */
 .contact-us {
   padding: 50px 0;
   background: url(../images/contact-us.png) no-repeat;
@@ -751,8 +877,11 @@
   font-family: "Gilroy";
 }
 
+/* ----------------------------------------------------------------------- */
+/*                                 Footer                                  */
+/* ----------------------------------------------------------------------- */
 .footer {
-  padding: 80px 0;
+  padding: 80px 0 0 0;
   background: linear-gradient(99.87deg, rgba(27, 26, 31, 0.98) 1.39%, rgba(34, 33, 39, 0.98) 28.4%, rgba(23, 23, 27, 0.98) 66.7%, rgba(27, 26, 31, 0.98) 98.14%);
 }
 
@@ -817,10 +946,10 @@
   color: #ffffff;
 }
 
-.footer .connect {
+.footer .connect .connect-info {
+  padding: 35px 30px;
   border: 1.5px dashed #47464A;
   border-radius: 7px;
-  padding: 35px 30px;
 }
 
 .footer .connect .connect-info h3 {
@@ -836,99 +965,92 @@
   justify-content: flex-end;
 }
 
+.footer .connect .connect-info ul li {
+  display: flex;
+  align-items: center;
+}
+
 .footer .connect .connect-info ul li:last-child {
   margin-right: 40px;
 }
 
 .footer .connect .connect-info ul a {
   margin-left: 15px;
-  font-size: 17px;
-  color: 17px;
   letter-spacing: .05em;
   color: #ffffff;
+}
+
+.footer .connect .connect-info ul a.email {
+  font-size: 17px;
   font-family: "Gilroy" !important;
 }
 
-/* -------------------------------------------------------------------------- */
-/*                                    fontS                                   */
-/* -------------------------------------------------------------------------- */
-@font-face {
-  font-family: 'Yekan Bakh';
-  src: url("../fonts/Yekan-Bakh/YekanBakh-Medium.eot") format("eot"), url("../fonts/Yekan-Bakh/YekanBakh-Medium.ttf") format("ttf"), url("../fonts/Yekan-Bakh/YekanBakh-Medium.woff") format("woff"), url("../fonts/Yekan-Bakh/YekanBakh-Medium.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: 'Kalameh';
-  src: url("../fonts/Kalameh/Kalameh-Bold.eot") format("eot"), url("../fonts/Kalameh/Kalameh-Bold.ttf") format("ttf"), url("../fonts/Kalameh/Kalameh-Bold.woff") format("woff"), url("../fonts/Kalameh/Kalameh-Bold.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: 'Gilroy';
-  src: url("../fonts/Gilroy/Gilroy-Medium.eot") format("eot"), url("../fonts/Gilroy/Gilroy-Medium.ttf") format("ttf"), url("../fonts/Gilroy/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy/Gilroy-Medium.woff2") format("woff2");
-}
-
-/* -------------------------------------------------------------------------- */
-/*                                Reset Styles                                */
-/* -------------------------------------------------------------------------- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  direction: rtl;
-}
-
-p {
+.footer .connect .connect-info ul a.phone {
+  font-size: 19px;
   font-family: "Yekan Bakh" !important;
 }
 
-ul,
-ol {
-  list-style: none;
-  padding: 0 !important;
+.footer .connect .social {
+  border: 1.5px dashed #47464A;
+  border-top: 0;
+  border-radius: 7px;
+  padding: 35px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer .connect .social h5 {
+  font-size: 16px;
   font-family: "Yekan Bakh";
+  color: #ffffff;
+  margin: 0;
 }
 
-a {
-  text-decoration: none !important;
-  cursor: pointer;
-  font-family: "Yekan Bakh" !important;
+.footer .connect .social span, .footer .connect .social .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .footer .connect .social a {
+  font-size: 12px;
+  font-family: "Gilroy";
+  color: #6D6A78;
+  letter-spacing: .01em;
 }
 
-button {
-  border: 0 !important;
-  outline: 0 !important;
-  cursor: pointer;
-  font-family: "Yekan Bakh" !important;
+.footer .connect .social ul {
+  display: flex;
 }
 
-input,
-select,
-textarea {
-  border: 0;
-  outline: 0 !important;
-  box-shadow: none !important;
+.footer .connect .social ul li {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #333238;
+  margin-right: 15px;
 }
 
-textarea {
-  resize: none;
+.footer .connect .social ul li a {
+  color: #ffffff;
 }
 
-img {
-  cursor: pointer;
+.footer .connect .social ul li a svg {
+  font-size: 20px;
 }
 
-p {
-  font-family: "Yekan Bakh" !important;
+.footer .copyright {
+  margin-top: 80px;
+  border-top: 1.5px dashed #47464A;
+  padding: 30px 0;
 }
 
-/* -------------------------------------------------------------------------- */
-/*                                 Base Styles                                */
-/* -------------------------------------------------------------------------- */
+.footer .copyright p {
+  font-size: 13px;
+  font-family: "Gilroy";
+  color: #6D6A78;
+  margin: 0;
+  letter-spacing: .01em;
+  opacity: .9;
+  text-transform: uppercase;
+  word-spacing: 2px;
+}
 /*# sourceMappingURL=index.css.map */

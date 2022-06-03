@@ -6,11 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>لاوینو</title>
-    <!-- Link Swiper's CSS -->
+    <!-- Swiper's CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./css/index.css">
+    <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.rtl.min.css"
         integrity="sha384-dc2NSrAXbAkjrdm9IYrX10fQq9SDG6Vjz7nQVKdKcJl3pC+k37e7qJR5MVSCS+wR" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body dir="rtl">
@@ -83,9 +85,6 @@
         </div>
     </header>
     <!-- ----------------------------------------------------------------------- -->
-    <!--                                 Header                                  -->
-    <!-- ----------------------------------------------------------------------- -->
-    <!-- ----------------------------------------------------------------------- -->
     <!--                                 Brands                                  -->
     <!-- ----------------------------------------------------------------------- -->
     <section class="brands py-5">
@@ -112,9 +111,6 @@
             </div>
         </div>
     </section>
-    <!-- ----------------------------------------------------------------------- -->
-    <!--                                 Brands                                  -->
-    <!-- ----------------------------------------------------------------------- -->
     <!-- ----------------------------------------------------------------------- -->
     <!--                                About us                                 -->
     <!-- ----------------------------------------------------------------------- -->
@@ -149,9 +145,6 @@
             </div>
         </div>
     </section>
-    <!-- ----------------------------------------------------------------------- -->
-    <!--                                About us                                 -->
-    <!-- ----------------------------------------------------------------------- -->
     <!-- ----------------------------------------------------------------------- -->
     <!--                             Consulting form                             -->
     <!-- ----------------------------------------------------------------------- -->
@@ -211,9 +204,6 @@
             </div>
         </div>
     </section>
-    <!-- ----------------------------------------------------------------------- -->
-    <!--                             Consulting form                             -->
-    <!-- ----------------------------------------------------------------------- -->
     <!-- ----------------------------------------------------------------------- -->
     <!--                                Products                                 -->
     <!-- ----------------------------------------------------------------------- -->
@@ -298,7 +288,7 @@
             </div>
     </section>
     <!-- ----------------------------------------------------------------------- -->
-    <!--                                Products                                 -->
+    <!--                                Feedback                                 -->
     <!-- ----------------------------------------------------------------------- -->
     <section class="feedback">
         <div class="container">
@@ -393,6 +383,8 @@
                             </div>
                         </div>
                     </div>
+                    <button class="next"><i class="fas fa-arrow-right"></i></button>
+                    <button class="prev"><i class="fas fa-arrow-left"></i></button>
                 </section>
             </div>
         </div>
@@ -411,32 +403,32 @@
             <div class="row gx-3">
                 <section class="col">
                     <section class="departments-item">
-                        <img src="./images/Icons/settings.png" alt="">
+                        <img src="./images/Icons/d-1.png" alt="">
                         <h3>دپارتمان بازرگانی</h3>
                     </section>
                 </section>
                 <section class="col">
                     <section class="departments-item">
-                        <img src="./images/Icons/settings.png" alt="">
-                        <h3>دپارتمان بازرگانی</h3>
+                        <img src="./images/Icons/d-2.png" alt="">
+                        <h3>دپارتمان مالی</h3>
                     </section>
                 </section>
                 <section class="col">
                     <section class="departments-item">
-                        <img src="./images/Icons/settings.png" alt="">
-                        <h3>دپارتمان بازرگانی</h3>
+                        <img src="./images/Icons/d-3.png" alt="">
+                        <h3>دپارتمان امور اداری</h3>
                     </section>
                 </section>
                 <section class="col">
                     <section class="departments-item">
-                        <img src="./images/Icons/settings.png" alt="">
-                        <h3>دپارتمان بازرگانی</h3>
+                        <img src="./images/Icons/d-4.png" alt="">
+                        <h3>دپارتمان فنی مهندسی</h3>
                     </section>
                 </section>
                 <section class="col">
                     <section class="departments-item">
-                        <img src="./images/Icons/settings.png" alt="">
-                        <h3>دپارتمان بازرگانی</h3>
+                        <img src="./images/Icons/d-5.png" alt="">
+                        <h3>دپارتمان حقوقی</h3>
                     </section>
                 </section>
             </div>
@@ -639,8 +631,10 @@
                         <section class="connect-info">
                             <h3>راه های ارتباطی با ما</h3>
                             <ul>
-                                <li><a href="">info@lawino.ir</a><img src="./images/Icons/sms.png" alt=""></li>
-                                <li><a href="">۰۹۱۲۶۹۱۹۱۹۱</a><img src="./images/Icons/f-call.png" alt=""></li>
+                                <li><a class="email" href="">info@lawino.ir</a><img src="./images/Icons/sms.png" alt="">
+                                </li>
+                                <li><a class="phone" href="">۰۹۱۲۶۹۱۹۱۹۱</a><img src="./images/Icons/f-call.png" alt="">
+                                </li>
                             </ul>
                         </section>
                         <section class="social">
@@ -649,29 +643,42 @@
                                 <span>FOLLOW US</span>
                             </section>
                             <ul>
-                                <li><a href=""></a></li>
-                                <li><a href=""></a></li>
-                                <li><a href=""></a></li>
-                                <li><a href=""></a></li>
+                                <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                                <li><a href=""><i class="fab fa-instagram"></i></a></li>
                             </ul>
                         </section>
                     </section>
                 </section>
             </div>
         </div>
+
+        <section class="copyright">
+            <div class="container">
+                <div class="row text-center">
+                    <p dir="ltr">
+                        © 2022 LAWINO. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </section>
     </footer>
 </body>
 <!-- Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
     integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
     crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
     integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
     crossorigin="anonymous"></script>
+<!-- Fontawesome Icon -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.4.2/js/all.min.js"
     integrity="sha512-IqeQ6271Vq75Nf4OOwCEYi4tIAyT2J7vtKrmOU9WCezb+YkxqAu+igEi2CuLEnA7cqtvFDHsQhXbpZXx/evxrw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- Custom JS -->
 <script src="./js/script.js"></script>
 
 </html>

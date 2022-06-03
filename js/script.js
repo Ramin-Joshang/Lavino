@@ -1,4 +1,4 @@
-//  Initialize Swiper 
+//  Products slider
 
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: "4",
@@ -14,6 +14,8 @@ var swiper = new Swiper(".mySwiper", {
     },
 });
 
+// Feedback slider
+
 var swiper = new Swiper(".myFeedback", {
     slidesPerView: "1",
     spaceBetween: 30,
@@ -26,4 +28,8 @@ var swiper = new Swiper(".myFeedback", {
         el: ".swiper-pagination",
         clickable: true,
     },
+    navigation: {
+        nextEl: ".next",
+        prevEl: ".prev",
+    }
 });

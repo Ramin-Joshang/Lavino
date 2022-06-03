@@ -1,8 +1,9 @@
+// Variables & Mixin
 @import './base';
+
 /* -------------------------------------------------------------------------- */
 /*                                   Header                                   */
 /* -------------------------------------------------------------------------- */
-
 .header {
     width: 100%;
     height: 620px;
@@ -105,7 +106,6 @@
 /* -------------------------------------------------------------------------- */
 /*                                  About us                                  */
 /* -------------------------------------------------------------------------- */
-
 .about-us {
     padding-bottom: 100px;
 
@@ -161,8 +161,9 @@
     }
 }
 
-// Consulting form
-
+/* ----------------------------------------------------------------------- */
+/*                             Consulting form                             */
+/* ----------------------------------------------------------------------- */
 .consulting-form {
     height: 660px;
     padding: 60px 0;
@@ -233,7 +234,6 @@
 /* -------------------------------------------------------------------------- */
 /*                                  Products                                  */
 /* -------------------------------------------------------------------------- */
-
 .products {
     padding: 60px 0;
 
@@ -299,6 +299,9 @@
     }
 }
 
+/* ----------------------------------------------------------------------- */
+/*                                Feedback                                 */
+/* ----------------------------------------------------------------------- */
 .feedback {
     height: 500px;
     background: linear-gradient(rgba(256, 256, 256, .9), rgba(256, 256, 256, .9)), url(../images/feedback.png) no-repeat;
@@ -319,57 +322,87 @@
         }
     }
 
-    .feedback-item {
+    .slider {
         position: relative;
-        width: 100%;
-        margin: 0 auto;
-        text-align: center;
 
-        .feedback-desc {
-            width: 100%;
-            padding: 30px 30px 40px 30px;
-            background: rgba(255, 255, 255, 0.75);
-            border: 2px solid $white;
-            box-shadow: 0px 10px 75px rgba(0, 0, 0, 0.06);
-            backdrop-filter: blur(15px);
-
-            p {
-                font-size: 16px;
-                font-family: $Yekan;
-                color: $gray;
-                line-height: 1.8;
-            }
-        }
-
-        .feedback-author {
+        .feedback-item {
             position: relative;
-            margin-top: -35px;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
 
-            img {
-                padding: 5px;
-                border: 2px solid $warning;
-                border-radius: 50%;
-                margin-bottom: 20px;
+            .feedback-desc {
+                width: 100%;
+                padding: 30px 30px 40px 30px;
+                background: rgba(255, 255, 255, 0.75);
+                border: 2px solid $white;
+                box-shadow: 0px 10px 75px rgba(0, 0, 0, 0.06);
+                backdrop-filter: blur(15px);
+
+                p {
+                    font-size: 16px;
+                    font-family: $Yekan;
+                    color: $gray;
+                    line-height: 1.8;
+                }
             }
 
-            h5 {
-                font-family: $Yekan;
-                font-size: 16px;
-                color: $darkTitle;
-                font-weight: 700;
-                margin-bottom: 0;
-            }
+            .feedback-author {
+                position: relative;
+                margin-top: -35px;
 
-            span {
-                font-family: $Yekan;
-                font-size: 12px;
-                color: $warning;
+                img {
+                    padding: 5px;
+                    border: 2px solid $warning;
+                    border-radius: 50%;
+                    margin-bottom: 20px;
+                }
+
+                h5 {
+                    font-family: $Yekan;
+                    font-size: 16px;
+                    color: $darkTitle;
+                    font-weight: 700;
+                    margin-bottom: 0;
+                }
+
+                span {
+                    font-family: $Yekan;
+                    font-size: 12px;
+                    color: $warning;
+                }
             }
         }
+
+        button {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $warning;
+            border-radius: 50%;
+            color: $white;
+        }
+
+        .prev {
+            top: 65px;
+            left: 165px;
+        }
+
+        .next {
+            top: 65px;
+            right: 165px;
+        }
+
     }
 
 }
 
+/* ----------------------------------------------------------------------- */
+/*                               Departments                                */
+/* ----------------------------------------------------------------------- */
 .departments {
     padding: 60px 0;
     text-align: center;
@@ -391,7 +424,7 @@
         text-align: center;
         background: $white;
         border: 1.3px solid $sliderBorder;
-        padding: 30px 60px 35px 60px;
+        padding: 30px 40px 35px 40px;
         margin-bottom: 35px;
 
         img {
@@ -415,6 +448,9 @@
 
 }
 
+/* ----------------------------------------------------------------------- */
+/*                               Permissions                               */
+/* ----------------------------------------------------------------------- */
 .permissions {
     padding: 60px;
     text-align: center;
@@ -477,6 +513,9 @@
     }
 }
 
+/* ----------------------------------------------------------------------- */
+/*                                  Blog                                   */
+/* ----------------------------------------------------------------------- */
 .blog {
     padding: 60px;
     text-align: center;
@@ -520,6 +559,9 @@
     }
 }
 
+/* ----------------------------------------------------------------------- */
+/*                               Contact-us                                */
+/* ----------------------------------------------------------------------- */
 .contact-us {
     padding: 50px 0;
     background: url(../images/contact-us.png) no-repeat;
@@ -586,8 +628,11 @@
     }
 }
 
+/* ----------------------------------------------------------------------- */
+/*                                 Footer                                  */
+/* ----------------------------------------------------------------------- */
 .footer {
-    padding: 80px 0;
+    padding: 80px 0 0 0;
     background: linear-gradient(99.87deg,
             rgba(27, 26, 31, 0.98) 1.39%,
             rgba(34, 33, 39, 0.98) 28.4%,
@@ -595,6 +640,7 @@
             rgba(27, 26, 31, 0.98) 98.14%);
 
     .footer-desc {
+
 
         .desc-title {
             padding-right: 20px;
@@ -654,11 +700,11 @@
     }
 
     .connect {
-        border: 1.5px dashed #47464A;
-        border-radius: 7px;
-        padding: 35px 30px;
 
         .connect-info {
+            padding: 35px 30px;
+            border: 1.5px dashed #47464A;
+            border-radius: 7px;
 
             h3 {
                 font-size: 20px;
@@ -672,19 +718,97 @@
                 align-items: center;
                 justify-content: flex-end;
 
+                li {
+                    display: flex;
+                    align-items: center;
+                }
+
                 li:last-child {
                     margin-right: 40px;
                 }
 
                 a {
                     margin-left: 15px;
-                    font-size: 17px;
-                    color: 17px;
                     letter-spacing: .05em;
                     color: $white;
+                }
+
+                a.email {
+                    font-size: 17px;
                     font-family: $Gilroy !important;
                 }
+
+                a.phone {
+                    font-size: 19px;
+                    font-family: $Yekan !important;
+                }
             }
+        }
+
+        .social {
+            border: 1.5px dashed #47464A;
+            border-top: 0;
+            border-radius: 7px;
+            padding: 35px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            h5 {
+                font-size: 16px;
+                font-family: $Yekan;
+                color: $white;
+                margin: 0;
+            }
+
+            span {
+                font-size: 12px;
+                font-family: $Gilroy;
+                color: #6D6A78;
+                letter-spacing: .01em;
+            }
+
+            ul {
+                display: flex;
+
+                li {
+                    width: 50px;
+                    height: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    background-color: #333238;
+                    margin-right: 15px;
+
+                    a {
+                        color: $white;
+
+                        svg {
+                            font-size: 20px;
+
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    .copyright {
+        margin-top: 80px;
+        border-top: 1.5px dashed #47464A;
+        padding: 30px 0;
+
+        p {
+            font-size: 13px;
+            font-family: $Gilroy;
+            color: #6D6A78;
+            margin: 0;
+            letter-spacing: .01em;
+            opacity: .9;
+            text-transform: uppercase;
+            word-spacing: 2px;
         }
     }
 }

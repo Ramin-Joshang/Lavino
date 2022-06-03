@@ -1,8 +1,8 @@
-// Main styles
-@import './styles';
+// Variables & Mixing
+@import './base';
 
 // Reset styles
 @import './reset';
 
-// Variables & Mixing
-@import './base'
+// Main styles
+@import './styles';
