@@ -113,7 +113,7 @@
         position: relative;
 
         .img-border {
-            @include border(510px, 5px, -15px, $warning, 60%);
+            @include border(510px, -5px, -15px, $warning, 60%);
             z-index: -1;
         }
     }
@@ -165,7 +165,8 @@
 /*                             Consulting form                             */
 /* ----------------------------------------------------------------------- */
 .consulting-form {
-    height: 660px;
+    height: auto;
+    min-height: 660px;
     padding: 60px 0;
     background: linear-gradient(0deg,
             rgba(0, 0, 0, 0.02),
@@ -186,7 +187,7 @@
     }
 
     form {
-        width: 60%;
+        width: 800px;
         // margin-top: 60px;
         margin: 65px auto 0 auto;
 
@@ -303,7 +304,8 @@
 /*                                Feedback                                 */
 /* ----------------------------------------------------------------------- */
 .feedback {
-    height: 500px;
+    height: auto;
+    min-height: 500px;
     background: linear-gradient(rgba(256, 256, 256, .9), rgba(256, 256, 256, .9)), url(../images/feedback.png) no-repeat;
     background-size: cover;
     backdrop-filter: blur(14px);
@@ -452,7 +454,7 @@
 /*                               Permissions                               */
 /* ----------------------------------------------------------------------- */
 .permissions {
-    padding: 60px;
+    padding: 60px 0;
     text-align: center;
 
     .permissions-title {
@@ -517,7 +519,7 @@
 /*                                  Blog                                   */
 /* ----------------------------------------------------------------------- */
 .blog {
-    padding: 60px;
+    padding: 60px 0;
     text-align: center;
 
     .blog-title {
@@ -568,64 +570,65 @@
     background-color: rgb(8, 192, 248);
     background-size: cover;
 
-    .contact-content {
-        display: flex;
+
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-between;
+
+    h5 {
+        font-size: 22px;
+        font-family: $Yekan;
+        color: $white;
+    }
+
+    span {
+        font-size: 11px;
+        font-family: $Gilroy;
+        color: $white;
+        letter-spacing: .05em;
+    }
+
+    .contact-info {
+        // display: flex;
         align-items: center;
-        justify-content: space-between;
+        margin: 0 auto;
 
-        h5 {
-            font-size: 22px;
-            font-family: $Yekan;
-            color: $white;
+        .info-item:first-child {
+            margin-left: 70px;
         }
 
-        span {
-            font-size: 11px;
-            font-family: $Gilroy;
-            color: $white;
-            letter-spacing: .05em;
-        }
-
-        .contact-info {
+        .info-item {
             display: flex;
             align-items: center;
+            text-align: end;
 
-            .info-item:first-child {
-                margin-left: 70px;
+            img {
+                padding: 16px;
+                border: 1.4px solid $white;
+                border-radius: 50%;
             }
 
-            .info-item {
-                display: flex;
-                align-items: center;
-                text-align: end;
+            section {
+                margin-left: 20px;
 
-                img {
-                    padding: 16px;
-                    border: 1.4px solid $white;
-                    border-radius: 50%;
+                p {
+                    font-size: 14px;
+                    color: $white;
+                    font-size: $Gilroy;
+                    letter-spacing: .1em;
+                    margin-bottom: 0;
                 }
 
-                section {
-                    margin-left: 20px;
-
-                    p {
-                        font-size: 14px;
-                        color: $white;
-                        font-size: $Gilroy;
-                        letter-spacing: .1em;
-                        margin-bottom: 0;
-                    }
-
-                    a {
-                        font-size: 22px;
-                        color: $white;
-                        letter-spacing: .06em;
-                        font-family: $Gilroy;
-                    }
+                a {
+                    font-size: 22px;
+                    color: $white;
+                    letter-spacing: .06em;
+                    font-family: $Gilroy;
                 }
             }
         }
     }
+
 }
 
 /* ----------------------------------------------------------------------- */
@@ -770,6 +773,7 @@
 
             ul {
                 display: flex;
+                align-items: center;
 
                 li {
                     width: 50px;

@@ -205,7 +205,7 @@ p {
   position: absolute;
   width: 408px;
   height: 510px;
-  left: 5px;
+  left: -5px;
   bottom: -15px;
   border: 2.5px solid #F5AD57;
   border-radius: 250px 250px 0px 0px;
@@ -267,7 +267,8 @@ p {
 /*                             Consulting form                             */
 /* ----------------------------------------------------------------------- */
 .consulting-form {
-  height: 660px;
+  height: auto;
+  min-height: 660px;
   padding: 60px 0;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)), url(../images/consulting.png) no-repeat bottom left;
   background-size: cover;
@@ -303,7 +304,7 @@ p {
 }
 
 .consulting-form form {
-  width: 60%;
+  width: 800px;
   margin: 65px auto 0 auto;
 }
 
@@ -483,7 +484,8 @@ p {
 /*                                Feedback                                 */
 /* ----------------------------------------------------------------------- */
 .feedback {
-  height: 500px;
+  height: auto;
+  min-height: 500px;
   background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(../images/feedback.png) no-repeat;
   background-size: cover;
   backdrop-filter: blur(14px);
@@ -667,7 +669,7 @@ p {
 /*                               Permissions                               */
 /* ----------------------------------------------------------------------- */
 .permissions {
-  padding: 60px;
+  padding: 60px 0;
   text-align: center;
 }
 
@@ -748,7 +750,7 @@ p {
 /*                                  Blog                                   */
 /* ----------------------------------------------------------------------- */
 .blog {
-  padding: 60px;
+  padding: 60px 0;
   text-align: center;
 }
 
@@ -818,51 +820,45 @@ p {
   background-size: cover;
 }
 
-.contact-us .contact-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.contact-us .contact-content h5 {
+.contact-us h5 {
   font-size: 22px;
   font-family: "Yekan Bakh";
   color: #ffffff;
 }
 
-.contact-us .contact-content span, .contact-us .contact-content .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .contact-us .contact-content a {
+.contact-us span, .contact-us .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .contact-us a {
   font-size: 11px;
   font-family: "Gilroy";
   color: #ffffff;
   letter-spacing: .05em;
 }
 
-.contact-us .contact-content .contact-info {
-  display: flex;
+.contact-us .contact-info {
   align-items: center;
+  margin: 0 auto;
 }
 
-.contact-us .contact-content .contact-info .info-item:first-child {
+.contact-us .contact-info .info-item:first-child {
   margin-left: 70px;
 }
 
-.contact-us .contact-content .contact-info .info-item {
+.contact-us .contact-info .info-item {
   display: flex;
   align-items: center;
   text-align: end;
 }
 
-.contact-us .contact-content .contact-info .info-item img {
+.contact-us .contact-info .info-item img {
   padding: 16px;
   border: 1.4px solid #ffffff;
   border-radius: 50%;
 }
 
-.contact-us .contact-content .contact-info .info-item section {
+.contact-us .contact-info .info-item section {
   margin-left: 20px;
 }
 
-.contact-us .contact-content .contact-info .info-item section p {
+.contact-us .contact-info .info-item section p {
   font-size: 14px;
   color: #ffffff;
   font-size: "Gilroy";
@@ -870,7 +866,7 @@ p {
   margin-bottom: 0;
 }
 
-.contact-us .contact-content .contact-info .info-item section a {
+.contact-us .contact-info .info-item section a {
   font-size: 22px;
   color: #ffffff;
   letter-spacing: .06em;
@@ -1016,6 +1012,7 @@ p {
 
 .footer .connect .social ul {
   display: flex;
+  align-items: center;
 }
 
 .footer .connect .social ul li {
@@ -1052,5 +1049,109 @@ p {
   opacity: .9;
   text-transform: uppercase;
   word-spacing: 2px;
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+  .header .header-content .header-title {
+    font-size: 40px;
+  }
+  .header .header-content .header-desc {
+    width: 500px;
+  }
+  .feedback .prev {
+    top: 65px;
+    left: 125px !important;
+  }
+  .feedback .next {
+    top: 65px;
+    right: 125px !important;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+  .header .navbar-collapse {
+    background-color: #878793;
+    z-index: 1;
+    padding: 10px 20px !important;
+    margin-top: 10px;
+  }
+  .header .navbar-collapse ul li {
+    border-bottom: 1px solid #5B5B6B;
+  }
+  .header .header-content .header-img {
+    display: none;
+  }
+  .feedback .prev {
+    top: 65px;
+    left: 100px !important;
+  }
+  .feedback .next {
+    top: 65px;
+    right: 100px !important;
+  }
+  .permissions .permissions-desc h5 {
+    font-size: 15px !important;
+  }
+  .permissions .permissions-desc span, .permissions .permissions-item .permissions-desc a {
+    font-size: 12px;
+  }
+  .contact-us .contact-info .info-item:first-child {
+    margin-left: 20px !important;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .about-us .about-content ul {
+    width: 85% !important;
+  }
+  .feedback .feedback-desc p {
+    font-size: 14px !important;
+  }
+  .feedback .prev {
+    display: none !important;
+  }
+  .feedback .next {
+    display: none !important;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media only screen and (max-width: 576px) {
+  .header .header-content .header-title {
+    font-size: 30px;
+  }
+  .header .header-content .header-desc {
+    width: 100%;
+  }
+  .contact-us .contact-info {
+    flex-wrap: wrap;
+  }
+  .contact-us .contact-info .info-item:first-child {
+    margin-bottom: 20px;
+  }
+  .footer .connect-info {
+    padding: 20px 10px !important;
+    text-align: center !important;
+  }
+  .footer .connect-info ul {
+    flex-wrap: wrap;
+    justify-content: center !important;
+    margin: 0 auto !important;
+  }
+  .footer .social {
+    padding: 20px 10px !important;
+    flex-wrap: wrap;
+  }
+  .footer .social section {
+    width: 100%;
+    text-align: center;
+  }
+  .footer .social ul {
+    margin: 0 auto;
+    margin-top: 20px;
+  }
 }
 /*# sourceMappingURL=index.css.map */

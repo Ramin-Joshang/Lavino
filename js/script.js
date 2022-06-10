@@ -1,7 +1,7 @@
 //  Products slider
 
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: "4",
+    slidesPerView: "1",
     spaceBetween: 30,
     loop: true,
     autoplay: {
@@ -11,6 +11,21 @@ var swiper = new Swiper(".mySwiper", {
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
+    },
+    breakpoints: {
+
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        992: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+        },
+        1200: {
+            slidesPerView: 4,
+            spaceBetween: 50,
+        },
     },
 });
 
