@@ -1394,11 +1394,11 @@ p {
     direction: ltr !important;
   }
   .feedback .prev {
-    top: 65px;
+    top: 100px !important;
     left: 100px !important;
   }
   .feedback .next {
-    top: 65px;
+    top: 100px !important;
     right: 100px !important;
   }
   .permissions .permissions-desc h5 {
@@ -1431,6 +1431,9 @@ p {
   .products .products-item {
     margin: 0 auto;
   }
+  .feedback .myFeedback {
+    width: 90% !important;
+  }
   .feedback .feedback-desc p {
     font-size: 14px !important;
   }
@@ -1444,11 +1447,35 @@ p {
 
 /* Small devices (landscape phones, 576px and up) */
 @media only screen and (max-width: 576px) {
+  .header .header-content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   .header .header-content .header-title {
     font-size: 30px;
   }
   .header .header-content .header-desc {
     width: 100%;
+  }
+  .brands {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .about-us {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .consulting-form {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .blog {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .contact-us {
+    padding-left: 15px;
+    padding-right: 15px;
   }
   .contact-us .contact-info {
     flex-direction: column;
@@ -1457,6 +1484,18 @@ p {
   .contact-us .contact-info .info-item:first-child {
     margin-bottom: 20px;
     margin-left: 0 !important;
+  }
+  .permissions {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .satisfaction {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .footer {
+    padding-left: 15px;
+    padding-right: 15px;
   }
   .footer .connect-info {
     padding: 20px 10px !important;

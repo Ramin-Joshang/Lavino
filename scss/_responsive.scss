@@ -70,12 +70,12 @@
 
     .feedback {
         .prev {
-            top: 65px;
+            top: 100px !important;
             left: 100px !important;
         }
 
         .next {
-            top: 65px;
+            top: 100px !important;
             right: 100px !important;
         }
     }
@@ -135,6 +135,10 @@
     }
 
     .feedback {
+        .myFeedback {
+            width: 90% !important;
+        }
+
         .feedback-desc p {
             font-size: 14px !important;
         }
@@ -157,6 +161,8 @@
 @media only screen and (max-width: 576px) {
     .header {
         .header-content {
+            padding-left: 15px;
+            padding-right: 15px;
 
             .header-title {
                 font-size: 30px;
@@ -169,7 +175,30 @@
 
     }
 
+    .brands {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .about-us {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .consulting-form {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .blog {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
     .contact-us {
+        padding-left: 15px;
+        padding-right: 15px;
+
         .contact-info {
             flex-direction: column;
             align-items: end;
@@ -181,7 +210,19 @@
         }
     }
 
+    .permissions {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .satisfaction {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
     .footer {
+        padding-left: 15px;
+        padding-right: 15px;
 
         .connect-info {
             padding: 20px 10px !important;
