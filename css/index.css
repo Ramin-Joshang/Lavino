@@ -48,6 +48,11 @@ a {
   text-decoration: none !important;
   cursor: pointer;
   font-family: "Yekan Bakh" !important;
+  transition: color .2s linear;
+}
+
+a:hover {
+  color: #F5AD57 !important;
 }
 
 button {
@@ -101,10 +106,30 @@ p {
 }
 
 .header .navbar ul a {
-  color: #ffffff;
-  opacity: 70%;
+  color: rgba(255, 255, 255, 0.7);
   margin-left: 30px;
   font-size: 15px;
+}
+
+.header .navbar .dark-mode {
+  background-color: #3c3a3f;
+  border-radius: 25px;
+  margin-left: 6px;
+  padding: 5px;
+}
+
+.header .navbar .dark-mode button {
+  background-color: transparent;
+  padding: 8px 10px;
+}
+
+.header .navbar .dark-mode button.active {
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.header .navbar .dark-mode button.active svg path {
+  stroke: black !important;
 }
 
 .header .navbar .contact-us-btn {
@@ -152,10 +177,30 @@ p {
   padding: 13px 30px;
   border-radius: 25px;
   font-size: 15px;
+  transition: 0.25s;
+  box-shadow: 0 0 0 1em transparent;
 }
 
-.header .header-content .header-btn svg {
-  margin: 5px 0 0 10px;
+.header .header-content .header-btn:hover {
+  animation: primary 1s;
+}
+
+@keyframes primary {
+  0% {
+    box-shadow: 0 0 0 0 #08C0F8;
+  }
+}
+
+@keyframes warning {
+  0% {
+    box-shadow: 0 0 0 0 #F5AD57;
+  }
+}
+
+@keyframes other {
+  0% {
+    box-shadow: 0 0 0 0 white;
+  }
 }
 
 .header .header-content .header-img {
@@ -186,7 +231,7 @@ p {
   transform: translateX(-50%);
   background-color: #ffffff;
   box-shadow: 0px 30px 35px rgba(42, 43, 74, 0.07);
-  padding: 20px 15px;
+  padding: 15px 15px 20px 15px;
   border-radius: 25px;
 }
 
@@ -245,13 +290,37 @@ p {
   margin-left: 10px;
 }
 
-.about-us .about-content .lavino {
+.about-us .about-content .lawino {
   color: #ffffff;
   background-color: #F5AD57;
   padding: 13px 30px;
   border-radius: 25px;
   font-size: 15px;
+  transition: 0.25s;
+  box-shadow: 0 0 0 1em transparent;
   margin-left: 10px;
+}
+
+.about-us .about-content .lawino:hover {
+  animation: warning 1s;
+}
+
+@keyframes primary {
+  0% {
+    box-shadow: 0 0 0 0 #08C0F8;
+  }
+}
+
+@keyframes warning {
+  0% {
+    box-shadow: 0 0 0 0 #F5AD57;
+  }
+}
+
+@keyframes other {
+  0% {
+    box-shadow: 0 0 0 0 white;
+  }
 }
 
 .about-us .about-content .questions {
@@ -260,7 +329,16 @@ p {
   padding: 13px 30px;
   border-radius: 25px;
   font-size: 15px;
+  transition: .25s;
   font-weight: 700;
+}
+
+.about-us .about-content .questions:hover {
+  color: #ffffff;
+  background-color: #F5AD57;
+  padding: 13px 30px;
+  border-radius: 25px;
+  font-size: 15px;
 }
 
 /* ----------------------------------------------------------------------- */
@@ -330,6 +408,7 @@ p {
   border-right: none;
   border-color: #E0E3EB;
   border-radius: 2px !important;
+  font-size: 15px !important;
 }
 
 .consulting-form form input::placeholder {
@@ -389,8 +468,32 @@ p {
   padding: 13px 30px;
   border-radius: 25px;
   font-size: 15px;
+  transition: 0.25s;
+  box-shadow: 0 0 0 1em transparent;
   width: fit-content;
   margin: 0 auto;
+}
+
+.consulting-form form button:hover {
+  animation: warning 1s;
+}
+
+@keyframes primary {
+  0% {
+    box-shadow: 0 0 0 0 #08C0F8;
+  }
+}
+
+@keyframes warning {
+  0% {
+    box-shadow: 0 0 0 0 #F5AD57;
+  }
+}
+
+@keyframes other {
+  0% {
+    box-shadow: 0 0 0 0 white;
+  }
 }
 
 /* -------------------------------------------------------------------------- */
@@ -457,10 +560,13 @@ p {
   border-radius: 0 0 5px 5px;
 }
 
-.products .products-item h3 {
+.products .products-item a {
+  color: #1C1C1F;
+}
+
+.products .products-item a h3 {
   margin: 30px 0 15px 0;
   font-size: 18px;
-  color: #1C1C1F;
   font-family: "Yekan Bakh";
   font-weight: 700;
 }
@@ -477,7 +583,31 @@ p {
   padding: 13px 30px;
   border-radius: 25px;
   font-size: 15px;
+  transition: 0.25s;
+  box-shadow: 0 0 0 1em transparent;
   margin-top: 70px;
+}
+
+.products button:hover {
+  animation: primary 1s;
+}
+
+@keyframes primary {
+  0% {
+    box-shadow: 0 0 0 0 #08C0F8;
+  }
+}
+
+@keyframes warning {
+  0% {
+    box-shadow: 0 0 0 0 #F5AD57;
+  }
+}
+
+@keyframes other {
+  0% {
+    box-shadow: 0 0 0 0 white;
+  }
 }
 
 /* ----------------------------------------------------------------------- */
@@ -598,7 +728,7 @@ p {
 }
 
 /* ----------------------------------------------------------------------- */
-/*                               Departments                                */
+/*                               Departments                               */
 /* ----------------------------------------------------------------------- */
 .departments {
   padding: 60px 0;
@@ -643,17 +773,29 @@ p {
   margin-bottom: 35px;
 }
 
-.departments .departments-item img {
-  padding: 20px;
+.departments .departments-item section {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1.4px solid #EFF1F8;
   border-radius: 50%;
-  margin-bottom: 30px;
+  margin: 0 auto 30px auto;
 }
 
-.departments .departments-item h3 {
+.departments .departments-item section.active {
+  border: 0;
+  background: linear-gradient(128.16deg, rgba(8, 192, 248, 0.11) -2.91%, rgba(8, 147, 248, 0.11) 106.26%);
+}
+
+.departments .departments-item a {
+  color: #1C1C1F;
+}
+
+.departments .departments-item a h3 {
   font-family: "Yekan Bakh";
   font-size: 18px;
-  color: #1C1C1F;
   font-weight: 700;
 }
 
@@ -663,6 +805,30 @@ p {
   padding: 13px 30px;
   border-radius: 25px;
   font-size: 15px;
+  transition: 0.25s;
+  box-shadow: 0 0 0 1em transparent;
+}
+
+.departments button:hover {
+  animation: primary 1s;
+}
+
+@keyframes primary {
+  0% {
+    box-shadow: 0 0 0 0 #08C0F8;
+  }
+}
+
+@keyframes warning {
+  0% {
+    box-shadow: 0 0 0 0 #F5AD57;
+  }
+}
+
+@keyframes other {
+  0% {
+    box-shadow: 0 0 0 0 white;
+  }
 }
 
 /* ----------------------------------------------------------------------- */
@@ -744,6 +910,109 @@ p {
   padding: 13px 30px;
   border-radius: 25px;
   font-size: 15px;
+  transition: 0.25s;
+  box-shadow: 0 0 0 1em transparent;
+}
+
+.permissions button:hover {
+  animation: warning 1s;
+}
+
+@keyframes primary {
+  0% {
+    box-shadow: 0 0 0 0 #08C0F8;
+  }
+}
+
+@keyframes warning {
+  0% {
+    box-shadow: 0 0 0 0 #F5AD57;
+  }
+}
+
+@keyframes other {
+  0% {
+    box-shadow: 0 0 0 0 white;
+  }
+}
+
+/* ----------------------------------------------------------------------- */
+/*                               Satisfaction                              */
+/* ----------------------------------------------------------------------- */
+.satisfaction {
+  padding: 50px 0;
+  position: relative;
+}
+
+.satisfaction::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 965px;
+  height: 100%;
+  background-image: url("../images/u-s-bg.png");
+  background-color: #F0F1F3;
+  background-repeat: no-repeat;
+  background-position: right;
+  z-index: -1;
+}
+
+.satisfaction .satisfaction-desc h2 {
+  font-size: 38px;
+  color: #1B1A1FFA;
+  font-family: "Kalameh";
+  text-align: right;
+}
+
+.satisfaction .satisfaction-desc span, .satisfaction .satisfaction-desc .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .satisfaction .satisfaction-desc a {
+  font-family: "Yekan Bakh";
+  font-weight: 500;
+  font-size: 16px;
+  color: #5B5B6B;
+}
+
+.satisfaction .satisfaction-desc p {
+  width: 80%;
+  margin-top: 45px;
+  font-size: 15px;
+  color: #A09CAD;
+  line-height: 1.8;
+}
+
+.satisfaction .satisfaction-img {
+  position: relative;
+  background-color: #D8DBDE;
+  padding: 11px;
+  border-radius: 1px;
+}
+
+.satisfaction .satisfaction-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.satisfaction .satisfaction-img .play {
+  position: absolute;
+  top: calc(50% - 40px);
+  right: calc(50% - 40px);
+  width: 80px;
+  height: 80px;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid #FFFFFF;
+  border-radius: 50%;
+}
+
+.satisfaction .satisfaction-img .play .play-bg {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
 }
 
 /* ----------------------------------------------------------------------- */
@@ -783,10 +1052,17 @@ p {
   border-radius: 50%;
 }
 
-.blog .blog-item h5 {
+.blog .blog-item a.card-title {
+  color: #1C1C1F;
+}
+
+.blog .blog-item a.card-title:hover {
+  color: #08C0F8 !important;
+}
+
+.blog .blog-item a.card-title h5 {
   font-size: 19px;
   font-family: "Yekan Bakh";
-  color: #1C1C1F;
   font-weight: 700;
   margin-bottom: 15px;
 }
@@ -808,6 +1084,30 @@ p {
   padding: 13px 30px;
   border-radius: 25px;
   font-size: 15px;
+  transition: 0.25s;
+  box-shadow: 0 0 0 1em transparent;
+}
+
+.blog button:hover {
+  animation: primary 1s;
+}
+
+@keyframes primary {
+  0% {
+    box-shadow: 0 0 0 0 #08C0F8;
+  }
+}
+
+@keyframes warning {
+  0% {
+    box-shadow: 0 0 0 0 #F5AD57;
+  }
+}
+
+@keyframes other {
+  0% {
+    box-shadow: 0 0 0 0 white;
+  }
 }
 
 /* ----------------------------------------------------------------------- */
@@ -1076,12 +1376,22 @@ p {
     z-index: 1;
     padding: 10px 20px !important;
     margin-top: 10px;
+    border-radius: 3px;
   }
   .header .navbar-collapse ul li {
-    border-bottom: 1px solid #5B5B6B;
+    border-bottom: 1px solid #a7a6a6;
+  }
+  .header .navbar-collapse .dark-mode {
+    background-color: #92929d;
+  }
+  .header .navbar-collapse .contact-us-btn {
+    background-color: #92929d !important;
   }
   .header .header-content .header-img {
     display: none;
+  }
+  .brands .brands-item {
+    direction: ltr !important;
   }
   .feedback .prev {
     top: 65px;
@@ -1097,6 +1407,17 @@ p {
   .permissions .permissions-desc span, .permissions .permissions-item .permissions-desc a {
     font-size: 12px;
   }
+  .satisfaction .satisfaction-desc {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .satisfaction .satisfaction-desc h2 {
+    text-align: center !important;
+  }
+  .satisfaction .satisfaction-desc p {
+    width: 100%;
+    text-align: justify;
+  }
   .contact-us .contact-info .info-item:first-child {
     margin-left: 20px !important;
   }
@@ -1106,6 +1427,9 @@ p {
 @media only screen and (max-width: 768px) {
   .about-us .about-content ul {
     width: 85% !important;
+  }
+  .products .products-item {
+    margin: 0 auto;
   }
   .feedback .feedback-desc p {
     font-size: 14px !important;
@@ -1127,10 +1451,12 @@ p {
     width: 100%;
   }
   .contact-us .contact-info {
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: end;
   }
   .contact-us .contact-info .info-item:first-child {
     margin-bottom: 20px;
+    margin-left: 0 !important;
   }
   .footer .connect-info {
     padding: 20px 10px !important;

@@ -10,7 +10,7 @@ $lightBtn:#F7F9FC;
 $form:rgba(255, 255, 255, 0.5);
 $sliderBorder:#EFF1F8;
 $inputBorder:#E0E3EB;
-$placeholder:rgba(31, 30, 35, .3);
+$placeholder:rgba(31, 30, 35, 0.3);
 $white:#ffffff;
 $primary:#08C0F8;
 $warning:#F5AD57;
@@ -24,11 +24,50 @@ $Gilroy:'Gilroy';
 @mixin btn($color, $bgColor, $opacity:100%) {
     color: $color;
     background-color: $bgColor;
-    // opacity: $opacity;
     padding: 13px 30px;
     border-radius: 25px;
     font-size: 15px;
 }
+
+@mixin btnEffect($shadow) {
+    transition: 0.25s;
+    box-shadow: 0 0 0 1em transparent;
+
+    @if ($shadow==$primary) {
+        &:hover {
+            animation: primary 1s;
+        }
+    }
+
+    @else if($shadow==$warning) {
+        &:hover {
+            animation: warning 1s;
+        }
+    }
+
+
+    @keyframes primary {
+        0% {
+            box-shadow: 0 0 0 0 $primary;
+        }
+    }
+
+    @keyframes warning {
+        0% {
+            box-shadow: 0 0 0 0 $warning;
+        }
+    }
+
+    @keyframes other {
+        0% {
+            box-shadow: 0 0 0 0 white;
+        }
+    }
+
+
+
+}
+
 
 @mixin border($height, $left, $bottom, $color, $opacity:100%) {
     position: absolute;
@@ -76,7 +115,6 @@ $Gilroy:'Gilroy';
         font-size: 15px;
         color: $placeholder;
         font-family: $Yekan;
-        // opacity: .3;
     }
 
     &:focus {

@@ -32,27 +32,26 @@
 
 @media only screen and (max-width: 992px) {
     .header {
-        // .navbar-toggler {
-        //     outline: none !important;
-        //     border: none !important;
-
-        //     span {
-        //         outline: none !important;
-        //         border: none !important;
-        //     }
-        // }
-
         .navbar-collapse {
             background-color: $darkGray;
             z-index: 1;
             padding: 10px 20px !important;
             margin-top: 10px;
+            border-radius: 3px;
 
             ul {
 
                 li {
-                    border-bottom: 1px solid $gray;
+                    border-bottom: 1px solid #a7a6a6;
                 }
+            }
+
+            .dark-mode {
+                background-color: #92929d;
+            }
+
+            .contact-us-btn {
+                background-color: #92929d !important;
             }
         }
 
@@ -60,6 +59,12 @@
             .header-img {
                 display: none;
             }
+        }
+    }
+
+    .brands {
+        .brands-item {
+            direction: ltr !important;
         }
     }
 
@@ -87,6 +92,22 @@
         }
     }
 
+    .satisfaction {
+        .satisfaction-desc {
+            text-align: center;
+            margin-bottom: 50px;
+
+            h2 {
+                text-align: center !important;
+            }
+
+            p {
+                width: 100%;
+                text-align: justify;
+            }
+        }
+    }
+
     .contact-us {
         .contact-info {
             .info-item:first-child {
@@ -104,6 +125,12 @@
     .about-us {
         .about-content ul {
             width: 85% !important;
+        }
+    }
+
+    .products {
+        .products-item {
+            margin: 0 auto;
         }
     }
 
@@ -144,10 +171,12 @@
 
     .contact-us {
         .contact-info {
-            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: end;
 
             .info-item:first-child {
                 margin-bottom: 20px;
+                margin-left: 0 !important;
             }
         }
     }
