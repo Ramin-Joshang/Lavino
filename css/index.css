@@ -2,20 +2,17 @@
 /*                                    fontS                                   */
 /* -------------------------------------------------------------------------- */
 @font-face {
-  font-family: 'Yekan Bakh';
+  font-family: "Yekan Bakh";
   src: url("../fonts/Yekan-Bakh/YekanBakh-Medium.eot") format("eot"), url("../fonts/Yekan-Bakh/YekanBakh-Medium.ttf") format("ttf"), url("../fonts/Yekan-Bakh/YekanBakh-Medium.woff") format("woff"), url("../fonts/Yekan-Bakh/YekanBakh-Medium.woff2") format("woff2");
 }
-
 @font-face {
-  font-family: 'Kalameh';
+  font-family: "Kalameh";
   src: url("../fonts/Kalameh/Kalameh-Bold.eot") format("eot"), url("../fonts/Kalameh/Kalameh-Bold.ttf") format("ttf"), url("../fonts/Kalameh/Kalameh-Bold.woff") format("woff"), url("../fonts/Kalameh/Kalameh-Bold.woff2") format("woff2");
 }
-
 @font-face {
-  font-family: 'Gilroy';
+  font-family: "Gilroy";
   src: url("../fonts/Gilroy/Gilroy-Medium.eot") format("eot"), url("../fonts/Gilroy/Gilroy-Medium.ttf") format("ttf"), url("../fonts/Gilroy/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy/Gilroy-Medium.woff2") format("woff2");
 }
-
 /* -------------------------------------------------------------------------- */
 /*                                Reset Styles                                */
 /* -------------------------------------------------------------------------- */
@@ -48,9 +45,8 @@ a {
   text-decoration: none !important;
   cursor: pointer;
   font-family: "Yekan Bakh" !important;
-  transition: color .2s linear;
+  transition: color 0.2s linear;
 }
-
 a:hover {
   color: #F5AD57 !important;
 }
@@ -90,79 +86,65 @@ p {
 /* -------------------------------------------------------------------------- */
 .header {
   width: 100%;
-  height: 620px;
-  margin-bottom: 50px;
+  height: fit-content;
   background: linear-gradient(99.87deg, rgba(27, 26, 31, 0.96) 1.39%, rgba(34, 33, 39, 0.96) 28.4%, rgba(23, 23, 27, 0.96) 66.7%, rgba(27, 26, 31, 0.96) 98.14%), url(../images/banner.png) no-repeat right;
   background-size: cover;
 }
-
 .header .navbar {
   height: 100px;
   background-color: transparent !important;
 }
-
 .header .navbar ul {
   margin: 0 auto;
 }
-
 .header .navbar ul a {
   color: rgba(255, 255, 255, 0.7);
   margin-left: 30px;
   font-size: 15px;
 }
-
 .header .navbar .dark-mode {
-  background-color: #3c3a3f;
+  background-color: rgb(60, 58, 63);
   border-radius: 25px;
   margin-left: 6px;
   padding: 5px;
 }
-
 .header .navbar .dark-mode button {
   background-color: transparent;
   padding: 8px 10px;
 }
-
 .header .navbar .dark-mode button.active {
   background-color: #ffffff;
   border-radius: 50%;
 }
-
 .header .navbar .dark-mode button.active svg path {
   stroke: black !important;
 }
-
 .header .navbar .contact-us-btn {
   color: #ffffff;
-  background-color: #3C3A3F;
+  background-color: #3c3a3f;
   padding: 13px 30px;
   border-radius: 25px;
   font-size: 15px;
 }
-
 .header .header-content {
   width: 100%;
   height: 520px;
   position: relative;
 }
-
 .header .header-content p.header-trust {
   color: #ffffff;
   font-family: "Gilroy";
   word-spacing: 3px;
 }
-
 .header .header-content p.header-trust span, .header .header-content p.header-trust .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .header .header-content p.header-trust a {
   color: #08C0F8;
 }
-
 .header .header-content .header-title {
   font-size: 50px;
   margin: 25px 0;
   color: #ffffff;
   font-family: "Kalameh";
 }
-
 .header .header-content .header-desc {
   width: 580px;
   font-size: 15px;
@@ -170,7 +152,6 @@ p {
   line-height: 1.8;
   margin-bottom: 50px;
 }
-
 .header .header-content .header-btn {
   color: #ffffff;
   background-color: #08C0F8;
@@ -180,35 +161,29 @@ p {
   transition: 0.25s;
   box-shadow: 0 0 0 1em transparent;
 }
-
 .header .header-content .header-btn:hover {
   animation: primary 1s;
 }
-
 @keyframes primary {
   0% {
     box-shadow: 0 0 0 0 #08C0F8;
   }
 }
-
 @keyframes warning {
   0% {
     box-shadow: 0 0 0 0 #F5AD57;
   }
 }
-
 @keyframes other {
   0% {
     box-shadow: 0 0 0 0 white;
   }
 }
-
 .header .header-content .header-img {
   position: absolute;
   bottom: -35px;
   left: 0;
 }
-
 .header .header-content .header-img .img-border {
   position: absolute;
   width: 408px;
@@ -219,11 +194,9 @@ p {
   border-radius: 250px 250px 0px 0px;
   opacity: 10%;
 }
-
 .header .header-content .header-img img {
   z-index: 2;
 }
-
 .header .header-content .header-mouse {
   position: absolute;
   bottom: -30px;
@@ -241,11 +214,9 @@ p {
 .about-us {
   padding-bottom: 100px;
 }
-
 .about-us .about-img {
   position: relative;
 }
-
 .about-us .about-img .img-border {
   position: absolute;
   width: 408px;
@@ -257,14 +228,12 @@ p {
   opacity: 60%;
   z-index: -1;
 }
-
 .about-us .about-content h2 {
   font-size: 38px;
-  color: #1B1A1FFA;
+  color: rgba(27, 26, 31, 0.9803921569);
   font-family: "Kalameh";
   text-align: right;
 }
-
 .about-us .about-content p {
   font-size: 15px;
   margin: 25px 0;
@@ -272,24 +241,20 @@ p {
   line-height: 1.8;
   color: #A09CAD;
 }
-
 .about-us .about-content ul {
   width: 60%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
 .about-us .about-content ul li {
   font-size: 17px;
   font-weight: 700;
   color: #2A292F;
 }
-
 .about-us .about-content ul li img {
   margin-left: 10px;
 }
-
 .about-us .about-content .lawino {
   color: #ffffff;
   background-color: #F5AD57;
@@ -300,39 +265,33 @@ p {
   box-shadow: 0 0 0 1em transparent;
   margin-left: 10px;
 }
-
 .about-us .about-content .lawino:hover {
   animation: warning 1s;
 }
-
 @keyframes primary {
   0% {
     box-shadow: 0 0 0 0 #08C0F8;
   }
 }
-
 @keyframes warning {
   0% {
     box-shadow: 0 0 0 0 #F5AD57;
   }
 }
-
 @keyframes other {
   0% {
     box-shadow: 0 0 0 0 white;
   }
 }
-
 .about-us .about-content .questions {
   color: #1C1C1F;
   background-color: #F7F9FC;
   padding: 13px 30px;
   border-radius: 25px;
   font-size: 15px;
-  transition: .25s;
+  transition: 0.25s;
   font-weight: 700;
 }
-
 .about-us .about-content .questions:hover {
   color: #ffffff;
   background-color: #F5AD57;
@@ -351,27 +310,23 @@ p {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)), url(../images/consulting.png) no-repeat bottom left;
   background-size: cover;
 }
-
 .consulting-form .consulting-title {
   text-align: center;
 }
-
 .consulting-form .consulting-title h2 {
   font-size: 34px;
-  color: #1B1A1FFA;
+  color: rgba(27, 26, 31, 0.9803921569);
   font-family: "Kalameh";
   text-align: center;
 }
-
 .consulting-form .consulting-title span, .consulting-form .consulting-title .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .consulting-form .consulting-title a {
   position: relative;
   font-size: 14px;
   color: #5B5B6B;
   font-family: "Yekan Bakh";
 }
-
 .consulting-form .consulting-title span::after, .consulting-form .consulting-title .permissions .permissions-item .permissions-desc a::after, .permissions .permissions-item .permissions-desc .consulting-form .consulting-title a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -20px;
   left: 50%;
@@ -380,20 +335,17 @@ p {
   border-bottom: 2px solid #F5AD57;
   border-radius: 50%;
 }
-
 .consulting-form form {
   width: 800px;
   margin: 65px auto 0 auto;
 }
-
 .consulting-form form span, .consulting-form form .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .consulting-form form a {
   position: relative;
   background-color: rgba(255, 255, 255, 0.5);
   border-left: none;
-  border-color: #E0E3EB;
+  border-color: #e0e3eb;
   border-radius: 2px !important;
 }
-
 .consulting-form form span::after, .consulting-form form .permissions .permissions-item .permissions-desc a::after, .permissions .permissions-item .permissions-desc .consulting-form form a::after {
   content: "";
   position: absolute;
@@ -402,7 +354,6 @@ p {
   height: 30px;
   background-color: #d2d5db;
 }
-
 .consulting-form form input {
   background-color: rgba(255, 255, 255, 0.5);
   border-right: none;
@@ -410,18 +361,15 @@ p {
   border-radius: 2px !important;
   font-size: 15px !important;
 }
-
 .consulting-form form input::placeholder {
   font-size: 15px;
   color: rgba(31, 30, 35, 0.3);
   font-family: "Yekan Bakh";
 }
-
 .consulting-form form input:focus {
   border-color: #E0E3EB;
   background-color: rgba(255, 255, 255, 0.5);
 }
-
 .consulting-form form select {
   background-color: rgba(255, 255, 255, 0.5);
   border-right: none;
@@ -431,18 +379,15 @@ p {
   color: rgba(31, 30, 35, 0.3);
   font-family: "Yekan Bakh";
 }
-
 .consulting-form form select::placeholder {
   font-size: 15px;
   color: rgba(31, 30, 35, 0.3);
   font-family: "Yekan Bakh";
 }
-
 .consulting-form form select:focus {
   border-color: #E0E3EB;
   background-color: rgba(255, 255, 255, 0.5);
 }
-
 .consulting-form form textarea {
   background-color: rgba(255, 255, 255, 0.5);
   border-right: none;
@@ -450,18 +395,15 @@ p {
   border-radius: 2px !important;
   border: solid 1px #E0E3EB;
 }
-
 .consulting-form form textarea::placeholder {
   font-size: 15px;
   color: rgba(31, 30, 35, 0.3);
   font-family: "Yekan Bakh";
 }
-
 .consulting-form form textarea:focus {
   border-color: #E0E3EB;
   background-color: rgba(255, 255, 255, 0.5);
 }
-
 .consulting-form form button {
   color: #ffffff;
   background-color: #F5AD57;
@@ -473,23 +415,19 @@ p {
   width: fit-content;
   margin: 0 auto;
 }
-
 .consulting-form form button:hover {
   animation: warning 1s;
 }
-
 @keyframes primary {
   0% {
     box-shadow: 0 0 0 0 #08C0F8;
   }
 }
-
 @keyframes warning {
   0% {
     box-shadow: 0 0 0 0 #F5AD57;
   }
 }
-
 @keyframes other {
   0% {
     box-shadow: 0 0 0 0 white;
@@ -502,28 +440,24 @@ p {
 .products {
   padding: 60px 0;
 }
-
 .products .products-title {
   text-align: center;
   margin-bottom: 60px;
 }
-
 .products .products-title h2 {
   font-size: 34px;
-  color: #1B1A1FFA;
+  color: rgba(27, 26, 31, 0.9803921569);
   font-family: "Kalameh";
   text-align: center;
 }
-
 .products .products-title span, .products .products-title .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .products .products-title a {
   position: relative;
   font-size: 14px;
   color: #5B5B6B;
   font-family: "Yekan Bakh";
 }
-
 .products .products-title span::after, .products .products-title .permissions .permissions-item .permissions-desc a::after, .permissions .permissions-item .permissions-desc .products .products-title a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -20px;
   left: 50%;
@@ -532,17 +466,14 @@ p {
   border-bottom: 2px solid #08C0F8;
   border-radius: 50%;
 }
-
 .products .products-item {
   width: fit-content;
   padding: 35px 70px 30px 70px;
   border: 1.3px solid #EFF1F8;
 }
-
 .products .products-item .products-img {
   position: relative;
 }
-
 .products .products-item .products-img .img-desc {
   position: absolute;
   left: 0;
@@ -550,7 +481,7 @@ p {
   bottom: 0;
   width: 99%;
   height: 40px;
-  background-color: #151822BF;
+  background-color: rgba(21, 24, 34, 0.7490196078);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -559,24 +490,20 @@ p {
   letter-spacing: 3px;
   border-radius: 0 0 5px 5px;
 }
-
 .products .products-item a {
   color: #1C1C1F;
 }
-
 .products .products-item a h3 {
   margin: 30px 0 15px 0;
   font-size: 18px;
   font-family: "Yekan Bakh";
   font-weight: 700;
 }
-
 .products .products-item span, .products .products-item .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .products .products-item a {
   font-size: 17px;
   color: #08C0F8;
   font-family: "Yekan Bakh";
 }
-
 .products button {
   color: #ffffff;
   background-color: #08C0F8;
@@ -587,23 +514,19 @@ p {
   box-shadow: 0 0 0 1em transparent;
   margin-top: 70px;
 }
-
 .products button:hover {
   animation: primary 1s;
 }
-
 @keyframes primary {
   0% {
     box-shadow: 0 0 0 0 #08C0F8;
   }
 }
-
 @keyframes warning {
   0% {
     box-shadow: 0 0 0 0 #F5AD57;
   }
 }
-
 @keyframes other {
   0% {
     box-shadow: 0 0 0 0 white;
@@ -621,28 +544,24 @@ p {
   backdrop-filter: blur(14px);
   padding: 50px 0;
 }
-
 .feedback .feedback-title {
   text-align: center;
   margin-bottom: 60px;
 }
-
 .feedback .feedback-title h2 {
   font-size: 38px;
   color: #1C1C1F;
   font-family: "Kalameh";
   text-align: center;
 }
-
 .feedback .feedback-title span, .feedback .feedback-title .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .feedback .feedback-title a {
   position: relative;
   font-size: 14px;
   color: #5B5B6B;
   font-family: "Yekan Bakh";
 }
-
 .feedback .feedback-title span::after, .feedback .feedback-title .permissions .permissions-item .permissions-desc a::after, .permissions .permissions-item .permissions-desc .feedback .feedback-title a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -20px;
   left: 50%;
@@ -651,18 +570,15 @@ p {
   border-bottom: 2px solid #F5AD57;
   border-radius: 50%;
 }
-
 .feedback .slider {
   position: relative;
 }
-
 .feedback .slider .feedback-item {
   position: relative;
   width: 100%;
   margin: 0 auto;
   text-align: center;
 }
-
 .feedback .slider .feedback-item .feedback-desc {
   width: 100%;
   padding: 30px 30px 40px 30px;
@@ -671,40 +587,34 @@ p {
   box-shadow: 0px 10px 75px rgba(0, 0, 0, 0.06);
   backdrop-filter: blur(15px);
 }
-
 .feedback .slider .feedback-item .feedback-desc p {
   font-size: 16px;
   font-family: "Yekan Bakh";
   color: #5B5B6B;
   line-height: 1.8;
 }
-
 .feedback .slider .feedback-item .feedback-author {
   position: relative;
   margin-top: -35px;
 }
-
 .feedback .slider .feedback-item .feedback-author img {
   padding: 5px;
   border: 2px solid #F5AD57;
   border-radius: 50%;
   margin-bottom: 20px;
 }
-
 .feedback .slider .feedback-item .feedback-author h5 {
   font-family: "Yekan Bakh";
   font-size: 16px;
-  color: #1B1A1FFA;
+  color: rgba(27, 26, 31, 0.9803921569);
   font-weight: 700;
   margin-bottom: 0;
 }
-
 .feedback .slider .feedback-item .feedback-author span, .feedback .slider .feedback-item .feedback-author .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .feedback .slider .feedback-item .feedback-author a {
   font-family: "Yekan Bakh";
   font-size: 12px;
   color: #F5AD57;
 }
-
 .feedback .slider button {
   position: absolute;
   width: 40px;
@@ -716,12 +626,10 @@ p {
   border-radius: 50%;
   color: #ffffff;
 }
-
 .feedback .slider .prev {
   top: 65px;
   left: 165px;
 }
-
 .feedback .slider .next {
   top: 65px;
   right: 165px;
@@ -734,28 +642,24 @@ p {
   padding: 60px 0;
   text-align: center;
 }
-
 .departments .departments-title {
   text-align: center;
   margin-bottom: 60px;
 }
-
 .departments .departments-title h2 {
   font-size: 34px;
-  color: #1B1A1FFA;
+  color: rgba(27, 26, 31, 0.9803921569);
   font-family: "Kalameh";
   text-align: center;
 }
-
 .departments .departments-title span, .departments .departments-title .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .departments .departments-title a {
   position: relative;
   font-size: 14px;
   color: #5B5B6B;
   font-family: "Yekan Bakh";
 }
-
 .departments .departments-title span::after, .departments .departments-title .permissions .permissions-item .permissions-desc a::after, .permissions .permissions-item .permissions-desc .departments .departments-title a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -20px;
   left: 50%;
@@ -764,7 +668,6 @@ p {
   border-bottom: 2px solid #08C0F8;
   border-radius: 50%;
 }
-
 .departments .departments-item {
   text-align: center;
   background: #ffffff;
@@ -772,7 +675,6 @@ p {
   padding: 30px 40px 35px 40px;
   margin-bottom: 35px;
 }
-
 .departments .departments-item section {
   width: 75px;
   height: 75px;
@@ -783,22 +685,18 @@ p {
   border-radius: 50%;
   margin: 0 auto 30px auto;
 }
-
 .departments .departments-item section.active {
   border: 0;
   background: linear-gradient(128.16deg, rgba(8, 192, 248, 0.11) -2.91%, rgba(8, 147, 248, 0.11) 106.26%);
 }
-
 .departments .departments-item a {
   color: #1C1C1F;
 }
-
 .departments .departments-item a h3 {
   font-family: "Yekan Bakh";
   font-size: 18px;
   font-weight: 700;
 }
-
 .departments button {
   color: #ffffff;
   background-color: #08C0F8;
@@ -808,23 +706,19 @@ p {
   transition: 0.25s;
   box-shadow: 0 0 0 1em transparent;
 }
-
 .departments button:hover {
   animation: primary 1s;
 }
-
 @keyframes primary {
   0% {
     box-shadow: 0 0 0 0 #08C0F8;
   }
 }
-
 @keyframes warning {
   0% {
     box-shadow: 0 0 0 0 #F5AD57;
   }
 }
-
 @keyframes other {
   0% {
     box-shadow: 0 0 0 0 white;
@@ -838,27 +732,23 @@ p {
   padding: 60px 0;
   text-align: center;
 }
-
 .permissions .permissions-title {
   margin-bottom: 60px;
 }
-
 .permissions .permissions-title h2 {
   font-size: 34px;
-  color: #1B1A1FFA;
+  color: rgba(27, 26, 31, 0.9803921569);
   font-family: "Kalameh";
   text-align: center;
 }
-
 .permissions .permissions-title span, .permissions .permissions-title .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .permissions-title a {
   position: relative;
   font-size: 14px;
   color: #5B5B6B;
   font-family: "Yekan Bakh";
 }
-
 .permissions .permissions-title span::after, .permissions .permissions-title .permissions-item .permissions-desc a::after, .permissions .permissions-item .permissions-desc .permissions-title a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -20px;
   left: 50%;
@@ -867,7 +757,6 @@ p {
   border-bottom: 2px solid #F5AD57;
   border-radius: 50%;
 }
-
 .permissions .permissions-item {
   padding: 20px 18px 20px 28px;
   border: 1.3px solid #EFF1F8;
@@ -875,13 +764,11 @@ p {
   display: flex;
   align-items: center;
 }
-
 .permissions .permissions-item .permissions-img {
   padding: 20px 18px;
   background-color: rgba(245, 173, 87, 0.12);
   border-radius: 2px;
 }
-
 .permissions .permissions-item .permissions-desc {
   width: 100%;
   display: flex;
@@ -890,20 +777,17 @@ p {
   margin-right: 20px;
   text-align: start;
 }
-
 .permissions .permissions-item .permissions-desc h5 {
   font-size: 17px;
   font-weight: 700;
   color: #1C1C1F;
   font-family: "Yekan Bakh";
 }
-
 .permissions .permissions-item .permissions-desc span, .permissions .permissions-item .permissions-desc a {
   font-size: 14px;
   color: #F5AD57;
   font-family: "Yekan Bakh";
 }
-
 .permissions button {
   color: #ffffff;
   background-color: #F5AD57;
@@ -913,23 +797,19 @@ p {
   transition: 0.25s;
   box-shadow: 0 0 0 1em transparent;
 }
-
 .permissions button:hover {
   animation: warning 1s;
 }
-
 @keyframes primary {
   0% {
     box-shadow: 0 0 0 0 #08C0F8;
   }
 }
-
 @keyframes warning {
   0% {
     box-shadow: 0 0 0 0 #F5AD57;
   }
 }
-
 @keyframes other {
   0% {
     box-shadow: 0 0 0 0 white;
@@ -943,9 +823,8 @@ p {
   padding: 50px 0;
   position: relative;
 }
-
 .satisfaction::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
@@ -953,46 +832,40 @@ p {
   max-width: 965px;
   height: 100%;
   background-image: url("../images/u-s-bg.png");
-  background-color: #F0F1F3;
+  background-color: #f0f1f3;
   background-repeat: no-repeat;
   background-position: right;
   z-index: -1;
 }
-
 .satisfaction .satisfaction-desc h2 {
   font-size: 38px;
-  color: #1B1A1FFA;
+  color: rgba(27, 26, 31, 0.9803921569);
   font-family: "Kalameh";
   text-align: right;
 }
-
 .satisfaction .satisfaction-desc span, .satisfaction .satisfaction-desc .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .satisfaction .satisfaction-desc a {
   font-family: "Yekan Bakh";
   font-weight: 500;
   font-size: 16px;
   color: #5B5B6B;
 }
-
 .satisfaction .satisfaction-desc p {
   width: 80%;
   margin-top: 45px;
   font-size: 15px;
-  color: #A09CAD;
+  color: #a09cad;
   line-height: 1.8;
 }
-
 .satisfaction .satisfaction-img {
   position: relative;
-  background-color: #D8DBDE;
+  background-color: #d8dbde;
   padding: 11px;
   border-radius: 1px;
 }
-
 .satisfaction .satisfaction-img img {
   width: 100%;
   height: 100%;
 }
-
 .satisfaction .satisfaction-img .play {
   position: absolute;
   top: calc(50% - 40px);
@@ -1001,10 +874,9 @@ p {
   height: 80px;
   padding: 5px;
   background: rgba(255, 255, 255, 0.5);
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   border-radius: 50%;
 }
-
 .satisfaction .satisfaction-img .play .play-bg {
   width: 100%;
   height: 100%;
@@ -1022,27 +894,23 @@ p {
   padding: 60px 0;
   text-align: center;
 }
-
 .blog .blog-title {
   margin-bottom: 60px;
 }
-
 .blog .blog-title h2 {
   font-size: 34px;
-  color: #1B1A1FFA;
+  color: rgba(27, 26, 31, 0.9803921569);
   font-family: "Kalameh";
   text-align: center;
 }
-
 .blog .blog-title span, .blog .blog-title .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .blog .blog-title a {
   position: relative;
   font-size: 14px;
   color: #5B5B6B;
   font-family: "Yekan Bakh";
 }
-
 .blog .blog-title span::after, .blog .blog-title .permissions .permissions-item .permissions-desc a::after, .permissions .permissions-item .permissions-desc .blog .blog-title a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -20px;
   left: 50%;
@@ -1051,33 +919,27 @@ p {
   border-bottom: 2px solid #08C0F8;
   border-radius: 50%;
 }
-
 .blog .blog-item a.card-title {
   color: #1C1C1F;
 }
-
 .blog .blog-item a.card-title:hover {
   color: #08C0F8 !important;
 }
-
 .blog .blog-item a.card-title h5 {
   font-size: 19px;
   font-family: "Yekan Bakh";
   font-weight: 700;
   margin-bottom: 15px;
 }
-
 .blog .blog-item p {
   color: #878793;
   font-size: 13px;
   line-height: 24px;
 }
-
 .blog .blog-item a {
   font-size: 13px;
   color: #08C0F8;
 }
-
 .blog button {
   color: #ffffff;
   background-color: #08C0F8;
@@ -1087,23 +949,19 @@ p {
   transition: 0.25s;
   box-shadow: 0 0 0 1em transparent;
 }
-
 .blog button:hover {
   animation: primary 1s;
 }
-
 @keyframes primary {
   0% {
     box-shadow: 0 0 0 0 #08C0F8;
   }
 }
-
 @keyframes warning {
   0% {
     box-shadow: 0 0 0 0 #F5AD57;
   }
 }
-
 @keyframes other {
   0% {
     box-shadow: 0 0 0 0 white;
@@ -1116,60 +974,51 @@ p {
 .contact-us {
   padding: 50px 0;
   background: url(../images/contact-us.png) no-repeat;
-  background-color: #08c0f8;
+  background-color: rgb(8, 192, 248);
   background-size: cover;
 }
-
 .contact-us h5 {
   font-size: 22px;
   font-family: "Yekan Bakh";
   color: #ffffff;
 }
-
 .contact-us span, .contact-us .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .contact-us a {
   font-size: 11px;
   font-family: "Gilroy";
   color: #ffffff;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
 }
-
 .contact-us .contact-info {
   align-items: center;
   margin: 0 auto;
 }
-
 .contact-us .contact-info .info-item:first-child {
   margin-left: 70px;
 }
-
 .contact-us .contact-info .info-item {
   display: flex;
   align-items: center;
   text-align: end;
 }
-
 .contact-us .contact-info .info-item img {
   padding: 16px;
   border: 1.4px solid #ffffff;
   border-radius: 50%;
 }
-
 .contact-us .contact-info .info-item section {
   margin-left: 20px;
 }
-
 .contact-us .contact-info .info-item section p {
   font-size: 14px;
   color: #ffffff;
   font-size: "Gilroy";
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   margin-bottom: 0;
 }
-
 .contact-us .contact-info .info-item section a {
   font-size: 22px;
   color: #ffffff;
-  letter-spacing: .06em;
+  letter-spacing: 0.06em;
   font-family: "Gilroy";
 }
 
@@ -1180,12 +1029,10 @@ p {
   padding: 80px 0 0 0;
   background: linear-gradient(99.87deg, rgba(27, 26, 31, 0.98) 1.39%, rgba(34, 33, 39, 0.98) 28.4%, rgba(23, 23, 27, 0.98) 66.7%, rgba(27, 26, 31, 0.98) 98.14%);
 }
-
 .footer .footer-desc .desc-title {
   padding-right: 20px;
   border-right: 3px solid #08C0F8;
 }
-
 .footer .footer-desc .desc-title h3 {
   font-size: 30px;
   color: #ffffff;
@@ -1193,101 +1040,84 @@ p {
   text-align: right;
   margin-bottom: 0;
 }
-
 .footer .footer-desc .desc-title span, .footer .footer-desc .desc-title .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .footer .footer-desc .desc-title a {
   font-size: 18px;
   color: #ffffff;
   font-family: "Kalameh";
   text-align: right;
 }
-
 .footer .footer-desc p {
   font-size: 16px;
   margin: 20px 0;
-  color: #908C9C;
+  color: #908c9c;
   line-height: 26px;
   text-align: justify;
 }
-
 .footer .footer-desc a {
   font-size: 13px;
   color: #08C0F8;
 }
-
 .footer .quick-access {
   text-align: start;
 }
-
 .footer .quick-access h5 {
   font-size: 16px;
   font-family: "Yekan Bakh";
   color: #ffffff;
   margin-bottom: 25px;
 }
-
 .footer .quick-access ul {
   display: flex;
   flex-wrap: wrap;
 }
-
 .footer .quick-access ul li {
   width: 45%;
   font-size: 15px;
   font-family: "Yekan Bakh";
-  opacity: .7;
+  opacity: 0.7;
   margin-bottom: 20px;
 }
-
 .footer .quick-access ul li a {
   color: #ffffff;
 }
-
 .footer .connect .connect-info {
   padding: 35px 30px;
-  border: 1.5px dashed #47464A;
+  border: 1.5px dashed #47464a;
   border-radius: 7px;
 }
-
 .footer .connect .connect-info h3 {
   font-size: 20px;
   font-family: "Yekan Bakh";
   color: #ffffff;
   margin-bottom: 25px;
 }
-
 .footer .connect .connect-info ul {
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
-
 .footer .connect .connect-info ul li {
   display: flex;
   align-items: center;
 }
-
 .footer .connect .connect-info ul li:last-child {
   margin-right: 40px;
 }
-
 .footer .connect .connect-info ul a {
   margin-left: 15px;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   color: #ffffff;
 }
-
 .footer .connect .connect-info ul a.email {
   font-size: 17px;
   font-family: "Gilroy" !important;
 }
-
 .footer .connect .connect-info ul a.phone {
   font-size: 19px;
   font-family: "Yekan Bakh" !important;
 }
-
 .footer .connect .social {
-  border: 1.5px dashed #47464A;
+  border: 1.5px dashed #47464a;
   border-top: 0;
   border-radius: 7px;
   padding: 35px 30px;
@@ -1295,26 +1125,22 @@ p {
   align-items: center;
   justify-content: space-between;
 }
-
 .footer .connect .social h5 {
   font-size: 16px;
   font-family: "Yekan Bakh";
   color: #ffffff;
   margin: 0;
 }
-
 .footer .connect .social span, .footer .connect .social .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .footer .connect .social a {
   font-size: 12px;
   font-family: "Gilroy";
-  color: #6D6A78;
-  letter-spacing: .01em;
+  color: #6d6a78;
+  letter-spacing: 0.01em;
 }
-
 .footer .connect .social ul {
   display: flex;
   align-items: center;
 }
-
 .footer .connect .social ul li {
   width: 50px;
   height: 50px;
@@ -1325,30 +1151,236 @@ p {
   background-color: #333238;
   margin-right: 15px;
 }
-
 .footer .connect .social ul li a {
   color: #ffffff;
 }
-
 .footer .connect .social ul li a svg {
   font-size: 20px;
 }
-
 .footer .copyright {
   margin-top: 80px;
-  border-top: 1.5px dashed #47464A;
+  border-top: 1.5px dashed #47464a;
   padding: 30px 0;
 }
-
 .footer .copyright p {
   font-size: 13px;
   font-family: "Gilroy";
-  color: #6D6A78;
+  color: #6d6a78;
   margin: 0;
-  letter-spacing: .01em;
-  opacity: .9;
+  letter-spacing: 0.01em;
+  opacity: 0.9;
   text-transform: uppercase;
   word-spacing: 2px;
+}
+
+.blog-header {
+  padding: 90px 0 115px 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)), url("../images/blog/blog-header.png");
+  background-size: cover;
+}
+.blog-header .blog-header-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.blog-header .blog-header-title h3 {
+  font-size: 50px;
+  color: #201f23;
+  font-family: "Kalameh";
+  text-align: center;
+  margin-left: 10px;
+}
+.blog-header .blog-header-title form {
+  display: flex;
+  gap: 7px;
+}
+.blog-header .blog-header-title form .blog-header-search {
+  width: 340px;
+}
+.blog-header .blog-header-title form .blog-header-search input {
+  padding: 0 20px;
+  height: 55px;
+  background: rgba(255, 255, 255, 0.5) !important;
+  border: 1.3px solid #e0e3eb !important;
+  backdrop-filter: blur(15px);
+  border-radius: 2px !important;
+}
+.blog-header .blog-header-title form .blog-header-search input:focus {
+  border-left: 0 !important;
+}
+.blog-header .blog-header-title form .blog-header-search input::placeholder {
+  font-family: "Yekan Bakh";
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 23px;
+  color: #1f1e23;
+  opacity: 0.3;
+}
+.blog-header .blog-header-title form .blog-header-search span, .blog-header .blog-header-title form .blog-header-search .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .blog-header .blog-header-title form .blog-header-search a {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  border: 1.3px solid #e0e3eb !important;
+  backdrop-filter: blur(15px);
+  border-radius: 2px !important;
+  border-right: 0 !important;
+}
+.blog-header .blog-header-title form .blog-header-select {
+  width: 178px;
+}
+.blog-header .blog-header-title form .blog-header-select select {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1.3px solid #e0e3eb !important;
+  backdrop-filter: blur(15px);
+  border-radius: 2px !important;
+  height: 55px;
+  font-family: "Yekan Bakh";
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 23px;
+  color: rgba(31, 30, 35, 0.3);
+}
+
+.products-header {
+  padding: 90px 0 115px 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)), url("../images/blog/blog-header.png");
+  background-size: cover;
+}
+.products-header .products-header-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.products-header .products-header-title h3 {
+  font-size: 50px;
+  color: #201f23;
+  font-family: "Kalameh";
+  text-align: center;
+  margin-left: 10px;
+}
+.products-header .products-header-title form {
+  display: flex;
+  gap: 7px;
+}
+.products-header .products-header-title form .products-header-search {
+  width: 340px;
+}
+.products-header .products-header-title form .products-header-search input {
+  padding: 0 20px;
+  height: 55px;
+  background: rgba(255, 255, 255, 0.5) !important;
+  border: 1.3px solid #e0e3eb !important;
+  backdrop-filter: blur(15px);
+  border-radius: 2px !important;
+}
+.products-header .products-header-title form .products-header-search input:focus {
+  border-left: 0 !important;
+}
+.products-header .products-header-title form .products-header-search input::placeholder {
+  font-family: "Yekan Bakh";
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 23px;
+  color: #1f1e23;
+  opacity: 0.3;
+}
+.products-header .products-header-title form .products-header-search span, .products-header .products-header-title form .products-header-search .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .products-header .products-header-title form .products-header-search a {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  border: 1.3px solid #e0e3eb !important;
+  backdrop-filter: blur(15px);
+  border-radius: 2px !important;
+  border-right: 0 !important;
+}
+.products-header .products-header-title form .products-header-select {
+  width: 178px;
+}
+.products-header .products-header-title form .products-header-select select {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1.3px solid #e0e3eb !important;
+  backdrop-filter: blur(15px);
+  border-radius: 2px !important;
+  height: 55px;
+  font-family: "Yekan Bakh";
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 23px;
+  color: rgba(31, 30, 35, 0.3);
+}
+
+.products-content {
+  padding: 100px 0;
+}
+.products-content .products-item {
+  width: fit-content;
+  padding: 35px 70px 30px 70px;
+  border: 1.3px solid #EFF1F8;
+  text-align: center;
+}
+.products-content .products-item .products-img {
+  position: relative;
+}
+.products-content .products-item .products-img .img-desc {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 99%;
+  height: 40px;
+  background-color: rgba(21, 24, 34, 0.7490196078);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Gilroy";
+  color: #ffffff;
+  letter-spacing: 3px;
+  border-radius: 0 0 5px 5px;
+}
+.products-content .products-item a {
+  color: #1C1C1F;
+}
+.products-content .products-item a h3 {
+  margin: 30px 0 15px 0;
+  font-size: 18px;
+  font-family: "Yekan Bakh";
+  font-weight: 700;
+}
+.products-content .products-item span, .products-content .products-item .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .products-content .products-item a {
+  font-size: 17px;
+  color: #08C0F8;
+  font-family: "Yekan Bakh";
+}
+.products-content .pagination {
+  margin-bottom: 50px;
+}
+.products-content .pagination ul {
+  margin: 0 auto;
+  display: flex;
+  gap: 13px;
+}
+.products-content .pagination ul li {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #e7e9ef;
+  border-radius: 50%;
+}
+.products-content .pagination ul li.active {
+  background: #f88c3d;
+  box-shadow: 0px 12px 40px rgba(248, 140, 61, 0.07);
+  border: 0;
+}
+.products-content .pagination ul li.active a {
+  color: #ffffff;
+}
+.products-content .pagination ul li a {
+  font-family: "Yekan Bakh";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 31px;
+  color: #5a5a6b;
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -1359,6 +1391,7 @@ p {
   .header .header-content .header-desc {
     width: 500px;
   }
+
   .feedback .prev {
     top: 65px;
     left: 125px !important;
@@ -1368,7 +1401,6 @@ p {
     right: 125px !important;
   }
 }
-
 /* Large devices (desktops, 992px and up) */
 @media only screen and (max-width: 992px) {
   .header .navbar-collapse {
@@ -1390,9 +1422,11 @@ p {
   .header .header-content .header-img {
     display: none;
   }
+
   .brands .brands-item {
     direction: ltr !important;
   }
+
   .feedback .prev {
     top: 100px !important;
     left: 100px !important;
@@ -1401,12 +1435,14 @@ p {
     top: 100px !important;
     right: 100px !important;
   }
+
   .permissions .permissions-desc h5 {
     font-size: 15px !important;
   }
   .permissions .permissions-desc span, .permissions .permissions-item .permissions-desc a {
     font-size: 12px;
   }
+
   .satisfaction .satisfaction-desc {
     text-align: center;
     margin-bottom: 50px;
@@ -1418,19 +1454,32 @@ p {
     width: 100%;
     text-align: justify;
   }
+
   .contact-us .contact-info .info-item:first-child {
     margin-left: 20px !important;
   }
-}
 
+  .blog-header h3,
+.products-header h3 {
+    width: 100%;
+    text-align: center !important;
+  }
+  .blog-header form,
+.products-header form {
+    width: 100%;
+    justify-content: center;
+  }
+}
 /* Medium devices (tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
   .about-us .about-content ul {
     width: 85% !important;
   }
+
   .products .products-item {
     margin: 0 auto;
   }
+
   .feedback .myFeedback {
     width: 90% !important;
   }
@@ -1444,7 +1493,6 @@ p {
     display: none !important;
   }
 }
-
 /* Small devices (landscape phones, 576px and up) */
 @media only screen and (max-width: 576px) {
   .header .header-content {
@@ -1457,22 +1505,27 @@ p {
   .header .header-content .header-desc {
     width: 100%;
   }
+
   .brands {
     padding-left: 15px;
     padding-right: 15px;
   }
+
   .about-us {
     padding-left: 15px;
     padding-right: 15px;
   }
+
   .consulting-form {
     padding-left: 15px;
     padding-right: 15px;
   }
+
   .blog {
     padding-left: 15px;
     padding-right: 15px;
   }
+
   .contact-us {
     padding-left: 15px;
     padding-right: 15px;
@@ -1485,14 +1538,17 @@ p {
     margin-bottom: 20px;
     margin-left: 0 !important;
   }
+
   .permissions {
     padding-left: 15px;
     padding-right: 15px;
   }
+
   .satisfaction {
     padding-left: 15px;
     padding-right: 15px;
   }
+
   .footer {
     padding-left: 15px;
     padding-right: 15px;
@@ -1518,5 +1574,19 @@ p {
     margin: 0 auto;
     margin-top: 20px;
   }
-}
-/*# sourceMappingURL=index.css.map */
+
+  .blog-header form,
+.products-header form {
+    flex-wrap: wrap;
+  }
+  .blog-header form .blog-header-search,
+.blog-header form .blog-header-select,
+.blog-header form .products-header-search,
+.blog-header form .products-header-select,
+.products-header form .blog-header-search,
+.products-header form .blog-header-select,
+.products-header form .products-header-search,
+.products-header form .products-header-select {
+    width: 100% !important;
+  }
+}/*# sourceMappingURL=index.css.map */

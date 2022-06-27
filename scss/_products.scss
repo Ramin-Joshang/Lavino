@@ -1,0 +1,158 @@
+// Variables & Mixin
+@import "./base";
+
+.products-header {
+    padding: 90px 0 115px 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)), url("../images/blog/blog-header.png");
+    background-size: cover;
+
+    .products-header-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        h3 {
+            @include main-title(50px, #201f23, center);
+            margin-left: 10px;
+        }
+
+        form {
+            display: flex;
+            gap: 7px;
+
+            .products-header-search {
+                width: 340px;
+                input {
+                    padding: 0 20px;
+                    height: 55px;
+                    background: rgba(255, 255, 255, 0.5) !important;
+                    border: 1.3px solid #e0e3eb !important;
+                    backdrop-filter: blur(15px);
+                    border-radius: 2px !important;
+
+                    &:focus {
+                        border-left: 0 !important;
+                    }
+
+                    &::placeholder {
+                        font-family: $Yekan;
+                        font-size: 15px;
+                        font-weight: 700;
+                        line-height: 23px;
+                        color: #1f1e23;
+                        opacity: 0.3;
+                    }
+                }
+                span {
+                    background-color: rgba(255, 255, 255, 0.5) !important;
+                    border: 1.3px solid #e0e3eb !important;
+                    backdrop-filter: blur(15px);
+                    border-radius: 2px !important;
+                    border-right: 0 !important;
+                }
+            }
+            .products-header-select {
+                width: 178px;
+
+                select {
+                    background: rgba(255, 255, 255, 0.5);
+                    border: 1.3px solid #e0e3eb !important;
+                    backdrop-filter: blur(15px);
+                    border-radius: 2px !important;
+                    height: 55px;
+                    font-family: $Yekan;
+                    font-size: 15px;
+                    font-weight: 700;
+                    line-height: 23px;
+                    color: rgb(31, 30, 35, 0.3);
+                    // opacity: 0.3;
+                }
+            }
+        }
+    }
+}
+
+.products-content {
+    padding: 100px 0;
+    .products-item {
+        width: fit-content;
+        padding: 35px 70px 30px 70px;
+        border: 1.3px solid $sliderBorder;
+        text-align: center;
+
+        .products-img {
+            position: relative;
+
+            .img-desc {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 99%;
+                height: 40px;
+                background-color: $img-desc;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: $Gilroy;
+                color: $white;
+                letter-spacing: 3px;
+                border-radius: 0 0 5px 5px;
+            }
+        }
+
+        a {
+            color: $dark;
+
+            h3 {
+                margin: 30px 0 15px 0;
+                font-size: 18px;
+                font-family: $Yekan;
+                font-weight: 700;
+            }
+        }
+
+        span {
+            font-size: 17px;
+            color: $primary;
+            font-family: $Yekan;
+        }
+    }
+    .pagination {
+        margin-bottom: 50px;
+        // text-align: center;
+        ul {
+            margin: 0 auto;
+            display: flex;
+            gap: 13px;
+
+            li {
+                width: 46px;
+                height: 46px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #ffffff;
+                border: 1px solid #e7e9ef;
+                border-radius: 50%;
+
+                &.active {
+                    background: #f88c3d;
+                    box-shadow: 0px 12px 40px rgba(248, 140, 61, 0.07);
+                    border: 0;
+                    a {
+                        color: #ffffff;
+                    }
+                }
+                a {
+                    font-family: $Yekan;
+                    font-weight: 500;
+                    font-size: 20px;
+                    line-height: 31px;
+                    color: #5a5a6b;
+                }
+            }
+        }
+    }
+}

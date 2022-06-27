@@ -1,11 +1,17 @@
 // Variables & Mixing
-@import './base';
+@import "./base";
 
 // Reset styles
-@import './reset';
+@import "./reset";
 
 // Main styles
-@import './styles';
+@import "./styles";
+
+// Blog styles
+@import "./blog.scss";
+
+// Products styles
+@import "./products";
 
 // Responsive styles
-@import './responsive';
+@import "./responsive";
