@@ -1,0 +1,179 @@
+// Variables & Mixin
+@import "./base";
+
+.blog-header {
+    padding: 90px 0 115px 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)), url("../images/blog/blog-header.png");
+    background-size: cover;
+
+    .blog-header-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        h3 {
+            @include main-title(50px, #201f23, center);
+            margin-left: 10px;
+        }
+
+        form {
+            display: flex;
+            gap: 7px;
+
+            .blog-header-search {
+                width: 340px;
+                input {
+                    padding: 0 20px;
+                    height: 55px;
+                    background: rgba(255, 255, 255, 0.5) !important;
+                    border: 1.3px solid #e0e3eb !important;
+                    backdrop-filter: blur(15px);
+                    border-radius: 2px !important;
+
+                    &:focus {
+                        border-left: 0 !important;
+                    }
+
+                    &::placeholder {
+                        font-family: $Yekan;
+                        font-size: 15px;
+                        font-weight: 700;
+                        line-height: 23px;
+                        color: #1f1e23;
+                        opacity: 0.3;
+                    }
+                }
+                span {
+                    background-color: rgba(255, 255, 255, 0.5) !important;
+                    border: 1.3px solid #e0e3eb !important;
+                    backdrop-filter: blur(15px);
+                    border-radius: 2px !important;
+                    border-right: 0 !important;
+                }
+            }
+            .blog-header-select {
+                width: 178px;
+
+                select {
+                    background: rgba(255, 255, 255, 0.5);
+                    border: 1.3px solid #e0e3eb !important;
+                    backdrop-filter: blur(15px);
+                    border-radius: 2px !important;
+                    height: 55px;
+                    font-family: $Yekan;
+                    font-size: 15px;
+                    font-weight: 700;
+                    line-height: 23px;
+                    color: rgb(31, 30, 35, 0.3);
+                    // opacity: 0.3;
+                }
+            }
+        }
+    }
+    .blog-header-categories {
+        margin-top: 45px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        button {
+            padding: 16px 20px;
+            background: rgba(255, 255, 255, 0.5);
+            border: 1.3px solid #e0e3eb;
+            backdrop-filter: blur(15px);
+            border-radius: 2px;
+            font-family: $Yekan;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 23px;
+            color: #1f1e23;
+            margin-left: 20px 10px;
+            transition: 0.3s all linear;
+
+            &.active,
+            &:hover {
+                background: #f88c3d;
+                box-shadow: 0px 15px 25px rgba(248, 140, 61, 0.04);
+                color: #ffffff;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.blog-content {
+    background-color: #f9f9f9;
+
+    .main-articles {
+        margin-bottom: 75px;
+        margin-top: -70px;
+
+        .main-articles-item {
+            position: relative;
+
+            .item-desc {
+                position: absolute;
+                bottom: 38px;
+                right: 33px;
+                .date-comment {
+                    margin-bottom: 15px;
+                    display: flex;
+                    gap: 25px;
+
+                    span {
+                        font-family: $Yekan;
+                        font-weight: 500;
+                        font-size: 12px;
+                        line-height: 19px;
+                        color: #ffffff;
+                    }
+                }
+                h5 {
+                    font-family: $Yekan;
+                    font-weight: 400;
+                    font-size: 21px;
+                    line-height: 31px;
+                    color: #ffffff;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .blog-articles {
+        font-family: $Yekan;
+        .blog-articles-item {
+            padding: 17px;
+            background: #ffffff;
+            box-shadow: 0px 25px 250px rgba(0, 0, 0, 0.01);
+            border-radius: 1px;
+            display: flex;
+            gap: 28px;
+
+            h5 {
+                font-weight: 700;
+                font-size: 19px;
+                line-height: 31px;
+                color: #201f23;
+            }
+            p {
+                font-weight: 500;
+                font-size: 13px;
+                line-height: 21px;
+                color: #5a5a6b;
+                margin: 10px 0 20px 0;
+                word-spacing: 1.2px;
+            }
+            .date-comment {
+                display: flex;
+                gap: 25px;
+                span {
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 19px;
+                    color: #5a5a6b;
+                }
+            }
+        }
+    }
+}

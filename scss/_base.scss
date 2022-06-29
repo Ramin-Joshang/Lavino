@@ -1,27 +1,27 @@
 // Theme color
-$darkTitle:#1B1A1FFA;
-$dark:#1C1C1F;
-$listItem:#2A292F;
-$img-desc: #151822BF;
-$gray:#5B5B6B;
-$darkGray:#878793;
-$lightGray:#A09CAD;
-$lightBtn:#F7F9FC;
-$form:rgba(255, 255, 255, 0.5);
-$sliderBorder:#EFF1F8;
-$inputBorder:#E0E3EB;
-$placeholder:rgba(31, 30, 35, 0.3);
-$white:#ffffff;
-$primary:#08C0F8;
-$warning:#F5AD57;
+$darkTitle: #1b1a1ffa;
+$dark: #1c1c1f;
+$listItem: #2a292f;
+$img-desc: #151822bf;
+$gray: #5b5b6b;
+$darkGray: #878793;
+$lightGray: #a09cad;
+$lightBtn: #f7f9fc;
+$form: rgba(255, 255, 255, 0.5);
+$sliderBorder: #eff1f8;
+$inputBorder: #e0e3eb;
+$placeholder: rgba(31, 30, 35, 0.3);
+$white: #ffffff;
+$primary: #08c0f8;
+$warning: #f5ad57;
 
 // Fonts
-$Yekan:'Yekan Bakh';
-$Kalameh:'Kalameh';
-$Gilroy:'Gilroy';
+$Yekan: "Yekan Bakh";
+$Kalameh: "Kalameh";
+$Gilroy: "Gilroy";
 
 // Mixin
-@mixin btn($color, $bgColor, $opacity:100%) {
+@mixin btn($color, $bgColor, $opacity: 100%) {
     color: $color;
     background-color: $bgColor;
     padding: 13px 30px;
@@ -37,14 +37,11 @@ $Gilroy:'Gilroy';
         &:hover {
             animation: primary 1s;
         }
-    }
-
-    @else if($shadow==$warning) {
+    } @else if($shadow==$warning) {
         &:hover {
             animation: warning 1s;
         }
     }
-
 
     @keyframes primary {
         0% {
@@ -63,13 +60,9 @@ $Gilroy:'Gilroy';
             box-shadow: 0 0 0 0 white;
         }
     }
-
-
-
 }
 
-
-@mixin border($height, $left, $bottom, $color, $opacity:100%) {
+@mixin border($height, $left, $bottom, $color, $opacity: 100%) {
     position: absolute;
     width: 408px;
     height: $height;
@@ -80,7 +73,7 @@ $Gilroy:'Gilroy';
     opacity: $opacity;
 }
 
-@mixin main-title($font, $color, $align:right) {
+@mixin main-title($font, $color, $align: right) {
     font-size: $font;
     color: $color;
     font-family: $Kalameh;
@@ -94,7 +87,7 @@ $Gilroy:'Gilroy';
     font-family: $Yekan;
 
     &::after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: -20px;
         left: 50%;
@@ -120,5 +113,27 @@ $Gilroy:'Gilroy';
     &:focus {
         border-color: $inputBorder;
         background-color: $form;
+    }
+}
+
+@mixin border-title {
+    position: relative;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 29px;
+    color: #3f3c48;
+    padding-bottom: 16px;
+    margin-bottom: 30px;
+    border-bottom: 1.3px solid #dfe1e4;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        right: 0;
+        width: 125px;
+        height: 1.3px;
+        background-color: #f88c3d;
+        z-index: 10;
     }
 }

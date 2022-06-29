@@ -1,0 +1,253 @@
+body {
+    background-color: #f3f3f3;
+}
+.products-page-links {
+    padding: 17px 0;
+    // background-color: #f3f3f3;
+    font-family: $Yekan;
+
+    ul {
+        display: flex;
+        // gap: 10px;
+        margin: 0;
+        flex-wrap: wrap;
+
+        li {
+            margin: 0 0 0 10px;
+
+            a {
+                margin-right: 10px;
+                font-weight: 500;
+                font-size: 13px;
+                line-height: 20px;
+                text-align: right;
+                color: #5a5a6b;
+            }
+        }
+    }
+}
+
+.products-page-item {
+    font-family: $Yekan;
+    background-color: #ffffff;
+
+    .item-content {
+        padding: 35px 0 60px 0;
+        display: flex;
+        align-items: center;
+        gap: 45px;
+
+        .title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h3 {
+                font-weight: 900;
+                font-size: 26px;
+                line-height: 40px;
+                color: #3f3c48;
+            }
+        }
+        ul.info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px 0;
+
+            li {
+                margin-left: 15px;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 22px;
+                color: #5b5b6b;
+                span {
+                    color: #f88c3d;
+                    margin-right: 9px;
+                }
+            }
+        }
+        p.desc-title {
+            margin: 30px 0 15px 0;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 22px;
+            color: #5b5b6b;
+        }
+
+        p.desc-content {
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 28px;
+            color: #3f3c48;
+            margin-bottom: 36px;
+            text-align: justify;
+        }
+        .btn {
+            background: #fcfcfd;
+            border: 1.3px dashed #dfe1e4;
+            border-radius: 6px;
+            padding: 8px;
+
+            .price {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 23px;
+                line-height: 36px;
+                color: #2abfed;
+                padding: 0 25px 0 0;
+                background-color: transparent;
+                margin-left: 140px;
+            }
+
+            .add {
+                padding: 16px 25px;
+                background: #2abfed;
+                border-radius: 2px;
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 23px;
+                color: #ffffff;
+                svg {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+.products-page-item-desc {
+    margin-top: 10px;
+    padding: 40px 0;
+    background-color: #ffffff;
+
+    .item-desc-content {
+        font-family: $Yekan;
+
+        h3 {
+            @include border-title;
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 29px;
+            text-align: justify;
+            color: #3f3c48;
+        }
+    }
+}
+
+.products-page-feedback {
+    padding: 50px 0;
+
+    .feedback-content {
+        font-family: $Yekan;
+
+        h3 {
+            @include border-title;
+        }
+
+        .feedback-item {
+            padding: 30px 40px;
+            background-color: #ffffff;
+            border-radius: 2px;
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+
+            .title {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                h5 {
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 28px;
+                    color: #201f23;
+                }
+                .date span {
+                    font-weight: 500;
+                    font-size: 13px;
+                    line-height: 20px;
+                    margin-right: 5px;
+                    color: #5a5a6b;
+                }
+            }
+            p {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 29px;
+                color: #3f3c48;
+                text-align: justify;
+                margin: 24px 0;
+            }
+            .reply span {
+                font-weight: 700;
+                font-size: 15px;
+                line-height: 23px;
+                color: #f88c3d;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+/* ----------------------------------------------------------------------- */
+/*                             Consulting form                             */
+/* ----------------------------------------------------------------------- */
+.products-page-form {
+    margin-bottom: 200px;
+    h3 {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 27px;
+        text-align: center;
+        color: #201f23;
+    }
+
+    form {
+        margin: 65px auto 0 auto;
+
+        span {
+            position: relative;
+            background-color: $form;
+            border-left: none;
+            border-color: #e0e3eb;
+            border-radius: 2px !important;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                width: 1.3px;
+                height: 30px;
+                background-color: #d2d5db;
+            }
+        }
+
+        input {
+            position: relative;
+            @include input;
+            font-size: 15px !important;
+            // padding: 10px 0;
+            height: 55px;
+        }
+        .rating {
+            position: absolute;
+            left: 30px;
+            top: 12.5px;
+        }
+        textarea {
+            @include input;
+            border: solid 1px $inputBorder;
+            resize: both !important;
+        }
+
+        button {
+            @include btn($white, $warning);
+            @include btnEffect($warning);
+            width: fit-content;
+            margin: 0 auto;
+        }
+    }
+}
