@@ -81,6 +81,27 @@ p {
 /* -------------------------------------------------------------------------- */
 /*                                 Base Styles                                */
 /* -------------------------------------------------------------------------- */
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #fff !important;
+}
+
+::selection {
+  background: #f88c3d;
+  color: #fff;
+}
+
+.navbar-toggler-icon {
+  background-image: url("../images/menu.png");
+}
+
+.navbar-toggler:focus {
+  box-shadow: unset !important;
+}
+
 /* -------------------------------------------------------------------------- */
 /*                                   Header                                   */
 /* -------------------------------------------------------------------------- */
@@ -102,7 +123,22 @@ p {
   margin-left: 30px;
   font-size: 15px;
 }
+.header .navbar ul a.active-link {
+  color: #f5ad57;
+}
+.header .navbar ul a::after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px #f5ad57;
+  transform: scaleX(0);
+  transition: transform 300ms ease-in-out;
+  transform-origin: 100% 50%;
+}
+.header .navbar ul a:hover:after {
+  transform: scaleX(1);
+}
 .header .navbar .dark-mode {
+  position: relative;
   background-color: rgb(60, 58, 63);
   border-radius: 25px;
   margin-left: 6px;
@@ -125,6 +161,26 @@ p {
   padding: 13px 30px;
   border-radius: 25px;
   font-size: 15px;
+  transition: 0.25s;
+  box-shadow: 0 0 0 1em transparent;
+}
+.header .navbar .contact-us-btn:hover {
+  animation: primary 1s;
+}
+@keyframes primary {
+  0% {
+    box-shadow: 0 0 0 0 #08c0f8;
+  }
+}
+@keyframes warning {
+  0% {
+    box-shadow: 0 0 0 0 #f5ad57;
+  }
+}
+@keyframes other {
+  0% {
+    box-shadow: 0 0 0 0 white;
+  }
 }
 .header .header-content {
   width: 100%;
@@ -135,6 +191,7 @@ p {
   color: #ffffff;
   font-family: "Gilroy";
   word-spacing: 3px;
+  animation: bounce 2s forwards;
 }
 .header .header-content p.header-trust span, .header .header-content p.header-trust .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .header .header-content p.header-trust a {
   color: #08c0f8;
@@ -144,6 +201,7 @@ p {
   margin: 25px 0;
   color: #ffffff;
   font-family: "Kalameh";
+  animation: bounce 2s forwards;
 }
 .header .header-content .header-desc {
   width: 580px;
@@ -151,6 +209,7 @@ p {
   color: #a09cad;
   line-height: 1.8;
   margin-bottom: 50px;
+  animation: bounce 2s forwards;
 }
 .header .header-content .header-btn {
   color: #ffffff;
@@ -179,6 +238,10 @@ p {
     box-shadow: 0 0 0 0 white;
   }
 }
+.header .header-content .header-btn img {
+  margin-left: 5px;
+  margin-bottom: 3px;
+}
 .header .header-content .header-img {
   position: absolute;
   bottom: -35px;
@@ -196,6 +259,7 @@ p {
 }
 .header .header-content .header-img img {
   z-index: 2;
+  animation: pulse 8s infinite;
 }
 .header .header-content .header-mouse {
   position: absolute;
@@ -211,13 +275,16 @@ p {
 /* -------------------------------------------------------------------------- */
 /*                                  About us                                  */
 /* -------------------------------------------------------------------------- */
-.about-us {
-  padding-bottom: 100px;
+.main-about-us {
+  padding: 100px;
 }
-.about-us .about-img {
+.main-about-us .about-img {
   position: relative;
 }
-.about-us .about-img .img-border {
+.main-about-us .about-img img {
+  animation: pulse 8s infinite;
+}
+.main-about-us .about-img .img-border {
   position: absolute;
   width: 408px;
   height: 510px;
@@ -228,34 +295,41 @@ p {
   opacity: 60%;
   z-index: -1;
 }
-.about-us .about-content h2 {
+.main-about-us .about-content h2 {
   font-size: 38px;
   color: rgba(27, 26, 31, 0.9803921569);
   font-family: "Kalameh";
   text-align: right;
+  animation: bounce 2s forwards;
+  animation: bounce 2s forwards;
 }
-.about-us .about-content p {
+.main-about-us .about-content p {
   font-size: 15px;
   margin: 25px 0;
   text-align: justify;
   line-height: 1.8;
   color: #a09cad;
+  animation: bounce 2s forwards;
 }
-.about-us .about-content ul {
+.main-about-us .about-content ul {
   width: 60%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  animation: bounce 2s forwards;
 }
-.about-us .about-content ul li {
+.main-about-us .about-content ul li {
   font-size: 17px;
   font-weight: 700;
   color: #2a292f;
 }
-.about-us .about-content ul li img {
+.main-about-us .about-content ul li:hover {
+  animation: shakeX 1s forwards;
+}
+.main-about-us .about-content ul li img {
   margin-left: 10px;
 }
-.about-us .about-content .lawino {
+.main-about-us .about-content .lawino {
   color: #ffffff;
   background-color: #f5ad57;
   padding: 13px 30px;
@@ -264,8 +338,9 @@ p {
   transition: 0.25s;
   box-shadow: 0 0 0 1em transparent;
   margin-left: 10px;
+  animation: fadeIn 2s forwards;
 }
-.about-us .about-content .lawino:hover {
+.main-about-us .about-content .lawino:hover {
   animation: warning 1s;
 }
 @keyframes primary {
@@ -283,7 +358,7 @@ p {
     box-shadow: 0 0 0 0 white;
   }
 }
-.about-us .about-content .questions {
+.main-about-us .about-content .questions {
   color: #1c1c1f;
   background-color: #f7f9fc;
   padding: 13px 30px;
@@ -291,8 +366,9 @@ p {
   font-size: 15px;
   transition: 0.25s;
   font-weight: 700;
+  animation: fadeIn 2s forwards;
 }
-.about-us .about-content .questions:hover {
+.main-about-us .about-content .questions:hover {
   color: #ffffff;
   background-color: #f5ad57;
   padding: 13px 30px;
@@ -318,6 +394,7 @@ p {
   color: rgba(27, 26, 31, 0.9803921569);
   font-family: "Kalameh";
   text-align: center;
+  animation: bounce 2s forwards;
 }
 .consulting-form .consulting-title span, .consulting-form .consulting-title .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .consulting-form .consulting-title a {
   position: relative;
@@ -338,6 +415,7 @@ p {
 .consulting-form form {
   width: 800px;
   margin: 65px auto 0 auto;
+  animation: fadeIn 2s forwards;
 }
 .consulting-form form span, .consulting-form form .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .consulting-form form a {
   position: relative;
@@ -370,6 +448,9 @@ p {
   border-color: #e0e3eb;
   background-color: rgba(255, 255, 255, 0.5);
 }
+.consulting-form form input:focus {
+  border-bottom: 1px solid #f5ad57;
+}
 .consulting-form form select {
   background-color: rgba(255, 255, 255, 0.5);
   border-right: none;
@@ -388,6 +469,9 @@ p {
   border-color: #e0e3eb;
   background-color: rgba(255, 255, 255, 0.5);
 }
+.consulting-form form select:focus {
+  border-bottom: 1px solid #f5ad57;
+}
 .consulting-form form textarea {
   background-color: rgba(255, 255, 255, 0.5);
   border-right: none;
@@ -403,6 +487,9 @@ p {
 .consulting-form form textarea:focus {
   border-color: #e0e3eb;
   background-color: rgba(255, 255, 255, 0.5);
+}
+.consulting-form form textarea:focus {
+  border-bottom: 1px solid #f5ad57;
 }
 .consulting-form form button {
   color: #ffffff;
@@ -434,6 +521,13 @@ p {
   }
 }
 
+/* ----------------------------------------------------------------------- */
+/*                                   brands                                */
+/* ----------------------------------------------------------------------- */
+.brands .brands-item {
+  animation: bounceIn 2s forwards;
+}
+
 /* -------------------------------------------------------------------------- */
 /*                                  Products                                  */
 /* -------------------------------------------------------------------------- */
@@ -449,6 +543,7 @@ p {
   color: rgba(27, 26, 31, 0.9803921569);
   font-family: "Kalameh";
   text-align: center;
+  animation: bounce 2s forwards;
 }
 .products .products-title span, .products .products-title .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .products .products-title a {
   position: relative;
@@ -470,6 +565,30 @@ p {
   width: fit-content;
   padding: 35px 70px 30px 70px;
   border: 1.3px solid #eff1f8;
+  animation: fadeIn 2s forwards;
+  position: relative;
+}
+.products .products-item:before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  top: calc(2px/ -1);
+  left: calc(2px/ -1);
+  background: linear-gradient(to right, #08c0f8 0%, #08c0f8 100%), linear-gradient(to top, #08c0f8 50%, transparent 50%), linear-gradient(to top, #08c0f8 50%, transparent 50%), linear-gradient(to right, #08c0f8 0%, #08c0f8 100%), linear-gradient(to left, #08c0f8 0%, #08c0f8 100%);
+  background-size: 100% 2px, 2px 200%, 2px 200%, 0% 2px, 0% 2px;
+  background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
+  background-repeat: no-repeat, no-repeat;
+  transition: transform 0.2s ease-in-out, background-position 0.2s ease-in-out, background-size 0.2s ease-in-out;
+  transform: scaleX(0) rotate(180deg);
+  transition-delay: 0.4s, 0.2s, 0s;
+  z-index: -1;
+}
+.products .products-item:hover:before {
+  background-size: 200% 2px, 2px 400%, 2px 400%, 55% 2px, 55% 2px;
+  background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+  transform: scaleX(1) rotate(180deg);
+  transition-delay: 0s, 0.2s, 0.4s;
 }
 .products .products-item .products-img {
   position: relative;
@@ -513,6 +632,7 @@ p {
   transition: 0.25s;
   box-shadow: 0 0 0 1em transparent;
   margin-top: 70px;
+  animation: fadeIn 2s forwards;
 }
 .products button:hover {
   animation: primary 1s;
@@ -553,6 +673,7 @@ p {
   color: #1c1c1f;
   font-family: "Kalameh";
   text-align: center;
+  animation: bounce 2s forwards;
 }
 .feedback .feedback-title span, .feedback .feedback-title .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .feedback .feedback-title a {
   position: relative;
@@ -603,6 +724,28 @@ p {
   border-radius: 50%;
   margin-bottom: 20px;
 }
+.feedback .slider .feedback-item .feedback-author img:hover {
+  transition: 0.25s;
+  box-shadow: 0 0 0 1em transparent;
+}
+.feedback .slider .feedback-item .feedback-author img:hover:hover {
+  animation: warning 1s;
+}
+@keyframes primary {
+  0% {
+    box-shadow: 0 0 0 0 #08c0f8;
+  }
+}
+@keyframes warning {
+  0% {
+    box-shadow: 0 0 0 0 #f5ad57;
+  }
+}
+@keyframes other {
+  0% {
+    box-shadow: 0 0 0 0 white;
+  }
+}
 .feedback .slider .feedback-item .feedback-author h5 {
   font-family: "Yekan Bakh";
   font-size: 16px;
@@ -625,6 +768,28 @@ p {
   background-color: #f5ad57;
   border-radius: 50%;
   color: #ffffff;
+}
+.feedback .slider button:hover {
+  transition: 0.25s;
+  box-shadow: 0 0 0 1em transparent;
+}
+.feedback .slider button:hover:hover {
+  animation: warning 1s;
+}
+@keyframes primary {
+  0% {
+    box-shadow: 0 0 0 0 #08c0f8;
+  }
+}
+@keyframes warning {
+  0% {
+    box-shadow: 0 0 0 0 #f5ad57;
+  }
+}
+@keyframes other {
+  0% {
+    box-shadow: 0 0 0 0 white;
+  }
 }
 .feedback .slider .prev {
   top: 65px;
@@ -651,6 +816,7 @@ p {
   color: rgba(27, 26, 31, 0.9803921569);
   font-family: "Kalameh";
   text-align: center;
+  animation: bounce 2s forwards;
 }
 .departments .departments-title span, .departments .departments-title .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .departments .departments-title a {
   position: relative;
@@ -674,6 +840,30 @@ p {
   border: 1.3px solid #eff1f8;
   padding: 30px 40px 35px 40px;
   margin-bottom: 35px;
+  animation: fadeInDown 2s forwards;
+  position: relative;
+}
+.departments .departments-item:before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  top: calc(2px/ -1);
+  left: calc(2px/ -1);
+  background: linear-gradient(to right, #08c0f8 0%, #08c0f8 100%), linear-gradient(to top, #08c0f8 50%, transparent 50%), linear-gradient(to top, #08c0f8 50%, transparent 50%), linear-gradient(to right, #08c0f8 0%, #08c0f8 100%), linear-gradient(to left, #08c0f8 0%, #08c0f8 100%);
+  background-size: 100% 2px, 2px 200%, 2px 200%, 0% 2px, 0% 2px;
+  background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
+  background-repeat: no-repeat, no-repeat;
+  transition: transform 0.2s ease-in-out, background-position 0.2s ease-in-out, background-size 0.2s ease-in-out;
+  transform: scaleX(0) rotate(180deg);
+  transition-delay: 0.4s, 0.2s, 0s;
+  z-index: -1;
+}
+.departments .departments-item:hover:before {
+  background-size: 200% 2px, 2px 400%, 2px 400%, 55% 2px, 55% 2px;
+  background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+  transform: scaleX(1) rotate(180deg);
+  transition-delay: 0s, 0.2s, 0.4s;
 }
 .departments .departments-item section {
   width: 75px;
@@ -684,6 +874,28 @@ p {
   border: 1.4px solid #eff1f8;
   border-radius: 50%;
   margin: 0 auto 30px auto;
+}
+.departments .departments-item section:hover {
+  transition: 0.25s;
+  box-shadow: 0 0 0 1em transparent;
+}
+.departments .departments-item section:hover:hover {
+  animation: primary 1s;
+}
+@keyframes primary {
+  0% {
+    box-shadow: 0 0 0 0 #08c0f8;
+  }
+}
+@keyframes warning {
+  0% {
+    box-shadow: 0 0 0 0 #f5ad57;
+  }
+}
+@keyframes other {
+  0% {
+    box-shadow: 0 0 0 0 white;
+  }
 }
 .departments .departments-item section.active {
   border: 0;
@@ -740,6 +952,7 @@ p {
   color: rgba(27, 26, 31, 0.9803921569);
   font-family: "Kalameh";
   text-align: center;
+  animation: bounce 2s forwards;
 }
 .permissions .permissions-title span, .permissions .permissions-title .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .permissions-title a {
   position: relative;
@@ -763,6 +976,30 @@ p {
   border-radius: 2px;
   display: flex;
   align-items: center;
+  animation: fadeInDown 2s forwards;
+  position: relative;
+}
+.permissions .permissions-item:before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  top: calc(2px/ -1);
+  left: calc(2px/ -1);
+  background: linear-gradient(to right, #f5ad57 0%, #f5ad57 100%), linear-gradient(to top, #f5ad57 50%, transparent 50%), linear-gradient(to top, #f5ad57 50%, transparent 50%), linear-gradient(to right, #f5ad57 0%, #f5ad57 100%), linear-gradient(to left, #f5ad57 0%, #f5ad57 100%);
+  background-size: 100% 2px, 2px 200%, 2px 200%, 0% 2px, 0% 2px;
+  background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
+  background-repeat: no-repeat, no-repeat;
+  transition: transform 0.2s ease-in-out, background-position 0.2s ease-in-out, background-size 0.2s ease-in-out;
+  transform: scaleX(0) rotate(180deg);
+  transition-delay: 0.4s, 0.2s, 0s;
+  z-index: -1;
+}
+.permissions .permissions-item:hover:before {
+  background-size: 200% 2px, 2px 400%, 2px 400%, 55% 2px, 55% 2px;
+  background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+  transform: scaleX(1) rotate(180deg);
+  transition-delay: 0s, 0.2s, 0.4s;
 }
 .permissions .permissions-item .permissions-img {
   padding: 20px 18px;
@@ -842,6 +1079,7 @@ p {
   color: rgba(27, 26, 31, 0.9803921569);
   font-family: "Kalameh";
   text-align: right;
+  animation: bounce 2s forwards;
 }
 .satisfaction .satisfaction-desc span, .satisfaction .satisfaction-desc .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .satisfaction .satisfaction-desc a {
   font-family: "Yekan Bakh";
@@ -861,6 +1099,7 @@ p {
   background-color: #d8dbde;
   padding: 11px;
   border-radius: 1px;
+  animation: pulse 6s infinite;
 }
 .satisfaction .satisfaction-img img {
   width: 100%;
@@ -876,6 +1115,26 @@ p {
   background: rgba(255, 255, 255, 0.5);
   border: 1px solid #ffffff;
   border-radius: 50%;
+  transition: 0.25s;
+  box-shadow: 0 0 0 1em transparent;
+}
+.satisfaction .satisfaction-img .play:hover {
+  animation: primary 1s;
+}
+@keyframes primary {
+  0% {
+    box-shadow: 0 0 0 0 #08c0f8;
+  }
+}
+@keyframes warning {
+  0% {
+    box-shadow: 0 0 0 0 #f5ad57;
+  }
+}
+@keyframes other {
+  0% {
+    box-shadow: 0 0 0 0 white;
+  }
 }
 .satisfaction .satisfaction-img .play .play-bg {
   width: 100%;
@@ -885,6 +1144,10 @@ p {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+}
+.satisfaction .satisfaction-img .play .play-bg img {
+  width: 22px;
+  height: 28px;
 }
 
 /* ----------------------------------------------------------------------- */
@@ -902,6 +1165,7 @@ p {
   color: rgba(27, 26, 31, 0.9803921569);
   font-family: "Kalameh";
   text-align: center;
+  animation: bounce 2s forwards;
 }
 .blog .blog-title span, .blog .blog-title .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .blog .blog-title a {
   position: relative;
@@ -918,6 +1182,14 @@ p {
   width: 94px;
   border-bottom: 2px solid #08c0f8;
   border-radius: 50%;
+}
+.blog .blog-item img:hover {
+  transform: scale(0.95);
+  transition: 500ms;
+}
+.blog .blog-item img:not(:hover) {
+  transform: scale(1);
+  transition: 500ms;
 }
 .blog .blog-item a.card-title {
   color: #1c1c1f;
@@ -939,6 +1211,18 @@ p {
 .blog .blog-item a {
   font-size: 13px;
   color: #08c0f8;
+  display: inline-block;
+}
+.blog .blog-item a:last-child::after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px #f5ad57;
+  transform: scaleX(0);
+  transition: transform 300ms ease-in-out;
+  transform-origin: 100% 50%;
+}
+.blog .blog-item a:last-child:hover:after {
+  transform: scaleX(1);
 }
 .blog button {
   color: #ffffff;
@@ -1005,6 +1289,9 @@ p {
   border: 1.4px solid #ffffff;
   border-radius: 50%;
 }
+.contact-us .contact-info .info-item img:hover {
+  animation: rubberBand 500ms forwards;
+}
 .contact-us .contact-info .info-item section {
   margin-left: 20px;
 }
@@ -1020,6 +1307,20 @@ p {
   color: #ffffff;
   letter-spacing: 0.06em;
   font-family: "Gilroy";
+}
+.contact-us .contact-info .info-item section a:hover {
+  color: #ffffff !important;
+}
+.contact-us .contact-info .info-item section a::after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px #ffffff;
+  transform: scaleX(0);
+  transition: transform 300ms ease-in-out;
+  transform-origin: 100% 50%;
+}
+.contact-us .contact-info .info-item section a:hover:after {
+  transform: scaleX(1);
 }
 
 /* ----------------------------------------------------------------------- */
@@ -1038,6 +1339,7 @@ p {
   color: #ffffff;
   font-family: "Kalameh";
   text-align: right;
+  animation: bounce 2s forwards;
   margin-bottom: 0;
 }
 .footer .footer-desc .desc-title span, .footer .footer-desc .desc-title .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .footer .footer-desc .desc-title a {
@@ -1045,6 +1347,7 @@ p {
   color: #ffffff;
   font-family: "Kalameh";
   text-align: right;
+  animation: bounce 2s forwards;
 }
 .footer .footer-desc p {
   font-size: 16px;
@@ -1056,6 +1359,18 @@ p {
 .footer .footer-desc a {
   font-size: 13px;
   color: #08c0f8;
+  display: inline-block;
+}
+.footer .footer-desc a::after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px #f5ad57;
+  transform: scaleX(0);
+  transition: transform 300ms ease-in-out;
+  transform-origin: 100% 50%;
+}
+.footer .footer-desc a:hover:after {
+  transform: scaleX(1);
 }
 .footer .quick-access {
   text-align: start;
@@ -1066,19 +1381,27 @@ p {
   color: #ffffff;
   margin-bottom: 25px;
 }
-.footer .quick-access ul {
-  display: flex;
-  flex-wrap: wrap;
-}
 .footer .quick-access ul li {
   width: 45%;
   font-size: 15px;
   font-family: "Yekan Bakh";
   opacity: 0.7;
   margin-bottom: 20px;
+  display: flex;
 }
 .footer .quick-access ul li a {
   color: #ffffff;
+}
+.footer .quick-access ul li a::after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px #f5ad57;
+  transform: scaleX(0);
+  transition: transform 300ms ease-in-out;
+  transform-origin: 100% 50%;
+}
+.footer .quick-access ul li a:hover:after {
+  transform: scaleX(1);
 }
 .footer .connect .connect-info {
   padding: 35px 30px;
@@ -1112,9 +1435,31 @@ p {
   font-size: 17px;
   font-family: "Gilroy" !important;
 }
+.footer .connect .connect-info ul a.email::after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px #f5ad57;
+  transform: scaleX(0);
+  transition: transform 300ms ease-in-out;
+  transform-origin: 100% 50%;
+}
+.footer .connect .connect-info ul a.email:hover:after {
+  transform: scaleX(1);
+}
 .footer .connect .connect-info ul a.phone {
   font-size: 19px;
   font-family: "Yekan Bakh" !important;
+}
+.footer .connect .connect-info ul a.phone::after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px #f5ad57;
+  transform: scaleX(0);
+  transition: transform 300ms ease-in-out;
+  transform-origin: 100% 50%;
+}
+.footer .connect .connect-info ul a.phone:hover:after {
+  transform: scaleX(1);
 }
 .footer .connect .social {
   border: 1.5px dashed #47464a;
@@ -1151,8 +1496,31 @@ p {
   background-color: #333238;
   margin-right: 15px;
 }
+.footer .connect .social ul li:hover {
+  transition: 0.25s;
+  box-shadow: 0 0 0 1em transparent;
+}
+.footer .connect .social ul li:hover:hover {
+  animation: warning 1s;
+}
+@keyframes primary {
+  0% {
+    box-shadow: 0 0 0 0 #08c0f8;
+  }
+}
+@keyframes warning {
+  0% {
+    box-shadow: 0 0 0 0 #f5ad57;
+  }
+}
+@keyframes other {
+  0% {
+    box-shadow: 0 0 0 0 white;
+  }
+}
 .footer .connect .social ul li a {
   color: #ffffff;
+  line-height: 0 !important;
 }
 .footer .connect .social ul li a svg {
   font-size: 20px;
@@ -1173,8 +1541,12 @@ p {
   word-spacing: 2px;
 }
 
+.header {
+  background-color: #1d1c20 m !important;
+}
+
 .blog-header {
-  padding: 90px 0 115px 0;
+  padding: 125px 0 115px 0;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)), url("../images/blog/blog-header.png");
   background-size: cover;
 }
@@ -1189,6 +1561,7 @@ p {
   color: #201f23;
   font-family: "Kalameh";
   text-align: center;
+  animation: bounce 2s forwards;
   margin-left: 10px;
 }
 .blog-header .blog-header-title form {
@@ -1256,10 +1629,33 @@ p {
   font-size: 15px;
   line-height: 23px;
   color: #1f1e23;
-  margin-left: 20px 10px;
+  margin-left: 20px;
   transition: 0.3s all linear;
+  position: relative;
 }
-.blog-header .blog-header-categories button.active, .blog-header .blog-header-categories button:hover {
+.blog-header .blog-header-categories button:before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  top: calc(2px/ -1);
+  left: calc(2px/ -1);
+  background: linear-gradient(to right, #f5ad57 0%, #f5ad57 100%), linear-gradient(to top, #f5ad57 50%, transparent 50%), linear-gradient(to top, #f5ad57 50%, transparent 50%), linear-gradient(to right, #f5ad57 0%, #f5ad57 100%), linear-gradient(to left, #f5ad57 0%, #f5ad57 100%);
+  background-size: 100% 2px, 2px 200%, 2px 200%, 0% 2px, 0% 2px;
+  background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
+  background-repeat: no-repeat, no-repeat;
+  transition: transform 0.3s ease-in-out, background-position 0.3s ease-in-out, background-size 0.3s ease-in-out;
+  transform: scaleX(0) rotate(180deg);
+  transition-delay: 0.6s, 0.3s, 0s;
+  z-index: -1;
+}
+.blog-header .blog-header-categories button:hover:before {
+  background-size: 200% 2px, 2px 400%, 2px 400%, 55% 2px, 55% 2px;
+  background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+  transform: scaleX(1) rotate(180deg);
+  transition-delay: 0s, 0.3s, 0.6s;
+}
+.blog-header .blog-header-categories button.active {
   background: #f88c3d;
   box-shadow: 0px 15px 25px rgba(248, 140, 61, 0.04);
   color: #ffffff;
@@ -1272,6 +1668,7 @@ p {
 .blog-content .main-articles {
   margin-bottom: 75px;
   margin-top: -70px;
+  animation: bounce 2s forwards;
 }
 .blog-content .main-articles .main-articles-item {
   position: relative;
@@ -1293,12 +1690,15 @@ p {
   line-height: 19px;
   color: #ffffff;
 }
-.blog-content .main-articles .main-articles-item .item-desc h5 {
+.blog-content .main-articles .main-articles-item .item-desc a {
+  color: #ffffff;
+  display: block;
+}
+.blog-content .main-articles .main-articles-item .item-desc a h5 {
   font-family: "Yekan Bakh";
   font-weight: 400;
   font-size: 21px;
   line-height: 31px;
-  color: #ffffff;
   margin: 0;
 }
 .blog-content .blog-articles {
@@ -1310,13 +1710,26 @@ p {
   box-shadow: 0px 25px 250px rgba(0, 0, 0, 0.01);
   border-radius: 1px;
   display: flex;
-  gap: 28px;
+  margin-bottom: 20px;
 }
-.blog-content .blog-articles .blog-articles-item h5 {
+.blog-content .blog-articles .blog-articles-item img {
+  margin-left: 28px;
+}
+.blog-content .blog-articles .blog-articles-item img:hover {
+  transform: scale(1.05, 1.05);
+  transition: 500ms;
+}
+.blog-content .blog-articles .blog-articles-item img:not(:hover) {
+  transform: scale(1, 1);
+  transition: 500ms;
+}
+.blog-content .blog-articles .blog-articles-item a {
+  color: #201f23;
+}
+.blog-content .blog-articles .blog-articles-item a h5 {
   font-weight: 700;
   font-size: 19px;
   line-height: 31px;
-  color: #201f23;
 }
 .blog-content .blog-articles .blog-articles-item p {
   font-weight: 500;
@@ -1336,9 +1749,46 @@ p {
   line-height: 19px;
   color: #5a5a6b;
 }
+.blog-content .pagination {
+  margin: 50px 0;
+}
+.blog-content .pagination ul {
+  margin: 0 auto;
+  display: flex;
+  gap: 13px;
+}
+.blog-content .pagination ul li {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #e7e9ef;
+  border-radius: 50%;
+}
+.blog-content .pagination ul li.active {
+  background: #f88c3d;
+  box-shadow: 0px 12px 40px rgba(248, 140, 61, 0.07);
+  border: 0;
+}
+.blog-content .pagination ul li.active a {
+  color: #ffffff;
+}
+.blog-content .pagination ul li a {
+  font-family: "Yekan Bakh";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 31px;
+  color: #5a5a6b;
+}
+
+.header {
+  background-color: #1d1c20 m !important;
+}
 
 .products-header {
-  padding: 90px 0 115px 0;
+  padding: 185px 0 115px 0;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)), url("../images/blog/blog-header.png");
   background-size: cover;
 }
@@ -1353,6 +1803,7 @@ p {
   color: #201f23;
   font-family: "Kalameh";
   text-align: center;
+  animation: bounce 2s forwards;
   margin-left: 10px;
 }
 .products-header .products-header-title form {
@@ -1371,6 +1822,7 @@ p {
   border-radius: 2px !important;
 }
 .products-header .products-header-title form .products-header-search input:focus {
+  border-bottom: 1px solid #f5ad57;
   border-left: 0 !important;
 }
 .products-header .products-header-title form .products-header-search input::placeholder {
@@ -1387,6 +1839,10 @@ p {
   backdrop-filter: blur(15px);
   border-radius: 2px !important;
   border-right: 0 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
 }
 .products-header .products-header-title form .products-header-select {
   width: 178px;
@@ -1403,6 +1859,21 @@ p {
   line-height: 23px;
   color: rgba(31, 30, 35, 0.3);
 }
+.products-header .products-header-title form .products-header-select select:focus {
+  border-bottom: 1px solid #f5ad57;
+  border-left: 0 !important;
+}
+.products-header .products-header-title form .products-header-select span, .products-header .products-header-title form .products-header-select .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .products-header .products-header-title form .products-header-select a {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  border: 1.3px solid #e0e3eb !important;
+  backdrop-filter: blur(15px);
+  border-radius: 2px !important;
+  border-right: 0 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
 
 .products-content {
   padding: 100px 0;
@@ -1412,6 +1883,30 @@ p {
   padding: 35px 70px 30px 70px;
   border: 1.3px solid #eff1f8;
   text-align: center;
+  animation: bounce 2s forwards;
+  position: relative;
+}
+.products-content .products-item:before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  top: calc(2px/ -1);
+  left: calc(2px/ -1);
+  background: linear-gradient(to right, #08c0f8 0%, #08c0f8 100%), linear-gradient(to top, #08c0f8 50%, transparent 50%), linear-gradient(to top, #08c0f8 50%, transparent 50%), linear-gradient(to right, #08c0f8 0%, #08c0f8 100%), linear-gradient(to left, #08c0f8 0%, #08c0f8 100%);
+  background-size: 100% 2px, 2px 200%, 2px 200%, 0% 2px, 0% 2px;
+  background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
+  background-repeat: no-repeat, no-repeat;
+  transition: transform 0.3s ease-in-out, background-position 0.3s ease-in-out, background-size 0.3s ease-in-out;
+  transform: scaleX(0) rotate(180deg);
+  transition-delay: 0.6s, 0.3s, 0s;
+  z-index: -1;
+}
+.products-content .products-item:hover:before {
+  background-size: 200% 2px, 2px 400%, 2px 400%, 55% 2px, 55% 2px;
+  background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+  transform: scaleX(1) rotate(180deg);
+  transition-delay: 0s, 0.3s, 0.6s;
 }
 .products-content .products-item .products-img {
   position: relative;
@@ -1434,6 +1929,9 @@ p {
 }
 .products-content .products-item a {
   color: #1c1c1f;
+}
+.products-content .products-item a:hover {
+  color: #08c0f8 !important;
 }
 .products-content .products-item a h3 {
   margin: 30px 0 15px 0;
@@ -1480,13 +1978,485 @@ p {
   color: #5a5a6b;
 }
 
+.header {
+  background: #1d1c20 !important;
+}
+
+.article .bread-crumb {
+  margin: 60px 0 51px 0;
+}
+.article .bread-crumb ul {
+  display: flex;
+}
+.article .bread-crumb ul li a {
+  color: #5A5A6B;
+  font-family: "Yekan Bakh";
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.article .bread-crumb img {
+  width: 14px;
+  height: 14px;
+}
+.article .bread-crumb h4 {
+  font-family: "Yekan Bakh";
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 20px;
+  color: #f88c3d;
+  margin-right: 6px;
+}
+
+.article {
+  animation: bounce 2s forwards;
+  margin-top: 145px;
+}
+.article .article-title ul {
+  display: flex;
+}
+.article .article-title ul li {
+  align-self: center;
+}
+.article .article-title ul li p {
+  font-family: "Yekan Bakh";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 19px;
+  text-align: right;
+  color: #5a5a6b;
+  margin-left: 24px;
+  margin-bottom: 0;
+}
+.article .article-title ul li img {
+  width: 22px;
+  margin-left: 10px;
+}
+.article .article-title h1 {
+  font-family: "Yekan Bakh";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 39px;
+  text-align: right;
+  color: #201f23;
+}
+.article .article-content .top-content {
+  display: flex;
+}
+.article .article-content .top-content .article-title-img {
+  width: 100%;
+  animation: pulse 8s infinite;
+}
+.article .article-content .top-content p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 27px;
+  text-align: right;
+  color: #5a5a6b;
+}
+.article .article-content .bottom-content p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 27px;
+  text-align: right;
+  color: #5a5a6b;
+  margin: 41px 0 41px 0;
+}
+.article .article-content .main-content .title {
+  font-family: "Yekan Bakh";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: right;
+  color: #F88C3D;
+}
+.article .article-content .main-content p {
+  font-family: "Yekan Bakh";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 27px;
+  text-align: right;
+  color: #5A5A6B;
+  margin: 12px 0 12px 0;
+}
+.article .article-content .main-content .tip {
+  background: #fbf1ea;
+  padding: 24px;
+  margin: 32px 0 32px 0;
+  position: relative;
+}
+.article .article-content .main-content .tip img {
+  width: 32px;
+  position: absolute;
+  top: -10px;
+}
+.article .article-content .main-content .tip h5 {
+  font-family: "Yekan Bakh";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 27px;
+  text-align: center;
+  color: #F88C3D;
+}
+.article .article-content .main-content p {
+  font-family: "Yekan Bakh";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 27px;
+  text-align: right;
+  color: #5A5A6B;
+}
+.article hr {
+  margin-top: 35px;
+  border: 1.3px solid #E0E3EB;
+  transform: rotate(-180deg);
+}
+.article .article-tags h6 {
+  font-family: "Yekan Bakh";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 27px;
+  text-align: right;
+  color: #F88C3D;
+  margin-bottom: 0 !important;
+}
+.article .article-tags img {
+  width: 22px;
+  height: 22px;
+  margin-left: 6px;
+}
+.article .article-tags .tags {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.article .article-tags .tags a {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 27px;
+  text-align: right;
+  color: #5A5A6B;
+  margin: 0 10px 0 10px;
+}
+.article .article-tags .tags a::after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px #f5ad57;
+  transform: scaleX(0);
+  transition: transform 300ms ease-in-out;
+  transform-origin: 100% 50%;
+}
+.article .article-tags .tags a:hover:after {
+  transform: scaleX(1);
+}
+.article .article-tags .tag-title {
+  display: flex;
+}
+
+.related-posts .post {
+  background: url("../images/related-posts.png") no-repeat;
+  border-radius: 1px;
+  filter: drop-shadow(0px 25px 250px rgba(0, 0, 0, 0.01));
+  max-height: 378px;
+  background-size: contain;
+  position: relative;
+}
+.related-posts .post:hover {
+  transform: scale(0.95);
+  transition: 1s;
+}
+.related-posts .post:not(:hover) {
+  transform: scale(1);
+  transition: 1s;
+}
+.related-posts .post .related-post-title .information {
+  display: flex;
+  position: absolute;
+  right: 40px;
+  bottom: 80px;
+}
+.related-posts .post .related-post-title .information div {
+  display: flex;
+}
+.related-posts .post .related-post-title .information div span, .related-posts .post .related-post-title .information div .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .related-posts .post .related-post-title .information div a {
+  margin-right: 6px;
+}
+.related-posts .post .related-post-title .information div:nth-child(1) {
+  margin-left: 15px;
+}
+.related-posts .post .related-post-title .information span, .related-posts .post .related-post-title .information .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .related-posts .post .related-post-title .information a {
+  font-family: "Yekan Bakh";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+}
+.related-posts .post .related-post-title h2 {
+  font-family: "Yekan Bakh";
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 31px;
+  color: #FFFFFF;
+  position: absolute;
+  bottom: 39px;
+  right: 39px;
+}
+.related-posts .swiper-container {
+  overflow-x: hidden;
+}
+.related-posts h1 {
+  font-family: "Kalameh";
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 27px;
+  text-align: right;
+  color: #201F23;
+  margin-top: 93px;
+  margin-bottom: 32px;
+}
+
+.user-comments {
+  background: #F8F8F8;
+}
+.user-comments .user-comments-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 32px;
+}
+.user-comments .user-comments-title h1 {
+  font-family: "Kalameh";
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 27px;
+  text-align: center;
+  color: #201F23;
+}
+.user-comments .user-comments-title svg:nth-child(1) {
+  margin-left: 15px;
+}
+.user-comments .user-comments-title .user-comment-icon {
+  margin-right: 15px;
+}
+.user-comments h6 {
+  font-family: "Kalameh";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 27px;
+  text-align: center;
+  color: #2ABFED;
+  margin-bottom: 30px;
+}
+.user-comments .comment {
+  display: flex;
+  background: #ffffff;
+  box-shadow: 0px 25px 250px rgba(0, 0, 0, 0.01);
+  border-radius: 1px;
+  padding: 25px 26px;
+  margin-bottom: 10px;
+}
+.user-comments .comment img {
+  width: 54px;
+  margin-left: 23px;
+}
+.user-comments .comment .comment-title {
+  display: flex;
+  justify-content: space-between;
+}
+.user-comments .comment .comment-title .comment-information {
+  display: flex;
+}
+.user-comments .comment .comment-title .comment-information h3 {
+  font-family: "Yekan Bakh";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 27px;
+  color: #201F23;
+}
+.user-comments .comment .comment-title .comment-information span, .user-comments .comment .comment-title .comment-information .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .user-comments .comment .comment-title .comment-information a {
+  font-family: "Yekan Bakh";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 27px;
+  color: #5A5A6B;
+  opacity: 0.5;
+  margin-right: 15px;
+}
+.user-comments .comment .comment-title .replay-comment {
+  display: flex;
+  align-items: center;
+}
+.user-comments .comment .comment-title .replay-comment a {
+  font-family: "Yekan Bakh";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 25px;
+  color: #F88C3D;
+  margin-bottom: 0.5rem;
+}
+.user-comments .comment .comment-title .replay-comment a::after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px #f5ad57;
+  transform: scaleX(0);
+  transition: transform 300ms ease-in-out;
+  transform-origin: 100% 50%;
+}
+.user-comments .comment .comment-title .replay-comment a:hover:after {
+  transform: scaleX(1);
+}
+.user-comments .comment .comment-title .replay-comment img {
+  width: 14px;
+  margin-bottom: 0.6rem;
+  margin-left: 6px;
+}
+.user-comments .comment-description p {
+  font-family: "Yekan Bakh";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 25px;
+  color: #5A5A6B;
+  margin-bottom: 0 !important;
+}
+.user-comments .separator {
+  margin-top: 61px;
+}
+
+.submit-comment-form {
+  margin-bottom: 122px;
+}
+.submit-comment-form h1 {
+  font-family: "Kalameh";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 27px;
+  text-align: center;
+  color: #201F23;
+  margin-top: 51px;
+  margin-bottom: 34px;
+}
+.submit-comment-form form span, .submit-comment-form form .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .submit-comment-form form a {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-left: none;
+  border-color: #e0e3eb;
+  border-radius: 2px !important;
+}
+.submit-comment-form form span::after, .submit-comment-form form .permissions .permissions-item .permissions-desc a::after, .permissions .permissions-item .permissions-desc .submit-comment-form form a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 1.3px;
+  height: 30px;
+  background-color: #d2d5db;
+}
+.submit-comment-form form input {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-right: none;
+  border-color: #e0e3eb;
+  border-radius: 2px !important;
+  font-size: 15px !important;
+  height: 55px;
+}
+.submit-comment-form form input::placeholder {
+  font-size: 15px;
+  color: rgba(31, 30, 35, 0.3);
+  font-family: "Yekan Bakh";
+}
+.submit-comment-form form input:focus {
+  border-color: #e0e3eb;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.submit-comment-form form input:focus {
+  border-bottom: 1px solid #f5ad57;
+}
+.submit-comment-form form .rating {
+  position: absolute;
+  left: 30px;
+  top: 12.5px;
+}
+.submit-comment-form form textarea {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-right: none;
+  border-color: #e0e3eb;
+  border-radius: 2px !important;
+  border: solid 1px #e0e3eb;
+  resize: both !important;
+}
+.submit-comment-form form textarea::placeholder {
+  font-size: 15px;
+  color: rgba(31, 30, 35, 0.3);
+  font-family: "Yekan Bakh";
+}
+.submit-comment-form form textarea:focus {
+  border-color: #e0e3eb;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.submit-comment-form form textarea:focus {
+  border-bottom: 1px solid #f5ad57;
+}
+.submit-comment-form form button {
+  color: #ffffff;
+  background-color: #f5ad57;
+  padding: 13px 30px;
+  border-radius: 25px;
+  font-size: 15px;
+  transition: 0.25s;
+  box-shadow: 0 0 0 1em transparent;
+  width: fit-content;
+  margin: 0 auto;
+}
+.submit-comment-form form button:hover {
+  animation: warning 1s;
+}
+@keyframes primary {
+  0% {
+    box-shadow: 0 0 0 0 #08c0f8;
+  }
+}
+@keyframes warning {
+  0% {
+    box-shadow: 0 0 0 0 #f5ad57;
+  }
+}
+@keyframes other {
+  0% {
+    box-shadow: 0 0 0 0 white;
+  }
+}
+
 body {
   background-color: #f3f3f3;
+}
+
+.header {
+  background-color: #1d1c20 m !important;
 }
 
 .products-page-links {
   padding: 17px 0;
   font-family: "Yekan Bakh";
+  margin-top: 100px;
 }
 .products-page-links ul {
   display: flex;
@@ -1515,10 +2485,14 @@ body {
   align-items: center;
   gap: 45px;
 }
+.products-page-item .item-content img {
+  animation: pulse 8s infinite;
+}
 .products-page-item .item-content .title {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  animation: bounce 2s forwards;
 }
 .products-page-item .item-content .title h3 {
   font-weight: 900;
@@ -1530,6 +2504,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 15px 0;
+  animation: bounce 2s forwards;
 }
 .products-page-item .item-content ul.info li {
   margin-left: 15px;
@@ -1548,6 +2523,7 @@ body {
   font-size: 14px;
   line-height: 22px;
   color: #5b5b6b;
+  animation: bounce 2s forwards;
 }
 .products-page-item .item-content p.desc-content {
   font-weight: 500;
@@ -1556,12 +2532,14 @@ body {
   color: #3f3c48;
   margin-bottom: 36px;
   text-align: justify;
+  animation: bounce 2s forwards;
 }
 .products-page-item .item-content .btn {
   background: #fcfcfd;
   border: 1.3px dashed #dfe1e4;
   border-radius: 6px;
   padding: 8px;
+  animation: bounce 2s forwards;
 }
 .products-page-item .item-content .btn .price {
   font-style: normal;
@@ -1581,6 +2559,26 @@ body {
   font-size: 15px;
   line-height: 23px;
   color: #ffffff;
+  transition: 0.25s;
+  box-shadow: 0 0 0 1em transparent;
+}
+.products-page-item .item-content .btn .add:hover {
+  animation: primary 1s;
+}
+@keyframes primary {
+  0% {
+    box-shadow: 0 0 0 0 #08c0f8;
+  }
+}
+@keyframes warning {
+  0% {
+    box-shadow: 0 0 0 0 #f5ad57;
+  }
+}
+@keyframes other {
+  0% {
+    box-shadow: 0 0 0 0 white;
+  }
 }
 .products-page-item .item-content .btn .add svg {
   margin-left: 10px;
@@ -1590,6 +2588,7 @@ body {
   margin-top: 10px;
   padding: 40px 0;
   background-color: #ffffff;
+  animation: bounce 2s forwards;
 }
 .products-page-item-desc .item-desc-content {
   font-family: "Yekan Bakh";
@@ -1682,12 +2681,26 @@ body {
   text-align: justify;
   margin: 24px 0;
 }
-.products-page-feedback .feedback-content .feedback-item .reply span, .products-page-feedback .feedback-content .feedback-item .reply .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .products-page-feedback .feedback-content .feedback-item .reply a {
+.products-page-feedback .feedback-content .feedback-item .reply {
+  display: inline-block;
+}
+.products-page-feedback .feedback-content .feedback-item .reply a {
   font-weight: 700;
   font-size: 15px;
   line-height: 23px;
   color: #f88c3d;
   margin-right: 5px;
+}
+.products-page-feedback .feedback-content .feedback-item .reply::after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px #f5ad57;
+  transform: scaleX(0);
+  transition: transform 300ms ease-in-out;
+  transform-origin: 100% 50%;
+}
+.products-page-feedback .feedback-content .feedback-item .reply:hover:after {
+  transform: scaleX(1);
 }
 
 /* ----------------------------------------------------------------------- */
@@ -1702,9 +2715,93 @@ body {
   line-height: 27px;
   text-align: center;
   color: #201f23;
+  font-family: "Kalameh";
 }
 .products-page-form form {
   margin: 65px auto 0 auto;
+}
+.products-page-form form .stars {
+  background: url(../images/stars.png) no-repeat;
+  margin: 0 auto;
+  direction: ltr;
+  background-size: contain;
+}
+.products-page-form form .stars:before {
+  display: table;
+  content: "";
+}
+.products-page-form form .stars:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+.products-page-form form .stars input[type=radio] {
+  position: absolute;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.products-page-form form .stars input[type=radio].star-5:checked ~ span, .products-page-form form .stars .permissions .permissions-item .permissions-desc input[type=radio].star-5:checked ~ a, .permissions .permissions-item .permissions-desc .products-page-form form .stars input[type=radio].star-5:checked ~ a {
+  width: 100%;
+}
+.products-page-form form .stars input[type=radio].star-4:checked ~ span, .products-page-form form .stars .permissions .permissions-item .permissions-desc input[type=radio].star-4:checked ~ a, .permissions .permissions-item .permissions-desc .products-page-form form .stars input[type=radio].star-4:checked ~ a {
+  width: 80%;
+}
+.products-page-form form .stars input[type=radio].star-3:checked ~ span, .products-page-form form .stars .permissions .permissions-item .permissions-desc input[type=radio].star-3:checked ~ a, .permissions .permissions-item .permissions-desc .products-page-form form .stars input[type=radio].star-3:checked ~ a {
+  width: 60%;
+}
+.products-page-form form .stars input[type=radio].star-2:checked ~ span, .products-page-form form .stars .permissions .permissions-item .permissions-desc input[type=radio].star-2:checked ~ a, .permissions .permissions-item .permissions-desc .products-page-form form .stars input[type=radio].star-2:checked ~ a {
+  width: 40%;
+}
+.products-page-form form .stars input[type=radio].star-1:checked ~ span, .products-page-form form .stars .permissions .permissions-item .permissions-desc input[type=radio].star-1:checked ~ a, .permissions .permissions-item .permissions-desc .products-page-form form .stars input[type=radio].star-1:checked ~ a {
+  width: 20%;
+}
+.products-page-form form .stars label {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-indent: -999em;
+  float: left;
+  position: relative;
+  z-index: 10;
+  background: transparent !important;
+  cursor: pointer;
+}
+.products-page-form form .stars label:hover ~ span, .products-page-form form .stars .permissions .permissions-item .permissions-desc label:hover ~ a, .permissions .permissions-item .permissions-desc .products-page-form form .stars label:hover ~ a {
+  background-position: 0 -30px;
+}
+.products-page-form form .stars label.star-5:hover ~ span, .products-page-form form .stars .permissions .permissions-item .permissions-desc label.star-5:hover ~ a, .permissions .permissions-item .permissions-desc .products-page-form form .stars label.star-5:hover ~ a {
+  width: 100% !important;
+}
+.products-page-form form .stars label.star-4:hover ~ span, .products-page-form form .stars .permissions .permissions-item .permissions-desc label.star-4:hover ~ a, .permissions .permissions-item .permissions-desc .products-page-form form .stars label.star-4:hover ~ a {
+  width: 80% !important;
+}
+.products-page-form form .stars label.star-3:hover ~ span, .products-page-form form .stars .permissions .permissions-item .permissions-desc label.star-3:hover ~ a, .permissions .permissions-item .permissions-desc .products-page-form form .stars label.star-3:hover ~ a {
+  width: 60% !important;
+}
+.products-page-form form .stars label.star-2:hover ~ span, .products-page-form form .stars .permissions .permissions-item .permissions-desc label.star-2:hover ~ a, .permissions .permissions-item .permissions-desc .products-page-form form .stars label.star-2:hover ~ a {
+  width: 40% !important;
+}
+.products-page-form form .stars label.star-1:hover ~ span, .products-page-form form .stars .permissions .permissions-item .permissions-desc label.star-1:hover ~ a, .permissions .permissions-item .permissions-desc .products-page-form form .stars label.star-1:hover ~ a {
+  width: 20% !important;
+}
+.products-page-form form .stars span, .products-page-form form .stars .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .products-page-form form .stars a {
+  display: block;
+  width: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 30px;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAABaCAYAAACv+ebYAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNXG14zYAAAAWdEVYdENyZWF0aW9uIFRpbWUAMDcvMDMvMTNJ3Rb7AAACnklEQVRoge2XwW3bMBSGPxa9NxtIGzTAW8DdRL7o3A0qb+BrdNIm9QAm0G7gbJBMwB5MoVJNUSRFIXGqHwhkmXr68hOPNH9ljOEt9OlNqBs4RlrrSmtdpdZ/Ti0EGnvtUoqTHFunBVCkuk6d6mbi83rggdteSa5THDeB3+UDO9z2inatXFum1roESuAReAB29vp15n2/gRfgZK+/gIuIXLxgrfUO+Bnzn0fom4ic+pvRVNuB/QrQ/RB6A7bwLjN8b985krO5MsKd0ElwJvgk1AteCPdCYWI5/SutddQxRUTU3DOzG4hd01EKqQnZuaLBITUh4F0CeLYm5CDw6PjuFTjaz9+BLwE1I8VO9StwAEoRaUSkseMHO+aqcWq2qwcdfQCOIvIy8dwDV/c/YL6zvWDbnQ3QuH5hltQEreM1dH/n6g28gT8eWLVUqqVKrb+vtGidFkCR6vp+0uLAba8k1/eRFh1ue0W7dv4sqpaSjGnR1Fy8YNWyY8W0aGpO/c1oqu3AKmlxCL0BW3iXGb637xzJ2VwZ4U7oJDgTfBLqBS+Ee6EQeMpULVFHUVOzPC3aNR2lkJotLbr0vtKiqWlMTcNaaXHQ0QfgaGqcaVG1jNLibGcbYyb/eDIlT6bjyZS+51JqtrS4gTfw/wzWqkKrKrU8fQPR6gKAmDKlPM3x1WkBFKmu0xxf3fZR5jnFdbzjv257JbmOdzx22yvadZzjW7e9ol27HWtVkjEtIubiB2u1Y8W0iJhTfzOe6uvAKmlxCL0FX+FdZvjevnMkd3Plgzuh0+A88EmoH7wM7oVC6AaiVdwuI2Z5WrRrOk4BNVtadOl9pUXENIhpWCstDjr6ABwR40yLaDVKi7Od7U1/Z0pzpjNngtNiaM2WFj8++A+motm0NTqjmwAAAABJRU5ErkJggg==") repeat-x -60px;
+  -webkit-transition: -webkit-width 0.5s;
+  -moz-transition: -moz-width 0.5s;
+  -ms-transition: -ms-width 0.5s;
+  -o-transition: -o-width 0.5s;
+  transition: width 0.5s;
+}
+.products-page-form form .ie7 form .stars {
+  *zoom: 1;
 }
 .products-page-form form span, .products-page-form form .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .products-page-form form a {
   position: relative;
@@ -1791,6 +2888,421 @@ body {
   }
 }
 
+.header {
+  background-color: #1d1c20 m !important;
+}
+
+.about-us {
+  padding-bottom: 0 !important;
+  animation: bounce 2s forwards;
+  margin-top: 85px;
+}
+.about-us .about-us-title {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 65px;
+}
+.about-us .about-us-title h1 {
+  font-family: "Kalameh";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: right;
+  color: #2ABFED;
+  animation: bounce 2s forwards;
+}
+.about-us .about-us-title ul {
+  display: flex;
+  margin-bottom: 0 !important;
+}
+.about-us .about-us-title ul li {
+  margin-left: 20px;
+}
+.about-us .about-us-title ul li a {
+  font-family: "Yekan Bakh";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: right;
+  color: #5A5A6B;
+}
+.about-us .about-us-title ul li a::after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px #f5ad57;
+  transform: scaleX(0);
+  transition: transform 300ms ease-in-out;
+  transform-origin: 100% 50%;
+}
+.about-us .about-us-title ul li a:hover:after {
+  transform: scaleX(1);
+}
+.about-us svg {
+  margin-bottom: 27px;
+  margin-top: 15px;
+}
+.about-us p {
+  font-family: "Yekan Bakh";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 30px;
+  text-align: right;
+  color: #5B5B6B;
+}
+.about-us .about-us-picture {
+  background: url("../images/about-us.png") no-repeat center;
+  height: 125px;
+  background-size: contain;
+  margin-top: 80px;
+  text-align: center;
+  animation: pulse 4s infinite;
+}
+.about-us .about-us-picture img {
+  width: 162px;
+  margin-top: 40px;
+}
+
+.target-us {
+  margin-top: 71px;
+  animation: bounce 2s forwards;
+}
+.target-us h1 {
+  font-family: "Yekan Bakh";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 30px;
+  text-align: right;
+  color: #1F1E22;
+}
+.target-us p {
+  font-family: "Yekan Bakh";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 30px;
+  text-align: right;
+  color: #5B5B6B;
+}
+.target-us svg {
+  margin-top: 15px;
+  margin-bottom: 27px;
+}
+
+.frequently-asked-questions {
+  animation: bounce 2s forwards;
+}
+.frequently-asked-questions h1 {
+  font-family: "Yekan Bakh";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 30px;
+  text-align: right;
+  color: #1F1E22;
+}
+.frequently-asked-questions p {
+  font-family: "Yekan Bakh";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 30px;
+  text-align: right;
+  color: #5B5B6B;
+}
+.frequently-asked-questions .accordion {
+  margin-bottom: 133px;
+}
+.frequently-asked-questions .accordion .accordion-button {
+  background: #F9F9F9;
+  padding: 28px 20px 28px 20px;
+  border-radius: 6px;
+}
+.frequently-asked-questions .accordion .accordion-button:before {
+  margin-left: 14px;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  content: "";
+  background-image: url("../images/open-accardeon.png");
+  background-repeat: no-repeat;
+  background-size: 31px;
+  transition: var(--bs-accordion-btn-icon-transition);
+}
+.frequently-asked-questions .accordion .accordion-button:after {
+  content: unset !important;
+}
+.frequently-asked-questions .accordion .accordion-button:not(.collapsed) {
+  color: unset !important;
+  background: #F9F9F9 !important;
+  box-shadow: unset !important;
+}
+.frequently-asked-questions .accordion .accordion-item {
+  border: unset !important;
+  margin-bottom: 10px;
+}
+.frequently-asked-questions .accordion .accordion-item .accordion-collapse {
+  background: #f9f9f9;
+}
+.frequently-asked-questions .accordion .accordion-item .accordion-collapse .accordion-body {
+  font-family: "Yekan Bakh";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: right;
+  color: #5A5A6B;
+}
+
+.contact-us-page {
+  margin-bottom: 93px;
+}
+.contact-us-page h1 {
+  font-family: "Yekan Bakh";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 26px;
+  text-align: center;
+  color: #1F1E22;
+  margin-bottom: 19px;
+}
+.contact-us-page h1 span, .contact-us-page h1 .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .contact-us-page h1 a {
+  color: #F88C3D;
+}
+.contact-us-page h1 span:after, .contact-us-page h1 .permissions .permissions-item .permissions-desc a:after, .permissions .permissions-item .permissions-desc .contact-us-page h1 a:after {
+  background: unset !important;
+}
+.contact-us-page .separator-contact-us {
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+.contact-us-page .information {
+  display: flex;
+  animation: fadeIn 2s forwards;
+}
+.contact-us-page .information .phone-icon {
+  background: #2ABFED;
+  box-shadow: 0 10px 35px rgba(252, 72, 83, 0.1);
+  padding: 14px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  margin-left: 24px;
+  line-height: 0 !important;
+  transition: 0.25s;
+  box-shadow: 0 0 0 1em transparent;
+}
+.contact-us-page .information .phone-icon:hover {
+  animation: primary 1s;
+}
+@keyframes primary {
+  0% {
+    box-shadow: 0 0 0 0 #08c0f8;
+  }
+}
+@keyframes warning {
+  0% {
+    box-shadow: 0 0 0 0 #f5ad57;
+  }
+}
+@keyframes other {
+  0% {
+    box-shadow: 0 0 0 0 white;
+  }
+}
+.contact-us-page .information .phone-icon:hover {
+  animation: shakeX 1s forwards;
+}
+.contact-us-page .information .phone-icon i {
+  color: #fff;
+  transform: rotateX(360deg);
+}
+.contact-us-page .information div h3 {
+  font-family: "Yekan Bakh";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: right;
+  letter-spacing: 0.04em;
+  color: #1F1E22;
+}
+.contact-us-page .information div h3:first-child {
+  margin-left: 20px;
+}
+.contact-us-page .information div h2 {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: right;
+  letter-spacing: 0.07em;
+  color: #1F1E22;
+}
+.contact-us-page .information p {
+  font-family: "Yekan Bakh";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: right;
+  color: #9F9FB2;
+  margin-bottom: 0 !important;
+}
+.contact-us-page .social-media {
+  display: flex;
+  animation: fadeIn 2s forwards;
+}
+.contact-us-page .social-media a {
+  background: #2ABFED;
+  border-radius: 50%;
+  padding: 14px;
+  width: 42px;
+  height: 42px;
+  margin-left: 15px;
+  transition: 0.25s;
+  box-shadow: 0 0 0 1em transparent;
+}
+.contact-us-page .social-media a:hover {
+  animation: primary 1s;
+}
+@keyframes primary {
+  0% {
+    box-shadow: 0 0 0 0 #08c0f8;
+  }
+}
+@keyframes warning {
+  0% {
+    box-shadow: 0 0 0 0 #f5ad57;
+  }
+}
+@keyframes other {
+  0% {
+    box-shadow: 0 0 0 0 white;
+  }
+}
+.contact-us-page .social-media a i {
+  color: #fff;
+}
+.contact-us-page form span, .contact-us-page form .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .contact-us-page form a {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-left: none;
+  border-color: #e0e3eb;
+  border-radius: 2px !important;
+}
+.contact-us-page form span::after, .contact-us-page form .permissions .permissions-item .permissions-desc a::after, .permissions .permissions-item .permissions-desc .contact-us-page form a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 1.3px;
+  height: 30px;
+  background-color: #d2d5db;
+}
+.contact-us-page form input {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-right: none;
+  border-color: #e0e3eb;
+  border-radius: 2px !important;
+  font-size: 15px !important;
+  height: 55px;
+}
+.contact-us-page form input::placeholder {
+  font-size: 15px;
+  color: rgba(31, 30, 35, 0.3);
+  font-family: "Yekan Bakh";
+}
+.contact-us-page form input:focus {
+  border-color: #e0e3eb;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.contact-us-page form input:focus {
+  border-bottom: 1px solid #08c0f8;
+}
+.contact-us-page form select {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-right: none;
+  border-color: #e0e3eb;
+  border-radius: 2px !important;
+  font-size: 15px !important;
+  height: 55px;
+  font-family: "Yekan Bakh";
+  color: #b7b7b9;
+}
+.contact-us-page form select::placeholder {
+  font-size: 15px;
+  color: rgba(31, 30, 35, 0.3);
+  font-family: "Yekan Bakh";
+}
+.contact-us-page form select:focus {
+  border-color: #e0e3eb;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.contact-us-page form select:focus {
+  border-bottom: 1px solid #08c0f8;
+}
+.contact-us-page form .rating {
+  position: absolute;
+  left: 30px;
+  top: 12.5px;
+}
+.contact-us-page form textarea {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-right: none;
+  border-color: #e0e3eb;
+  border-radius: 2px !important;
+  border: solid 1px #e0e3eb;
+  resize: both !important;
+}
+.contact-us-page form textarea::placeholder {
+  font-size: 15px;
+  color: rgba(31, 30, 35, 0.3);
+  font-family: "Yekan Bakh";
+}
+.contact-us-page form textarea:focus {
+  border-color: #e0e3eb;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.contact-us-page form textarea:focus {
+  border-bottom: 1px solid #08c0f8;
+}
+.contact-us-page form button {
+  color: #ffffff;
+  background-color: #f5ad57;
+  padding: 13px 30px;
+  border-radius: 25px;
+  font-size: 15px;
+  transition: 0.25s;
+  box-shadow: 0 0 0 1em transparent;
+  width: fit-content;
+  margin: 0 auto;
+}
+.contact-us-page form button:hover {
+  animation: warning 1s;
+}
+@keyframes primary {
+  0% {
+    box-shadow: 0 0 0 0 #08c0f8;
+  }
+}
+@keyframes warning {
+  0% {
+    box-shadow: 0 0 0 0 #f5ad57;
+  }
+}
+@keyframes other {
+  0% {
+    box-shadow: 0 0 0 0 white;
+  }
+}
+
 /* Extra large devices (large desktops, 1200px and up) */
 @media only screen and (max-width: 1200px) {
   .header .header-content .header-title {
@@ -1808,23 +3320,66 @@ body {
     top: 65px;
     right: 125px !important;
   }
+
+  .container-article {
+    max-width: 942px;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 1400px) {
+  .container-article {
+    max-width: 942px;
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 /* Large devices (desktops, 992px and up) */
 @media only screen and (max-width: 992px) {
   .header .navbar-collapse {
-    background-color: #878793;
-    z-index: 1;
-    padding: 10px 20px !important;
-    margin-top: 10px;
-    border-radius: 3px;
+    display: block;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -270px;
+    width: 270px;
+    height: 100vh;
+    transition: all 0.5s linear;
+    background-color: #000;
+    z-index: 10;
+  }
+  .header .navbar-collapse.show {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    flex-direction: column;
+    height: auto;
   }
   .header .navbar-collapse ul li {
     border-bottom: 1px solid #a7a6a6;
   }
+  .header .navbar-collapse ul li a::after {
+    border-bottom: none !important;
+  }
   .header .navbar-collapse .dark-mode {
+    width: fit-content;
+    margin-top: 20px;
     background-color: #92929d;
   }
   .header .navbar-collapse .contact-us-btn {
+    margin-top: 20px;
     background-color: #92929d !important;
   }
   .header .header-content .header-img {
@@ -1888,7 +3443,7 @@ body {
 }
 /* Medium devices (tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
-  .about-us .about-content ul {
+  .main-about-us .about-content ul {
     width: 85% !important;
   }
 
@@ -1931,7 +3486,7 @@ body {
     padding-right: 15px;
   }
 
-  .about-us {
+  .main-about-us {
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -1982,6 +3537,9 @@ body {
     justify-content: center !important;
     margin: 0 auto !important;
   }
+  .footer .connect-info ul li:first-child {
+    margin-bottom: 10px !important;
+  }
   .footer .social {
     padding: 20px 10px !important;
     flex-wrap: wrap;
@@ -2010,10 +3568,8 @@ body {
     width: 100% !important;
   }
 
-  .blog-articles-item {
-    gap: 15px;
-  }
   .blog-articles-item img {
+    margin-left: 15px !important;
     width: 125px !important;
   }
 

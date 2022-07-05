@@ -1,8 +1,12 @@
 // Variables & Mixin
 @import "./base";
 
+.header {
+    background-color: #1d1c20 m !important;
+}
+
 .blog-header {
-    padding: 90px 0 115px 0;
+    padding: 125px 0 115px 0;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)), url("../images/blog/blog-header.png");
     background-size: cover;
 
@@ -66,7 +70,6 @@
                     font-weight: 700;
                     line-height: 23px;
                     color: rgb(31, 30, 35, 0.3);
-                    // opacity: 0.3;
                 }
             }
         }
@@ -88,11 +91,10 @@
             font-size: 15px;
             line-height: 23px;
             color: #1f1e23;
-            margin-left: 20px 10px;
+            margin-left: 20px;
             transition: 0.3s all linear;
-
-            &.active,
-            &:hover {
+            @include magic-border(2px, $warning, 0.3s, 1);
+            &.active {
                 background: #f88c3d;
                 box-shadow: 0px 15px 25px rgba(248, 140, 61, 0.04);
                 color: #ffffff;
@@ -108,10 +110,9 @@
     .main-articles {
         margin-bottom: 75px;
         margin-top: -70px;
-
+        animation: bounce 2s forwards;
         .main-articles-item {
             position: relative;
-
             .item-desc {
                 position: absolute;
                 bottom: 38px;
@@ -129,13 +130,16 @@
                         color: #ffffff;
                     }
                 }
-                h5 {
-                    font-family: $Yekan;
-                    font-weight: 400;
-                    font-size: 21px;
-                    line-height: 31px;
+                a {
                     color: #ffffff;
-                    margin: 0;
+                    display: block;
+                    h5 {
+                        font-family: $Yekan;
+                        font-weight: 400;
+                        font-size: 21px;
+                        line-height: 31px;
+                        margin: 0;
+                    }
                 }
             }
         }
@@ -148,13 +152,26 @@
             box-shadow: 0px 25px 250px rgba(0, 0, 0, 0.01);
             border-radius: 1px;
             display: flex;
-            gap: 28px;
-
-            h5 {
-                font-weight: 700;
-                font-size: 19px;
-                line-height: 31px;
+            // gap: 28px;
+            margin-bottom: 20px;
+            img {
+                margin-left: 28px;
+                &:hover {
+                    transform: scale(1.05, 1.05);
+                    transition: 500ms;
+                }
+                &:not(:hover) {
+                    transform: scale(1, 1);
+                    transition: 500ms;
+                }
+            }
+            a {
                 color: #201f23;
+                h5 {
+                    font-weight: 700;
+                    font-size: 19px;
+                    line-height: 31px;
+                }
             }
             p {
                 font-weight: 500;
@@ -171,6 +188,42 @@
                     font-weight: 500;
                     font-size: 12px;
                     line-height: 19px;
+                    color: #5a5a6b;
+                }
+            }
+        }
+    }
+    .pagination {
+        margin: 50px 0;
+        // text-align: center;
+        ul {
+            margin: 0 auto;
+            display: flex;
+            gap: 13px;
+
+            li {
+                width: 46px;
+                height: 46px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #ffffff;
+                border: 1px solid #e7e9ef;
+                border-radius: 50%;
+
+                &.active {
+                    background: #f88c3d;
+                    box-shadow: 0px 12px 40px rgba(248, 140, 61, 0.07);
+                    border: 0;
+                    a {
+                        color: #ffffff;
+                    }
+                }
+                a {
+                    font-family: $Yekan;
+                    font-weight: 500;
+                    font-size: 20px;
+                    line-height: 31px;
                     color: #5a5a6b;
                 }
             }

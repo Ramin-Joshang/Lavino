@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مشخصات محصول</title>
-    <!-- Bootstrap CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.rtl.min.css"
-        integrity="sha384-dc2NSrAXbAkjrdm9IYrX10fQq9SDG6Vjz7nQVKdKcJl3pC+k37e7qJR5MVSCS+wR" crossorigin="anonymous">
+    <!-- Bootstrap v-5 -->
+    <link rel="stylesheet" href="./plugins/bootstrap/bootstrap.rtl.min.css">
+    <!-- Animate Css -->
+    <link rel="stylesheet" href="./plugins/Animate/animate.min.css" />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/index.css">
 </head>
@@ -17,7 +18,7 @@
     <!-- ----------------------------------------------------------------------- -->
     <!--                                 Header                                  -->
     <!-- ----------------------------------------------------------------------- -->
-    <header class="header">
+    <header class="header fixed-top">
         <div class="container">
             <div class="row">
                 <nav class="navbar navbar-expand-lg bg-light">
@@ -33,22 +34,19 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="#">خانه</a>
+                                    <a class="nav-link" href="./index.html">خانه</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">محصولات</a>
+                                    <a class="nav-link active-link" href="products.html">محصولات</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link">گالری</a>
+                                    <a class="nav-link" href="./blog.html">وبلاگ</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link">تماس با ما</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link">درباره ما</a>
+                                    <a class="nav-link" href='./contact-us.html'>تماس با ما</a>
                                 </li>
                             </ul>
-                            <form action="#" class="d-flex" role="contact-us">
+                            <form class="d-flex" role="contact-us">
                                 <section class="dark-mode">
                                     <button class="dark">
                                         <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
@@ -73,7 +71,9 @@
                                         </svg>
                                     </button>
                                 </section>
-                                <button class="contact-us-btn" type="submit">تماس با ما</button>
+                                <a href="./contact-us.html">
+                                    <button class="contact-us-btn" type="button">تماس با ما</button>
+                                </a>
                             </form>
                         </div>
                     </div>
@@ -82,7 +82,7 @@
         </div>
     </header>
     <!-- ----------------------------------------------------------------------- -->
-    <!--                               products-h                                -->
+    <!--                             products-links                              -->
     <!-- ----------------------------------------------------------------------- -->
     <section class="products-page-links">
         <div class="container">
@@ -107,7 +107,9 @@
             </div>
         </div>
     </section>
-
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                              products-item                              -->
+    <!-- ----------------------------------------------------------------------- -->
     <section class="products-page-item">
         <div class="container">
             <div class="row">
@@ -162,7 +164,9 @@
             </div>
         </div>
     </section>
-
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                          products-item-desc                             -->
+    <!-- ----------------------------------------------------------------------- -->
     <section class="products-page-item-desc">
         <section class="container">
             <div class="row">
@@ -183,7 +187,9 @@
             </div>
         </section>
     </section>
-
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                            products-feedback                            -->
+    <!-- ----------------------------------------------------------------------- -->
     <section class="products-page-feedback">
         <div class="container">
             <div class="row">
@@ -260,7 +266,7 @@
                                         stroke="#F88C3D" stroke-width="1.5" stroke-linecap="round" />
                                     <path d="M2 5L16 5" stroke="#F88C3D" stroke-width="1.5" stroke-linecap="round" />
                                 </svg>
-                                <span>پاسخ دادن</span>
+                                <a href="#">پاسخ دادن</a>
                             </section>
                         </section>
                     </section>
@@ -335,7 +341,7 @@
                                         stroke="#F88C3D" stroke-width="1.5" stroke-linecap="round" />
                                     <path d="M2 5L16 5" stroke="#F88C3D" stroke-width="1.5" stroke-linecap="round" />
                                 </svg>
-                                <span>پاسخ دادن</span>
+                                <a href="#">پاسخ دادن</a>
                             </section>
                         </section>
                     </section>
@@ -410,7 +416,7 @@
                                         stroke="#F88C3D" stroke-width="1.5" stroke-linecap="round" />
                                     <path d="M2 5L16 5" stroke="#F88C3D" stroke-width="1.5" stroke-linecap="round" />
                                 </svg>
-                                <span>پاسخ دادن</span>
+                                <a href="#">پاسخ دادن</a>
                             </section>
                         </section>
                     </section>
@@ -418,7 +424,9 @@
             </div>
         </div>
     </section>
-
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                              products-form                              -->
+    <!-- ----------------------------------------------------------------------- -->
     <section class="products-page-form">
         <div class="container">
             <div class="row">
@@ -426,7 +434,7 @@
                 <form action="">
                     <div class="row mb-3">
                         <div class="col-lg col-12 input-group input-group-lg mb-3 mb-lg-0">
-                            <span class="input-group-text" id="basic-addon1">
+                            <span class="input-group-text">
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -455,7 +463,7 @@
                                 aria-describedby="basic-addon1">
                         </div>
                         <div class="col-lg col-12 input-group input-group-lg">
-                            <span class="input-group-text" id="basic-addon1">
+                            <span class="input-group-text">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -466,38 +474,19 @@
                             </span>
                             <input type="text" class="form-control" placeholder="امتیاز محصول" aria-label="Username"
                                 aria-describedby="basic-addon1">
-                            <section class="rating">
-                                <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M13.9317 9.93337C13.7159 10.1425 13.6167 10.445 13.6659 10.7417L14.4067 14.8417C14.4692 15.1892 14.3226 15.5409 14.0317 15.7417C13.7467 15.95 13.3676 15.975 13.0567 15.8084L9.36591 13.8834C9.23758 13.815 9.09508 13.7784 8.94924 13.7742H8.72341C8.64508 13.7859 8.56841 13.8109 8.49841 13.8492L4.80675 15.7834C4.62425 15.875 4.41758 15.9075 4.21508 15.875C3.72175 15.7817 3.39258 15.3117 3.47341 14.8159L4.21508 10.7159C4.26425 10.4167 4.16508 10.1125 3.94925 9.90004L0.940079 6.98337C0.688412 6.73921 0.600912 6.37254 0.715912 6.04171C0.827579 5.71171 1.11258 5.47087 1.45675 5.41671L5.59841 4.81587C5.91341 4.78337 6.19008 4.59171 6.33175 4.30837L8.15674 0.566707C8.20008 0.483374 8.25591 0.406707 8.32341 0.341707L8.39841 0.283374C8.43758 0.240041 8.48258 0.204207 8.53258 0.175041L8.62341 0.141707L8.76508 0.083374H9.11591C9.42924 0.115874 9.70508 0.303374 9.84924 0.583374L11.6984 4.30837C11.8317 4.58087 12.0909 4.77004 12.3901 4.81587L16.5317 5.41671C16.8817 5.46671 17.1742 5.70837 17.2901 6.04171C17.3992 6.37587 17.3051 6.74254 17.0484 6.98337L13.9317 9.93337Z"
-                                        fill="#E5E6E7" />
-                                </svg>
-                                <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M13.9317 9.93337C13.7159 10.1425 13.6167 10.445 13.6659 10.7417L14.4067 14.8417C14.4692 15.1892 14.3226 15.5409 14.0317 15.7417C13.7467 15.95 13.3676 15.975 13.0567 15.8084L9.36591 13.8834C9.23758 13.815 9.09508 13.7784 8.94924 13.7742H8.72341C8.64508 13.7859 8.56841 13.8109 8.49841 13.8492L4.80675 15.7834C4.62425 15.875 4.41758 15.9075 4.21508 15.875C3.72175 15.7817 3.39258 15.3117 3.47341 14.8159L4.21508 10.7159C4.26425 10.4167 4.16508 10.1125 3.94925 9.90004L0.940079 6.98337C0.688412 6.73921 0.600912 6.37254 0.715912 6.04171C0.827579 5.71171 1.11258 5.47087 1.45675 5.41671L5.59841 4.81587C5.91341 4.78337 6.19008 4.59171 6.33175 4.30837L8.15674 0.566707C8.20008 0.483374 8.25591 0.406707 8.32341 0.341707L8.39841 0.283374C8.43758 0.240041 8.48258 0.204207 8.53258 0.175041L8.62341 0.141707L8.76508 0.083374H9.11591C9.42924 0.115874 9.70508 0.303374 9.84924 0.583374L11.6984 4.30837C11.8317 4.58087 12.0909 4.77004 12.3901 4.81587L16.5317 5.41671C16.8817 5.46671 17.1742 5.70837 17.2901 6.04171C17.3992 6.37587 17.3051 6.74254 17.0484 6.98337L13.9317 9.93337Z"
-                                        fill="#E5E6E7" />
-                                </svg>
-                                <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M13.9317 9.93337C13.7159 10.1425 13.6167 10.445 13.6659 10.7417L14.4067 14.8417C14.4692 15.1892 14.3226 15.5409 14.0317 15.7417C13.7467 15.95 13.3676 15.975 13.0567 15.8084L9.36591 13.8834C9.23758 13.815 9.09508 13.7784 8.94924 13.7742H8.72341C8.64508 13.7859 8.56841 13.8109 8.49841 13.8492L4.80675 15.7834C4.62425 15.875 4.41758 15.9075 4.21508 15.875C3.72175 15.7817 3.39258 15.3117 3.47341 14.8159L4.21508 10.7159C4.26425 10.4167 4.16508 10.1125 3.94925 9.90004L0.940079 6.98337C0.688412 6.73921 0.600912 6.37254 0.715912 6.04171C0.827579 5.71171 1.11258 5.47087 1.45675 5.41671L5.59841 4.81587C5.91341 4.78337 6.19008 4.59171 6.33175 4.30837L8.15674 0.566707C8.20008 0.483374 8.25591 0.406707 8.32341 0.341707L8.39841 0.283374C8.43758 0.240041 8.48258 0.204207 8.53258 0.175041L8.62341 0.141707L8.76508 0.083374H9.11591C9.42924 0.115874 9.70508 0.303374 9.84924 0.583374L11.6984 4.30837C11.8317 4.58087 12.0909 4.77004 12.3901 4.81587L16.5317 5.41671C16.8817 5.46671 17.1742 5.70837 17.2901 6.04171C17.3992 6.37587 17.3051 6.74254 17.0484 6.98337L13.9317 9.93337Z"
-                                        fill="#E5E6E7" />
-                                </svg>
-                                <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M13.9317 9.93337C13.7159 10.1425 13.6167 10.445 13.6659 10.7417L14.4067 14.8417C14.4692 15.1892 14.3226 15.5409 14.0317 15.7417C13.7467 15.95 13.3676 15.975 13.0567 15.8084L9.36591 13.8834C9.23758 13.815 9.09508 13.7784 8.94924 13.7742H8.72341C8.64508 13.7859 8.56841 13.8109 8.49841 13.8492L4.80675 15.7834C4.62425 15.875 4.41758 15.9075 4.21508 15.875C3.72175 15.7817 3.39258 15.3117 3.47341 14.8159L4.21508 10.7159C4.26425 10.4167 4.16508 10.1125 3.94925 9.90004L0.940079 6.98337C0.688412 6.73921 0.600912 6.37254 0.715912 6.04171C0.827579 5.71171 1.11258 5.47087 1.45675 5.41671L5.59841 4.81587C5.91341 4.78337 6.19008 4.59171 6.33175 4.30837L8.15674 0.566707C8.20008 0.483374 8.25591 0.406707 8.32341 0.341707L8.39841 0.283374C8.43758 0.240041 8.48258 0.204207 8.53258 0.175041L8.62341 0.141707L8.76508 0.083374H9.11591C9.42924 0.115874 9.70508 0.303374 9.84924 0.583374L11.6984 4.30837C11.8317 4.58087 12.0909 4.77004 12.3901 4.81587L16.5317 5.41671C16.8817 5.46671 17.1742 5.70837 17.2901 6.04171C17.3992 6.37587 17.3051 6.74254 17.0484 6.98337L13.9317 9.93337Z"
-                                        fill="#E5E6E7" />
-                                </svg>
-                                <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M13.9317 9.93337C13.7159 10.1425 13.6167 10.445 13.6659 10.7417L14.4067 14.8417C14.4692 15.1892 14.3226 15.5409 14.0317 15.7417C13.7467 15.95 13.3676 15.975 13.0567 15.8084L9.36591 13.8834C9.23758 13.815 9.09508 13.7784 8.94924 13.7742H8.72341C8.64508 13.7859 8.56841 13.8109 8.49841 13.8492L4.80675 15.7834C4.62425 15.875 4.41758 15.9075 4.21508 15.875C3.72175 15.7817 3.39258 15.3117 3.47341 14.8159L4.21508 10.7159C4.26425 10.4167 4.16508 10.1125 3.94925 9.90004L0.940079 6.98337C0.688412 6.73921 0.600912 6.37254 0.715912 6.04171C0.827579 5.71171 1.11258 5.47087 1.45675 5.41671L5.59841 4.81587C5.91341 4.78337 6.19008 4.59171 6.33175 4.30837L8.15674 0.566707C8.20008 0.483374 8.25591 0.406707 8.32341 0.341707L8.39841 0.283374C8.43758 0.240041 8.48258 0.204207 8.53258 0.175041L8.62341 0.141707L8.76508 0.083374H9.11591C9.42924 0.115874 9.70508 0.303374 9.84924 0.583374L11.6984 4.30837C11.8317 4.58087 12.0909 4.77004 12.3901 4.81587L16.5317 5.41671C16.8817 5.46671 17.1742 5.70837 17.2901 6.04171C17.3992 6.37587 17.3051 6.74254 17.0484 6.98337L13.9317 9.93337Z"
-                                        fill="#E5E6E7" />
-                                </svg>
-                            </section>
+                            <div class="stars rating">
+                                <input type="radio" name="star" class="star-1" id="star-1" />
+                                <label class="star-1" for="star-1">1</label>
+                                <input type="radio" name="star" class="star-2" id="star-2" />
+                                <label class="star-2" for="star-2">2</label>
+                                <input type="radio" name="star" class="star-3" id="star-3" />
+                                <label class="star-3" for="star-3">3</label>
+                                <input type="radio" name="star" class="star-4" id="star-4" />
+                                <label class="star-4" for="star-4">4</label>
+                                <input type="radio" name="star" class="star-5" id="star-5" />
+                                <label class="star-5" for="star-5">5</label>
+                                <span></span>
+                            </div>
                         </div>
                     </div>
                     <div class="row mb-4">
@@ -568,16 +557,10 @@
                     <section class="quick-access">
                         <h5>دسترسی سریع</h5>
                         <ul>
-                            <li><a href="">درباره ما</a></li>
-                            <li><a href="">درباره ما</a></li>
-                            <li><a href="">تماس با ما</a></li>
-                            <li><a href="">تماس با ما</a></li>
-                            <li><a href="">گالری</a></li>
-                            <li><a href="">گالری</a></li>
-                            <li><a href="">محصولات</a></li>
-                            <li><a href="">محصولات</a></li>
-                            <li><a href="">خانه</a></li>
-                            <li><a href="">خانه</a></li>
+                            <li><a href="./contact-us.html">تماس با ما</a></li>
+                            <li><a href="./blog.html">وبلاگ</a></li>
+                            <li><a href="./products.html">محصولات</a></li>
+                            <li><a href="./index.html">خانه</a></li>
                         </ul>
                     </section>
                 </section>
@@ -608,6 +591,7 @@
                 </section>
             </div>
         </div>
+
         <section class="copyright">
             <div class="container">
                 <div class="row text-center">
@@ -620,16 +604,9 @@
     </footer>
 </body>
 <!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
-    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
-    integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
-    crossorigin="anonymous"></script>
-<!-- Fontawesome Icon -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.4.2/js/all.min.js"
-    integrity="sha512-IqeQ6271Vq75Nf4OOwCEYi4tIAyT2J7vtKrmOU9WCezb+YkxqAu+igEi2CuLEnA7cqtvFDHsQhXbpZXx/evxrw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./plugins/bootstrap/bootstrap.min.js"></script>
+<!-- Font Awesome -->
+<script src="./plugins/font-awesome/font-awesome.min.js"></script>
 <!-- Custom JS -->
 <script src="./js/script.js"></script>
 

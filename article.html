@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بلاگ</title>
+    <!-- Swiper's CSS -->
+    <link rel="stylesheet" href="plugins/swiper/swiper-bundle.min.css" />
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.rtl.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./plugins/Animate/animate.min.css" />
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body dir="rtl">
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                                 Header                                  -->
+    <!-- ----------------------------------------------------------------------- -->
+    <header class="header fixed-top">
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg bg-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="./images/logo.png" alt="logo">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./index.html">خانه</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="products.html">محصولات</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active-link" href="./blog.html">وبلاگ</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href='./contact-us.html'>تماس با ما</a>
+                                </li>
+                            </ul>
+                            <form class="d-flex" role="contact-us">
+                                <section class="dark-mode">
+                                    <button class="dark">
+                                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M1.60707 9.83259C1.89207 13.9097 5.35166 17.2268 9.49207 17.4088C12.4133 17.5355 15.0258 16.1738 16.5933 14.0284C17.2425 13.1497 16.8942 12.5638 15.8096 12.7618C15.2792 12.8568 14.7329 12.8963 14.1629 12.8726C10.2917 12.7143 7.12499 9.47634 7.10916 5.65259C7.10124 4.62342 7.31499 3.64967 7.70291 2.76301C8.13041 1.78134 7.61582 1.31426 6.62624 1.73384C3.49124 3.05592 1.34582 6.21467 1.60707 9.83259Z"
+                                                stroke="#ffffff" stroke-width="1.3" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                    <button class="light active">
+                                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.49996 14.6459C12.3419 14.6459 14.6458 12.342 14.6458 9.50008C14.6458 6.65812 12.3419 4.35425 9.49996 4.35425C6.65799 4.35425 4.35413 6.65812 4.35413 9.50008C4.35413 12.342 6.65799 14.6459 9.49996 14.6459Z"
+                                                stroke="#ffffff" stroke-width="1.3" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M15.1525 15.1524L15.0496 15.0495M15.0496 3.95033L15.1525 3.84742L15.0496 3.95033ZM3.84754 15.1524L3.95046 15.0495L3.84754 15.1524ZM9.50004 1.64659V1.58325V1.64659ZM9.50004 17.4166V17.3533V17.4166ZM1.64671 9.49992H1.58337H1.64671ZM17.4167 9.49992H17.3534H17.4167ZM3.95046 3.95033L3.84754 3.84742L3.95046 3.95033Z"
+                                                stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </section>
+                                <a href="./contact-us.html">
+                                    <button class="contact-us-btn" type="button">تماس با ما</button>
+                                </a>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                                 Article                                 -->
+    <!-- ----------------------------------------------------------------------- -->
+
+    <section class="article">
+        <div class="container-article mx-auto">
+            <div class="bread-crumb">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <ul>
+                            <li>
+                                <a href="/">صفحه اصلی</a>
+                                <svg width="4" height="4" viewBox="0 0 4 4" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="2" cy="2" r="2" fill="#D9D9D9" />
+                                </svg>
+                            </li>
+                            <li>
+                                <a href="/blog">بلاگ</a>
+                                <svg width="4" height="4" viewBox="0 0 4 4" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="2" cy="2" r="2" fill="#D9D9D9" />
+                                </svg>
+                            </li>
+                            <li>
+                                <a href="">۱۳ نکته‌ که درباره‌ی مد پایدار باید بدانید</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="d-flex justify-content-end">
+                            <a href="#" class="d-flex">
+                                <img src="./images/svg/share.svg" alt="share">
+                                <h4>اشتراک گذاری با دیگران</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-content">
+                <div class="top-content">
+                    <div class="row">
+                        <div class="col-lg-7 col-12">
+                            <div class="article-title">
+                                <ul>
+                                    <li>
+                                        <img src="images/avatar.png" alt="">
+                                    </li>
+                                    <li>
+                                        <p>امیرحسین میهن پرست</p>
+                                    </li>
+                                    <li>
+                                        <p>شنبه ۱۷ تیر</p>
+                                    </li>
+                                    <li>
+                                        <p>۳۸ دیدگاه</p>
+                                    </li>
+                                </ul>
+                                <h1>۹ فایده‌ی بی‌نظیر دوش صبحگاهی برای سلامت بدن</h1>
+                            </div>
+                            <p>
+                                آدم‌ها به دو دسته‌ی کلی تقسیم می‌شوند؛ آن‌هایی که صبح‌ها دوش می‌گیرند و آن‌هایی که دوش
+                                گرفتن
+                                در
+                                شب‌ها را
+                                دوست دارند. بعضی از افراد دوش شبانه را به عنوان روشی برای به آرامش رسیدن بعد از یک روز
+                                طولانی
+                                دوست دارند
+                                و بعضی دیگر به این دلیل صبح‌ها دوش می‌گیرند که روز را شاداب‌تر شروع کنند. شما می‌توانید
+                                هر
+                                کدام
+                                از این
+                                روتین‌ها را که دوست دارید انتخاب کنید اما دانشمندان معتقدند فواید دوش صبحگاهی خیلی بیشتر
+                                از
+                                دوش
+                                گرفتن در
+                                شب‌ها است.
+                                در این مطلب از دیجی‌کالا مگ می‌خواهیم ۹ مزیت دوش صبحگاهی را بیان کنیم. اگر شما هم از آن
+                                دسته
+                                افرادی
+                                هستید که شب‌ها قبل از خواب به حمام می‌روید.
+                            </p>
+                        </div>
+                        <div class="col-lg-5 col-12">
+                            <img src="images/article.png" class="article-title-img img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="bottom-content">
+                        <p>
+                            اگر از آن دسته افرادی هستید که صبح‌ها به دلیل ضربان نامنظم قلب بیدار می‌شوید، باید بدانید که
+                            به
+                            احتمال خیلی زیاد درگیر استرس هستید. دوش صبحگاهی، مخصوصا دوش با آب خنک، روشی عالی برای کاهش
+                            این
+                            نوع
+                            از استرس است. البته فراموش نکنید که نباید با آب خیلی سرد دوش گرفت، آب ولرم که گرمای زیادی
+                            ندارد
+                            بهترین انتخاب برای دوش صبحگاهی است. با این کار بدن شما اکسیژن مورد نیازش را دریافت کرده و
+                            مغز
+                            می‌تواند با استفاده از این اکسیژن میزان استرس را کاهش دهد. رایحه درمانی در زمان دوش گرفتن هم
+                            می‌تواند به این موضوع کمک کند.
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="main-content">
+                        <h1 class="title">افزایش ایمنی بدن</h1>
+                        <p>
+                            دوش صبحگاهی بدن را برای ساخت گلبول‌های سفید جدید تحریک کرده و به این طریق سیستم ایمنی بدن را
+                            تقویت می‌کند. با توجه به ساعت بیولوژیکی بدن، تولید گلبول سفید در صبح بیشتر است و در صورتی که
+                            صبح‌ها دوش بگیریم میزان تولید آن به شکل قابل توجهی افزایش پیدا می‌کند.دوش گرفتن به طول کلی
+                            باعث
+                            پاکیزگی پوست شده و به سلامت آن کمک می‌کند؛ اما دوش صبحگاهی مزایای بیشتری برای پوست به ارمغان
+                            می‌آورد. صبح‌ها با دوش گرفتن می‌توانید چربی طبیعی پوست را متعادل کرده و تا حد زیادی از بروز
+                            آکنه
+                            جلوگیری کنید.
+                        </p>
+                        <div class="tip">
+                            <img src="images/tip.png" alt="">
+                            <h5>
+                                اگر زیاد سرفه می‌کنید می‌توانید با دوش گرفتن در صبح‌ها تا میزان زیادی آن را تسکین دهید.
+                                وقتی
+                                درگیر سرماخوردگی یا سرفه‌ی مزمن هستید
+                            </h5>
+
+                        </div>
+                        <p>
+                            سفر دوستدار طبیعت سفری است که در تمام مراحل آن، همیشه طبیعت را در اولویت قرار می‌دهید. در
+                            این
+                            سفرها تمام تصمیم‌هایی که می‌گیرید، از انتخاب وسیله‌ی حمل‌و‌نقل گرفته تا محل اقامت، با در نظر
+                            گرفتن طبیعت و آثاری است که انتخاب شما روی آن خواهد داشت.
+                            <br />
+                            <br />
+                            سفر دوستدار طبیعت ممکن است گاهی اوقات سخت‌تر از سفرهای عادی باشد و گاهی بسیار راحت و
+                            دلپذیرتر
+                            است. در نهایت هر چقدر که برای داشتن یک سفر دوستدار طبیعت سختی بکشید، ارزشش را دارد و نتیجه‌ی
+                            آن،
+                            داشتن سیاره‌ای سبز و زیبا است.
+                        </p>
+                        <h1 class="title">خرید محصولات محلی</h1>
+                        <p>
+                            خریدن سوغاتی یکی از مهم‌ترین بخش‌های سفر برای ما است. این روزها هر جای توریستی که بروید،
+                            محصولات
+                            خارجی را پیدا می‌کنید و شاید وسوسه شوید تا به‌عنوان سوغات این محصولات را بخرید. اما سوغاتی
+                            باید
+                            یکی از محصولات اصیل و بومی باشد. وقتی محصولات بومی و محلی می‌خرید، به کسب‌وکارهای بومی رونق
+                            می‌دهید. علاوه‌براین، خیالتان راحت است که برای حمل‌ونقل چیزهایی که می‌خرید، هواپیماهای بزرگ
+                            به
+                            گوشه و کنار دنیا پرواز نکرده‌اند.
+                            <br />
+                            <br />
+                            نکته‌ی مهمی که در مورد خرید محصلات محلی باید بدانید این است که در خرید آن‌ها هم طبیعت را در
+                            نظر
+                            بگیرید. بعضی محصولات محلی با تخریب محیط زیست به دست می‌آیند. مثلا وسایل تزیینی که با صدف‌های
+                            خاص
+                            درست می‌شوند یا سبزی‌هایی که در فصل نامناسب و در حجم بسیار زیاد، از طبیعت چیده شده‌اند. سعی
+                            کنید
+                            این محصولات را بشناسید و آن‌ها را خریداری نکنید.
+                            <br />
+                            <br />
+                            با حمایت از کسب‌وکارهای غیرقانونی بومی، به تخریب طبیعت دامن می‌زنید.
+                        </p>
+                    </div>
+                    <hr />
+                    <div class="article-tags">
+                        <div class="row">
+                            <div class="col-lg-3 col-12">
+                                <div class="tag-title">
+                                    <img src="images/hashtag.png" alt="">
+                                    <h6>تگهای مقاله</h6>
+                                </div>
+                            </div>
+                            <div class="col-lg-9 col-12">
+                                <div class="tags">
+                                    <a href="#">#تجهیزات سفر</a>
+                                    <a href="#">#مسافرت</a>
+                                    <a href="#">#مازندران</a>
+                                    <a href="#">#هواپیما</a>
+                                    <a href="#">#سبک زندگی</a>
+                                    <a href="#">#مدرنیته</a>
+                                    <a href="#">#شمال</a>
+                                    <a href="#">#شیراز</a>
+                                    <a href="#">#رشت</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                                 Related Posts                           -->
+    <!-- ----------------------------------------------------------------------- -->
+    <section class="related-posts">
+        <div class="container-article mx-auto">
+            <h1>مطالب مرتبط</h1>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="post">
+                            <div class="related-post-title">
+                                <div class="information">
+                                    <div>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.99984 1.16666C3.78567 1.16666 1.1665 3.78583 1.1665 7C1.1665 10.2142 3.78567 12.8333 6.99984 12.8333C10.214 12.8333 12.8332 10.2142 12.8332 7C12.8332 3.78583 10.214 1.16666 6.99984 1.16666ZM9.53734 9.0825C9.45567 9.2225 9.30984 9.29833 9.15817 9.29833C9.08234 9.29833 9.0065 9.28083 8.9365 9.23416L7.12817 8.155C6.679 7.88666 6.3465 7.2975 6.3465 6.77833V4.38666C6.3465 4.1475 6.54484 3.94916 6.784 3.94916C7.02317 3.94916 7.2215 4.1475 7.2215 4.38666V6.77833C7.2215 6.98833 7.3965 7.2975 7.57734 7.4025L9.38567 8.48166C9.59567 8.60416 9.66567 8.8725 9.53734 9.0825Z"
+                                                fill="white" />
+                                        </svg>
+                                        <span>26مهر</span>
+                                    </div>
+                                    <div>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10.7742 9.8175L11.0017 11.6608C11.0601 12.145 10.5409 12.4833 10.1267 12.2325L8.10839 11.0308C7.96839 10.9492 7.93339 10.7742 8.00923 10.6342C8.30089 10.0975 8.45839 9.49083 8.45839 8.88416C8.45839 6.74916 6.62673 5.01083 4.37506 5.01083C3.91423 5.01083 3.46506 5.08083 3.04506 5.22083C2.82923 5.29083 2.61923 5.0925 2.67173 4.87083C3.20256 2.7475 5.24423 1.16666 7.68256 1.16666C10.5292 1.16666 12.8334 3.31916 12.8334 5.97333C12.8334 7.54833 12.0226 8.9425 10.7742 9.8175Z"
+                                                fill="white" />
+                                            <path
+                                                d="M7.58317 8.88417C7.58317 9.57833 7.3265 10.22 6.89484 10.7275C6.31734 11.4275 5.4015 11.8767 4.37484 11.8767L2.85234 12.7808C2.59567 12.9383 2.269 12.7225 2.304 12.425L2.44984 11.2758C1.66817 10.7333 1.1665 9.86417 1.1665 8.88417C1.1665 7.8575 1.71484 6.95333 2.55484 6.41667C3.074 6.07833 3.69817 5.88583 4.37484 5.88583C6.14817 5.88583 7.58317 7.2275 7.58317 8.88417Z"
+                                                fill="white" />
+                                        </svg>
+                                        <span>37دیدگاه</span>
+                                    </div>
+                                </div>
+                                <h2>آینده ی دنیای سرگرمی چگونه خواهد بود؟</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="post">
+                            <div class="related-post-title">
+                                <div class="information">
+                                    <div>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.99984 1.16666C3.78567 1.16666 1.1665 3.78583 1.1665 7C1.1665 10.2142 3.78567 12.8333 6.99984 12.8333C10.214 12.8333 12.8332 10.2142 12.8332 7C12.8332 3.78583 10.214 1.16666 6.99984 1.16666ZM9.53734 9.0825C9.45567 9.2225 9.30984 9.29833 9.15817 9.29833C9.08234 9.29833 9.0065 9.28083 8.9365 9.23416L7.12817 8.155C6.679 7.88666 6.3465 7.2975 6.3465 6.77833V4.38666C6.3465 4.1475 6.54484 3.94916 6.784 3.94916C7.02317 3.94916 7.2215 4.1475 7.2215 4.38666V6.77833C7.2215 6.98833 7.3965 7.2975 7.57734 7.4025L9.38567 8.48166C9.59567 8.60416 9.66567 8.8725 9.53734 9.0825Z"
+                                                fill="white" />
+                                        </svg>
+                                        <span>26مهر</span>
+                                    </div>
+                                    <div>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10.7742 9.8175L11.0017 11.6608C11.0601 12.145 10.5409 12.4833 10.1267 12.2325L8.10839 11.0308C7.96839 10.9492 7.93339 10.7742 8.00923 10.6342C8.30089 10.0975 8.45839 9.49083 8.45839 8.88416C8.45839 6.74916 6.62673 5.01083 4.37506 5.01083C3.91423 5.01083 3.46506 5.08083 3.04506 5.22083C2.82923 5.29083 2.61923 5.0925 2.67173 4.87083C3.20256 2.7475 5.24423 1.16666 7.68256 1.16666C10.5292 1.16666 12.8334 3.31916 12.8334 5.97333C12.8334 7.54833 12.0226 8.9425 10.7742 9.8175Z"
+                                                fill="white" />
+                                            <path
+                                                d="M7.58317 8.88417C7.58317 9.57833 7.3265 10.22 6.89484 10.7275C6.31734 11.4275 5.4015 11.8767 4.37484 11.8767L2.85234 12.7808C2.59567 12.9383 2.269 12.7225 2.304 12.425L2.44984 11.2758C1.66817 10.7333 1.1665 9.86417 1.1665 8.88417C1.1665 7.8575 1.71484 6.95333 2.55484 6.41667C3.074 6.07833 3.69817 5.88583 4.37484 5.88583C6.14817 5.88583 7.58317 7.2275 7.58317 8.88417Z"
+                                                fill="white" />
+                                        </svg>
+                                        <span>37دیدگاه</span>
+                                    </div>
+                                </div>
+                                <h2>آینده ی دنیای سرگرمی چگونه خواهد بود؟</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="post">
+                            <div class="related-post-title">
+                                <div class="information">
+                                    <div>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M6.99984 1.16666C3.78567 1.16666 1.1665 3.78583 1.1665 7C1.1665 10.2142 3.78567 12.8333 6.99984 12.8333C10.214 12.8333 12.8332 10.2142 12.8332 7C12.8332 3.78583 10.214 1.16666 6.99984 1.16666ZM9.53734 9.0825C9.45567 9.2225 9.30984 9.29833 9.15817 9.29833C9.08234 9.29833 9.0065 9.28083 8.9365 9.23416L7.12817 8.155C6.679 7.88666 6.3465 7.2975 6.3465 6.77833V4.38666C6.3465 4.1475 6.54484 3.94916 6.784 3.94916C7.02317 3.94916 7.2215 4.1475 7.2215 4.38666V6.77833C7.2215 6.98833 7.3965 7.2975 7.57734 7.4025L9.38567 8.48166C9.59567 8.60416 9.66567 8.8725 9.53734 9.0825Z"
+                                                fill="white" />
+                                        </svg>
+                                        <span>26مهر</span>
+                                    </div>
+                                    <div>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10.7742 9.8175L11.0017 11.6608C11.0601 12.145 10.5409 12.4833 10.1267 12.2325L8.10839 11.0308C7.96839 10.9492 7.93339 10.7742 8.00923 10.6342C8.30089 10.0975 8.45839 9.49083 8.45839 8.88416C8.45839 6.74916 6.62673 5.01083 4.37506 5.01083C3.91423 5.01083 3.46506 5.08083 3.04506 5.22083C2.82923 5.29083 2.61923 5.0925 2.67173 4.87083C3.20256 2.7475 5.24423 1.16666 7.68256 1.16666C10.5292 1.16666 12.8334 3.31916 12.8334 5.97333C12.8334 7.54833 12.0226 8.9425 10.7742 9.8175Z"
+                                                fill="white" />
+                                            <path
+                                                d="M7.58317 8.88417C7.58317 9.57833 7.3265 10.22 6.89484 10.7275C6.31734 11.4275 5.4015 11.8767 4.37484 11.8767L2.85234 12.7808C2.59567 12.9383 2.269 12.7225 2.304 12.425L2.44984 11.2758C1.66817 10.7333 1.1665 9.86417 1.1665 8.88417C1.1665 7.8575 1.71484 6.95333 2.55484 6.41667C3.074 6.07833 3.69817 5.88583 4.37484 5.88583C6.14817 5.88583 7.58317 7.2275 7.58317 8.88417Z"
+                                                fill="white" />
+                                        </svg>
+                                        <span>37دیدگاه</span>
+                                    </div>
+                                </div>
+                                <h2>آینده ی دنیای سرگرمی چگونه خواهد بود؟</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                                 User Comments                           -->
+    <!-- ----------------------------------------------------------------------- -->
+
+    <section class="user-comments">
+        <div class="container-article mx-auto">
+            <div class="user-comments-title">
+                <svg width="193" height="3" viewBox="0 0 193 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M193 1.5L1.54901 2.79028C0.833008 2.79511 0.25 2.21602 0.25 1.5C0.25 0.783982 0.833008 0.204891 1.54901 0.209717L193 1.5Z"
+                        fill="url(#paint0_linear_370_422)" />
+                    <defs>
+                        <linearGradient id="paint0_linear_370_422" x1="193" y1="1.5" x2="-11" y2="1.5"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#D9D9D9" stop-opacity="0" />
+                            <stop offset="1" stop-color="#D9D9D9" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <h1>دید گاه کاربران</h1>
+                <svg width="193" height="3" class="user-comment-icon" viewBox="0 0 193 3" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M0 1.5L191.451 0.209717C192.167 0.204891 192.75 0.783982 192.75 1.5C192.75 2.21602 192.167 2.79511 191.451 2.79028L0 1.5Z"
+                        fill="url(#paint0_linear_370_421)" />
+                    <defs>
+                        <linearGradient id="paint0_linear_370_421" x1="0" y1="1.5" x2="204" y2="1.5"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#D9D9D9" stop-opacity="0" />
+                            <stop offset="1" stop-color="#D9D9D9" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <h6>37 دیدگاه</h6>
+            <div class="col-12">
+                <div class="comment">
+                    <div>
+                        <img src="images/user-comment.png" alt="">
+                    </div>
+                    <div>
+                        <div class="comment-title">
+                            <div class="comment-information">
+                                <h3>رضا شریفی</h3>
+                                <span>چند دقیقه پیش</span>
+                            </div>
+                            <div class="replay-comment">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7.00022 12.6667C3.53355 12.6667 0.720215 9.84667 0.720215 6.38667C0.720215 5.14 1.08688 3.93334 1.78022 2.89334C1.93355 2.66667 2.24688 2.6 2.47355 2.75334C2.70021 2.90667 2.76688 3.22 2.61355 3.44667C2.03355 4.31334 1.72688 5.33334 1.72688 6.38C1.72688 9.29334 4.09355 11.66 7.00688 11.66C9.92022 11.66 12.2869 9.29334 12.2869 6.38C12.2869 3.46667 9.91355 1.1 7.00022 1.1C6.38688 1.1 5.78688 1.18667 5.22021 1.36C4.95355 1.44 4.67355 1.29334 4.59355 1.02667C4.51355 0.760005 4.66022 0.480005 4.92688 0.400005C5.59355 0.200005 6.28688 0.093338 7.00022 0.093338C10.4669 0.093338 13.2802 2.91334 13.2802 6.37334C13.2802 9.83334 10.4669 12.6667 7.00022 12.6667Z"
+                                        fill="#F88C3D" />
+                                </svg>
+                                <a href="#">پاسخ دادن</a>
+                            </div>
+                        </div>
+                        <div class="comment-description">
+                            <p>
+                                سفر یکی از جذاب‌ترین تجربه‌های زندگی است. مطمئنا ما دوست نداریم که لحظات خوش زندگی ما،
+                                باعث
+                                آسیب زدن به طبیعت زیبای اطرافمان شود. اگر اهل سفر و گردشگری هستید، با رعایت چند نکته‌ی
+                                مهم
+                                می‌توانید سفر دوستدار طبیعت را تجربه کنید
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="comment">
+                    <div>
+                        <img src="images/user-comment.png" alt="">
+                    </div>
+                    <div>
+                        <div class="comment-title">
+                            <div class="comment-information">
+                                <h3>رضا شریفی</h3>
+                                <span>چند دقیقه پیش</span>
+                            </div>
+                            <div class="replay-comment">
+                                <img src="./images/svg/reply.svg" alt="">
+                                <a href="#">پاسخ دادن</a>
+                            </div>
+                        </div>
+                        <div class="comment-description">
+                            <p>
+                                سفر یکی از جذاب‌ترین تجربه‌های زندگی است. مطمئنا ما دوست نداریم که لحظات خوش زندگی ما،
+                                باعث
+                                آسیب زدن به طبیعت زیبای اطرافمان شود. اگر اهل سفر و گردشگری هستید، با رعایت چند نکته‌ی
+                                مهم
+                                می‌توانید سفر دوستدار طبیعت را تجربه کنید
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="comment">
+                    <div>
+                        <img src="images/user-comment.png" alt="">
+                    </div>
+                    <div>
+                        <div class="comment-title">
+                            <div class="comment-information">
+                                <h3>رضا شریفی</h3>
+                                <span>چند دقیقه پیش</span>
+                            </div>
+                            <div class="replay-comment">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7.00022 12.6667C3.53355 12.6667 0.720215 9.84667 0.720215 6.38667C0.720215 5.14 1.08688 3.93334 1.78022 2.89334C1.93355 2.66667 2.24688 2.6 2.47355 2.75334C2.70021 2.90667 2.76688 3.22 2.61355 3.44667C2.03355 4.31334 1.72688 5.33334 1.72688 6.38C1.72688 9.29334 4.09355 11.66 7.00688 11.66C9.92022 11.66 12.2869 9.29334 12.2869 6.38C12.2869 3.46667 9.91355 1.1 7.00022 1.1C6.38688 1.1 5.78688 1.18667 5.22021 1.36C4.95355 1.44 4.67355 1.29334 4.59355 1.02667C4.51355 0.760005 4.66022 0.480005 4.92688 0.400005C5.59355 0.200005 6.28688 0.093338 7.00022 0.093338C10.4669 0.093338 13.2802 2.91334 13.2802 6.37334C13.2802 9.83334 10.4669 12.6667 7.00022 12.6667Z"
+                                        fill="#F88C3D" />
+                                </svg>
+                                <a href="#">پاسخ دادن</a>
+                            </div>
+                        </div>
+                        <div class="comment-description">
+                            <p>
+                                سفر یکی از جذاب‌ترین تجربه‌های زندگی است. مطمئنا ما دوست نداریم که لحظات خوش زندگی ما،
+                                باعث
+                                آسیب زدن به طبیعت زیبای اطرافمان شود. اگر اهل سفر و گردشگری هستید، با رعایت چند نکته‌ی
+                                مهم
+                                می‌توانید سفر دوستدار طبیعت را تجربه کنید
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="separator">
+                <svg width="1000" height="2" viewBox="0 0 1000 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line y1="1" x2="1000" y2="1" stroke="#CBCDD8" stroke-width="2" stroke-dasharray="2 7" />
+                </svg>
+            </div>
+        </div>
+    </section>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                            Submit Comment Form                          -->
+    <!-- ----------------------------------------------------------------------- -->
+
+    <section class="submit-comment-form">
+        <div class="container-article mx-auto">
+            <h1>دیدگاه خود را بنویسید</h1>
+            <form action="">
+                <div class="row mb-3">
+                    <div class="col-lg col-12 input-group input-group-lg mb-3 mb-lg-0">
+                        <span class="input-group-text" id="basic-addon1">
+                            <img src="./images/icons/user.png" alt="">
+                        </span>
+                        <input type="text" class="form-control" placeholder="نام و نام خانوادگی..."
+                            aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="col-lg col-12 input-group input-group-lg mb-3 mb-lg-0">
+                        <span class="input-group-text">
+                            <img src="./images/icons/psot.png" alt="">
+                        </span>
+                        <input type="text" class="form-control" placeholder="آدرس ایمیل" aria-label="Username"
+                            aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="input-group">
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="9"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <button>ارسال درخواست</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                               Contact-us                                -->
+    <!-- ----------------------------------------------------------------------- -->
+    <section class="contact-us">
+        <div class="container">
+            <div class="row justify-content-between">
+                <section class="col-12 col-lg-5 text-center text-lg-start mb-4 mb-lg-0">
+                    <section class="contact-desc ">
+                        <h5>از طریق راه های زیر با ما در ارتباط باشید</h5>
+                        <span>Contact us using the following ways</span>
+                    </section>
+                </section>
+                <section class="col-12 col-lg-7">
+                    <section class="contact-info d-flex justify-content-center ">
+                        <section class="info-item">
+                            <section>
+                                <p>Email</p>
+                                <a href="">info@lawino.com</a>
+                            </section>
+                            <img src="./images/icons/email.png" alt="email">
+                        </section>
+                        <section class="info-item">
+                            <section>
+                                <p>Phone</p>
+                                <a href="">۰۹۱۲۶۹۱۹۱۹۱</a>
+                            </section>
+                            <img src="./images/icons/call.png" alt="phone">
+                        </section>
+                    </section>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                                 Footer                                  -->
+    <!-- ----------------------------------------------------------------------- -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <section class="col-12 col-lg-6 col-xl-4 mb-4 mb-lg-0">
+                    <section class="footer-desc">
+                        <section class="desc-title">
+                            <h3>لاویتو</h3>
+                            <span>تجربه کیفیت و رضایت</span>
+                        </section>
+                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
+                            چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
+                            تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در
+                            شصت و...پ</p>
+                        <a href="#">مشاهده بیشتر...</a>
+                    </section>
+                </section>
+                <section class="col-12 col-lg-5 col-xl-3 offset-lg-1">
+                    <section class="quick-access">
+                        <h5>دسترسی سریع</h5>
+                        <ul>
+                            <li><a href="./contact-us.html">تماس با ما</a></li>
+                            <li><a href="./blog.html">وبلاگ</a></li>
+                            <li><a href="./products.html">محصولات</a></li>
+                            <li><a href="./index.html">خانه</a></li>
+                        </ul>
+                    </section>
+                </section>
+                <section class="col-12 col-lg-8 col-xl-4">
+                    <section class="connect">
+                        <section class="connect-info">
+                            <h3>راه های ارتباطی با ما</h3>
+                            <ul>
+                                <li><a class="email" href="">info@lawino.ir</a><img src="./images/icons/sms.png" alt="">
+                                </li>
+                                <li><a class="phone" href="">۰۹۱۲۶۹۱۹۱۹۱</a><img src="./images/icons/f-call.png" alt="">
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="social">
+                            <section>
+                                <h5>شبکه های اجتماعی</h5>
+                                <span>FOLLOW US</span>
+                            </section>
+                            <ul>
+                                <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </section>
+                    </section>
+                </section>
+            </div>
+        </div>
+
+        <section class="copyright">
+            <div class="container">
+                <div class="row text-center">
+                    <p dir="ltr">
+                        © 2022 LAWINO. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </footer>
+</body>
+<!-- Swiper JS -->
+<script src="./plugins/swiper/swiper-bundle.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="./plugins/bootstrap/bootstrap.min.js"></script>
+<!-- Font Awesome -->
+<script src="./plugins/font-awesome/font-awesome.min.js"></script>
+<!-- Custom JS -->
+<script src="./js/script.js"></script>
+
+</html>

@@ -1,0 +1,339 @@
+.header {
+  background-color: #1d1c20 m !important;
+}
+
+.about-us {
+  padding-bottom: 0 !important;
+  animation: bounce 2s forwards;
+  margin-top: 85px;
+  .about-us-title {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 65px;
+
+    h1 {
+      font-family: $Kalameh;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 40px;
+      text-align: right;
+      color: #2ABFED;
+      animation: bounce 2s forwards;
+    }
+
+    ul {
+      display: flex;
+      margin-bottom: 0 !important;
+
+      li {
+        margin-left: 20px;
+
+        a {
+          font-family: $Yekan;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 22px;
+          text-align: right;
+          color: #5A5A6B;
+          @include border-link($warning);
+        }
+      }
+    }
+  }
+
+  svg {
+    margin-bottom: 27px;
+    margin-top: 15px;
+  }
+
+  p {
+    font-family: $Yekan;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 30px;
+    text-align: right;
+    color: #5B5B6B;
+  }
+
+  .about-us-picture {
+    background: url("../images/about-us.png") no-repeat center;
+    height: 125px;
+    background-size: contain;
+    margin-top: 80px;
+    text-align: center;
+    animation: pulse 4s infinite;
+    img {
+      width: 162px;
+      margin-top: 40px;
+    }
+  }
+}
+
+.target-us {
+  margin-top: 71px;
+  animation: bounce 2s forwards;
+  h1 {
+    font-family: $Yekan;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 30px;
+    text-align: right;
+    color: #1F1E22;
+  }
+
+  p {
+    font-family: $Yekan;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 30px;
+    text-align: right;
+    color: #5B5B6B;
+  }
+
+  svg {
+    margin-top: 15px;
+    margin-bottom: 27px;
+  }
+}
+
+.frequently-asked-questions {
+  animation: bounce 2s forwards;
+  h1 {
+    font-family: $Yekan;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 30px;
+    text-align: right;
+    color: #1F1E22;
+  }
+
+  p {
+    font-family: $Yekan;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 30px;
+    text-align: right;
+    color: #5B5B6B;
+  }
+  .accordion {
+    margin-bottom: 133px;
+    .accordion-button {
+      background: #F9F9F9;
+      padding: 28px 20px 28px 20px;
+      border-radius: 6px;
+      &:before {
+        margin-left: 14px;
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        content: "";
+        background-image: url("../images/open-accardeon.png");
+        background-repeat: no-repeat;
+        background-size: 31px;
+        transition: var(--bs-accordion-btn-icon-transition);
+      }
+
+      &:after {
+        content: unset !important;
+      }
+
+      &:not(.collapsed) {
+        color: unset !important;
+        background: #F9F9F9 !important;
+        box-shadow: unset !important;
+      }
+    }
+    .accordion-item {
+      border: unset !important;
+      margin-bottom: 10px;
+      .accordion-collapse {
+        background: #f9f9f9;
+        .accordion-body{
+          font-family: $Yekan;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 30px;
+          text-align: right;
+          color: #5A5A6B;
+        }
+      }
+    }
+  }
+}
+
+.contact-us-page {
+  margin-bottom: 93px;
+
+  h1 {
+    font-family: $Yekan;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 26px;
+    text-align: center;
+    color: #1F1E22;
+    margin-bottom: 19px;
+    span {
+      color: #F88C3D;
+      &:after{
+        background: unset !important;
+      }
+    }
+  }
+
+  .separator-contact-us {
+    margin-top: 25px;
+    margin-bottom: 20px;
+  }
+
+  .information {
+    display: flex;
+    animation: fadeIn 2s forwards;
+    .phone-icon {
+      background: #2ABFED;
+      box-shadow: 0 10px 35px rgba(252, 72, 83, 0.1);
+      padding: 14px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      margin-left: 24px;
+      line-height: 0 !important;
+      @include btnEffect($primary);
+      &:hover{
+        animation: shakeX 1s forwards;
+      }
+      i {
+        color: #fff;
+        transform: rotateX(360deg);
+      }
+    }
+
+    div {
+      h3 {
+        font-family: 'Yekan Bakh';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+        text-align: right;
+        letter-spacing: 0.04em;
+        color: #1F1E22;
+      }
+
+      h3:first-child {
+        margin-left: 20px;
+      }
+
+      h2 {
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 30px;
+        text-align: right;
+        letter-spacing: 0.07em;
+        color: #1F1E22;
+      }
+    }
+
+    p {
+      font-family: 'Yekan Bakh';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 22px;
+      text-align: right;
+      color: #9F9FB2;
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .social-media {
+    display: flex;
+    animation: fadeIn 2s forwards;
+    a {
+      background: #2ABFED;
+      border-radius: 50%;
+      padding: 14px;
+      width: 42px;
+      height: 42px;
+      margin-left: 15px;
+      @include btnEffect($primary);
+
+      i {
+        color: #fff;
+      }
+    }
+  }
+
+  form {
+    span {
+      position: relative;
+      background-color: $form;
+      border-left: none;
+      border-color: #e0e3eb;
+      border-radius: 2px !important;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 1.3px;
+        height: 30px;
+        background-color: #d2d5db;
+      }
+    }
+
+    input {
+      position: relative;
+      @include input;
+      font-size: 15px !important;
+      height: 55px;
+      &:focus{
+        border-bottom: 1px solid $primary;
+      }
+    }
+
+    select {
+      position: relative;
+      @include input;
+      font-size: 15px !important;
+      height: 55px;
+      font-family: $Yekan;
+      color: #b7b7b9;
+      &:focus{
+        border-bottom: 1px solid $primary;
+      }
+    }
+
+    .rating {
+      position: absolute;
+      left: 30px;
+      top: 12.5px;
+    }
+
+    textarea {
+      @include input;
+      border: solid 1px $inputBorder;
+      resize: both !important;
+      &:focus{
+        border-bottom: 1px solid $primary;
+      }
+    }
+
+    button {
+      @include btn($white, $warning);
+      @include btnEffect($warning);
+      width: fit-content;
+      margin: 0 auto;
+    }
+  }
+}

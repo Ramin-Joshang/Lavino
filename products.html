@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>صفحه مصولات</title>
-    <!-- Bootstrap CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.rtl.min.css"
-        integrity="sha384-dc2NSrAXbAkjrdm9IYrX10fQq9SDG6Vjz7nQVKdKcJl3pC+k37e7qJR5MVSCS+wR" crossorigin="anonymous">
+    <!-- Bootstrap v-5 -->
+    <link rel="stylesheet" href="./plugins/bootstrap/bootstrap.rtl.min.css">
+    <!-- Animate Css -->
+    <link rel="stylesheet" href="./plugins/Animate/animate.min.css" />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/index.css">
 </head>
@@ -17,7 +18,7 @@
     <!-- ----------------------------------------------------------------------- -->
     <!--                                 Header                                  -->
     <!-- ----------------------------------------------------------------------- -->
-    <header class="header">
+    <header class="header fixed-top">
         <div class="container">
             <div class="row">
                 <nav class="navbar navbar-expand-lg bg-light">
@@ -33,22 +34,19 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="#">خانه</a>
+                                    <a class="nav-link" href="./index.html">خانه</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="./products.html">محصولات</a>
+                                    <a class="nav-link active-link" href="products.html">محصولات</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link">گالری</a>
+                                    <a class="nav-link" href="./blog.html">وبلاگ</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link">تماس با ما</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link">درباره ما</a>
+                                    <a class="nav-link" href='./contact-us.html'>تماس با ما</a>
                                 </li>
                             </ul>
-                            <form action="#" class="d-flex" role="contact-us">
+                            <form class="d-flex" role="contact-us">
                                 <section class="dark-mode">
                                     <button class="dark">
                                         <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
@@ -73,7 +71,9 @@
                                         </svg>
                                     </button>
                                 </section>
-                                <button class="contact-us-btn" type="submit">تماس با ما</button>
+                                <a href="./contact-us.html">
+                                    <button class="contact-us-btn" type="button">تماس با ما</button>
+                                </a>
                             </form>
                         </div>
                     </div>
@@ -92,32 +92,19 @@
                     </h3>
                     <form>
                         <div class="products-header-search input-group">
-                            <input type="text" class="form-control" placeholder="جستجوی مقالات" aria-label="Username"
-                                aria-describedby="basic-addon1">
-                            <span class="input-group-text input-icon" id="basic-addon1">
-                                <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <ellipse cx="7.33467" cy="7.33467" rx="6.3669" ry="6.3669" stroke="#5A5A6B"
-                                        stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M11.7629 12.0936L14.2591 14.5833" stroke="#5A5A6B" stroke-width="1.3"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
+                            <input type="text" class="form-control" placeholder="جستجوی مقالات" aria-label="Username">
+                            <span>
+                                <img src="./images/svg/search.svg" alt="">
                             </span>
                         </div>
                         <div class="products-header-select input-group">
                             <select class="form-select" aria-label="Default select example">
-                                <!-- <option selected>Open this select menu</option> -->
                                 <option selected value="1">پربازدیدترین ها</option>
                                 <option value="2">پربازدیدترین ها</option>
                                 <option value="3">پربازدیدترین ها</option>
                             </select>
-                            <!-- <span class="input-group-text input-icon" id="basic-addon1">
-                                <svg width="10" height="6" viewBox="0 0 10 6" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M4.99997 5.85018C4.82075 5.85018 4.64155 5.78175 4.50492 5.64518L0.205141 1.34536C-0.0683805 1.07184 -0.0683805 0.628372 0.205141 0.354961C0.478552 0.0815496 0.921933 0.0815496 1.19548 0.354961L4.99997 4.15968L8.80449 0.355094C9.07801 0.0816824 9.52135 0.0816824 9.79474 0.355094C10.0684 0.628505 10.0684 1.07197 9.79474 1.3455L5.49503 5.64531C5.35832 5.78191 5.17913 5.85018 4.99997 5.85018Z"
-                                        fill="#5A5A6B" />
-                                </svg> -->
+                            <span class="input-group-text input-icon" id="basic-addon1">
+                                <img src="./images/svg/select-bottom-arrow.svg" alt="">
                             </span>
                         </div>
                     </form>
@@ -137,7 +124,7 @@
                             <img src="./images/p-slider-1.png" alt='products'>
                             <section class="img-desc">PDF</section>
                         </section>
-                        <a href="#">
+                        <a href="./products-page.html">
                             <h3>فایل متخصص لاویتو</h3>
                         </a>
                         <span>۵۰۰،۰۰۰ تومان</span>
@@ -149,7 +136,7 @@
                             <img src="./images/p-slider-1.png" alt='products'>
                             <section class="img-desc">PDF</section>
                         </section>
-                        <a href="#">
+                        <a href="./products-page.html">
                             <h3>فایل متخصص لاویتو</h3>
                         </a>
                         <span>۵۰۰،۰۰۰ تومان</span>
@@ -161,7 +148,7 @@
                             <img src="./images/p-slider-1.png" alt='products'>
                             <section class="img-desc">PDF</section>
                         </section>
-                        <a href="#">
+                        <a href="./products-page.html">
                             <h3>فایل متخصص لاویتو</h3>
                         </a>
                         <span>۵۰۰،۰۰۰ تومان</span>
@@ -173,7 +160,7 @@
                             <img src="./images/p-slider-1.png" alt='products'>
                             <section class="img-desc">PDF</section>
                         </section>
-                        <a href="#">
+                        <a href="./products-page.html">
                             <h3>فایل متخصص لاویتو</h3>
                         </a>
                         <span>۵۰۰،۰۰۰ تومان</span>
@@ -185,7 +172,7 @@
                             <img src="./images/p-slider-1.png" alt='products'>
                             <section class="img-desc">PDF</section>
                         </section>
-                        <a href="#">
+                        <a href="./products-page.html">
                             <h3>فایل متخصص لاویتو</h3>
                         </a>
                         <span>۵۰۰،۰۰۰ تومان</span>
@@ -197,7 +184,7 @@
                             <img src="./images/p-slider-1.png" alt='products'>
                             <section class="img-desc">PDF</section>
                         </section>
-                        <a href="#">
+                        <a href="./products-page.html">
                             <h3>فایل متخصص لاویتو</h3>
                         </a>
                         <span>۵۰۰،۰۰۰ تومان</span>
@@ -209,7 +196,7 @@
                             <img src="./images/p-slider-1.png" alt='products'>
                             <section class="img-desc">PDF</section>
                         </section>
-                        <a href="#">
+                        <a href="./products-page.html">
                             <h3>فایل متخصص لاویتو</h3>
                         </a>
                         <span>۵۰۰،۰۰۰ تومان</span>
@@ -221,7 +208,7 @@
                             <img src="./images/p-slider-1.png" alt='products'>
                             <section class="img-desc">PDF</section>
                         </section>
-                        <a href="#">
+                        <a href="./products-page.html">
                             <h3>فایل متخصص لاویتو</h3>
                         </a>
                         <span>۵۰۰،۰۰۰ تومان</span>
@@ -233,7 +220,7 @@
                             <img src="./images/p-slider-1.png" alt='products'>
                             <section class="img-desc">PDF</section>
                         </section>
-                        <a href="#">
+                        <a href="./products-page.html">
                             <h3>فایل متخصص لاویتو</h3>
                         </a>
                         <span>۵۰۰،۰۰۰ تومان</span>
@@ -245,7 +232,7 @@
                             <img src="./images/p-slider-1.png" alt='products'>
                             <section class="img-desc">PDF</section>
                         </section>
-                        <a href="#">
+                        <a href="./products-page.html">
                             <h3>فایل متخصص لاویتو</h3>
                         </a>
                         <span>۵۰۰،۰۰۰ تومان</span>
@@ -257,7 +244,7 @@
                             <img src="./images/p-slider-1.png" alt='products'>
                             <section class="img-desc">PDF</section>
                         </section>
-                        <a href="#">
+                        <a href="./products-page.html">
                             <h3>فایل متخصص لاویتو</h3>
                         </a>
                         <span>۵۰۰،۰۰۰ تومان</span>
@@ -269,7 +256,7 @@
                             <img src="./images/p-slider-1.png" alt='products'>
                             <section class="img-desc">PDF</section>
                         </section>
-                        <a href="#">
+                        <a href="./products-page.html">
                             <h3>فایل متخصص لاویتو</h3>
                         </a>
                         <span>۵۰۰،۰۰۰ تومان</span>
@@ -358,16 +345,10 @@
                     <section class="quick-access">
                         <h5>دسترسی سریع</h5>
                         <ul>
-                            <li><a href="">درباره ما</a></li>
-                            <li><a href="">درباره ما</a></li>
-                            <li><a href="">تماس با ما</a></li>
-                            <li><a href="">تماس با ما</a></li>
-                            <li><a href="">گالری</a></li>
-                            <li><a href="">گالری</a></li>
-                            <li><a href="">محصولات</a></li>
-                            <li><a href="">محصولات</a></li>
-                            <li><a href="">خانه</a></li>
-                            <li><a href="">خانه</a></li>
+                            <li><a href="./contact-us.html">تماس با ما</a></li>
+                            <li><a href="./blog.html">وبلاگ</a></li>
+                            <li><a href="./products.html">محصولات</a></li>
+                            <li><a href="./index.html">خانه</a></li>
                         </ul>
                     </section>
                 </section>
@@ -398,6 +379,7 @@
                 </section>
             </div>
         </div>
+
         <section class="copyright">
             <div class="container">
                 <div class="row text-center">
@@ -410,16 +392,9 @@
     </footer>
 </body>
 <!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
-    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
-    integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
-    crossorigin="anonymous"></script>
-<!-- Fontawesome Icon -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.4.2/js/all.min.js"
-    integrity="sha512-IqeQ6271Vq75Nf4OOwCEYi4tIAyT2J7vtKrmOU9WCezb+YkxqAu+igEi2CuLEnA7cqtvFDHsQhXbpZXx/evxrw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./plugins/bootstrap/bootstrap.min.js"></script>
+<!-- Font Awesome -->
+<script src="./plugins/font-awesome/font-awesome.min.js"></script>
 <!-- Custom JS -->
 <script src="./js/script.js"></script>
 

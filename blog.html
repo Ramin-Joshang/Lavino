@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>بلاگ</title>
-    <!-- Bootstrap CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.rtl.min.css"
-        integrity="sha384-dc2NSrAXbAkjrdm9IYrX10fQq9SDG6Vjz7nQVKdKcJl3pC+k37e7qJR5MVSCS+wR" crossorigin="anonymous">
+    <!-- Bootstrap v-5 -->
+    <link rel="stylesheet" href="./plugins/bootstrap/bootstrap.rtl.min.css">
+    <!-- Animate Css -->
+    <link rel="stylesheet" href="./plugins/Animate/animate.min.css" />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/index.css">
 </head>
@@ -17,7 +18,7 @@
     <!-- ----------------------------------------------------------------------- -->
     <!--                                 Header                                  -->
     <!-- ----------------------------------------------------------------------- -->
-    <header class="header">
+    <header class="header fixed-top">
         <div class="container">
             <div class="row">
                 <nav class="navbar navbar-expand-lg bg-light">
@@ -33,22 +34,19 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="#">خانه</a>
+                                    <a class="nav-link" href="./index.html">خانه</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">محصولات</a>
+                                    <a class="nav-link" href="products.html">محصولات</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link">گالری</a>
+                                    <a class="nav-link active-link" href="./blog.html">وبلاگ</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link">تماس با ما</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link">درباره ما</a>
+                                    <a class="nav-link" href='./contact-us.html'>تماس با ما</a>
                                 </li>
                             </ul>
-                            <form action="#" class="d-flex" role="contact-us">
+                            <form class="d-flex" role="contact-us">
                                 <section class="dark-mode">
                                     <button class="dark">
                                         <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
@@ -73,7 +71,9 @@
                                         </svg>
                                     </button>
                                 </section>
-                                <button class="contact-us-btn" type="submit">تماس با ما</button>
+                                <a href="./contact-us.html">
+                                    <button class="contact-us-btn" type="button">تماس با ما</button>
+                                </a>
                             </form>
                         </div>
                     </div>
@@ -82,7 +82,7 @@
         </div>
     </header>
     <!-- ----------------------------------------------------------------------- -->
-    <!--                               blog-header                                -->
+    <!--                               blog-header                               -->
     <!-- ----------------------------------------------------------------------- -->
     <section class="blog-header">
         <div class="container">
@@ -91,9 +91,8 @@
                     <h3 class="mb-3 mb-lg-0">بلاگ لاوینو</h3>
                     <form>
                         <div class="blog-header-search input-group">
-                            <input type="text" class="form-control" placeholder="جستجوی مقالات" aria-label="Username"
-                                aria-describedby="basic-addon1">
-                            <span class="input-group-text input-icon" id="basic-addon1">
+                            <input type="text" class="form-control" placeholder="جستجوی مقالات" aria-label="Username">
+                            <span class="input-group-text input-icon">
                                 <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <ellipse cx="7.33467" cy="7.33467" rx="6.3669" ry="6.3669" stroke="#5A5A6B"
@@ -138,7 +137,9 @@
             </div>
         </div>
     </section>
-
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                              blog-content                               -->
+    <!-- ----------------------------------------------------------------------- -->
     <section class="blog-content">
         <div class="container">
             <div class="row">
@@ -146,8 +147,8 @@
                     <div class="row">
                         <section class="col-12 col-sm-10 col-md-6 col-lg-4 mb-5 mb-lg-0 mx-auto mx-md-0">
                             <section class="main-articles-item">
-                                <img style="width: 100%;" src="./images/blog/main-articles-1.png" alt="articles">
-                                <section class="item-desc">
+                                <img src="./images/blog/main-articles-1.png" alt="articles" class="img-fluid w-100">
+                                <figcaption class="item-desc">
                                     <section class="date-comment">
                                         <section class="date">
                                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
@@ -171,14 +172,16 @@
                                             <span>۳۷ دیدگاه</span>
                                         </section>
                                     </section>
-                                    <h5>۱۳ نکته‌ که درباره‌ی مد پایدار باید بدانید</h5>
-                                </section>
+                                    <a href="">
+                                        <h5>۱۳ نکته‌ که درباره‌ی مد پایدار باید بدانید</h5>
+                                    </a>
+                                </figcaption>
                             </section>
                         </section>
                         <section class="col-12 col-sm-10 col-md-6 col-lg-4 mb-5 mb-lg-0 mx-auto mx-md-0">
                             <section class="main-articles-item">
-                                <img style="width: 100%;" src="./images/blog/main-articles-2.png" alt="articles">
-                                <section class="item-desc">
+                                <img src="./images/blog/main-articles-2.png" alt="articles" class="img-fluid w-100">
+                                <figcaption class="item-desc">
                                     <section class="date-comment">
                                         <section class="date">
                                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
@@ -202,14 +205,16 @@
                                             <span>۳۷ دیدگاه</span>
                                         </section>
                                     </section>
-                                    <h5>۱۳ نکته‌ که درباره‌ی مد پایدار باید بدانید</h5>
-                                </section>
+                                    <a href="">
+                                        <h5>۱۳ نکته‌ که درباره‌ی مد پایدار باید بدانید</h5>
+                                    </a>
+                                </figcaption>
                             </section>
                         </section>
                         <section class="col-12 col-sm-10 col-md-6 col-lg-4 mb-5 mb-lg-0 mx-auto mx-md-0">
                             <section class="main-articles-item">
-                                <img style="width: 100%;" src="./images/blog/main-articles-3.png" alt="articles">
-                                <section class="item-desc">
+                                <img src="./images/blog/main-articles-3.png" alt="articles" class="img-fluid w-100">
+                                <figcaption class="item-desc">
                                     <section class="date-comment">
                                         <section class="date">
                                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
@@ -233,12 +238,13 @@
                                             <span>۳۷ دیدگاه</span>
                                         </section>
                                     </section>
-                                    <h5>۱۳ نکته‌ که درباره‌ی مد پایدار باید بدانید</h5>
-                                </section>
+                                    <a href="">
+                                        <h5>۱۳ نکته‌ که درباره‌ی مد پایدار باید بدانید</h5>
+                                    </a>
+                                </figcaption>
                             </section>
                         </section>
                     </div>
-
                 </section>
                 <section class="blog-articles">
                     <div class="row ">
@@ -246,7 +252,9 @@
                             <section class="blog-articles-item">
                                 <img src="./images/blog/blog-articles-1.png" alt="articles">
                                 <section class="blog-articles-desc">
-                                    <h5>بررسی ربات کنترلی مدل تبدیل شونده؛ یک اسباب‌بازی هیجان‌انگیز</h5>
+                                    <a href="./article.html">
+                                        <h5>بررسی ربات کنترلی مدل تبدیل شونده؛ یک اسباب‌بازی هیجان‌انگیز</h5>
+                                    </a>
                                     <p>در این سری ویدیوهای تلنت به جعبه‌گشایی و بررسی انواع بازی‌های کودکان می‌پردازیم.
                                         در این ویدیو یک ربات کنترلی با قابلیت‌های جالب را انتخاب کردیم. </p>
                                     <section class="date-comment">
@@ -279,7 +287,9 @@
                             <section class="blog-articles-item">
                                 <img src="./images/blog/blog-articles-1.png" alt="articles">
                                 <section class="blog-articles-desc">
-                                    <h5>بررسی ربات کنترلی مدل تبدیل شونده؛ یک اسباب‌بازی هیجان‌انگیز</h5>
+                                    <a href="./article.html">
+                                        <h5>بررسی ربات کنترلی مدل تبدیل شونده؛ یک اسباب‌بازی هیجان‌انگیز</h5>
+                                    </a>
                                     <p>در این سری ویدیوهای تلنت به جعبه‌گشایی و بررسی انواع بازی‌های کودکان می‌پردازیم.
                                         در این ویدیو یک ربات کنترلی با قابلیت‌های جالب را انتخاب کردیم. </p>
                                     <section class="date-comment">
@@ -312,7 +322,9 @@
                             <section class="blog-articles-item">
                                 <img src="./images/blog/blog-articles-1.png" alt="articles">
                                 <section class="blog-articles-desc">
-                                    <h5>بررسی ربات کنترلی مدل تبدیل شونده؛ یک اسباب‌بازی هیجان‌انگیز</h5>
+                                    <a href="./article.html">
+                                        <h5>بررسی ربات کنترلی مدل تبدیل شونده؛ یک اسباب‌بازی هیجان‌انگیز</h5>
+                                    </a>
                                     <p>در این سری ویدیوهای تلنت به جعبه‌گشایی و بررسی انواع بازی‌های کودکان می‌پردازیم.
                                         در این ویدیو یک ربات کنترلی با قابلیت‌های جالب را انتخاب کردیم. </p>
                                     <section class="date-comment">
@@ -345,7 +357,9 @@
                             <section class="blog-articles-item">
                                 <img src="./images/blog/blog-articles-1.png" alt="articles">
                                 <section class="blog-articles-desc">
-                                    <h5>بررسی ربات کنترلی مدل تبدیل شونده؛ یک اسباب‌بازی هیجان‌انگیز</h5>
+                                    <a href="./article.html">
+                                        <h5>بررسی ربات کنترلی مدل تبدیل شونده؛ یک اسباب‌بازی هیجان‌انگیز</h5>
+                                    </a>
                                     <p>در این سری ویدیوهای تلنت به جعبه‌گشایی و بررسی انواع بازی‌های کودکان می‌پردازیم.
                                         در این ویدیو یک ربات کنترلی با قابلیت‌های جالب را انتخاب کردیم. </p>
                                     <section class="date-comment">
@@ -378,7 +392,9 @@
                             <section class="blog-articles-item">
                                 <img src="./images/blog/blog-articles-1.png" alt="articles">
                                 <section class="blog-articles-desc">
-                                    <h5>بررسی ربات کنترلی مدل تبدیل شونده؛ یک اسباب‌بازی هیجان‌انگیز</h5>
+                                    <a href="./article.html">
+                                        <h5>بررسی ربات کنترلی مدل تبدیل شونده؛ یک اسباب‌بازی هیجان‌انگیز</h5>
+                                    </a>
                                     <p>در این سری ویدیوهای تلنت به جعبه‌گشایی و بررسی انواع بازی‌های کودکان می‌پردازیم.
                                         در این ویدیو یک ربات کنترلی با قابلیت‌های جالب را انتخاب کردیم. </p>
                                     <section class="date-comment">
@@ -411,7 +427,9 @@
                             <section class="blog-articles-item">
                                 <img src="./images/blog/blog-articles-1.png" alt="articles">
                                 <section class="blog-articles-desc">
-                                    <h5>بررسی ربات کنترلی مدل تبدیل شونده؛ یک اسباب‌بازی هیجان‌انگیز</h5>
+                                    <a href="./article.html">
+                                        <h5>بررسی ربات کنترلی مدل تبدیل شونده؛ یک اسباب‌بازی هیجان‌انگیز</h5>
+                                    </a>
                                     <p>در این سری ویدیوهای تلنت به جعبه‌گشایی و بررسی انواع بازی‌های کودکان می‌پردازیم.
                                         در این ویدیو یک ربات کنترلی با قابلیت‌های جالب را انتخاب کردیم. </p>
                                     <section class="date-comment">
@@ -444,7 +462,9 @@
                             <section class="blog-articles-item">
                                 <img src="./images/blog/blog-articles-1.png" alt="articles">
                                 <section class="blog-articles-desc">
-                                    <h5>بررسی ربات کنترلی مدل تبدیل شونده؛ یک اسباب‌بازی هیجان‌انگیز</h5>
+                                    <a href="./article.html">
+                                        <h5>بررسی ربات کنترلی مدل تبدیل شونده؛ یک اسباب‌بازی هیجان‌انگیز</h5>
+                                    </a>
                                     <p>در این سری ویدیوهای تلنت به جعبه‌گشایی و بررسی انواع بازی‌های کودکان می‌پردازیم.
                                         در این ویدیو یک ربات کنترلی با قابلیت‌های جالب را انتخاب کردیم. </p>
                                     <section class="date-comment">
@@ -477,7 +497,9 @@
                             <section class="blog-articles-item">
                                 <img src="./images/blog/blog-articles-1.png" alt="articles">
                                 <section class="blog-articles-desc">
-                                    <h5>بررسی ربات کنترلی مدل تبدیل شونده؛ یک اسباب‌بازی هیجان‌انگیز</h5>
+                                    <a href="./article.html">
+                                        <h5>بررسی ربات کنترلی مدل تبدیل شونده؛ یک اسباب‌بازی هیجان‌انگیز</h5>
+                                    </a>
                                     <p>در این سری ویدیوهای تلنت به جعبه‌گشایی و بررسی انواع بازی‌های کودکان می‌پردازیم.
                                         در این ویدیو یک ربات کنترلی با قابلیت‌های جالب را انتخاب کردیم. </p>
                                     <section class="date-comment">
@@ -510,7 +532,9 @@
                             <section class="blog-articles-item">
                                 <img src="./images/blog/blog-articles-1.png" alt="articles">
                                 <section class="blog-articles-desc">
-                                    <h5>بررسی ربات کنترلی مدل تبدیل شونده؛ یک اسباب‌بازی هیجان‌انگیز</h5>
+                                    <a href="./article.html">
+                                        <h5>بررسی ربات کنترلی مدل تبدیل شونده؛ یک اسباب‌بازی هیجان‌انگیز</h5>
+                                    </a>
                                     <p>در این سری ویدیوهای تلنت به جعبه‌گشایی و بررسی انواع بازی‌های کودکان می‌پردازیم.
                                         در این ویدیو یک ربات کنترلی با قابلیت‌های جالب را انتخاب کردیم. </p>
                                     <section class="date-comment">
@@ -543,7 +567,9 @@
                             <section class="blog-articles-item">
                                 <img src="./images/blog/blog-articles-1.png" alt="articles">
                                 <section class="blog-articles-desc">
-                                    <h5>بررسی ربات کنترلی مدل تبدیل شونده؛ یک اسباب‌بازی هیجان‌انگیز</h5>
+                                    <a href="./article.html">
+                                        <h5>بررسی ربات کنترلی مدل تبدیل شونده؛ یک اسباب‌بازی هیجان‌انگیز</h5>
+                                    </a>
                                     <p>در این سری ویدیوهای تلنت به جعبه‌گشایی و بررسی انواع بازی‌های کودکان می‌پردازیم.
                                         در این ویدیو یک ربات کنترلی با قابلیت‌های جالب را انتخاب کردیم. </p>
                                     <section class="date-comment">
@@ -573,6 +599,30 @@
                             </section>
                         </section>
                     </div>
+                </section>
+            </div>
+            <div class="row">
+                <section class="pagination">
+                    <ul>
+                        <li>
+                            <a href="#">1</a>
+                        </li>
+                        <li>
+                            <a href="#">2</a>
+                        </li>
+                        <li class="active">
+                            <a href="#">3</a>
+                        </li>
+                        <li>
+                            <a href="#">4</a>
+                        </li>
+                        <li>
+                            <a href="#">5</a>
+                        </li>
+                        <li>
+                            <a href="#">6</a>
+                        </li>
+                    </ul>
                 </section>
             </div>
         </div>
@@ -633,16 +683,10 @@
                     <section class="quick-access">
                         <h5>دسترسی سریع</h5>
                         <ul>
-                            <li><a href="">درباره ما</a></li>
-                            <li><a href="">درباره ما</a></li>
-                            <li><a href="">تماس با ما</a></li>
-                            <li><a href="">تماس با ما</a></li>
-                            <li><a href="">گالری</a></li>
-                            <li><a href="">گالری</a></li>
-                            <li><a href="">محصولات</a></li>
-                            <li><a href="">محصولات</a></li>
-                            <li><a href="">خانه</a></li>
-                            <li><a href="">خانه</a></li>
+                            <li><a href="./contact-us.html">تماس با ما</a></li>
+                            <li><a href="./blog.html">وبلاگ</a></li>
+                            <li><a href="./products.html">محصولات</a></li>
+                            <li><a href="./index.html">خانه</a></li>
                         </ul>
                     </section>
                 </section>
@@ -673,6 +717,7 @@
                 </section>
             </div>
         </div>
+
         <section class="copyright">
             <div class="container">
                 <div class="row text-center">
@@ -685,16 +730,9 @@
     </footer>
 </body>
 <!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
-    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
-    integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
-    crossorigin="anonymous"></script>
-<!-- Fontawesome Icon -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.4.2/js/all.min.js"
-    integrity="sha512-IqeQ6271Vq75Nf4OOwCEYi4tIAyT2J7vtKrmOU9WCezb+YkxqAu+igEi2CuLEnA7cqtvFDHsQhXbpZXx/evxrw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./plugins/bootstrap/bootstrap.min.js"></script>
+<!-- Font Awesome -->
+<script src="./plugins/font-awesome/font-awesome.min.js"></script>
 <!-- Custom JS -->
 <script src="./js/script.js"></script>
 

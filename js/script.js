@@ -6,6 +6,7 @@ const buttons = document.querySelector('.dark-mode').children;
 
 for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', e => {
+        e.preventDefault();
         for (let j = 0; j < buttons.length; j++) {
             const element = buttons[j];
             element.classList.remove("active");
@@ -63,4 +64,59 @@ var swiper = new Swiper(".myFeedback", {
         nextEl: ".next",
         prevEl: ".prev",
     }
+});
+var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 2,
+    loop: true,
+    spaceBetween: 20,
+    centeredSlides: false,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 2,
+        },
+
+        380: {
+            slidesPerView: 2,
+        },
+
+        425: {
+            slidesPerView: 2,
+        },
+
+        500: {
+            slidesPerView: 2,
+        },
+
+        576: {
+            slidesPerView: 2,
+        },
+
+        690: {
+            slidesPerView: 2,
+        },
+
+        768: {
+            slidesPerView: 2,
+        },
+
+        1000: {
+            slidesPerView: 2,
+        },
+
+        1150: {
+            slidesPerView: 2,
+        },
+
+        1250: {
+            slidesPerView: 2,
+        },
+
+        1400: {
+            slidesPerView: 2,
+        },
+    },
 });

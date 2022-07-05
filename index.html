@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>لاوینو</title>
-    <!-- Swiper's CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <!-- Bootstrap CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.rtl.min.css"
-        integrity="sha384-dc2NSrAXbAkjrdm9IYrX10fQq9SDG6Vjz7nQVKdKcJl3pC+k37e7qJR5MVSCS+wR" crossorigin="anonymous">
+    <!-- Swiper v-8 -->
+    <link rel="stylesheet" href="./plugins/swiper/swiper-bundle.min.css" />
+    <!-- Bootstrap v-5 -->
+    <link rel="stylesheet" href="./plugins/bootstrap/bootstrap.rtl.min.css">
+    <!-- Animate Css -->
+    <link rel="stylesheet" href="./plugins/Animate/animate.min.css" />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/index.css">
 </head>
@@ -35,22 +36,19 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="#">خانه</a>
+                                    <a class="nav-link active-link" href="./index.html">خانه</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="./products.html">محصولات</a>
+                                    <a class="nav-link" href="products.html">محصولات</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link">گالری</a>
+                                    <a class="nav-link" href="./blog.html">وبلاگ</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link">تماس با ما</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link">درباره ما</a>
+                                    <a class="nav-link" href='./contact-us.html'>تماس با ما</a>
                                 </li>
                             </ul>
-                            <form action="#" class="d-flex" role="contact-us">
+                            <form class="d-flex" role="contact-us">
                                 <section class="dark-mode">
                                     <button class="dark">
                                         <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
@@ -75,8 +73,11 @@
                                         </svg>
                                     </button>
                                 </section>
-                                <button class="contact-us-btn" type="submit">تماس با ما</button>
+                                <a href="./contact-us.html">
+                                    <button class="contact-us-btn" type="button">تماس با ما</button>
+                                </a>
                             </form>
+
                         </div>
                     </div>
                 </nav>
@@ -93,13 +94,7 @@
                             مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه
                             درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد.</p>
                         <button class="header-btn">
-                            <svg width="18" height="17" viewBox="0 0 18 17" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M9.00008 0.166626C4.40841 0.166626 0.666748 3.90829 0.666748 8.49996C0.666748 13.0916 4.40841 16.8333 9.00008 16.8333C13.5917 16.8333 17.3334 13.0916 17.3334 8.49996C17.3334 3.90829 13.5917 0.166626 9.00008 0.166626ZM8.37508 5.16663C8.37508 4.82496 8.65842 4.54163 9.00008 4.54163C9.34175 4.54163 9.62508 4.82496 9.62508 5.16663V9.33329C9.62508 9.67496 9.34175 9.95829 9.00008 9.95829C8.65842 9.95829 8.37508 9.67496 8.37508 9.33329V5.16663ZM9.76675 12.15C9.72508 12.2583 9.66675 12.3416 9.59175 12.425C9.50842 12.5 9.41675 12.5583 9.31675 12.6C9.21675 12.6416 9.10841 12.6666 9.00008 12.6666C8.89175 12.6666 8.78341 12.6416 8.68342 12.6C8.58342 12.5583 8.49175 12.5 8.40841 12.425C8.33342 12.3416 8.27508 12.2583 8.23342 12.15C8.19175 12.05 8.16675 11.9416 8.16675 11.8333C8.16675 11.725 8.19175 11.6166 8.23342 11.5166C8.27508 11.4166 8.33342 11.325 8.40841 11.2416C8.49175 11.1666 8.58342 11.1083 8.68342 11.0666C8.88342 10.9833 9.11675 10.9833 9.31675 11.0666C9.41675 11.1083 9.50842 11.1666 9.59175 11.2416C9.66675 11.325 9.72508 11.4166 9.76675 11.5166C9.80842 11.6166 9.83342 11.725 9.83342 11.8333C9.83342 11.9416 9.80842 12.05 9.76675 12.15Z"
-                                    fill="white" />
-                            </svg>
-
+                            <img src="./images/svg/about-our-team.svg" alt="sing">
                             درباره تیم ما
                         </button>
                     </section>
@@ -109,17 +104,7 @@
                     </section>
                     <section class="header-mouse">
                         <a href="#banner">
-                            <svg width="16" height="22" viewBox="0 0 16 22" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M8 0C3.58872 0 0 3.52945 0 7.86754V14.1327C0 18.4708 3.58872 22 8 22C12.411 22 16 18.4815 16 14.1567V7.86754C16 3.52945 12.411 0 8 0ZM14.4953 14.1567C14.4953 17.6782 11.5817 20.5431 8 20.5431C4.41856 20.5431 1.50473 17.6673 1.50473 14.1325V7.86754C1.50473 4.33271 4.41856 1.45694 8 1.45694C11.5817 1.45694 14.4953 4.33271 14.4953 7.86754V14.1567Z"
-                                    fill="#1C1B1F" />
-                                <path
-                                    d="M8.04788 6.02209C7.62985 6.02209 7.29102 6.34823 7.29102 6.75059V9.30027C7.29102 9.70263 7.62985 10.0288 8.04788 10.0288C8.46591 10.0288 8.80475 9.70263 8.80475 9.30027V6.75059C8.80475 6.34823 8.46591 6.02209 8.04788 6.02209Z"
-                                    fill="#1C1B1F" />
-                            </svg>
-
-
+                            <img src="./images/svg/header-mouse.svg" alt="mouse">
                         </a>
                     </section>
                 </div>
@@ -168,7 +153,7 @@
     <!-- ----------------------------------------------------------------------- -->
     <!--                                About us                                 -->
     <!-- ----------------------------------------------------------------------- -->
-    <section class="about-us">
+    <section class="main-about-us">
         <div class="container">
             <div class="row align-items-center">
                 <section class="d-none d-xl-block col-xl-4 ">
@@ -226,14 +211,14 @@
                 <form action="">
                     <div class="row mb-3">
                         <div class="col-sm col-12 input-group input-group-lg mb-3 mb-sm-0">
-                            <span class="input-group-text" id="basic-addon1">
+                            <span class="input-group-text">
                                 <img src="./images/icons/user.png" alt="">
                             </span>
                             <input type="text" class="form-control" placeholder="نام و نام خانوادگی..."
                                 aria-label="Username" aria-describedby="basic-addon1">
                         </div>
                         <div class="col-sm col-12 input-group input-group-lg">
-                            <span class="input-group-text" id="basic-addon1">
+                            <span class="input-group-text">
                                 <img src="./images/icons/psot.png" alt="">
                             </span>
                             <input type="text" class="form-control" placeholder="آدرس ایمیل" aria-label="Username"
@@ -242,14 +227,14 @@
                     </div>
                     <div class="row mb-3">
                         <div class="col-sm col-12 input-group input-group-lg mb-3 mb-sm-0">
-                            <span class="input-group-text" id="basic-addon1">
+                            <span class="input-group-text">
                                 <img src="./images/icons/phone.png" alt="">
                             </span>
                             <input type="text" class="form-control" placeholder="شماره تلفن..." aria-label="Username"
                                 aria-describedby="basic-addon1">
                         </div>
                         <div class="col-sm col-12 input-group input-group-lg">
-                            <span class="input-group-text" id="basic-addon1">
+                            <span class="input-group-text">
                                 <img src="./images/icons/list.png" alt="">
                             </span>
                             <select class="form-select" aria-label="Default select example">
@@ -342,6 +327,7 @@
                 </section>
                 <div class="swiper-pagination" style="bottom:80px ;"></div>
             </div>
+        </div>
     </section>
     <!-- ----------------------------------------------------------------------- -->
     <!--                                Feedback                                 -->
@@ -608,14 +594,11 @@
                 <section class="col-12 col-lg-7">
                     <section class="satisfaction-img">
                         <img src="./images/u-s-img.png" alt="satisfaction">
-                        <section class="play">
+                        <button class="play">
                             <section class="play-bg">
-                                <svg width="22" height="28" viewBox="0 0 22 28" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M22 14L0.25 27.8564L0.25 0.143594L22 14Z" fill="#1E1E22" />
-                                </svg>
+                                <img src="./images/svg/play-btn.svg" alt="play">
                             </section>
-                        </section>
+                        </button>
                     </section>
                 </section>
             </div>
@@ -735,16 +718,10 @@
                     <section class="quick-access">
                         <h5>دسترسی سریع</h5>
                         <ul>
-                            <li><a href="">درباره ما</a></li>
-                            <li><a href="">درباره ما</a></li>
-                            <li><a href="">تماس با ما</a></li>
-                            <li><a href="">تماس با ما</a></li>
-                            <li><a href="">گالری</a></li>
-                            <li><a href="">گالری</a></li>
-                            <li><a href="">محصولات</a></li>
-                            <li><a href="">محصولات</a></li>
-                            <li><a href="">خانه</a></li>
-                            <li><a href="">خانه</a></li>
+                            <li><a href="./contact-us.html">تماس با ما</a></li>
+                            <li><a href="./blog.html">وبلاگ</a></li>
+                            <li><a href="./products.html">محصولات</a></li>
+                            <li><a href="./index.html">خانه</a></li>
                         </ul>
                     </section>
                 </section>
@@ -788,18 +765,11 @@
     </footer>
 </body>
 <!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="./plugins/swiper/swiper-bundle.min.js"></script>
 <!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
-    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
-    integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
-    crossorigin="anonymous"></script>
-<!-- Fontawesome Icon -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.4.2/js/all.min.js"
-    integrity="sha512-IqeQ6271Vq75Nf4OOwCEYi4tIAyT2J7vtKrmOU9WCezb+YkxqAu+igEi2CuLEnA7cqtvFDHsQhXbpZXx/evxrw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./plugins/bootstrap/bootstrap.min.js"></script>
+<!-- Font Awesome -->
+<script src="./plugins/font-awesome/font-awesome.min.js"></script>
 <!-- Custom JS -->
 <script src="./js/script.js"></script>
 
