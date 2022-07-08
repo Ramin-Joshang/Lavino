@@ -4206,6 +4206,16 @@ body {
   fill: #ffffff;
 }
 
+.dots {
+  width: 95%;
+  overflow: hidden;
+}
+.dots svg {
+  width: fit-content;
+  margin-bottom: 27px;
+  margin-top: 15px;
+}
+
 .about-us {
   padding-bottom: 0 !important;
   animation: bounce 2s forwards;
@@ -4221,7 +4231,7 @@ body {
   font-size: 36px;
   line-height: 40px;
   text-align: right;
-  color: #2ABFED;
+  color: #2abfed;
   animation: bounce 2s forwards;
 }
 .about-us .about-us-title ul {
@@ -4239,7 +4249,7 @@ body {
   font-size: 14px;
   line-height: 22px;
   text-align: right;
-  color: #5A5A6B;
+  color: #5a5a6b;
 }
 .about-us .about-us-title ul li a::after {
   display: block;
@@ -4252,10 +4262,6 @@ body {
 .about-us .about-us-title ul li a:hover:after {
   transform: scaleX(1);
 }
-.about-us svg {
-  margin-bottom: 27px;
-  margin-top: 15px;
-}
 .about-us p {
   font-family: "Yekan Bakh";
   font-style: normal;
@@ -4263,7 +4269,7 @@ body {
   font-size: 15px;
   line-height: 30px;
   text-align: right;
-  color: #5B5B6B;
+  color: #5b5b6b;
   text-align: justify;
 }
 .about-us .about-us-picture {
@@ -4275,7 +4281,7 @@ body {
   animation: pulse 4s infinite;
 }
 .about-us .about-us-picture svg {
-  width: 162px;
+  max-width: 162px;
 }
 
 .target-us {
@@ -4289,7 +4295,7 @@ body {
   font-size: 26px;
   line-height: 30px;
   text-align: right;
-  color: #1F1E22;
+  color: #1f1e22;
 }
 .target-us p {
   font-family: "Yekan Bakh";
@@ -4298,7 +4304,7 @@ body {
   font-size: 15px;
   line-height: 30px;
   text-align: right;
-  color: #5B5B6B;
+  color: #5b5b6b;
   text-align: justify;
 }
 .target-us svg {
@@ -4316,7 +4322,7 @@ body {
   font-size: 26px;
   line-height: 30px;
   text-align: right;
-  color: #1F1E22;
+  color: #1f1e22;
 }
 .frequently-asked-questions p {
   font-family: "Yekan Bakh";
@@ -4325,14 +4331,14 @@ body {
   font-size: 15px;
   line-height: 30px;
   text-align: right;
-  color: #5B5B6B;
+  color: #5b5b6b;
   text-align: justify;
 }
 .frequently-asked-questions .accordion {
   margin-bottom: 133px;
 }
 .frequently-asked-questions .accordion .accordion-button {
-  background: #F9F9F9;
+  background: #f9f9f9;
   padding: 28px 20px 28px 20px;
   border-radius: 6px;
 }
@@ -4369,7 +4375,7 @@ body {
   font-size: 14px;
   line-height: 30px;
   text-align: right;
-  color: #5A5A6B;
+  color: #5a5a6b;
 }
 
 .contact-us-page {
@@ -4382,11 +4388,11 @@ body {
   font-size: 17px;
   line-height: 26px;
   text-align: center;
-  color: #1F1E22;
+  color: #1f1e22;
   margin-bottom: 19px;
 }
 .contact-us-page h1 span, .contact-us-page h1 .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .contact-us-page h1 a {
-  color: #F88C3D;
+  color: #f88c3d;
 }
 .contact-us-page h1 span:after, .contact-us-page h1 .permissions .permissions-item .permissions-desc a:after, .permissions .permissions-item .permissions-desc .contact-us-page h1 a:after {
   background: unset !important;
@@ -4400,7 +4406,7 @@ body {
   animation: fadeIn 2s forwards;
 }
 .contact-us-page .information .phone-icon {
-  background: #2ABFED;
+  background: #2abfed;
   box-shadow: 0 10px 35px rgba(252, 72, 83, 0.1);
   padding: 14px;
   width: 42px;
@@ -4437,7 +4443,8 @@ body {
 .contact-us-page .information .phone-icon:hover {
   animation: shakeX 1s forwards;
 }
-.contact-us-page .information .phone-icon svg, .contact-us-page .information .phone-icon i {
+.contact-us-page .information .phone-icon svg,
+.contact-us-page .information .phone-icon i {
   color: #fff;
   transform: rotateX(360deg);
 }
@@ -4449,7 +4456,7 @@ body {
   line-height: 30px;
   text-align: right;
   letter-spacing: 0.04em;
-  color: #1F1E22;
+  color: #1f1e22;
 }
 .contact-us-page .information div h3:first-child {
   margin-left: 20px;
@@ -4462,7 +4469,7 @@ body {
   line-height: 30px;
   text-align: right;
   letter-spacing: 0.07em;
-  color: #1F1E22;
+  color: #1f1e22;
 }
 .contact-us-page .information p {
   font-family: "Yekan Bakh";
@@ -4471,7 +4478,7 @@ body {
   font-size: 14px;
   line-height: 22px;
   text-align: right;
-  color: #9F9FB2;
+  color: #9f9fb2;
   margin-bottom: 0 !important;
   text-align: justify;
 }
@@ -4480,7 +4487,7 @@ body {
   animation: fadeIn 2s forwards;
 }
 .contact-us-page .social-media a {
-  background: #2ABFED;
+  background: #2abfed;
   border-radius: 50%;
   padding: 14px;
   width: 42px;
@@ -4512,7 +4519,8 @@ body {
     box-shadow: 0 0 0 0 #3c3a3f;
   }
 }
-.contact-us-page .social-media a svg, .contact-us-page .social-media a i {
+.contact-us-page .social-media a svg,
+.contact-us-page .social-media a i {
   color: #fff;
 }
 .contact-us-page form span, .contact-us-page form .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .contact-us-page form a {
@@ -4937,5 +4945,10 @@ body {
   .products-page-item .item-content .price {
     padding: 0 !important;
     margin: 0 0 15px 15px !important;
+  }
+
+  .contact-us-page .separator-contact-us {
+    width: 100%;
+    overflow-x: hidden;
   }
 }/*# sourceMappingURL=index.css.map */

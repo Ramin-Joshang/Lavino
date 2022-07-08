@@ -4,8 +4,8 @@
         --bs-gutter-x: 1.5rem;
         --bs-gutter-y: 0;
         width: 100%;
-        padding-left: calc(var(--bs-gutter-x) * .5);
-        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+        padding-right: calc(var(--bs-gutter-x) * 0.5);
         margin-left: auto;
         margin-right: auto;
     }
@@ -42,13 +42,12 @@
         --bs-gutter-x: 1.5rem;
         --bs-gutter-y: 0;
         width: 100%;
-        padding-left: calc(var(--bs-gutter-x) * .5);
-        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+        padding-right: calc(var(--bs-gutter-x) * 0.5);
         margin-left: auto;
         margin-right: auto;
     }
 }
-
 
 /* Large devices (desktops, 992px and up) */
 
@@ -96,8 +95,6 @@
                 background-color: #92929d !important;
             }
         }
-
-      
     }
 
     .banner-content {
@@ -184,17 +181,17 @@
 /* Medium devices (tablets, 768px and up) */
 
 @media only screen and (max-width: 768px) {
-    .contact-us-page{
-        .social-media{
+    .contact-us-page {
+        .social-media {
             justify-content: center;
         }
     }
 
-    .blog-content{
-        .blog-articles{
-            .blog-articles-item{
+    .blog-content {
+        .blog-articles {
+            .blog-articles-item {
                 display: block;
-                img{
+                img {
                     width: 100% !important;
                     margin-bottom: 15px;
                 }
@@ -255,19 +252,19 @@
             }
         }
     }
-    .blog-content{
-        .blog-articles{
-            .blog-articles-item{
+    .blog-content {
+        .blog-articles {
+            .blog-articles-item {
                 display: block;
-                img{
+                img {
                     width: 100% !important;
                     margin-bottom: 15px;
                 }
             }
         }
     }
-    .contact-us-page{
-        .social-media{
+    .contact-us-page {
+        .social-media {
             justify-content: center;
         }
     }
@@ -377,6 +374,13 @@
         .item-content .price {
             padding: 0 !important;
             margin: 0 0 15px 15px !important;
+        }
+    }
+
+    .contact-us-page {
+        .separator-contact-us {
+            width: 100%;
+            overflow-x: hidden;
         }
     }
 }
