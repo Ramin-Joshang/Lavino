@@ -15,10 +15,26 @@
 </head>
 
 <body dir="rtl">
+   <!-- ----------------------------------------------------------------------- -->
+<!--                                 Layer                                   -->
+<!-- ----------------------------------------------------------------------- -->
+<section id="layer"></section>
+    <!-- ----------------------------------------------------------------------- -->
+<!--                                 Loader                                  -->
+<!-- ----------------------------------------------------------------------- -->
+<div class="overlay">
+    <div class="overlay-door"></div>
+    <div class="overlay-content">
+        <div class="loader">
+            <div class="inner"></div>
+        </div>
+        <img src="images/loader-logo.png" alt="">
+    </div>
+</div>
     <!-- ----------------------------------------------------------------------- -->
     <!--                                 Header                                  -->
     <!-- ----------------------------------------------------------------------- -->
-    <header class="header">
+    <header class="header fixed-top">
         <div class="container">
             <div class="row">
                 <nav class="navbar navbar-expand-lg bg-light">
@@ -26,27 +42,22 @@
                         <a class="navbar-brand" href="index.html">
                             <img src="./images/logo.png" alt="logo">
                         </a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="navbar-toggler" type="button" >
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="./index.html">خانه</a>
+                                    <a class="nav-link" href="./index.html">خانه</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="products.html">محصولات</a>
+                                    <a class="nav-link active-link" href="products.html">محصولات</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="./article.html">گالری</a>
+                                    <a class="nav-link" href="./blog.html">وبلاگ</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href='./conteact-us.html'>تماس با ما</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./blog.html">درباره ما</a>
+                                    <a class="nav-link" href='./contact-us.html'>تماس با ما</a>
                                 </li>
                             </ul>
                             <form class="d-flex" role="contact-us">
@@ -74,7 +85,9 @@
                                         </svg>
                                     </button>
                                 </section>
-                                <button class="contact-us-btn" type="submit">تماس با ما</button>
+                                <a href="./contact-us.html">
+                                    <button class="contact-us-btn" type="button">تماس با ما</button>
+                                </a>
                             </form>
                         </div>
                     </div>
@@ -475,18 +488,27 @@
                             </span>
                             <input type="text" class="form-control" placeholder="امتیاز محصول" aria-label="Username"
                                 aria-describedby="basic-addon1">
-                            <div class="stars rating">
-                                <input type="radio" name="star" class="star-1" id="star-1" />
-                                <label class="star-1" for="star-1">1</label>
-                                <input type="radio" name="star" class="star-2" id="star-2" />
-                                <label class="star-2" for="star-2">2</label>
-                                <input type="radio" name="star" class="star-3" id="star-3" />
-                                <label class="star-3" for="star-3">3</label>
-                                <input type="radio" name="star" class="star-4" id="star-4" />
-                                <label class="star-4" for="star-4">4</label>
-                                <input type="radio" name="star" class="star-5" id="star-5" />
-                                <label class="star-5" for="star-5">5</label>
-                                <span></span>
+                            <div class="star-rating rating">
+                                <input id="star-5" type="radio" name="rating" value="star-5" />
+                                <label for="star-5" title="5 stars">
+                                    <i class="active fa fa-star" aria-hidden="true"></i>
+                                </label>
+                                <input id="star-4" type="radio" name="rating" value="star-4" />
+                                <label for="star-4" title="4 stars">
+                                    <i class="active fa fa-star" aria-hidden="true"></i>
+                                </label>
+                                <input id="star-3" type="radio" name="rating" value="star-3" />
+                                <label for="star-3" title="3 stars">
+                                    <i class="active fa fa-star" aria-hidden="true"></i>
+                                </label>
+                                <input id="star-2" type="radio" name="rating" value="star-2" />
+                                <label for="star-2" title="2 stars">
+                                    <i class="active fa fa-star" aria-hidden="true"></i>
+                                </label>
+                                <input id="star-1" type="radio" name="rating" value="star-1" />
+                                <label for="star-1" title="1 star">
+                                    <i class="active fa fa-star" aria-hidden="true"></i>
+                                </label>
                             </div>
                         </div>
                     </div>
@@ -551,22 +573,16 @@
                             چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
                             تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در
                             شصت و...پ</p>
-                        <a href="#">مشاهده بیشتر...</a>
+                        <a href="contact-us.html">مشاهده بیشتر...</a>
                     </section>
                 </section>
                 <section class="col-12 col-lg-5 col-xl-3 offset-lg-1">
                     <section class="quick-access">
                         <h5>دسترسی سریع</h5>
                         <ul>
-                            <li><a href="./blog.html">درباره ما</a></li>
-                            <li><a href="./blog.html">درباره ما</a></li>
-                            <li><a href="./conteact-us.html">تماس با ما</a></li>
-                            <li><a href="./conteact-us.html">تماس با ما</a></li>
-                            <li><a href="./">گالری</a></li>
-                            <li><a href="./">گالری</a></li>
+                            <li><a href="./contact-us.html">تماس با ما</a></li>
+                            <li><a href="./blog.html">وبلاگ</a></li>
                             <li><a href="./products.html">محصولات</a></li>
-                            <li><a href="./products.html">محصولات</a></li>
-                            <li><a href="./index.html">خانه</a></li>
                             <li><a href="./index.html">خانه</a></li>
                         </ul>
                     </section>
@@ -610,11 +626,17 @@
         </section>
     </footer>
 </body>
+<script src="./plugins/jquery/jquery.min.js"></script>
+<!-- Swiper JS -->
+<script src="./plugins/swiper/swiper-bundle.min.js"></script>
 <!-- Bootstrap JS -->
 <script src="./plugins/bootstrap/bootstrap.min.js"></script>
 <!-- Font Awesome -->
 <script src="./plugins/font-awesome/font-awesome.min.js"></script>
 <!-- Custom JS -->
 <script src="./js/script.js"></script>
-
+<!-- Change Theme -->
+<script src="js/change-theme.js"></script>
+<!-- Loader -->
+<script src="js/loader.js"></script>
 </html>

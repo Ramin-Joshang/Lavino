@@ -14,6 +14,30 @@ for (let i = 0; i < buttons.length; i++) {
         buttons[i].classList.add('active');
     })
 }
+// Navbar Toggle
+
+const navbarBtn=document.querySelector('.navbar-toggler');
+const navbarCollapse=document.querySelector('.navbar-collapse');
+const layer=document.querySelector('#layer');
+let isNavbarOpen=false;
+
+layer.addEventListener('click',toggleNavbar);
+navbarBtn.addEventListener('click',toggleNavbar);
+
+function toggleNavbar() {
+    if (!isNavbarOpen) {
+        navbarCollapse.classList.add('show');
+        layer.classList.add('active');
+        isNavbarOpen=true;
+    } else {
+        navbarCollapse.classList.remove('show');
+        layer.classList.remove('active');
+        isNavbarOpen=false;
+    }    
+console.log(isNavbarOpen);
+}
+
+
 
 //  Products slider
 
@@ -56,10 +80,10 @@ var swiper = new Swiper(".myFeedback", {
         delay: 6000,
         disableOnInteraction: false,
     },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
+    // pagination: {
+    //     el: ".swiper-pagination",
+    //     clickable: true,
+    // },
     navigation: {
         nextEl: ".next",
         prevEl: ".prev",

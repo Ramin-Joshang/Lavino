@@ -1,12 +1,8 @@
 // Variables & Mixin
-@import "./base";
-
-.header {
-    background-color: #1d1c20 m !important;
-}
+@import "base";
 
 .blog-header {
-    padding: 90px 0 115px 0;
+    padding: 125px 0 115px 0;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)), url("../images/blog/blog-header.png");
     background-size: cover;
 
@@ -204,9 +200,7 @@
             li {
                 width: 46px;
                 height: 46px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                text-align: center;
                 background: #ffffff;
                 border: 1px solid #e7e9ef;
                 border-radius: 50%;
@@ -223,10 +217,12 @@
                     font-family: $Yekan;
                     font-weight: 500;
                     font-size: 20px;
-                    line-height: 31px;
+                    line-height: 48px;
                     color: #5a5a6b;
                 }
             }
         }
     }
 }
+
+@include change-color

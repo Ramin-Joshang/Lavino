@@ -12,9 +12,11 @@ $sliderBorder: #eff1f8;
 $inputBorder: #e0e3eb;
 $placeholder: rgba(31, 30, 35, 0.3);
 $white: #ffffff;
+$black: #000000;
 $primary: #08c0f8;
 $warning: #f5ad57;
-
+$light-background: #fff;
+$dark-background: #000;
 // Fonts
 $Yekan: "Yekan Bakh";
 $Kalameh: "Kalameh";
@@ -22,173 +24,697 @@ $Gilroy: "Gilroy";
 
 // Mixin
 @mixin btn($color, $bgColor, $opacity: 100%) {
-    color: $color;
-    background-color: $bgColor;
-    padding: 13px 30px;
-    border-radius: 25px;
-    font-size: 15px;
+  color: $color;
+  background-color: $bgColor;
+  padding: 13px 30px;
+  border-radius: 25px;
+  font-size: 15px;
 }
 
 @mixin btnEffect($shadow) {
-    transition: 0.25s;
-    box-shadow: 0 0 0 1em transparent;
+  transition: 0.25s;
+  box-shadow: 0 0 0 1em transparent;
 
-    @if ($shadow==$primary) {
-        &:hover {
-            animation: primary 1s;
-        }
-    } @else if($shadow==$warning) {
-        &:hover {
-            animation: warning 1s;
-        }
-    } @else if($shadow==$white) {
-        animation: other 1s;
+  @if ($shadow==$primary) {
+    &:hover {
+      animation: primary 1s;
     }
+  } @else if ($shadow==$warning) {
+    &:hover {
+      animation: warning 1s;
+    }
+  } @else if ($shadow==$white) {
+    &:hover {
+      animation: light 1s;
+    }
+  } @else if ($shadow==$gray) {
+    &:hover {
+      animation: dark 1s;
+    }
+  }
 
-    @keyframes primary {
-        0% {
-            box-shadow: 0 0 0 0 $primary;
-        }
+  @keyframes primary {
+    0% {
+      box-shadow: 0 0 0 0 $primary;
     }
+  }
 
-    @keyframes warning {
-        0% {
-            box-shadow: 0 0 0 0 $warning;
-        }
+  @keyframes warning {
+    0% {
+      box-shadow: 0 0 0 0 $warning;
     }
-
-    @keyframes other {
-        0% {
-            box-shadow: 0 0 0 0 white;
-        }
+  }
+  @keyframes light {
+    0% {
+      box-shadow: 0 0 0 0 $white;
     }
+  }
+  @keyframes dark {
+    0% {
+      box-shadow: 0 0 0 0 #3c3a3f;
+    }
+  }
 }
 
 @mixin border($height, $left, $bottom, $color, $opacity: 100%) {
-    position: absolute;
-    width: 408px;
-    height: $height;
-    left: $left;
-    bottom: $bottom;
-    border: 2.5px solid $color;
-    border-radius: 250px 250px 0px 0px;
-    opacity: $opacity;
+  position: absolute;
+  width: 408px;
+  height: $height;
+  left: $left;
+  bottom: $bottom;
+  border: 2.5px solid $color;
+  border-radius: 250px 250px 0px 0px;
+  opacity: $opacity;
 }
 
 @mixin main-title($font, $color, $align: right) {
-    font-size: $font;
-    color: $color;
-    font-family: $Kalameh;
-    text-align: $align;
-    animation: bounce 2s forwards;
+  font-size: $font;
+  color: $color;
+  font-family: $Kalameh;
+  text-align: $align;
+  animation: bounce 2s forwards;
 }
 
 @mixin magic-border($width, $color, $duration, $direction) {
-    position: relative;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    width: calc(100% + #{$width * 2});
+    height: calc(100% + #{$width * 2});
+    top: calc(#{$width} / -1);
+    left: calc(#{$width} / -1);
+    background: linear-gradient(to right, $color 0%, $color 100%), linear-gradient(to top, $color 50%, transparent 50%),
+    linear-gradient(to top, $color 50%, transparent 50%), linear-gradient(to right, $color 0%, $color 100%),
+    linear-gradient(to left, $color 0%, $color 100%);
+    background-size: 100% $width, $width 200%, $width 200%, 0% $width, 0% $width;
+    background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
+    background-repeat: no-repeat, no-repeat;
+    transition: transform $duration ease-in-out, background-position $duration ease-in-out,
+    background-size $duration ease-in-out;
+    transform: scaleX(0) rotate(180deg * $direction);
+    transition-delay: $duration * 2, $duration, 0s;
+    z-index: -1;
+  }
+  &:hover {
     &:before {
-        content: "";
-        position: absolute;
-        width: calc(100% + #{$width * 2});
-        height: calc(100% + #{$width * 2});
-        top: calc(#{$width}/ -1);
-        left: calc(#{$width}/ -1);
-        background: linear-gradient(to right, $color 0%, $color 100%),
-            linear-gradient(to top, $color 50%, transparent 50%), linear-gradient(to top, $color 50%, transparent 50%),
-            linear-gradient(to right, $color 0%, $color 100%), linear-gradient(to left, $color 0%, $color 100%);
-        background-size: 100% $width, $width 200%, $width 200%, 0% $width, 0% $width;
-        background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
-        background-repeat: no-repeat, no-repeat;
-        transition: transform $duration ease-in-out, background-position $duration ease-in-out,
-            background-size $duration ease-in-out;
-        transform: scaleX(0) rotate(180deg * $direction);
-        transition-delay: $duration * 2, $duration, 0s;
-        z-index: -1;
+      background-size: 200% $width, $width 400%, $width 400%, 55% $width, 55% $width;
+      background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+      transform: scaleX(1) rotate(180deg * $direction);
+      transition-delay: 0s, $duration, $duration * 2;
     }
-    &:hover {
-        &:before {
-            background-size: 200% $width, $width 400%, $width 400%, 55% $width, 55% $width;
-            background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
-            transform: scaleX(1) rotate(180deg * $direction);
-            transition-delay: 0s, $duration, $duration * 2;
-        }
-    }
+  }
 }
 
 @mixin border-link($color) {
-    &::after {
-        display: block;
-        content: "";
-        border-bottom: solid 2px $color;
-        transform: scaleX(0);
-        transition: transform 300ms ease-in-out;
-        transform-origin: 100% 50%;
-    }
+  &::after {
+    display: block;
+    content: "";
+    border-bottom: solid 2px $color;
+    transform: scaleX(0);
+    transition: transform 300ms ease-in-out;
+    transform-origin: 100% 50%;
+  }
 
-    &:hover {
-        &:after {
-            transform: scaleX(1);
-        }
+  &:hover {
+    &:after {
+      transform: scaleX(1);
     }
+  }
 }
-@mixin main-title-desc($borderColor) {
-    position: relative;
-    font-size: 14px;
-    color: $gray;
-    font-family: $Yekan;
 
-    &::after {
-        content: "";
-        position: absolute;
-        bottom: -20px;
-        left: 50%;
-        transform: translateX(-65%);
-        width: 94px;
-        border-bottom: 2px solid $borderColor;
-        border-radius: 50%;
-    }
+@mixin main-title-desc($borderColor) {
+  position: relative;
+  font-size: 14px;
+  color: $gray;
+  font-family: $Yekan;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-65%);
+    width: 94px;
+    border-bottom: 2px solid $borderColor;
+    border-radius: 50%;
+  }
 }
 
 @mixin input {
-    background-color: $form;
-    border-right: none;
+  background-color: $form;
+  border-right: none;
+  border-color: $inputBorder;
+  border-radius: 2px !important;
+
+  &::placeholder {
+    font-size: 15px;
+    color: $placeholder;
+    font-family: $Yekan;
+  }
+
+  &:focus {
     border-color: $inputBorder;
-    border-radius: 2px !important;
-
-    &::placeholder {
-        font-size: 15px;
-        color: $placeholder;
-        font-family: $Yekan;
-    }
-
-    &:focus {
-        border-color: $inputBorder;
-        background-color: $form;
-    }
+    background-color: $form;
+  }
 }
 
 @mixin border-title {
-    position: relative;
-    font-weight: 700;
-    font-size: 19px;
-    line-height: 29px;
-    color: #3f3c48;
-    padding-bottom: 16px;
-    margin-bottom: 30px;
-    border-bottom: 1.3px solid #dfe1e4;
+  position: relative;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 29px;
+  color: #3f3c48;
+  padding-bottom: 16px;
+  margin-bottom: 30px;
+  border-bottom: 1.3px solid #dfe1e4;
 
-    &::after {
-        content: "";
-        position: absolute;
-        bottom: -1px;
-        right: 0;
-        width: 125px;
-        height: 1.3px;
-        background-color: #f88c3d;
-        z-index: 10;
-    }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+    width: 125px;
+    height: 1.3px;
+    background-color: #f88c3d;
+    z-index: 10;
+  }
 }
 
-::selection {
-    background: #f88c3d;
-    color: #fff;
+@mixin theme-colors($light-theme: true) {
+  @if $light-theme {
+    background-color: $light-background !important;
+    $light: true;
+  } @else {
+    background-color: $dark-background !important;
+    $dark: true;
+  }
+}
+
+@mixin change-color {
+  .dark-theme {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    span{
+      color: $white !important;
+    }
+
+    .brands {
+      svg path {
+        fill: $white;
+      }
+    }
+    .main-about-us {
+      .about-content{
+        ul{
+          li{
+            color: $white;
+          }
+        }
+      }
+    }
+    .consulting-form {
+      form {
+        ::placeholder {
+          color: $white;
+        }
+
+        input {
+          background: $black;
+          color: $white;
+        }
+
+        span {
+          background: $black;
+
+          svg path {
+            stroke: $white;
+          }
+        }
+
+        .select-icon path {
+          fill: $white;
+        }
+
+        select {
+          background: $black;
+          color: $white;
+        }
+
+        textarea {
+          background: $black;
+          color: $white;
+        }
+      }
+    }
+    .products{
+      .products-item{
+        h3{
+          transition: .3s all linear;
+          &:hover{
+          color: $primary !important;
+        }
+      }
+      }
+    }
+    .blog {
+      .blog-item {
+        background: $black;
+
+        h5{
+          transition: .3s all linear;
+          &:hover{
+          color: $primary !important;
+        }
+      }
+      }
+    }
+
+    .feedback {
+      background: $black;
+
+      .slider {
+        .feedback-item {
+          .feedback-desc {
+            background: $black;
+    }
+    .feedback-author{ 
+      h5{
+        transition: .3s all linear;
+        &:hover{
+        color: $warning !important;
+      }
+    }
+          }
+        }
+      }
+    }
+
+    .departments {
+      .departments-item {
+        background: $black;
+
+        h3{
+          transition: .3s all linear;
+          &:hover{
+          color: $primary !important;
+        }
+      }
+      }
+    }
+
+    .satisfaction {
+      background: $dark;
+
+      .satisfaction-img {
+        background: $dark;
+      }
+    }
+
+    .contact-us-page {
+      form {
+        ::placeholder {
+          color: $white;
+        }
+
+        input {
+          background: $black;
+        }
+
+        select {
+          background: $black;
+          color: $white;
+        }
+
+        textarea {
+          background: $black;
+        }
+      }
+    }
+
+    .frequently-asked-questions {
+      .accordion {
+        .accordion-item {
+          .accordion-header {
+            background: $black;
+
+            .accordion-button {
+              background: $black;
+              color: $white;
+            }
+          }
+
+          .accordion-body {
+            background: $black;
+            color: $white !important;
+          }
+        }
+      }
+    }
+
+    .permissions{
+      .permissions-item{
+        a{
+          transition: .3s all linear;
+          &:hover{
+          color: $warning !important;
+        }
+      }
+      }
+    }
+
+    .blog-content {
+      background: $black;
+
+.main-articles{
+  .main-articles-item{ 
+    h5{
+      transition: .3s all linear;
+      &:hover{
+      color: $warning !important;
+    }
+  }
+  }
+}
+
+      .blog-articles {
+        .blog-articles-item {
+          background: $black;
+          border: 1px solid $white;
+          border-radius: 5px;
+
+          h5{
+            transition: .3s all linear;
+            &:hover{
+            color: $warning !important;
+          }
+        }
+          svg path {
+            fill: $white;
+          }
+        }
+      }
+    }
+
+    .blog-header {
+      .blog-header-categories {
+        button {
+          background: $dark;
+          border: 1px solid $white;
+          color: $white;
+        }
+      }
+    }
+
+    .blog-header-title {
+      form {
+        .blog-header-search {
+          ::placeholder {
+            color: $white !important;
+            opacity: 1 !important;
+          }
+
+          input {
+            background: $black !important;
+            color: $white;
+          }
+
+          span {
+            background: $black !important;
+
+            svg path,
+            ellipse {
+              stroke: $white;
+            }
+          }
+        }
+      
+        .blog-header-select {
+          select {
+            background: $black !important;
+            color: $white !important;
+            border-left: 0 !important;
+          }
+         
+
+          span {
+            background: $black !important;
+
+            svg path,
+            ellipse {
+              stroke: $white;
+            }
+          }
+        }
+      }
+    }
+
+    .pagination {
+      ul {
+        li {
+          background: $black;
+
+          a {
+            color: $white;
+          }
+        }
+      }
+    }
+
+    .user-comments {
+      background: $black;
+
+      .comment {
+        background: $black;
+        border: 1px solid $white;
+        border-radius: 3px;
+        margin-bottom: 15px;
+
+        .comment-information {
+          span {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .article {
+      .bread-crumb{
+        ul{
+          li{
+            a{
+              color: $white;
+            }
+          }
+        }
+      }
+      .article-tags{
+        .tags{
+          a{
+            color:$primary
+          }
+        }
+      }
+      .article-content {
+        .main-content {
+          .tip {
+            background: $dark;
+          }
+        }
+      }
+    }
+
+    .submit-comment-form {
+      form {
+        ::placeholder {
+          color: $white;
+        }
+
+        input {
+          background: $black;
+          color: $white;
+        }
+
+
+        textarea {
+          background: $black;
+          color: $white;
+        }
+
+        span {
+          background: $black;
+
+          svg path {
+            stroke: $white;
+          }
+        }
+
+        span:last-child {
+          svg path {
+            fill: $white;
+          }
+        }
+      }
+    }
+
+    .products-header {
+      .products-header-title {
+        form {
+          ::placeholder{
+            color: $white !important;
+            opacity: 1 !important;
+          }
+          .products-header-search {
+            input {
+              background: $black !important;
+              color: $white;
+            }
+
+            .input-icon {
+              background: $black !important;
+
+              svg path,
+              ellipse {
+                stroke: $white;
+              }
+            }
+          }
+
+          .products-header-select {
+            select {
+              background: $black !important;
+              color: $white !important;
+            }
+
+            .input-icon {
+              background: $black !important;
+
+              svg path {
+                fill: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+
+.products-content{
+  .products-item{
+    h3{
+      transition: .3s all linear;
+      &:hover{
+      color: $primary !important;
+    }
+  }
+  }
+}
+
+    .products-page-item-desc {
+      background: $black;
+    }
+    .products-page-links{
+      ul {
+        li{
+          a{
+            color: $white;
+          }
+        }
+      }
+    }
+    .products-page-item{
+      .item-content{
+        ul{
+          li{
+            color: $primary;
+          }
+        }
+        .btn{
+          background: $black;
+        }
+      }
+    }
+    .products-page-feedback {
+      .feedback-content {
+        .feedback-item {
+          background-color: black;
+          border: 1px solid $white;
+
+          .date {
+            svg path {
+              fill: $white;
+            }
+          }
+        }
+      }
+    }
+
+    .products-page-form {
+      form {
+
+        input, select, span, textarea {
+          background: black !important;
+          color: $white;
+          border-color: $white;
+        }
+
+        ::placeholder{
+          color: $white !important; 
+          opacity: 1 !important;
+         }
+
+        span {
+          svg path {
+            stroke: $white;
+          }
+        }
+      }
+    }
+
+    .contact-us-page {
+      form {
+        input, select, span, textarea {
+          background: black !important;
+          color: $white;
+          border-color: $white;
+        }
+
+        span {
+          svg path {
+            stroke: $white;
+            // fill: $white;
+          }
+        }
+
+        .select-icon {
+          svg path {
+            fill: $white;
+          }
+        }
+      }
+    }
+
+    .about-us{
+      .about-us-title{
+        ul{
+          li{
+            a{
+              color: $white;
+            }
+          }
+        }
+      }
+      .about-us-picture{
+        svg{
+          path{
+            fill: $white;
+          }
+        }
+      }
+    }
+  }
 }

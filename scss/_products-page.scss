@@ -1,15 +1,11 @@
 body {
   background-color: #f3f3f3;
 }
-.header {
-  background-color: #1d1c20 m !important;
-}
 
 .products-page-links {
   padding: 17px 0;
-  // background-color: #f3f3f3;
   font-family: $Yekan;
-
+  margin-top: 100px;
   ul {
     display: flex;
     // gap: 10px;
@@ -33,7 +29,6 @@ body {
 
 .products-page-item {
   font-family: $Yekan;
-  background-color: #ffffff;
 
   .item-content {
     padding: 35px 0 60px 0;
@@ -250,158 +245,31 @@ body {
 
   form {
     margin: 65px auto 0 auto;
-    .stars {
-      background: url(../images/stars.png) no-repeat;
-      margin: 0 auto;
-      direction: ltr;
-      background-size: contain;
-      &:before {
-        display: table;
-        content: "";
-      }
-      &:after {
-        display: table;
-        content: "";
-        clear: both;
-      }
+    .star-rating {
+      direction: rtl;
+      display: inline-block;
+      cursor: default;
+
       input[type="radio"] {
-        position: absolute;
-        opacity: 0;
-        filter: alpha(opacity=0);
+        display: none;
       }
-      input[type="radio"].star-5 {
-        &:checked {
-          ~ {
-            span {
-              width: 100%;
-            }
-          }
-        }
-      }
-      input[type="radio"].star-4 {
-        &:checked {
-          ~ {
-            span {
-              width: 80%;
-            }
-          }
-        }
-      }
-      input[type="radio"].star-3 {
-        &:checked {
-          ~ {
-            span {
-              width: 60%;
-            }
-          }
-        }
-      }
-      input[type="radio"].star-2 {
-        &:checked {
-          ~ {
-            span {
-              width: 40%;
-            }
-          }
-        }
-      }
-      input[type="radio"].star-1 {
-        &:checked {
-          ~ {
-            span {
-              width: 20%;
-            }
-          }
-        }
-      }
+
       label {
-        display: block;
-        width: 30px;
-        height: 30px;
-        margin: 0 !important;
-        padding: 0 !important;
-        text-indent: -999em;
-        float: left;
-        position: relative;
-        z-index: 10;
-        background: transparent !important;
+        color: #bbb;
+        font-size: 1.5rem;
+        padding: 0;
         cursor: pointer;
-        &:hover {
-          ~ {
-            span {
-              background-position: 0 -30px;
-            }
-          }
-        }
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
       }
-      label.star-5 {
-        &:hover {
-          ~ {
-            span {
-              width: 100% !important;
-            }
-          }
-        }
-      }
-      label.star-4 {
-        &:hover {
-          ~ {
-            span {
-              width: 80% !important;
-            }
-          }
-        }
-      }
-      label.star-3 {
-        &:hover {
-          ~ {
-            span {
-              width: 60% !important;
-            }
-          }
-        }
-      }
-      label.star-2 {
-        &:hover {
-          ~ {
-            span {
-              width: 40% !important;
-            }
-          }
-        }
-      }
-      label.star-1 {
-        &:hover {
-          ~ {
-            span {
-              width: 20% !important;
-            }
-          }
-        }
-      }
-      span {
-        display: block;
-        width: 0;
-        position: relative;
-        top: 0;
-        left: 0;
-        height: 30px;
-        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAABaCAYAAACv+ebYAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNXG14zYAAAAWdEVYdENyZWF0aW9uIFRpbWUAMDcvMDMvMTNJ3Rb7AAACnklEQVRoge2XwW3bMBSGPxa9NxtIGzTAW8DdRL7o3A0qb+BrdNIm9QAm0G7gbJBMwB5MoVJNUSRFIXGqHwhkmXr68hOPNH9ljOEt9OlNqBs4RlrrSmtdpdZ/Ti0EGnvtUoqTHFunBVCkuk6d6mbi83rggdteSa5THDeB3+UDO9z2inatXFum1roESuAReAB29vp15n2/gRfgZK+/gIuIXLxgrfUO+Bnzn0fom4ic+pvRVNuB/QrQ/RB6A7bwLjN8b985krO5MsKd0ElwJvgk1AteCPdCYWI5/SutddQxRUTU3DOzG4hd01EKqQnZuaLBITUh4F0CeLYm5CDw6PjuFTjaz9+BLwE1I8VO9StwAEoRaUSkseMHO+aqcWq2qwcdfQCOIvIy8dwDV/c/YL6zvWDbnQ3QuH5hltQEreM1dH/n6g28gT8eWLVUqqVKrb+vtGidFkCR6vp+0uLAba8k1/eRFh1ue0W7dv4sqpaSjGnR1Fy8YNWyY8W0aGpO/c1oqu3AKmlxCL0BW3iXGb637xzJ2VwZ4U7oJDgTfBLqBS+Ee6EQeMpULVFHUVOzPC3aNR2lkJotLbr0vtKiqWlMTcNaaXHQ0QfgaGqcaVG1jNLibGcbYyb/eDIlT6bjyZS+51JqtrS4gTfw/wzWqkKrKrU8fQPR6gKAmDKlPM3x1WkBFKmu0xxf3fZR5jnFdbzjv257JbmOdzx22yvadZzjW7e9ol27HWtVkjEtIubiB2u1Y8W0iJhTfzOe6uvAKmlxCL0FX+FdZvjevnMkd3Plgzuh0+A88EmoH7wM7oVC6AaiVdwuI2Z5WrRrOk4BNVtadOl9pUXENIhpWCstDjr6ABwR40yLaDVKi7Od7U1/Z0pzpjNngtNiaM2WFj8++A+motm0NTqjmwAAAABJRU5ErkJggg==")
-          repeat-x -60px;
-        -webkit-transition: -webkit-width 0.5s;
-        -moz-transition: -moz-width 0.5s;
-        -ms-transition: -ms-width 0.5s;
-        -o-transition: -o-width 0.5s;
-        transition: width 0.5s;
+
+      label:hover,
+      label:hover ~ label,
+      input[type="radio"]:checked ~ label {
+        color: #f2b600;
       }
     }
-    .ie7 {
-      form {
-        .stars {
-          *zoom: 1;
-        }
-      }
-    }
+
     span {
       position: relative;
       background-color: $form;
@@ -424,19 +292,26 @@ body {
       @include input;
       font-size: 15px !important;
       // padding: 10px 0;
-      height: 55px;
+      height: 55px; 
+
+      &:focus{
+        border-bottom-color:$warning !important ;
+      }
     }
 
     .rating {
       position: absolute;
-      left: 30px;
-      top: 12.5px;
+      left: 21px;
+      top: 8.5px;
     }
 
     textarea {
       @include input;
       border: solid 1px $inputBorder;
       resize: both !important;
+      &:focus{
+        border-bottom-color:$warning !important ;
+      }
     }
 
     button {
@@ -447,3 +322,5 @@ body {
     }
   }
 }
+
+@include change-color;
