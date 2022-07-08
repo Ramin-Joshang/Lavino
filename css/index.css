@@ -1,3 +1,8 @@
+::selection {
+  background: #f88c3d;
+  color: #fff;
+}
+
 /* -------------------------------------------------------------------------- */
 /*                                    fontS                                   */
 /* -------------------------------------------------------------------------- */
@@ -81,25 +86,17 @@ p {
 /* -------------------------------------------------------------------------- */
 /*                                 Base Styles                                */
 /* -------------------------------------------------------------------------- */
+::selection {
+  background: #f88c3d;
+  color: #fff;
+}
+
 html {
   overflow-x: hidden;
 }
 
 body {
   background-color: #fff !important;
-}
-
-::selection {
-  background: #f88c3d;
-  color: #fff;
-}
-
-.navbar-toggler-icon {
-  background-image: url("../images/menu.png");
-}
-
-.navbar-toggler:focus {
-  box-shadow: unset !important;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -122,9 +119,6 @@ body {
   color: rgba(255, 255, 255, 0.7);
   margin-left: 30px;
   font-size: 15px;
-}
-.header .navbar ul a.active-link {
-  color: #f5ad57;
 }
 .header .navbar ul a::after {
   display: block;
@@ -1211,18 +1205,6 @@ body {
 .blog .blog-item a {
   font-size: 13px;
   color: #08c0f8;
-  display: inline-block;
-}
-.blog .blog-item a:last-child::after {
-  display: block;
-  content: "";
-  border-bottom: solid 2px #f5ad57;
-  transform: scaleX(0);
-  transition: transform 300ms ease-in-out;
-  transform-origin: 100% 50%;
-}
-.blog .blog-item a:last-child:hover:after {
-  transform: scaleX(1);
 }
 .blog button {
   color: #ffffff;
@@ -1359,18 +1341,6 @@ body {
 .footer .footer-desc a {
   font-size: 13px;
   color: #08c0f8;
-  display: inline-block;
-}
-.footer .footer-desc a::after {
-  display: block;
-  content: "";
-  border-bottom: solid 2px #f5ad57;
-  transform: scaleX(0);
-  transition: transform 300ms ease-in-out;
-  transform-origin: 100% 50%;
-}
-.footer .footer-desc a:hover:after {
-  transform: scaleX(1);
 }
 .footer .quick-access {
   text-align: start;
@@ -1380,6 +1350,10 @@ body {
   font-family: "Yekan Bakh";
   color: #ffffff;
   margin-bottom: 25px;
+}
+.footer .quick-access ul {
+  display: flex;
+  flex-wrap: wrap;
 }
 .footer .quick-access ul li {
   width: 45%;
@@ -1541,12 +1515,17 @@ body {
   word-spacing: 2px;
 }
 
+::selection {
+  background: #f88c3d;
+  color: #fff;
+}
+
 .header {
   background-color: #1d1c20 m !important;
 }
 
 .blog-header {
-  padding: 125px 0 115px 0;
+  padding: 90px 0 115px 0;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)), url("../images/blog/blog-header.png");
   background-size: cover;
 }
@@ -1783,12 +1762,17 @@ body {
   color: #5a5a6b;
 }
 
+::selection {
+  background: #f88c3d;
+  color: #fff;
+}
+
 .header {
   background-color: #1d1c20 m !important;
 }
 
 .products-header {
-  padding: 185px 0 115px 0;
+  padding: 90px 0 115px 0;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)), url("../images/blog/blog-header.png");
   background-size: cover;
 }
@@ -1979,17 +1963,19 @@ body {
 }
 
 .header {
-  background: #1d1c20 !important;
+  background-color: #1d1c20 m !important;
 }
 
 .article .bread-crumb {
+  display: flex;
   margin: 60px 0 51px 0;
+  justify-content: space-between;
 }
 .article .bread-crumb ul {
   display: flex;
 }
 .article .bread-crumb ul li a {
-  color: #5A5A6B;
+  color: #5a5a6b;
   font-family: "Yekan Bakh";
   font-weight: 700;
   font-size: 13px;
@@ -2010,10 +1996,6 @@ body {
   margin-right: 6px;
 }
 
-.article {
-  animation: bounce 2s forwards;
-  margin-top: 145px;
-}
 .article .article-title ul {
   display: flex;
 }
@@ -2048,8 +2030,7 @@ body {
   display: flex;
 }
 .article .article-content .top-content .article-title-img {
-  width: 100%;
-  animation: pulse 8s infinite;
+  width: 446px;
 }
 .article .article-content .top-content p {
   font-style: normal;
@@ -2075,7 +2056,7 @@ body {
   font-size: 18px;
   line-height: 27px;
   text-align: right;
-  color: #F88C3D;
+  color: #f88c3d;
 }
 .article .article-content .main-content p {
   font-family: "Yekan Bakh";
@@ -2084,7 +2065,7 @@ body {
   font-size: 14px;
   line-height: 27px;
   text-align: right;
-  color: #5A5A6B;
+  color: #5a5a6b;
   margin: 12px 0 12px 0;
 }
 .article .article-content .main-content .tip {
@@ -2105,7 +2086,7 @@ body {
   font-size: 17px;
   line-height: 27px;
   text-align: center;
-  color: #F88C3D;
+  color: #f88c3d;
 }
 .article .article-content .main-content p {
   font-family: "Yekan Bakh";
@@ -2114,12 +2095,17 @@ body {
   font-size: 14px;
   line-height: 27px;
   text-align: right;
-  color: #5A5A6B;
+  color: #5a5a6b;
 }
 .article hr {
   margin-top: 35px;
-  border: 1.3px solid #E0E3EB;
+  border: 1.3px solid #e0e3eb;
   transform: rotate(-180deg);
+}
+.article .article-tags {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .article .article-tags h6 {
   font-family: "Yekan Bakh";
@@ -2128,7 +2114,7 @@ body {
   font-size: 14px;
   line-height: 27px;
   text-align: right;
-  color: #F88C3D;
+  color: #f88c3d;
   margin-bottom: 0 !important;
 }
 .article .article-tags img {
@@ -2138,27 +2124,16 @@ body {
 }
 .article .article-tags .tags {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
 }
 .article .article-tags .tags a {
+  font-family: "Yekan Bakh";
+  font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 27px;
   text-align: right;
-  color: #5A5A6B;
+  color: #5a5a6b;
   margin: 0 10px 0 10px;
-}
-.article .article-tags .tags a::after {
-  display: block;
-  content: "";
-  border-bottom: solid 2px #f5ad57;
-  transform: scaleX(0);
-  transition: transform 300ms ease-in-out;
-  transform-origin: 100% 50%;
-}
-.article .article-tags .tags a:hover:after {
-  transform: scaleX(1);
 }
 .article .article-tags .tag-title {
   display: flex;
@@ -2168,17 +2143,9 @@ body {
   background: url("../images/related-posts.png") no-repeat;
   border-radius: 1px;
   filter: drop-shadow(0px 25px 250px rgba(0, 0, 0, 0.01));
-  max-height: 378px;
+  height: 378px;
   background-size: contain;
   position: relative;
-}
-.related-posts .post:hover {
-  transform: scale(0.95);
-  transition: 1s;
-}
-.related-posts .post:not(:hover) {
-  transform: scale(1);
-  transition: 1s;
 }
 .related-posts .post .related-post-title .information {
   display: flex;
@@ -2202,14 +2169,14 @@ body {
   line-height: 19px;
   display: flex;
   align-items: center;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .related-posts .post .related-post-title h2 {
   font-family: "Yekan Bakh";
   font-weight: 700;
   font-size: 21px;
   line-height: 31px;
-  color: #FFFFFF;
+  color: #ffffff;
   position: absolute;
   bottom: 39px;
   right: 39px;
@@ -2223,13 +2190,13 @@ body {
   font-size: 28px;
   line-height: 27px;
   text-align: right;
-  color: #201F23;
+  color: #201f23;
   margin-top: 93px;
   margin-bottom: 32px;
 }
 
 .user-comments {
-  background: #F8F8F8;
+  background: #f8f8f8;
 }
 .user-comments .user-comments-title {
   display: flex;
@@ -2244,7 +2211,7 @@ body {
   font-size: 32px;
   line-height: 27px;
   text-align: center;
-  color: #201F23;
+  color: #201f23;
 }
 .user-comments .user-comments-title svg:nth-child(1) {
   margin-left: 15px;
@@ -2258,7 +2225,7 @@ body {
   font-size: 16px;
   line-height: 27px;
   text-align: center;
-  color: #2ABFED;
+  color: #2abfed;
   margin-bottom: 30px;
 }
 .user-comments .comment {
@@ -2286,7 +2253,7 @@ body {
   font-weight: 700;
   font-size: 17px;
   line-height: 27px;
-  color: #201F23;
+  color: #201f23;
 }
 .user-comments .comment .comment-title .comment-information span, .user-comments .comment .comment-title .comment-information .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .user-comments .comment .comment-title .comment-information a {
   font-family: "Yekan Bakh";
@@ -2294,7 +2261,7 @@ body {
   font-weight: 700;
   font-size: 13px;
   line-height: 27px;
-  color: #5A5A6B;
+  color: #5a5a6b;
   opacity: 0.5;
   margin-right: 15px;
 }
@@ -2308,19 +2275,8 @@ body {
   font-weight: 700;
   font-size: 14px;
   line-height: 25px;
-  color: #F88C3D;
+  color: #f88c3d;
   margin-bottom: 0.5rem;
-}
-.user-comments .comment .comment-title .replay-comment a::after {
-  display: block;
-  content: "";
-  border-bottom: solid 2px #f5ad57;
-  transform: scaleX(0);
-  transition: transform 300ms ease-in-out;
-  transform-origin: 100% 50%;
-}
-.user-comments .comment .comment-title .replay-comment a:hover:after {
-  transform: scaleX(1);
 }
 .user-comments .comment .comment-title .replay-comment img {
   width: 14px;
@@ -2333,7 +2289,7 @@ body {
   font-weight: 500;
   font-size: 13px;
   line-height: 25px;
-  color: #5A5A6B;
+  color: #5a5a6b;
   margin-bottom: 0 !important;
 }
 .user-comments .separator {
@@ -2350,7 +2306,7 @@ body {
   font-size: 28px;
   line-height: 27px;
   text-align: center;
-  color: #201F23;
+  color: #201f23;
   margin-top: 51px;
   margin-bottom: 34px;
 }
@@ -2387,9 +2343,6 @@ body {
   border-color: #e0e3eb;
   background-color: rgba(255, 255, 255, 0.5);
 }
-.submit-comment-form form input:focus {
-  border-bottom: 1px solid #f5ad57;
-}
 .submit-comment-form form .rating {
   position: absolute;
   left: 30px;
@@ -2411,9 +2364,6 @@ body {
 .submit-comment-form form textarea:focus {
   border-color: #e0e3eb;
   background-color: rgba(255, 255, 255, 0.5);
-}
-.submit-comment-form form textarea:focus {
-  border-bottom: 1px solid #f5ad57;
 }
 .submit-comment-form form button {
   color: #ffffff;
@@ -2456,7 +2406,6 @@ body {
 .products-page-links {
   padding: 17px 0;
   font-family: "Yekan Bakh";
-  margin-top: 100px;
 }
 .products-page-links ul {
   display: flex;
@@ -2894,8 +2843,6 @@ body {
 
 .about-us {
   padding-bottom: 0 !important;
-  animation: bounce 2s forwards;
-  margin-top: 85px;
 }
 .about-us .about-us-title {
   display: flex;
@@ -2909,8 +2856,7 @@ body {
   font-size: 36px;
   line-height: 40px;
   text-align: right;
-  color: #2ABFED;
-  animation: bounce 2s forwards;
+  color: #2abfed;
 }
 .about-us .about-us-title ul {
   display: flex;
@@ -2926,18 +2872,7 @@ body {
   font-size: 14px;
   line-height: 22px;
   text-align: right;
-  color: #5A5A6B;
-}
-.about-us .about-us-title ul li a::after {
-  display: block;
-  content: "";
-  border-bottom: solid 2px #f5ad57;
-  transform: scaleX(0);
-  transition: transform 300ms ease-in-out;
-  transform-origin: 100% 50%;
-}
-.about-us .about-us-title ul li a:hover:after {
-  transform: scaleX(1);
+  color: #5a5a6b;
 }
 .about-us svg {
   margin-bottom: 27px;
@@ -2950,7 +2885,7 @@ body {
   font-size: 15px;
   line-height: 30px;
   text-align: right;
-  color: #5B5B6B;
+  color: #5b5b6b;
 }
 .about-us .about-us-picture {
   background: url("../images/about-us.png") no-repeat center;
@@ -2958,7 +2893,6 @@ body {
   background-size: contain;
   margin-top: 80px;
   text-align: center;
-  animation: pulse 4s infinite;
 }
 .about-us .about-us-picture img {
   width: 162px;
@@ -2967,7 +2901,6 @@ body {
 
 .target-us {
   margin-top: 71px;
-  animation: bounce 2s forwards;
 }
 .target-us h1 {
   font-family: "Yekan Bakh";
@@ -2976,7 +2909,7 @@ body {
   font-size: 26px;
   line-height: 30px;
   text-align: right;
-  color: #1F1E22;
+  color: #1f1e22;
 }
 .target-us p {
   font-family: "Yekan Bakh";
@@ -2985,16 +2918,13 @@ body {
   font-size: 15px;
   line-height: 30px;
   text-align: right;
-  color: #5B5B6B;
+  color: #5b5b6b;
 }
 .target-us svg {
   margin-top: 15px;
   margin-bottom: 27px;
 }
 
-.frequently-asked-questions {
-  animation: bounce 2s forwards;
-}
 .frequently-asked-questions h1 {
   font-family: "Yekan Bakh";
   font-style: normal;
@@ -3002,7 +2932,7 @@ body {
   font-size: 26px;
   line-height: 30px;
   text-align: right;
-  color: #1F1E22;
+  color: #1f1e22;
 }
 .frequently-asked-questions p {
   font-family: "Yekan Bakh";
@@ -3011,13 +2941,13 @@ body {
   font-size: 15px;
   line-height: 30px;
   text-align: right;
-  color: #5B5B6B;
+  color: #5b5b6b;
 }
 .frequently-asked-questions .accordion {
   margin-bottom: 133px;
 }
 .frequently-asked-questions .accordion .accordion-button {
-  background: #F9F9F9;
+  background: #f9f9f9;
   padding: 28px 20px 28px 20px;
   border-radius: 6px;
 }
@@ -3037,7 +2967,7 @@ body {
 }
 .frequently-asked-questions .accordion .accordion-button:not(.collapsed) {
   color: unset !important;
-  background: #F9F9F9 !important;
+  background: #f9f9f9 !important;
   box-shadow: unset !important;
 }
 .frequently-asked-questions .accordion .accordion-item {
@@ -3054,7 +2984,7 @@ body {
   font-size: 14px;
   line-height: 30px;
   text-align: right;
-  color: #5A5A6B;
+  color: #5a5a6b;
 }
 
 .contact-us-page {
@@ -3067,14 +2997,10 @@ body {
   font-size: 17px;
   line-height: 26px;
   text-align: center;
-  color: #1F1E22;
-  margin-bottom: 19px;
+  color: #1f1e22;
 }
 .contact-us-page h1 span, .contact-us-page h1 .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .contact-us-page h1 a {
-  color: #F88C3D;
-}
-.contact-us-page h1 span:after, .contact-us-page h1 .permissions .permissions-item .permissions-desc a:after, .permissions .permissions-item .permissions-desc .contact-us-page h1 a:after {
-  background: unset !important;
+  color: #f88c3d;
 }
 .contact-us-page .separator-contact-us {
   margin-top: 25px;
@@ -3082,17 +3008,15 @@ body {
 }
 .contact-us-page .information {
   display: flex;
-  animation: fadeIn 2s forwards;
 }
 .contact-us-page .information .phone-icon {
-  background: #2ABFED;
+  background: #2abfed;
   box-shadow: 0 10px 35px rgba(252, 72, 83, 0.1);
   padding: 14px;
   width: 42px;
   height: 42px;
   border-radius: 50%;
   margin-left: 24px;
-  line-height: 0 !important;
   transition: 0.25s;
   box-shadow: 0 0 0 1em transparent;
 }
@@ -3114,9 +3038,6 @@ body {
     box-shadow: 0 0 0 0 white;
   }
 }
-.contact-us-page .information .phone-icon:hover {
-  animation: shakeX 1s forwards;
-}
 .contact-us-page .information .phone-icon i {
   color: #fff;
   transform: rotateX(360deg);
@@ -3129,7 +3050,7 @@ body {
   line-height: 30px;
   text-align: right;
   letter-spacing: 0.04em;
-  color: #1F1E22;
+  color: #1f1e22;
 }
 .contact-us-page .information div h3:first-child {
   margin-left: 20px;
@@ -3142,7 +3063,7 @@ body {
   line-height: 30px;
   text-align: right;
   letter-spacing: 0.07em;
-  color: #1F1E22;
+  color: #1f1e22;
 }
 .contact-us-page .information p {
   font-family: "Yekan Bakh";
@@ -3151,15 +3072,14 @@ body {
   font-size: 14px;
   line-height: 22px;
   text-align: right;
-  color: #9F9FB2;
+  color: #9f9fb2;
   margin-bottom: 0 !important;
 }
 .contact-us-page .social-media {
   display: flex;
-  animation: fadeIn 2s forwards;
 }
 .contact-us-page .social-media a {
-  background: #2ABFED;
+  background: #2abfed;
   border-radius: 50%;
   padding: 14px;
   width: 42px;
@@ -3222,9 +3142,6 @@ body {
   border-color: #e0e3eb;
   background-color: rgba(255, 255, 255, 0.5);
 }
-.contact-us-page form input:focus {
-  border-bottom: 1px solid #08c0f8;
-}
 .contact-us-page form select {
   position: relative;
   background-color: rgba(255, 255, 255, 0.5);
@@ -3244,9 +3161,6 @@ body {
 .contact-us-page form select:focus {
   border-color: #e0e3eb;
   background-color: rgba(255, 255, 255, 0.5);
-}
-.contact-us-page form select:focus {
-  border-bottom: 1px solid #08c0f8;
 }
 .contact-us-page form .rating {
   position: absolute;
@@ -3269,9 +3183,6 @@ body {
 .contact-us-page form textarea:focus {
   border-color: #e0e3eb;
   background-color: rgba(255, 255, 255, 0.5);
-}
-.contact-us-page form textarea:focus {
-  border-bottom: 1px solid #08c0f8;
 }
 .contact-us-page form button {
   color: #ffffff;
@@ -3323,25 +3234,11 @@ body {
 
   .container-article {
     max-width: 942px;
-    --bs-gutter-x: 1.5rem;
-    --bs-gutter-y: 0;
-    width: 100%;
-    padding-left: calc(var(--bs-gutter-x) * 0.5);
-    padding-right: calc(var(--bs-gutter-x) * 0.5);
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 @media (min-width: 1400px) {
   .container-article {
     max-width: 942px;
-    --bs-gutter-x: 1.5rem;
-    --bs-gutter-y: 0;
-    width: 100%;
-    padding-left: calc(var(--bs-gutter-x) * 0.5);
-    padding-right: calc(var(--bs-gutter-x) * 0.5);
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 /* Large devices (desktops, 992px and up) */
@@ -3356,7 +3253,7 @@ body {
     width: 270px;
     height: 100vh;
     transition: all 0.5s linear;
-    background-color: #000;
+    background-color: rgb(46, 46, 80);
     z-index: 10;
   }
   .header .navbar-collapse.show {

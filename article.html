@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بلاگ</title>
-    <!-- Swiper's CSS -->
-    <link rel="stylesheet" href="plugins/swiper/swiper-bundle.min.css" />
-    <!-- Bootstrap CDN -->
-    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.rtl.min.css">
-    <!-- Custom CSS -->
+    <title>لاوینو</title>
+    <!-- Swiper v-8 -->
+    <link rel="stylesheet" href="./plugins/swiper/swiper-bundle.min.css" />
+    <!-- Bootstrap v-5 -->
+    <link rel="stylesheet" href="./plugins/bootstrap/bootstrap.rtl.min.css">
+    <!-- Animate Css -->
     <link rel="stylesheet" href="./plugins/Animate/animate.min.css" />
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/index.css">
 </head>
 
@@ -19,7 +20,7 @@
     <!-- ----------------------------------------------------------------------- -->
     <!--                                 Header                                  -->
     <!-- ----------------------------------------------------------------------- -->
-    <header class="header fixed-top">
+    <header class="header">
         <div class="container">
             <div class="row">
                 <nav class="navbar navbar-expand-lg bg-light">
@@ -35,16 +36,19 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="./index.html">خانه</a>
+                                    <a class="nav-link" aria-current="page" href="./index.html">خانه</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="products.html">محصولات</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active-link" href="./blog.html">وبلاگ</a>
+                                    <a class="nav-link" href="./article.html">گالری</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href='./contact-us.html'>تماس با ما</a>
+                                    <a class="nav-link" href='./conteact-us.html'>تماس با ما</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./blog.html">درباره ما</a>
                                 </li>
                             </ul>
                             <form class="d-flex" role="contact-us">
@@ -72,9 +76,7 @@
                                         </svg>
                                     </button>
                                 </section>
-                                <a href="./contact-us.html">
-                                    <button class="contact-us-btn" type="button">تماس با ما</button>
-                                </a>
+                                <button class="contact-us-btn" type="submit">تماس با ما</button>
                             </form>
                         </div>
                     </div>
@@ -85,110 +87,85 @@
     <!-- ----------------------------------------------------------------------- -->
     <!--                                 Article                                 -->
     <!-- ----------------------------------------------------------------------- -->
-
     <section class="article">
         <div class="container-article mx-auto">
             <div class="bread-crumb">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-12">
-                        <ul>
-                            <li>
-                                <a href="/">صفحه اصلی</a>
-                                <svg width="4" height="4" viewBox="0 0 4 4" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="2" cy="2" r="2" fill="#D9D9D9" />
-                                </svg>
-                            </li>
-                            <li>
-                                <a href="/blog">بلاگ</a>
-                                <svg width="4" height="4" viewBox="0 0 4 4" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="2" cy="2" r="2" fill="#D9D9D9" />
-                                </svg>
-                            </li>
-                            <li>
-                                <a href="">۱۳ نکته‌ که درباره‌ی مد پایدار باید بدانید</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-12">
-                        <div class="d-flex justify-content-end">
-                            <a href="#" class="d-flex">
-                                <img src="./images/svg/share.svg" alt="share">
-                                <h4>اشتراک گذاری با دیگران</h4>
-                            </a>
-                        </div>
-                    </div>
+                <ul>
+                    <li>
+                        <a href="/">صفحه اصلی</a>
+                        <svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="2" cy="2" r="2" fill="#D9D9D9" />
+                        </svg>
+                    </li>
+                    <li>
+                        <a href="/blog">بلاگ</a>
+                        <svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="2" cy="2" r="2" fill="#D9D9D9" />
+                        </svg>
+                    </li>
+                    <li>
+                        <a href="">۱۳ نکته‌ که درباره‌ی مد پایدار باید بدانید</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <img src="./images/svg/share.svg" alt="share">
+                    <h4>اشتراک گذاری با دیگران</h4>
                 </div>
             </div>
-
             <div class="article-content">
                 <div class="top-content">
-                    <div class="row">
-                        <div class="col-lg-7 col-12">
-                            <div class="article-title">
-                                <ul>
-                                    <li>
-                                        <img src="images/avatar.png" alt="">
-                                    </li>
-                                    <li>
-                                        <p>امیرحسین میهن پرست</p>
-                                    </li>
-                                    <li>
-                                        <p>شنبه ۱۷ تیر</p>
-                                    </li>
-                                    <li>
-                                        <p>۳۸ دیدگاه</p>
-                                    </li>
-                                </ul>
-                                <h1>۹ فایده‌ی بی‌نظیر دوش صبحگاهی برای سلامت بدن</h1>
-                            </div>
-                            <p>
-                                آدم‌ها به دو دسته‌ی کلی تقسیم می‌شوند؛ آن‌هایی که صبح‌ها دوش می‌گیرند و آن‌هایی که دوش
-                                گرفتن
-                                در
-                                شب‌ها را
-                                دوست دارند. بعضی از افراد دوش شبانه را به عنوان روشی برای به آرامش رسیدن بعد از یک روز
-                                طولانی
-                                دوست دارند
-                                و بعضی دیگر به این دلیل صبح‌ها دوش می‌گیرند که روز را شاداب‌تر شروع کنند. شما می‌توانید
-                                هر
-                                کدام
-                                از این
-                                روتین‌ها را که دوست دارید انتخاب کنید اما دانشمندان معتقدند فواید دوش صبحگاهی خیلی بیشتر
-                                از
-                                دوش
-                                گرفتن در
-                                شب‌ها است.
-                                در این مطلب از دیجی‌کالا مگ می‌خواهیم ۹ مزیت دوش صبحگاهی را بیان کنیم. اگر شما هم از آن
-                                دسته
-                                افرادی
-                                هستید که شب‌ها قبل از خواب به حمام می‌روید.
-                            </p>
+                    <div>
+                        <div class="article-title">
+                            <ul>
+                                <li>
+                                    <img src="images/avatar.png" alt="">
+                                </li>
+                                <li>
+                                    <p>امیرحسین میهن پرست</p>
+                                </li>
+                                <li>
+                                    <p>شنبه ۱۷ تیر</p>
+                                </li>
+                                <li>
+                                    <p>۳۸ دیدگاه</p>
+                                </li>
+                            </ul>
+                            <h1>۹ فایده‌ی بی‌نظیر دوش صبحگاهی برای سلامت بدن</h1>
                         </div>
-                        <div class="col-lg-5 col-12">
-                            <img src="images/article.png" class="article-title-img img-fluid" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="bottom-content">
                         <p>
-                            اگر از آن دسته افرادی هستید که صبح‌ها به دلیل ضربان نامنظم قلب بیدار می‌شوید، باید بدانید که
-                            به
-                            احتمال خیلی زیاد درگیر استرس هستید. دوش صبحگاهی، مخصوصا دوش با آب خنک، روشی عالی برای کاهش
-                            این
-                            نوع
-                            از استرس است. البته فراموش نکنید که نباید با آب خیلی سرد دوش گرفت، آب ولرم که گرمای زیادی
-                            ندارد
-                            بهترین انتخاب برای دوش صبحگاهی است. با این کار بدن شما اکسیژن مورد نیازش را دریافت کرده و
-                            مغز
-                            می‌تواند با استفاده از این اکسیژن میزان استرس را کاهش دهد. رایحه درمانی در زمان دوش گرفتن هم
-                            می‌تواند به این موضوع کمک کند.
+                            آدم‌ها به دو دسته‌ی کلی تقسیم می‌شوند؛ آن‌هایی که صبح‌ها دوش می‌گیرند و آن‌هایی که دوش گرفتن
+                            در
+                            شب‌ها را
+                            دوست دارند. بعضی از افراد دوش شبانه را به عنوان روشی برای به آرامش رسیدن بعد از یک روز
+                            طولانی
+                            دوست دارند
+                            و بعضی دیگر به این دلیل صبح‌ها دوش می‌گیرند که روز را شاداب‌تر شروع کنند. شما می‌توانید هر
+                            کدام
+                            از این
+                            روتین‌ها را که دوست دارید انتخاب کنید اما دانشمندان معتقدند فواید دوش صبحگاهی خیلی بیشتر از
+                            دوش
+                            گرفتن در
+                            شب‌ها است.
+                            در این مطلب از دیجی‌کالا مگ می‌خواهیم ۹ مزیت دوش صبحگاهی را بیان کنیم. اگر شما هم از آن دسته
+                            افرادی
+                            هستید که شب‌ها قبل از خواب به حمام می‌روید.
                         </p>
                     </div>
+                    <div>
+                        <img src="images/article.png" class="article-title-img" alt="">
+                    </div>
                 </div>
-
+                <div class="bottom-content">
+                    <p>
+                        اگر از آن دسته افرادی هستید که صبح‌ها به دلیل ضربان نامنظم قلب بیدار می‌شوید، باید بدانید که به
+                        احتمال خیلی زیاد درگیر استرس هستید. دوش صبحگاهی، مخصوصا دوش با آب خنک، روشی عالی برای کاهش این
+                        نوع
+                        از استرس است. البته فراموش نکنید که نباید با آب خیلی سرد دوش گرفت، آب ولرم که گرمای زیادی ندارد
+                        بهترین انتخاب برای دوش صبحگاهی است. با این کار بدن شما اکسیژن مورد نیازش را دریافت کرده و مغز
+                        می‌تواند با استفاده از این اکسیژن میزان استرس را کاهش دهد. رایحه درمانی در زمان دوش گرفتن هم
+                        می‌تواند به این موضوع کمک کند.
+                    </p>
+                </div>
                 <div>
                     <div class="main-content">
                         <h1 class="title">افزایش ایمنی بدن</h1>
@@ -249,27 +226,22 @@
                         </p>
                     </div>
                     <hr />
+
                     <div class="article-tags">
-                        <div class="row">
-                            <div class="col-lg-3 col-12">
-                                <div class="tag-title">
-                                    <img src="images/hashtag.png" alt="">
-                                    <h6>تگهای مقاله</h6>
-                                </div>
-                            </div>
-                            <div class="col-lg-9 col-12">
-                                <div class="tags">
-                                    <a href="#">#تجهیزات سفر</a>
-                                    <a href="#">#مسافرت</a>
-                                    <a href="#">#مازندران</a>
-                                    <a href="#">#هواپیما</a>
-                                    <a href="#">#سبک زندگی</a>
-                                    <a href="#">#مدرنیته</a>
-                                    <a href="#">#شمال</a>
-                                    <a href="#">#شیراز</a>
-                                    <a href="#">#رشت</a>
-                                </div>
-                            </div>
+                        <div class="tag-title">
+                            <img src="images/hashtag.png" alt="">
+                            <h6>تگهای مقاله</h6>
+                        </div>
+                        <div class="tags">
+                            <a href="#">#تجهیزات سفر</a>
+                            <a href="#">#مسافرت</a>
+                            <a href="#">#مازندران</a>
+                            <a href="#">#هواپیما</a>
+                            <a href="#">#سبک زندگی</a>
+                            <a href="#">#مدرنیته</a>
+                            <a href="#">#شمال</a>
+                            <a href="#">#شیراز</a>
+                            <a href="#">#رشت</a>
                         </div>
                     </div>
                 </div>
@@ -277,7 +249,7 @@
         </div>
     </section>
     <!-- ----------------------------------------------------------------------- -->
-    <!--                                 Related Posts                           -->
+    <!--                               Related Posts                             -->
     <!-- ----------------------------------------------------------------------- -->
     <section class="related-posts">
         <div class="container-article mx-auto">
@@ -378,11 +350,9 @@
             </div>
         </div>
     </section>
-
     <!-- ----------------------------------------------------------------------- -->
     <!--                                 User Comments                           -->
     <!-- ----------------------------------------------------------------------- -->
-
     <section class="user-comments">
         <div class="container-article mx-auto">
             <div class="user-comments-title">
@@ -398,7 +368,7 @@
                         </linearGradient>
                     </defs>
                 </svg>
-                <h1>دید گاه کاربران</h1>
+                <h1>دیدگاه کاربران</h1>
                 <svg width="193" height="3" class="user-comment-icon" viewBox="0 0 193 3" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -426,12 +396,7 @@
                                 <span>چند دقیقه پیش</span>
                             </div>
                             <div class="replay-comment">
-                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M7.00022 12.6667C3.53355 12.6667 0.720215 9.84667 0.720215 6.38667C0.720215 5.14 1.08688 3.93334 1.78022 2.89334C1.93355 2.66667 2.24688 2.6 2.47355 2.75334C2.70021 2.90667 2.76688 3.22 2.61355 3.44667C2.03355 4.31334 1.72688 5.33334 1.72688 6.38C1.72688 9.29334 4.09355 11.66 7.00688 11.66C9.92022 11.66 12.2869 9.29334 12.2869 6.38C12.2869 3.46667 9.91355 1.1 7.00022 1.1C6.38688 1.1 5.78688 1.18667 5.22021 1.36C4.95355 1.44 4.67355 1.29334 4.59355 1.02667C4.51355 0.760005 4.66022 0.480005 4.92688 0.400005C5.59355 0.200005 6.28688 0.093338 7.00022 0.093338C10.4669 0.093338 13.2802 2.91334 13.2802 6.37334C13.2802 9.83334 10.4669 12.6667 7.00022 12.6667Z"
-                                        fill="#F88C3D" />
-                                </svg>
+                                <img src="./images/svg/reply.svg" alt="">
                                 <a href="#">پاسخ دادن</a>
                             </div>
                         </div>
@@ -487,12 +452,7 @@
                                 <span>چند دقیقه پیش</span>
                             </div>
                             <div class="replay-comment">
-                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M7.00022 12.6667C3.53355 12.6667 0.720215 9.84667 0.720215 6.38667C0.720215 5.14 1.08688 3.93334 1.78022 2.89334C1.93355 2.66667 2.24688 2.6 2.47355 2.75334C2.70021 2.90667 2.76688 3.22 2.61355 3.44667C2.03355 4.31334 1.72688 5.33334 1.72688 6.38C1.72688 9.29334 4.09355 11.66 7.00688 11.66C9.92022 11.66 12.2869 9.29334 12.2869 6.38C12.2869 3.46667 9.91355 1.1 7.00022 1.1C6.38688 1.1 5.78688 1.18667 5.22021 1.36C4.95355 1.44 4.67355 1.29334 4.59355 1.02667C4.51355 0.760005 4.66022 0.480005 4.92688 0.400005C5.59355 0.200005 6.28688 0.093338 7.00022 0.093338C10.4669 0.093338 13.2802 2.91334 13.2802 6.37334C13.2802 9.83334 10.4669 12.6667 7.00022 12.6667Z"
-                                        fill="#F88C3D" />
-                                </svg>
+                                <img src="./images/svg/reply.svg" alt="">
                                 <a href="#">پاسخ دادن</a>
                             </div>
                         </div>
@@ -518,7 +478,6 @@
     <!-- ----------------------------------------------------------------------- -->
     <!--                            Submit Comment Form                          -->
     <!-- ----------------------------------------------------------------------- -->
-
     <section class="submit-comment-form">
         <div class="container-article mx-auto">
             <h1>دیدگاه خود را بنویسید</h1>
@@ -532,7 +491,7 @@
                             aria-label="Username" aria-describedby="basic-addon1">
                     </div>
                     <div class="col-lg col-12 input-group input-group-lg mb-3 mb-lg-0">
-                        <span class="input-group-text">
+                        <span class="input-group-text" id="basic-addon1">
                             <img src="./images/icons/psot.png" alt="">
                         </span>
                         <input type="text" class="form-control" placeholder="آدرس ایمیل" aria-label="Username"
@@ -583,7 +542,6 @@
             </div>
         </div>
     </section>
-
     <!-- ----------------------------------------------------------------------- -->
     <!--                                 Footer                                  -->
     <!-- ----------------------------------------------------------------------- -->
@@ -607,9 +565,15 @@
                     <section class="quick-access">
                         <h5>دسترسی سریع</h5>
                         <ul>
-                            <li><a href="./contact-us.html">تماس با ما</a></li>
-                            <li><a href="./blog.html">وبلاگ</a></li>
+                            <li><a href="./blog.html">درباره ما</a></li>
+                            <li><a href="./blog.html">درباره ما</a></li>
+                            <li><a href="./conteact-us.html">تماس با ما</a></li>
+                            <li><a href="./conteact-us.html">تماس با ما</a></li>
+                            <li><a href="./">گالری</a></li>
+                            <li><a href="./">گالری</a></li>
                             <li><a href="./products.html">محصولات</a></li>
+                            <li><a href="./products.html">محصولات</a></li>
+                            <li><a href="./index.html">خانه</a></li>
                             <li><a href="./index.html">خانه</a></li>
                         </ul>
                     </section>

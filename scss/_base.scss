@@ -93,13 +93,13 @@ $Gilroy: "Gilroy";
         top: calc(#{$width}/ -1);
         left: calc(#{$width}/ -1);
         background: linear-gradient(to right, $color 0%, $color 100%),
-        linear-gradient(to top, $color 50%, transparent 50%), linear-gradient(to top, $color 50%, transparent 50%),
-        linear-gradient(to right, $color 0%, $color 100%), linear-gradient(to left, $color 0%, $color 100%);
+            linear-gradient(to top, $color 50%, transparent 50%), linear-gradient(to top, $color 50%, transparent 50%),
+            linear-gradient(to right, $color 0%, $color 100%), linear-gradient(to left, $color 0%, $color 100%);
         background-size: 100% $width, $width 200%, $width 200%, 0% $width, 0% $width;
         background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
         background-repeat: no-repeat, no-repeat;
         transition: transform $duration ease-in-out, background-position $duration ease-in-out,
-        background-size $duration ease-in-out;
+            background-size $duration ease-in-out;
         transform: scaleX(0) rotate(180deg * $direction);
         transition-delay: $duration * 2, $duration, 0s;
         z-index: -1;
@@ -113,7 +113,6 @@ $Gilroy: "Gilroy";
         }
     }
 }
-
 
 @mixin border-link($color) {
     &::after {
@@ -189,4 +188,7 @@ $Gilroy: "Gilroy";
     }
 }
 
-
+::selection {
+    background: #f88c3d;
+    color: #fff;
+}

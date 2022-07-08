@@ -6,18 +6,7 @@ html {
 body {
   background-color: #fff !important;
 }
-::selection {
-  background: #f88c3d;
-  color: #fff;
-}
-.navbar-toggler-icon{
-  background-image: url('../images/menu.png');
-}
-.navbar-toggler{
-  &:focus{
-    box-shadow: unset !important;
-  }
-}
+
 /* -------------------------------------------------------------------------- */
 /*                                   Header                                   */
 /* -------------------------------------------------------------------------- */
@@ -45,9 +34,6 @@ body {
         color: rgba(256, 256, 256, 0.7);
         margin-left: 30px;
         font-size: 15px;
-        &.active-link{
-          color: $warning;
-        }
         &::after {
           display: block;
           content: "";
@@ -786,10 +772,6 @@ body {
     a {
       font-size: 13px;
       color: $primary;
-      display: inline-block;
-      &:last-child{
-        @include border-link($warning)
-      }
     }
   }
 
@@ -914,8 +896,6 @@ body {
     a {
       font-size: 13px;
       color: $primary;
-      display: inline-block;
-      @include border-link($warning)
     }
   }
 
@@ -930,6 +910,8 @@ body {
     }
 
     ul {
+      display: flex;
+      flex-wrap: wrap;
 
       li {
         width: 45%;
