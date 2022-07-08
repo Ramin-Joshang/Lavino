@@ -14,13 +14,13 @@
 /* Extra large devices (large desktops, 1200px and up) */
 
 @media only screen and (max-width: 1200px) {
-    .header {
-        .header-content {
-            .header-title {
+    .banner {
+        .banner-content {
+            .banner-title {
                 font-size: 40px;
             }
 
-            .header-desc {
+            .banner-desc {
                 width: 500px;
             }
         }
@@ -97,10 +97,12 @@
             }
         }
 
-        .header-content {
-            .header-img {
-                display: none;
-            }
+      
+    }
+
+    .banner-content {
+        .banner-img {
+            display: none;
         }
     }
 
@@ -182,13 +184,6 @@
 /* Medium devices (tablets, 768px and up) */
 
 @media only screen and (max-width: 768px) {
-    .banner{
-        .banner-content{
-            .banner-img{
-                display: none;
-            }
-        }
-    }
     .contact-us-page{
         .social-media{
             justify-content: center;
@@ -246,16 +241,16 @@
 /* Small devices (landscape phones, 576px and up) */
 
 @media only screen and (max-width: 576px) {
-    .header {
-        .header-content {
+    .banner {
+        .banner-content {
             padding-left: 15px;
             padding-right: 15px;
 
-            .header-title {
+            .banner-title {
                 font-size: 30px;
             }
 
-            .header-desc {
+            .banner-desc {
                 width: 100%;
             }
         }
@@ -271,17 +266,14 @@
             }
         }
     }
-    .banner{
-        .banner-content{
-            .banner-img{
-                display: none;
-            }
-        }
-    }
     .contact-us-page{
         .social-media{
             justify-content: center;
         }
+    }
+    .banner {
+        padding-left: 15px;
+        padding-right: 15px;
     }
     .brands {
         padding-left: 15px;
