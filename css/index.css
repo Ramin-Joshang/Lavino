@@ -2752,7 +2752,7 @@ body {
   display: flex;
 }
 .article .bread-crumb ul li a {
-  color: #5A5A6B;
+  color: #5a5a6b;
   font-family: "Yekan Bakh";
   font-weight: 700;
   font-size: 13px;
@@ -2839,7 +2839,7 @@ body {
   font-size: 18px;
   line-height: 27px;
   text-align: right;
-  color: #F88C3D;
+  color: #f88c3d;
 }
 .article .article-content .main-content p {
   font-family: "Yekan Bakh";
@@ -2848,7 +2848,7 @@ body {
   font-size: 14px;
   line-height: 27px;
   text-align: right;
-  color: #5A5A6B;
+  color: #5a5a6b;
   margin: 12px 0 12px 0;
 }
 .article .article-content .main-content .tip {
@@ -2869,7 +2869,7 @@ body {
   font-size: 17px;
   line-height: 27px;
   text-align: center;
-  color: #F88C3D;
+  color: #f88c3d;
 }
 .article .article-content .main-content p {
   font-family: "Yekan Bakh";
@@ -2878,11 +2878,11 @@ body {
   font-size: 14px;
   line-height: 27px;
   text-align: right;
-  color: #5A5A6B;
+  color: #5a5a6b;
 }
 .article hr {
   margin-top: 35px;
-  border: 1.3px solid #E0E3EB;
+  border: 1.3px solid #e0e3eb;
   transform: rotate(-180deg);
 }
 .article .article-tags h6 {
@@ -2892,7 +2892,7 @@ body {
   font-size: 14px;
   line-height: 27px;
   text-align: right;
-  color: #F88C3D;
+  color: #f88c3d;
   margin-bottom: 0 !important;
 }
 .article .article-tags img {
@@ -2910,7 +2910,7 @@ body {
   font-size: 14px;
   line-height: 27px;
   text-align: right;
-  color: #5A5A6B;
+  color: #5a5a6b;
   margin: 0 10px 0 10px;
 }
 .article .article-tags .tags a::after {
@@ -2966,14 +2966,14 @@ body {
   line-height: 19px;
   display: flex;
   align-items: center;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .related-posts .post .related-post-title h2 {
   font-family: "Yekan Bakh";
   font-weight: 700;
   font-size: 21px;
   line-height: 31px;
-  color: #FFFFFF;
+  color: #ffffff;
   position: absolute;
   bottom: 39px;
   right: 39px;
@@ -2987,13 +2987,13 @@ body {
   font-size: 28px;
   line-height: 27px;
   text-align: right;
-  color: #201F23;
+  color: #201f23;
   margin-top: 93px;
   margin-bottom: 32px;
 }
 
 .user-comments {
-  background: #F8F8F8;
+  background: #f8f8f8;
 }
 .user-comments .user-comments-title {
   display: flex;
@@ -3008,7 +3008,7 @@ body {
   font-size: 32px;
   line-height: 27px;
   text-align: center;
-  color: #201F23;
+  color: #201f23;
 }
 .user-comments .user-comments-title svg:nth-child(1) {
   margin-left: 15px;
@@ -3022,7 +3022,7 @@ body {
   font-size: 16px;
   line-height: 27px;
   text-align: center;
-  color: #2ABFED;
+  color: #2abfed;
   margin-bottom: 30px;
 }
 .user-comments .comment {
@@ -3050,7 +3050,7 @@ body {
   font-weight: 700;
   font-size: 17px;
   line-height: 27px;
-  color: #201F23;
+  color: #201f23;
 }
 .user-comments .comment .comment-title .comment-information span, .user-comments .comment .comment-title .comment-information .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .user-comments .comment .comment-title .comment-information a {
   font-family: "Yekan Bakh";
@@ -3058,7 +3058,7 @@ body {
   font-weight: 700;
   font-size: 13px;
   line-height: 27px;
-  color: #5A5A6B;
+  color: #5a5a6b;
   opacity: 0.5;
   margin-right: 15px;
 }
@@ -3072,7 +3072,7 @@ body {
   font-weight: 700;
   font-size: 14px;
   line-height: 25px;
-  color: #F88C3D;
+  color: #f88c3d;
   margin-bottom: 0.5rem;
 }
 .user-comments .comment .comment-title .replay-comment a::after {
@@ -3097,10 +3097,12 @@ body {
   font-weight: 500;
   font-size: 13px;
   line-height: 25px;
-  color: #5A5A6B;
+  color: #5a5a6b;
   margin-bottom: 0 !important;
 }
 .user-comments .separator {
+  max-width: 100%;
+  overflow-x: hidden;
   margin-top: 61px;
 }
 
@@ -3114,7 +3116,7 @@ body {
   font-size: 28px;
   line-height: 27px;
   text-align: center;
-  color: #201F23;
+  color: #201f23;
   margin-top: 51px;
   margin-bottom: 34px;
 }
@@ -4950,5 +4952,9 @@ body {
   .contact-us-page .separator-contact-us {
     width: 100%;
     overflow-x: hidden;
+  }
+
+  .about-us .about-us-picture {
+    animation: none;
   }
 }/*# sourceMappingURL=index.css.map */
