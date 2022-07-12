@@ -904,5 +904,52 @@
     $('.show-product').on('click', () => {
         $('#product').modal('show')
     })
+    if ($(window).width() >= 1440) {
+        $(function () {
+            $(window).scroll(function () {
+                console.log(window.scrollY)
+                if (window.scrollY > 0 && window.scrollY < 100) {
+                    $('.banner .banner-content section').addClass('animate__animated animate__bounce')
+                } else if (window.scrollY > 200 && window.scrollY < 600) {
+                    $('.main-about-us').addClass('animate__animated animate__bounce animate__slower')
+                } else if (window.scrollY > 1000 && window.scrollY < 1400) {
+                    $('.consulting-title').addClass('animate__animated animate__bounce')
+                } else if (window.scrollY > 1500 && window.scrollY < 2000) {
+                    $('.products-title').addClass('animate__animated animate__bounce')
+                } else if (window.scrollY > 2200 && window.scrollY < 2500) {
+                    $('.feedback-title').addClass('animate__animated animate__bounce')
+                } else if (window.scrollY > 2700 && window.scrollY < 3200) {
+                    $('.departments-title').addClass('animate__animated animate__bounce')
+                } else if (window.scrollY > 3250 && window.scrollY < 3600) {
+                    $('.permissions-title').addClass('animate__animated animate__bounce')
+                } else if (window.scrollY > 4450 && window.scrollY < 4900) {
+                    $('.blog-title').addClass('animate__animated animate__bounce')
+                }
+            })
+        })
+    } else {
+        $(function () {
+            $(window).scroll(function () {
+                console.log(window.scrollY)
+                if (window.scrollY > 0 && window.scrollY < 100) {
+                    $('.banner .banner-content section').addClass('animate__animated animate__bounce')
+                } else if (window.scrollY > 500 && window.scrollY < 1100) {
+                    $('.main-about-us').addClass('animate__animated animate__bounce animate__slower')
+                } else if (window.scrollY > 1400 && window.scrollY < 1900) {
+                    $('.consulting-title').addClass('animate__animated animate__bounce')
+                } else if (window.scrollY > 2100 && window.scrollY < 2700) {
+                    $('.products-title').addClass('animate__animated animate__bounce')
+                } else if (window.scrollY > 2900 && window.scrollY < 3300) {
+                    $('.feedback-title').addClass('animate__animated animate__bounce')
+                } else if (window.scrollY > 3500 && window.scrollY < 4100) {
+                    $('.departments-title').addClass('animate__animated animate__bounce')
+                } else if (window.scrollY > 5000 && window.scrollY < 5700) {
+                    $('.permissions-title').addClass('animate__animated animate__bounce')
+                } else if (window.scrollY > 6700 && window.scrollY < 7300) {
+                    $('.blog-title').addClass('animate__animated animate__bounce')
+                }
+            })
+        })
+    }
 </script>
 </html>
