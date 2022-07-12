@@ -2,10 +2,14 @@ body {
   background-color: #f3f3f3;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                             Products Page Links                            */
+/* -------------------------------------------------------------------------- */
 .products-page-links {
   padding: 17px 0;
   font-family: $Yekan;
   margin-top: 100px;
+
   ul {
     display: flex;
     // gap: 10px;
@@ -27,6 +31,9 @@ body {
   }
 }
 
+/* -------------------------------------------------------------------------- */
+/*                             Products Page Item                             */
+/* -------------------------------------------------------------------------- */
 .products-page-item {
   font-family: $Yekan;
 
@@ -45,6 +52,7 @@ body {
       justify-content: space-between;
       align-items: center;
       animation: bounce 2s forwards;
+      animation-delay: 1s;
 
       h3 {
         font-weight: 900;
@@ -59,6 +67,7 @@ body {
       flex-wrap: wrap;
       gap: 15px 0;
       animation: bounce 2s forwards;
+      animation-delay: 1s;
 
       li {
         margin-left: 15px;
@@ -81,6 +90,7 @@ body {
       line-height: 22px;
       color: #5b5b6b;
       animation: bounce 2s forwards;
+      animation-delay: 1s;
     }
 
     p.desc-content {
@@ -91,6 +101,7 @@ body {
       margin-bottom: 36px;
       text-align: justify;
       animation: bounce 2s forwards;
+      animation-delay: 1s;
     }
 
     .btn {
@@ -99,6 +110,7 @@ body {
       border-radius: 6px;
       padding: 8px;
       animation: bounce 2s forwards;
+      animation-delay: 1s;
 
       .price {
         font-style: normal;
@@ -129,11 +141,16 @@ body {
   }
 }
 
+/* -------------------------------------------------------------------------- */
+/*                           Products Page Item Desc                          */
+/* -------------------------------------------------------------------------- */
 .products-page-item-desc {
   margin-top: 10px;
   padding: 40px 0;
   background-color: #ffffff;
   animation: bounce 2s forwards;
+  animation-delay: 1s;
+
   .item-desc-content {
     font-family: $Yekan;
 
@@ -151,6 +168,9 @@ body {
   }
 }
 
+/* -------------------------------------------------------------------------- */
+/*                           Products Page Feedback                           */
+/* -------------------------------------------------------------------------- */
 .products-page-feedback {
   padding: 50px 0;
 
@@ -201,6 +221,7 @@ body {
 
       .reply {
         display: inline-block;
+
         a {
           font-weight: 700;
           font-size: 15px;
@@ -245,6 +266,7 @@ body {
 
   form {
     margin: 65px auto 0 auto;
+
     .star-rating {
       direction: rtl;
       display: inline-block;
@@ -292,10 +314,10 @@ body {
       @include input;
       font-size: 15px !important;
       // padding: 10px 0;
-      height: 55px; 
+      height: 55px;
 
-      &:focus{
-        border-bottom-color:$warning !important ;
+      &:focus {
+        border-bottom-color: $warning !important;
       }
     }
 
@@ -309,8 +331,9 @@ body {
       @include input;
       border: solid 1px $inputBorder;
       resize: both !important;
-      &:focus{
-        border-bottom-color:$warning !important ;
+
+      &:focus {
+        border-bottom-color: $warning !important;
       }
     }
 

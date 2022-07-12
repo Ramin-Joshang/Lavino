@@ -1,6 +1,10 @@
+/* -------------------------------------------------------------------------- */
+/*                                     Dots                                   */
+/* -------------------------------------------------------------------------- */
 .dots {
   width: 95%;
   overflow: hidden;
+
   svg {
     width: fit-content;
     margin-bottom: 27px;
@@ -8,10 +12,15 @@
   }
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                   About Us                                 */
+/* -------------------------------------------------------------------------- */
 .about-us {
   padding-bottom: 0 !important;
   animation: bounce 2s forwards;
+  animation-delay: 1s;
   margin-top: 85px;
+
   .about-us-title {
     margin-top: 65px;
 
@@ -24,12 +33,14 @@
       text-align: right;
       color: #2abfed;
       animation: bounce 2s forwards;
+      animation-delay: 1s;
     }
 
     ul {
       display: flex;
       margin-bottom: 0 !important;
       justify-content: end;
+
       li {
         margin-left: 20px;
 
@@ -65,15 +76,21 @@
     margin-top: 80px;
     text-align: center;
     animation: pulse 4s infinite;
+
     svg {
       max-width: 162px;
     }
   }
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                  Target Us                                 */
+/* -------------------------------------------------------------------------- */
 .target-us {
   margin-top: 71px;
   animation: bounce 2s forwards;
+  animation-delay: 1s;
+
   h1 {
     font-family: $Yekan;
     font-style: normal;
@@ -101,8 +118,13 @@
   }
 }
 
+/* -------------------------------------------------------------------------- */
+/*                          Frequently Asked Questions                        */
+/* -------------------------------------------------------------------------- */
 .frequently-asked-questions {
   animation: bounce 2s forwards;
+  animation-delay: 1s;
+
   h1 {
     font-family: $Yekan;
     font-style: normal;
@@ -123,12 +145,15 @@
     color: #5b5b6b;
     text-align: justify;
   }
+
   .accordion {
     margin-bottom: 133px;
+
     .accordion-button {
       background: #f9f9f9;
       padding: 28px 20px 28px 20px;
       border-radius: 6px;
+
       &:before {
         margin-left: 14px;
         flex-shrink: 0;
@@ -153,11 +178,14 @@
         }
       }
     }
+
     .accordion-item {
       border: unset !important;
       margin-bottom: 10px;
+
       .accordion-collapse {
         background: #f9f9f9;
+
         .accordion-body {
           font-family: $Yekan;
           font-style: normal;
@@ -172,6 +200,9 @@
   }
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                  Contact US                                */
+/* -------------------------------------------------------------------------- */
 .contact-us-page {
   margin-bottom: 93px;
 
@@ -184,8 +215,10 @@
     text-align: center;
     color: #1f1e22;
     margin-bottom: 19px;
+
     span {
       color: #f88c3d;
+
       &:after {
         background: unset !important;
       }
@@ -200,6 +233,7 @@
   .information {
     display: flex;
     animation: fadeIn 2s forwards;
+
     .phone-icon {
       background: #2abfed;
       box-shadow: 0 10px 35px rgba(252, 72, 83, 0.1);
@@ -210,9 +244,11 @@
       margin-left: 24px;
       line-height: 0 !important;
       @include btnEffect($primary);
+
       &:hover {
         animation: shakeX 1s forwards;
       }
+
       svg,
       i {
         color: #fff;
@@ -264,6 +300,7 @@
   .social-media {
     display: flex;
     animation: fadeIn 2s forwards;
+
     a {
       background: #2abfed;
       border-radius: 50%;
@@ -303,6 +340,7 @@
       @include input;
       font-size: 15px !important;
       height: 55px;
+
       &:focus {
         border-bottom: 1px solid $primary;
       }
@@ -315,6 +353,7 @@
       height: 55px;
       font-family: $Yekan;
       color: #b7b7b9;
+
       &:focus {
         border-bottom: 1px solid $primary;
       }
@@ -330,6 +369,7 @@
       @include input;
       border: solid 1px $inputBorder;
       resize: both !important;
+
       &:focus {
         border-bottom: 1px solid $primary;
       }

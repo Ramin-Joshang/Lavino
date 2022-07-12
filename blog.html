@@ -6,29 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>بلاگ</title>
+    <link rel="stylesheet" href="./plugins/swiper/swiper-bundle.min.css"/>
     <!-- Bootstrap v-5 -->
     <link rel="stylesheet" href="./plugins/bootstrap/bootstrap.rtl.min.css">
     <!-- Animate Css -->
-    <link rel="stylesheet" href="./plugins/Animate/animate.min.css"/>
+    <link rel="stylesheet" href="plugins/animate/animate.min.css"/>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body dir="rtl">
-   <!-- ----------------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------------- -->
 <!--                                 Layer                                   -->
 <!-- ----------------------------------------------------------------------- -->
 <section id="layer"></section>
-    <!-- ----------------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------------- -->
 <!--                                 Loader                                  -->
 <!-- ----------------------------------------------------------------------- -->
+<div class="cursor"></div>
 <div class="overlay">
     <div class="overlay-door"></div>
     <div class="overlay-content">
         <div class="loader">
             <div class="inner"></div>
         </div>
-        <img src="images/loader-logo.png" alt="">
+        <img src="images/loader-logo.png" class="img-fluid px-2" alt="">
     </div>
 </div>
 <!-- ----------------------------------------------------------------------- -->
@@ -105,7 +107,7 @@
                 <h3 class="mb-3 mb-lg-0">بلاگ لاوینو</h3>
                 <form>
                     <div class="blog-header-search input-group">
-                        <input type="text" class="form-control" placeholder="جستجوی مقالات" aria-label="Username">
+                        <input type="text" class="form-control" placeholder="جستجوی مقالات">
                         <span class="input-group-text input-icon">
                                 <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
@@ -117,13 +119,12 @@
                             </span>
                     </div>
                     <div class="blog-header-select input-group">
-                        <select class="form-select" aria-label="Default select example">
-                            <!-- <option selected>Open this select menu</option> -->
+                        <select class="form-select">
                             <option selected value="1">پربازدیدترین ها</option>
                             <option value="2">پربازدیدترین ها</option>
                             <option value="3">پربازدیدترین ها</option>
                         </select>
-                        <span class="input-group-text input-icon" id="basic-addon1">
+                        <span class="input-group-text input-icon">
                                 <svg width="10" height="6" viewBox="0 0 10 6" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -156,113 +157,115 @@
 <!-- ----------------------------------------------------------------------- -->
 <section class="blog-content">
     <div class="container">
-        <div class="row">
-            <section class="main-articles">
-                <div class="row">
-                    <section class="col-12 col-sm-10 col-md-6 col-lg-4 mb-5 mb-lg-0 mx-auto mx-md-0">
-                        <section class="main-articles-item">
-                            <img src="./images/blog/main-articles-1.png" alt="articles" class="img-fluid w-100">
-                            <figcaption class="item-desc">
-                                <section class="date-comment">
-                                    <section class="date">
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                    d="M5.99984 0.166626C2.78567 0.166626 0.166504 2.78579 0.166504 5.99996C0.166504 9.21413 2.78567 11.8333 5.99984 11.8333C9.214 11.8333 11.8332 9.21413 11.8332 5.99996C11.8332 2.78579 9.214 0.166626 5.99984 0.166626ZM8.53734 8.08246C8.45567 8.22246 8.30984 8.29829 8.15817 8.29829C8.08234 8.29829 8.0065 8.28079 7.9365 8.23413L6.12817 7.15496C5.679 6.88663 5.3465 6.29746 5.3465 5.77829V3.38663C5.3465 3.14746 5.54484 2.94913 5.784 2.94913C6.02317 2.94913 6.2215 3.14746 6.2215 3.38663V5.77829C6.2215 5.98829 6.3965 6.29746 6.57734 6.40246L8.38567 7.48163C8.59567 7.60413 8.66567 7.87246 8.53734 8.08246Z"
-                                                    fill="white"/>
-                                        </svg>
-                                        <span>۲۶ مهر</span>
+        <div class="row ">
+            <section class="main-articles ">
+                <div class="swiper blog-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <section class="main-articles-item ">
+                                <img src="./images/blog/main-articles-1.png" alt="articles" class="img-fluid w-100">
+                                <figcaption class="item-desc">
+                                    <section class="date-comment">
+                                        <section class="date">
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                        d="M5.99984 0.166626C2.78567 0.166626 0.166504 2.78579 0.166504 5.99996C0.166504 9.21413 2.78567 11.8333 5.99984 11.8333C9.214 11.8333 11.8332 9.21413 11.8332 5.99996C11.8332 2.78579 9.214 0.166626 5.99984 0.166626ZM8.53734 8.08246C8.45567 8.22246 8.30984 8.29829 8.15817 8.29829C8.08234 8.29829 8.0065 8.28079 7.9365 8.23413L6.12817 7.15496C5.679 6.88663 5.3465 6.29746 5.3465 5.77829V3.38663C5.3465 3.14746 5.54484 2.94913 5.784 2.94913C6.02317 2.94913 6.2215 3.14746 6.2215 3.38663V5.77829C6.2215 5.98829 6.3965 6.29746 6.57734 6.40246L8.38567 7.48163C8.59567 7.60413 8.66567 7.87246 8.53734 8.08246Z"
+                                                        fill="white"/>
+                                            </svg>
+                                            <span>۲۶ مهر</span>
+                                        </section>
+                                        <section class="comment">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                        d="M10.7742 9.81746L11.0017 11.6608C11.0601 12.145 10.5409 12.4833 10.1267 12.2325L8.10839 11.0308C7.96839 10.9491 7.93339 10.7741 8.00923 10.6341C8.30089 10.0975 8.45839 9.49079 8.45839 8.88413C8.45839 6.74913 6.62673 5.01079 4.37506 5.01079C3.91423 5.01079 3.46506 5.08079 3.04506 5.22079C2.82923 5.29079 2.61923 5.09246 2.67173 4.87079C3.20256 2.74746 5.24423 1.16663 7.68256 1.16663C10.5292 1.16663 12.8334 3.31913 12.8334 5.97329C12.8334 7.54829 12.0226 8.94246 10.7742 9.81746Z"
+                                                        fill="white"/>
+                                                <path
+                                                        d="M7.58341 8.8842C7.58341 9.57836 7.32675 10.22 6.89508 10.7275C6.31758 11.4275 5.40175 11.8767 4.37508 11.8767L2.85258 12.7809C2.59591 12.9384 2.26925 12.7225 2.30425 12.425L2.45008 11.2759C1.66841 10.7334 1.16675 9.8642 1.16675 8.8842C1.16675 7.85753 1.71508 6.95336 2.55508 6.4167C3.07425 6.07836 3.69841 5.88586 4.37508 5.88586C6.14841 5.88586 7.58341 7.22753 7.58341 8.8842Z"
+                                                        fill="white"/>
+                                            </svg>
+                                            <span>۳۷ دیدگاه</span>
+                                        </section>
                                     </section>
-                                    <section class="comment">
-                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                    d="M10.7742 9.81746L11.0017 11.6608C11.0601 12.145 10.5409 12.4833 10.1267 12.2325L8.10839 11.0308C7.96839 10.9491 7.93339 10.7741 8.00923 10.6341C8.30089 10.0975 8.45839 9.49079 8.45839 8.88413C8.45839 6.74913 6.62673 5.01079 4.37506 5.01079C3.91423 5.01079 3.46506 5.08079 3.04506 5.22079C2.82923 5.29079 2.61923 5.09246 2.67173 4.87079C3.20256 2.74746 5.24423 1.16663 7.68256 1.16663C10.5292 1.16663 12.8334 3.31913 12.8334 5.97329C12.8334 7.54829 12.0226 8.94246 10.7742 9.81746Z"
-                                                    fill="white"/>
-                                            <path
-                                                    d="M7.58341 8.8842C7.58341 9.57836 7.32675 10.22 6.89508 10.7275C6.31758 11.4275 5.40175 11.8767 4.37508 11.8767L2.85258 12.7809C2.59591 12.9384 2.26925 12.7225 2.30425 12.425L2.45008 11.2759C1.66841 10.7334 1.16675 9.8642 1.16675 8.8842C1.16675 7.85753 1.71508 6.95336 2.55508 6.4167C3.07425 6.07836 3.69841 5.88586 4.37508 5.88586C6.14841 5.88586 7.58341 7.22753 7.58341 8.8842Z"
-                                                    fill="white"/>
-                                        </svg>
-                                        <span>۳۷ دیدگاه</span>
+                                    <a href="">
+                                        <h5>۱۳ نکته‌ که درباره‌ی مد پایدار باید بدانید</h5>
+                                    </a>
+                                </figcaption>
+                            </section>
+                        </div>
+                        <div class="swiper-slide">
+                            <section class="main-articles-item ">
+                                <img src="./images/blog/main-articles-2.png" alt="articles" class="img-fluid w-100">
+                                <figcaption class="item-desc">
+                                    <section class="date-comment">
+                                        <section class="date">
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                        d="M5.99984 0.166626C2.78567 0.166626 0.166504 2.78579 0.166504 5.99996C0.166504 9.21413 2.78567 11.8333 5.99984 11.8333C9.214 11.8333 11.8332 9.21413 11.8332 5.99996C11.8332 2.78579 9.214 0.166626 5.99984 0.166626ZM8.53734 8.08246C8.45567 8.22246 8.30984 8.29829 8.15817 8.29829C8.08234 8.29829 8.0065 8.28079 7.9365 8.23413L6.12817 7.15496C5.679 6.88663 5.3465 6.29746 5.3465 5.77829V3.38663C5.3465 3.14746 5.54484 2.94913 5.784 2.94913C6.02317 2.94913 6.2215 3.14746 6.2215 3.38663V5.77829C6.2215 5.98829 6.3965 6.29746 6.57734 6.40246L8.38567 7.48163C8.59567 7.60413 8.66567 7.87246 8.53734 8.08246Z"
+                                                        fill="white"/>
+                                            </svg>
+                                            <span>۲۶ مهر</span>
+                                        </section>
+                                        <section class="comment">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                        d="M10.7742 9.81746L11.0017 11.6608C11.0601 12.145 10.5409 12.4833 10.1267 12.2325L8.10839 11.0308C7.96839 10.9491 7.93339 10.7741 8.00923 10.6341C8.30089 10.0975 8.45839 9.49079 8.45839 8.88413C8.45839 6.74913 6.62673 5.01079 4.37506 5.01079C3.91423 5.01079 3.46506 5.08079 3.04506 5.22079C2.82923 5.29079 2.61923 5.09246 2.67173 4.87079C3.20256 2.74746 5.24423 1.16663 7.68256 1.16663C10.5292 1.16663 12.8334 3.31913 12.8334 5.97329C12.8334 7.54829 12.0226 8.94246 10.7742 9.81746Z"
+                                                        fill="white"/>
+                                                <path
+                                                        d="M7.58341 8.8842C7.58341 9.57836 7.32675 10.22 6.89508 10.7275C6.31758 11.4275 5.40175 11.8767 4.37508 11.8767L2.85258 12.7809C2.59591 12.9384 2.26925 12.7225 2.30425 12.425L2.45008 11.2759C1.66841 10.7334 1.16675 9.8642 1.16675 8.8842C1.16675 7.85753 1.71508 6.95336 2.55508 6.4167C3.07425 6.07836 3.69841 5.88586 4.37508 5.88586C6.14841 5.88586 7.58341 7.22753 7.58341 8.8842Z"
+                                                        fill="white"/>
+                                            </svg>
+                                            <span>۳۷ دیدگاه</span>
+                                        </section>
                                     </section>
-                                </section>
-                                <a href="">
-                                    <h5>۱۳ نکته‌ که درباره‌ی مد پایدار باید بدانید</h5>
-                                </a>
-                            </figcaption>
-                        </section>
-                    </section>
-                    <section class="col-12 col-sm-10 col-md-6 col-lg-4 mb-5 mb-lg-0 mx-auto mx-md-0">
-                        <section class="main-articles-item">
-                            <img src="./images/blog/main-articles-2.png" alt="articles" class="img-fluid w-100">
-                            <figcaption class="item-desc">
-                                <section class="date-comment">
-                                    <section class="date">
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                    d="M5.99984 0.166626C2.78567 0.166626 0.166504 2.78579 0.166504 5.99996C0.166504 9.21413 2.78567 11.8333 5.99984 11.8333C9.214 11.8333 11.8332 9.21413 11.8332 5.99996C11.8332 2.78579 9.214 0.166626 5.99984 0.166626ZM8.53734 8.08246C8.45567 8.22246 8.30984 8.29829 8.15817 8.29829C8.08234 8.29829 8.0065 8.28079 7.9365 8.23413L6.12817 7.15496C5.679 6.88663 5.3465 6.29746 5.3465 5.77829V3.38663C5.3465 3.14746 5.54484 2.94913 5.784 2.94913C6.02317 2.94913 6.2215 3.14746 6.2215 3.38663V5.77829C6.2215 5.98829 6.3965 6.29746 6.57734 6.40246L8.38567 7.48163C8.59567 7.60413 8.66567 7.87246 8.53734 8.08246Z"
-                                                    fill="white"/>
-                                        </svg>
-                                        <span>۲۶ مهر</span>
+                                    <a href="">
+                                        <h5>۱۳ نکته‌ که درباره‌ی مد پایدار باید بدانید</h5>
+                                    </a>
+                                </figcaption>
+                            </section>
+                        </div>
+                        <div class="swiper-slide">
+                            <section class="main-articles-item ">
+                                <img src="./images/blog/main-articles-3.png" alt="articles" class="img-fluid w-100">
+                                <figcaption class="item-desc">
+                                    <section class="date-comment">
+                                        <section class="date">
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                        d="M5.99984 0.166626C2.78567 0.166626 0.166504 2.78579 0.166504 5.99996C0.166504 9.21413 2.78567 11.8333 5.99984 11.8333C9.214 11.8333 11.8332 9.21413 11.8332 5.99996C11.8332 2.78579 9.214 0.166626 5.99984 0.166626ZM8.53734 8.08246C8.45567 8.22246 8.30984 8.29829 8.15817 8.29829C8.08234 8.29829 8.0065 8.28079 7.9365 8.23413L6.12817 7.15496C5.679 6.88663 5.3465 6.29746 5.3465 5.77829V3.38663C5.3465 3.14746 5.54484 2.94913 5.784 2.94913C6.02317 2.94913 6.2215 3.14746 6.2215 3.38663V5.77829C6.2215 5.98829 6.3965 6.29746 6.57734 6.40246L8.38567 7.48163C8.59567 7.60413 8.66567 7.87246 8.53734 8.08246Z"
+                                                        fill="white"/>
+                                            </svg>
+                                            <span>۲۶ مهر</span>
+                                        </section>
+                                        <section class="comment">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                        d="M10.7742 9.81746L11.0017 11.6608C11.0601 12.145 10.5409 12.4833 10.1267 12.2325L8.10839 11.0308C7.96839 10.9491 7.93339 10.7741 8.00923 10.6341C8.30089 10.0975 8.45839 9.49079 8.45839 8.88413C8.45839 6.74913 6.62673 5.01079 4.37506 5.01079C3.91423 5.01079 3.46506 5.08079 3.04506 5.22079C2.82923 5.29079 2.61923 5.09246 2.67173 4.87079C3.20256 2.74746 5.24423 1.16663 7.68256 1.16663C10.5292 1.16663 12.8334 3.31913 12.8334 5.97329C12.8334 7.54829 12.0226 8.94246 10.7742 9.81746Z"
+                                                        fill="white"/>
+                                                <path
+                                                        d="M7.58341 8.8842C7.58341 9.57836 7.32675 10.22 6.89508 10.7275C6.31758 11.4275 5.40175 11.8767 4.37508 11.8767L2.85258 12.7809C2.59591 12.9384 2.26925 12.7225 2.30425 12.425L2.45008 11.2759C1.66841 10.7334 1.16675 9.8642 1.16675 8.8842C1.16675 7.85753 1.71508 6.95336 2.55508 6.4167C3.07425 6.07836 3.69841 5.88586 4.37508 5.88586C6.14841 5.88586 7.58341 7.22753 7.58341 8.8842Z"
+                                                        fill="white"/>
+                                            </svg>
+                                            <span>۳۷ دیدگاه</span>
+                                        </section>
                                     </section>
-                                    <section class="comment">
-                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                    d="M10.7742 9.81746L11.0017 11.6608C11.0601 12.145 10.5409 12.4833 10.1267 12.2325L8.10839 11.0308C7.96839 10.9491 7.93339 10.7741 8.00923 10.6341C8.30089 10.0975 8.45839 9.49079 8.45839 8.88413C8.45839 6.74913 6.62673 5.01079 4.37506 5.01079C3.91423 5.01079 3.46506 5.08079 3.04506 5.22079C2.82923 5.29079 2.61923 5.09246 2.67173 4.87079C3.20256 2.74746 5.24423 1.16663 7.68256 1.16663C10.5292 1.16663 12.8334 3.31913 12.8334 5.97329C12.8334 7.54829 12.0226 8.94246 10.7742 9.81746Z"
-                                                    fill="white"/>
-                                            <path
-                                                    d="M7.58341 8.8842C7.58341 9.57836 7.32675 10.22 6.89508 10.7275C6.31758 11.4275 5.40175 11.8767 4.37508 11.8767L2.85258 12.7809C2.59591 12.9384 2.26925 12.7225 2.30425 12.425L2.45008 11.2759C1.66841 10.7334 1.16675 9.8642 1.16675 8.8842C1.16675 7.85753 1.71508 6.95336 2.55508 6.4167C3.07425 6.07836 3.69841 5.88586 4.37508 5.88586C6.14841 5.88586 7.58341 7.22753 7.58341 8.8842Z"
-                                                    fill="white"/>
-                                        </svg>
-                                        <span>۳۷ دیدگاه</span>
-                                    </section>
-                                </section>
-                                <a href="">
-                                    <h5>۱۳ نکته‌ که درباره‌ی مد پایدار باید بدانید</h5>
-                                </a>
-                            </figcaption>
-                        </section>
-                    </section>
-                    <section class="col-12 col-sm-10 col-md-6 col-lg-4 mb-5 mb-lg-0 mx-auto mx-md-0">
-                        <section class="main-articles-item">
-                            <img src="./images/blog/main-articles-3.png" alt="articles" class="img-fluid w-100">
-                            <figcaption class="item-desc">
-                                <section class="date-comment">
-                                    <section class="date">
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                    d="M5.99984 0.166626C2.78567 0.166626 0.166504 2.78579 0.166504 5.99996C0.166504 9.21413 2.78567 11.8333 5.99984 11.8333C9.214 11.8333 11.8332 9.21413 11.8332 5.99996C11.8332 2.78579 9.214 0.166626 5.99984 0.166626ZM8.53734 8.08246C8.45567 8.22246 8.30984 8.29829 8.15817 8.29829C8.08234 8.29829 8.0065 8.28079 7.9365 8.23413L6.12817 7.15496C5.679 6.88663 5.3465 6.29746 5.3465 5.77829V3.38663C5.3465 3.14746 5.54484 2.94913 5.784 2.94913C6.02317 2.94913 6.2215 3.14746 6.2215 3.38663V5.77829C6.2215 5.98829 6.3965 6.29746 6.57734 6.40246L8.38567 7.48163C8.59567 7.60413 8.66567 7.87246 8.53734 8.08246Z"
-                                                    fill="white"/>
-                                        </svg>
-                                        <span>۲۶ مهر</span>
-                                    </section>
-                                    <section class="comment">
-                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                    d="M10.7742 9.81746L11.0017 11.6608C11.0601 12.145 10.5409 12.4833 10.1267 12.2325L8.10839 11.0308C7.96839 10.9491 7.93339 10.7741 8.00923 10.6341C8.30089 10.0975 8.45839 9.49079 8.45839 8.88413C8.45839 6.74913 6.62673 5.01079 4.37506 5.01079C3.91423 5.01079 3.46506 5.08079 3.04506 5.22079C2.82923 5.29079 2.61923 5.09246 2.67173 4.87079C3.20256 2.74746 5.24423 1.16663 7.68256 1.16663C10.5292 1.16663 12.8334 3.31913 12.8334 5.97329C12.8334 7.54829 12.0226 8.94246 10.7742 9.81746Z"
-                                                    fill="white"/>
-                                            <path
-                                                    d="M7.58341 8.8842C7.58341 9.57836 7.32675 10.22 6.89508 10.7275C6.31758 11.4275 5.40175 11.8767 4.37508 11.8767L2.85258 12.7809C2.59591 12.9384 2.26925 12.7225 2.30425 12.425L2.45008 11.2759C1.66841 10.7334 1.16675 9.8642 1.16675 8.8842C1.16675 7.85753 1.71508 6.95336 2.55508 6.4167C3.07425 6.07836 3.69841 5.88586 4.37508 5.88586C6.14841 5.88586 7.58341 7.22753 7.58341 8.8842Z"
-                                                    fill="white"/>
-                                        </svg>
-                                        <span>۳۷ دیدگاه</span>
-                                    </section>
-                                </section>
-                                <a href="">
-                                    <h5>۱۳ نکته‌ که درباره‌ی مد پایدار باید بدانید</h5>
-                                </a>
-                            </figcaption>
-                        </section>
-                    </section>
+                                    <a href="">
+                                        <h5>۱۳ نکته‌ که درباره‌ی مد پایدار باید بدانید</h5>
+                                    </a>
+                                </figcaption>
+                            </section>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section class="blog-articles">
                 <div class="row ">
-                    <section class="col-12 col-lg-6 mx-auto mb-5 mb-lg-0">
+                    <section class="col-12 mx-auto mb-5 mb-lg-0">
                         <section class="blog-articles-item">
                             <img src="./images/blog/blog-articles-1.png" alt="articles">
                             <section class="blog-articles-desc">
@@ -297,7 +300,7 @@
                             </section>
                         </section>
                     </section>
-                    <section class="col-12 col-lg-6 mx-auto mb-5 mb-lg-0">
+                    <section class="col-12 mx-auto mb-5 mb-lg-0">
                         <section class="blog-articles-item">
                             <img src="./images/blog/blog-articles-1.png" alt="articles">
                             <section class="blog-articles-desc">
@@ -332,7 +335,7 @@
                             </section>
                         </section>
                     </section>
-                    <section class="col-12 col-lg-6 mx-auto mb-5 mb-lg-0">
+                    <section class="col-12 mx-auto mb-5 mb-lg-0">
                         <section class="blog-articles-item">
                             <img src="./images/blog/blog-articles-1.png" alt="articles">
                             <section class="blog-articles-desc">
@@ -367,7 +370,7 @@
                             </section>
                         </section>
                     </section>
-                    <section class="col-12 col-lg-6 mx-auto mb-5 mb-lg-0">
+                    <section class="col-12 mx-auto mb-5 mb-lg-0">
                         <section class="blog-articles-item">
                             <img src="./images/blog/blog-articles-1.png" alt="articles">
                             <section class="blog-articles-desc">
@@ -402,7 +405,7 @@
                             </section>
                         </section>
                     </section>
-                    <section class="col-12 col-lg-6 mx-auto mb-5 mb-lg-0">
+                    <section class="col-12 mx-auto mb-5 mb-lg-0">
                         <section class="blog-articles-item">
                             <img src="./images/blog/blog-articles-1.png" alt="articles">
                             <section class="blog-articles-desc">
@@ -437,7 +440,7 @@
                             </section>
                         </section>
                     </section>
-                    <section class="col-12 col-lg-6 mx-auto mb-5 mb-lg-0">
+                    <section class="col-12 mx-auto mb-5 mb-lg-0">
                         <section class="blog-articles-item">
                             <img src="./images/blog/blog-articles-1.png" alt="articles">
                             <section class="blog-articles-desc">
@@ -472,7 +475,7 @@
                             </section>
                         </section>
                     </section>
-                    <section class="col-12 col-lg-6 mx-auto mb-5 mb-lg-0">
+                    <section class="col-12 mx-auto mb-5 mb-lg-0">
                         <section class="blog-articles-item">
                             <img src="./images/blog/blog-articles-1.png" alt="articles">
                             <section class="blog-articles-desc">
@@ -507,7 +510,7 @@
                             </section>
                         </section>
                     </section>
-                    <section class="col-12 col-lg-6 mx-auto mb-5 mb-lg-0">
+                    <section class="col-12 mx-auto mb-5 mb-lg-0">
                         <section class="blog-articles-item">
                             <img src="./images/blog/blog-articles-1.png" alt="articles">
                             <section class="blog-articles-desc">
@@ -542,7 +545,7 @@
                             </section>
                         </section>
                     </section>
-                    <section class="col-12 col-lg-6 mx-auto mb-5 mb-lg-0">
+                    <section class="col-12 mx-auto mb-5 mb-lg-0">
                         <section class="blog-articles-item">
                             <img src="./images/blog/blog-articles-1.png" alt="articles">
                             <section class="blog-articles-desc">
@@ -577,7 +580,7 @@
                             </section>
                         </section>
                     </section>
-                    <section class="col-12 col-lg-6 mx-auto mb-5 mb-lg-0">
+                    <section class="col-12 mx-auto mb-5 mb-lg-0">
                         <section class="blog-articles-item">
                             <img src="./images/blog/blog-articles-1.png" alt="articles">
                             <section class="blog-articles-desc">
@@ -683,7 +686,7 @@
             <section class="col-12 col-lg-6 col-xl-4 mb-4 mb-lg-0">
                 <section class="footer-desc">
                     <section class="desc-title">
-                        <h3>لاویتو</h3>
+                        <h3>لاوینو</h3>
                         <span>تجربه کیفیت و رضایت</span>
                     </section>
                     <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
@@ -756,4 +759,5 @@
 <script src="js/change-theme.js"></script>
 <!-- Loader -->
 <script src="js/loader.js"></script>
+
 </html>

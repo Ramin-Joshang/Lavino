@@ -1,8 +1,18 @@
+/* -------------------------------------------------------------------------- */
+/*                                    Article                                 */
+/* -------------------------------------------------------------------------- */
+
 .article {
+  animation: bounce 2s forwards;
+  animation-delay: 1s;
+  margin-top: 145px;
+
   .bread-crumb {
     margin: 60px 0 51px 0;
+
     ul {
       display: flex;
+
       li {
         a {
           color: #5a5a6b;
@@ -15,11 +25,13 @@
         }
       }
     }
+
     img {
       width: 14px;
       height: 14px;
       margin-left: 6px;
     }
+
     a {
       font-family: $Yekan;
       font-weight: 700;
@@ -29,14 +41,11 @@
       margin-right: 6px;
     }
   }
-}
 
-.article {
-  animation: bounce 2s forwards;
-  margin-top: 145px;
   .article-title {
     ul {
       display: flex;
+
       li {
         align-self: center;
 
@@ -181,10 +190,12 @@
       height: 22px;
       margin-left: 6px;
     }
+
     .tags {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+
       a {
         font-weight: 700;
         font-size: 14px;
@@ -195,11 +206,16 @@
         @include border-link($warning);
       }
     }
+
     .tag-title {
       display: flex;
     }
   }
 }
+
+/* -------------------------------------------------------------------------- */
+/*                                 Related Posts                              */
+/* -------------------------------------------------------------------------- */
 
 .related-posts {
   .post {
@@ -209,29 +225,36 @@
     max-height: 378px;
     background-size: contain;
     position: relative;
+
     &:hover {
       transform: scale(0.95);
       transition: 1s;
     }
+
     &:not(:hover) {
       transform: scale(1);
       transition: 1s;
     }
+
     .related-post-title {
       .information {
         display: flex;
         position: absolute;
         right: 40px;
         bottom: 80px;
+
         div {
           display: flex;
+
           span {
             margin-right: 6px;
           }
         }
+
         div:nth-child(1) {
           margin-left: 15px;
         }
+
         span {
           font-family: $Yekan;
           font-weight: 500;
@@ -242,6 +265,7 @@
           color: #ffffff;
         }
       }
+
       h2 {
         font-family: $Yekan;
         font-weight: 700;
@@ -254,9 +278,11 @@
       }
     }
   }
+
   .swiper-container {
     overflow-x: hidden;
   }
+
   h1 {
     font-family: $Kalameh;
     font-weight: 700;
@@ -269,14 +295,20 @@
   }
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                 User Comments                              */
+/* -------------------------------------------------------------------------- */
+
 .user-comments {
   background: #f8f8f8;
+
   .user-comments-title {
     display: flex;
     align-items: center;
     justify-content: center;
     padding-top: 50px;
     padding-bottom: 32px;
+
     h1 {
       font-family: $Kalameh;
       font-weight: 700;
@@ -285,13 +317,16 @@
       text-align: center;
       color: #201f23;
     }
+
     svg:nth-child(1) {
       margin-left: 15px;
     }
+
     .user-comment-icon {
       margin-right: 15px;
     }
   }
+
   h6 {
     font-family: $Kalameh;
     font-weight: 700;
@@ -301,6 +336,7 @@
     color: #2abfed;
     margin-bottom: 30px;
   }
+
   .comment {
     display: flex;
     background: #ffffff;
@@ -308,15 +344,19 @@
     border-radius: 1px;
     padding: 25px 26px;
     margin-bottom: 10px;
+
     img {
       width: 54px;
       margin-left: 23px;
     }
+
     .comment-title {
       display: flex;
       justify-content: space-between;
+
       .comment-information {
         display: flex;
+
         h3 {
           font-family: $Yekan;
           font-style: normal;
@@ -325,6 +365,7 @@
           line-height: 27px;
           color: #201f23;
         }
+
         span {
           font-family: $Yekan;
           font-style: normal;
@@ -336,9 +377,11 @@
           margin-right: 15px;
         }
       }
+
       .replay-comment {
         display: flex;
         align-items: center;
+
         a {
           font-family: $Yekan;
           font-style: normal;
@@ -349,6 +392,7 @@
           margin-bottom: 0.5rem;
           @include border-link($warning);
         }
+
         svg {
           width: 14px;
           margin-bottom: 0.6rem;
@@ -369,6 +413,7 @@
       margin-bottom: 0 !important;
     }
   }
+
   .separator {
     max-width: 100%;
     overflow-x: hidden;
@@ -376,8 +421,13 @@
   }
 }
 
+/* -------------------------------------------------------------------------- */
+/*                              Submit Comment Form                           */
+/* -------------------------------------------------------------------------- */
+
 .submit-comment-form {
   margin-bottom: 122px;
+
   h1 {
     font-family: $Kalameh;
     font-style: normal;
@@ -389,6 +439,7 @@
     margin-top: 51px;
     margin-bottom: 34px;
   }
+
   form {
     span {
       position: relative;
@@ -412,19 +463,23 @@
       @include input;
       font-size: 15px !important;
       height: 55px;
+
       &:focus {
         border-bottom: 1px solid $warning;
       }
     }
+
     .rating {
       position: absolute;
       left: 30px;
       top: 12.5px;
     }
+
     textarea {
       @include input;
       border: solid 1px $inputBorder;
       resize: both !important;
+
       &:focus {
         border-bottom: 1px solid $warning;
       }

@@ -11,73 +11,28 @@
     <!-- Bootstrap v-5 -->
     <link rel="stylesheet" href="./plugins/bootstrap/bootstrap.rtl.min.css">
     <!-- Animate Css -->
-    <link rel="stylesheet" href="./plugins/Animate/animate.min.css"/>
+    <link rel="stylesheet" href="plugins/animate/animate.min.css"/>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/index.css">
-    <style>
-        .scroll-bottom {
-            bottom: 13px;
-            border-radius: 21px;
-            border: 2px solid #000;
-            -moz-transform: scale(.75, .75);
-            -ms-transform: scale(.75, .75);
-            -webkit-transform: scale(.75, .75);
-            transform: scale(0.9, .9);
-        }
-
-        .scroll-bottom {
-            position: absolute !important;
-            bottom: 12px;
-            left: 50%;
-            width: 27px;
-            height: 32px;
-            margin-left: -13px;
-            text-align: center;
-            z-index: 30;
-            cursor: pointer;
-        }
-
-        .scroll-bottom div {
-            position: absolute;
-            top: 8px;
-            left: 11px;
-            width: 2px;
-            height: 4px;
-            background: #000000;
-            border-radius: 4px;
-            animation: scrollanimation 2s infinite;
-        }
-
-        @keyframes scrollanimation {
-            0% {
-                height: 5px
-            }
-            50% {
-                height: 12px
-            }
-            100% {
-                height: 5px
-            }
-        }
-    </style>
 </head>
 
 <body dir="rtl" class="light-theme">
 
-   <!-- ----------------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------------- -->
 <!--                                 Layer                                   -->
 <!-- ----------------------------------------------------------------------- -->
 <section id="layer"></section>
-    <!-- ----------------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------------- -->
 <!--                                 Loader                                  -->
 <!-- ----------------------------------------------------------------------- -->
+<div class="cursor"></div>
 <div class="overlay">
     <div class="overlay-door"></div>
     <div class="overlay-content">
         <div class="loader">
             <div class="inner"></div>
         </div>
-        <img src="images/loader-logo.png" alt="">
+        <img src="images/loader-logo.png" class="img-fluid px-2" alt="">
     </div>
 </div>
 <!-- ----------------------------------------------------------------------- -->
@@ -86,12 +41,12 @@
 <header class="header fixed-top">
     <div class="container">
         <div class="row">
-             <nav class="navbar navbar-expand-lg bg-light">
+            <nav class="navbar navbar-expand-lg bg-light">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="index.html">
                         <img src="./images/logo.png" alt="logo">
                     </a>
-                    <button class="navbar-toggler" type="button" >
+                    <button class="navbar-toggler" type="button">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -141,7 +96,7 @@
 
                     </div>
                 </div>
-            </nav> 
+            </nav>
         </div>
     </div>
 </header>
@@ -325,8 +280,7 @@
                                           stroke="#5A5A6B" stroke-width="1.8" stroke-linecap="round"
                                           stroke-linejoin="round"/>
                                     </svg>                                                                </span>
-                        <input type="text" class="form-control" placeholder="نام و نام خانوادگی..."
-                               aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" placeholder="نام و نام خانوادگی...">
                     </div>
                     <div class="col-sm col-12 input-group input-group-lg">
                             <span class="input-group-text">
@@ -337,8 +291,7 @@
                                     </svg>
                                     
                             </span>
-                        <input type="text" class="form-control" placeholder="آدرس ایمیل" aria-label="Username"
-                               aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" placeholder="آدرس ایمیل">
                     </div>
                 </div>
                 <div class="row mb-3">
@@ -350,8 +303,7 @@
                                           fill="#5A5A6B"/>
                                     </svg>
                                                                  </span>
-                        <input type="text" class="form-control" placeholder="شماره تلفن..." aria-label="Username"
-                               aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" placeholder="شماره تلفن...">
                     </div>
                     <div class="col-sm col-12 input-group input-group-lg">
                             <span class="input-group-text">
@@ -362,7 +314,7 @@
                                     </svg>
                                     
                             </span>
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-select">
                             <option value="" selected hidden>موضوع درخواست</option>
                             <option value="1">درخواست شماره 1</option>
                             <option value="2">درخواست شماره 2</option>
@@ -389,7 +341,7 @@
     <div class='container'>
         <div class="row">
             <section class="products-title">
-                <h2>محصولات لاویتو</h2>
+                <h2>محصولات لاوینو</h2>
                 <span>محصولات آموزشی ما در زمینه های مختلف در دسترس هستند</span>
             </section>
         </div>
@@ -400,48 +352,48 @@
                     <div class="swiper-wrapper text-center">
                         <div class="swiper-slide">
                             <section class="products-item">
-                                <section class="products-img">
+                                <section class="products-img show-product">
                                     <img src="./images/p-slider-1.png" alt='products'>
                                     <section class="img-desc">PDF</section>
                                 </section>
                                 <a href="#">
-                                    <h3>فایل متخصص لاویتو</h3>
+                                    <h3>فایل متخصص لاوینو</h3>
                                 </a>
                                 <span>۵۰۰،۰۰۰ تومان</span>
                             </section>
                         </div>
                         <div class="swiper-slide">
                             <section class="products-item">
-                                <section class="products-img">
+                                <section class="products-img show-product">
                                     <img src="./images/p-slider-2.png" alt='products'>
                                     <section class="img-desc">PDF</section>
                                 </section>
                                 <a href="#">
-                                    <h3>فایل متخصص لاویتو</h3>
+                                    <h3>فایل متخصص لاوینو</h3>
                                 </a>
                                 <span>۵۰۰،۰۰۰ تومان</span>
                             </section>
                         </div>
                         <div class="swiper-slide">
                             <section class="products-item">
-                                <section class="products-img">
+                                <section class="products-img show-product">
                                     <img src="./images/p-slider-3.png" alt='products'>
                                     <section class="img-desc">PDF</section>
                                 </section>
                                 <a href="#">
-                                    <h3>فایل متخصص لاویتو</h3>
+                                    <h3>فایل متخصص لاوینو</h3>
                                 </a>
                                 <span>۵۰۰،۰۰۰ تومان</span>
                             </section>
                         </div>
                         <div class="swiper-slide">
                             <section class="products-item">
-                                <section class="products-img">
+                                <section class="products-img show-product">
                                     <img src="./images/p-slider-4.png" alt='products'>
                                     <section class="img-desc">PDF</section>
                                 </section>
                                 <a href="#">
-                                    <h3>فایل متخصص لاویتو</h3>
+                                    <h3>فایل متخصص لاوینو</h3>
                                 </a>
                                 <span>۵۰۰،۰۰۰ تومان</span>
                             </section>
@@ -829,6 +781,43 @@
     </div>
 </section>
 <!-- ----------------------------------------------------------------------- -->
+<!--                              Show Product                               -->
+<!-- ----------------------------------------------------------------------- -->
+<div class="modal fade" id="product" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <button type="button" class="btn-close" data-bs-dismiss="modal">X</button>
+            <div class="modal-body p-0">
+                <div class="row">
+                    <div class="col-lg-6 order-lg-0 order-md-0 order-1">
+                        <div class="product-modal">
+                            <h1>
+                                فایل متخصص لاوینو
+                            </h1>
+                            <h3>کدفایل:65214</h3>
+                            <h3>فرمت فایل:pdf</h3>
+                            <h3>حجم فایل:780 کیلو بایت</h3>
+                            <h3>تعداد صفحات:60 صفحه</h3>
+                            <h4>توضیحات</h4>
+                            <p>
+                                قانونگذار چك را وسيله پرداخت فوري و جايگزين پول قرار داده است تا در معاملات خصوصا داد و
+                                ستدهاي تجاري نقش تسريع و تسهيل كننده را ايفاء نمايد. از اينرو هر اقدام و عاملي كه
+                                دستيابي به اين هدف را با مشكل مواجه يا غير ممكن سازد منع شده است.
+                            </p>
+                            <a href="products-page.html">مشاهده محصول</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1 order-md-1 order-0">
+                        <img src="images/product.png" class="img-fluid" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ----------------------------------------------------------------------- -->
 <!--                                 Footer                                  -->
 <!-- ----------------------------------------------------------------------- -->
 <footer class="footer">
@@ -837,7 +826,7 @@
             <section class="col-12 col-lg-6 col-xl-4 mb-4 mb-lg-0">
                 <section class="footer-desc">
                     <section class="desc-title">
-                        <h3>لاویتو</h3>
+                        <h3>لاوینو</h3>
                         <span>تجربه کیفیت و رضایت</span>
                     </section>
                     <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
@@ -910,4 +899,10 @@
 <script src="js/change-theme.js"></script>
 <!-- Loader -->
 <script src="js/loader.js"></script>
+
+<script>
+    $('.show-product').on('click', () => {
+        $('#product').modal('show')
+    })
+</script>
 </html>

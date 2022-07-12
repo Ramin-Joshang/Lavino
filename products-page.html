@@ -9,7 +9,7 @@
     <!-- Bootstrap v-5 -->
     <link rel="stylesheet" href="./plugins/bootstrap/bootstrap.rtl.min.css">
     <!-- Animate Css -->
-    <link rel="stylesheet" href="./plugins/Animate/animate.min.css" />
+    <link rel="stylesheet" href="plugins/animate/animate.min.css" />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/index.css">
 </head>
@@ -19,16 +19,17 @@
 <!--                                 Layer                                   -->
 <!-- ----------------------------------------------------------------------- -->
 <section id="layer"></section>
-    <!-- ----------------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------------- -->
 <!--                                 Loader                                  -->
 <!-- ----------------------------------------------------------------------- -->
+<div class="cursor"></div>
 <div class="overlay">
     <div class="overlay-door"></div>
     <div class="overlay-content">
         <div class="loader">
             <div class="inner"></div>
         </div>
-        <img src="images/loader-logo.png" alt="">
+        <img src="images/loader-logo.png" class="img-fluid px-2" alt="">
     </div>
 </div>
     <!-- ----------------------------------------------------------------------- -->
@@ -170,7 +171,7 @@
                                     <path d="M7.5 6.66663H17.5" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
                                         stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
-                                اضافه کردن به سبد خرید
+                                خرید محصول
                             </button>
                         </section>
                     </section>
@@ -461,11 +462,10 @@
                                         stroke-linejoin="round" />
                                 </svg>
                             </span>
-                            <input type="text" class="form-control" placeholder="نام و نام خانوادگی..."
-                                aria-label="Username" aria-describedby="basic-addon1">
+                            <input type="text" class="form-control" placeholder="نام و نام خانوادگی...">
                         </div>
                         <div class="col-lg col-12 input-group input-group-lg mb-3 mb-lg-0">
-                            <span class="input-group-text" id="basic-addon1">
+                            <span class="input-group-text">
                                 <svg width="15" height="17" viewBox="0 0 15 17" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -473,8 +473,7 @@
                                         fill="#5A5A6B" />
                                 </svg>
                             </span>
-                            <input type="text" class="form-control" placeholder="آدرس ایمیل" aria-label="Username"
-                                aria-describedby="basic-addon1">
+                            <input type="text" class="form-control" placeholder="آدرس ایمیل">
                         </div>
                         <div class="col-lg col-12 input-group input-group-lg">
                             <span class="input-group-text">
@@ -486,8 +485,7 @@
                                         stroke-linejoin="round" />
                                 </svg>
                             </span>
-                            <input type="text" class="form-control" placeholder="امتیاز محصول" aria-label="Username"
-                                aria-describedby="basic-addon1">
+                            <input type="text" class="form-control" placeholder="امتیاز محصول" disabled>
                             <div class="star-rating rating">
                                 <input id="star-5" type="radio" name="rating" value="star-5" />
                                 <label for="star-5" title="5 stars">
@@ -566,7 +564,7 @@
                 <section class="col-12 col-lg-6 col-xl-4 mb-4 mb-lg-0">
                     <section class="footer-desc">
                         <section class="desc-title">
-                            <h3>لاویتو</h3>
+                            <h3>لاوینو</h3>
                             <span>تجربه کیفیت و رضایت</span>
                         </section>
                         <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.

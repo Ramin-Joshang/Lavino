@@ -1,4 +1,4 @@
-// Dark mode
+/** Dark mode **/
 
 const dark = document.querySelector('.dark');
 const light = document.querySelector('.light');
@@ -14,32 +14,38 @@ for (let i = 0; i < buttons.length; i++) {
         buttons[i].classList.add('active');
     })
 }
-// Navbar Toggle
+/** Navbar Toggle **/
 
-const navbarBtn=document.querySelector('.navbar-toggler');
-const navbarCollapse=document.querySelector('.navbar-collapse');
-const layer=document.querySelector('#layer');
-let isNavbarOpen=false;
+const navbarBtn = document.querySelector('.navbar-toggler');
+const navbarCollapse = document.querySelector('.navbar-collapse');
+const layer = document.querySelector('#layer');
+let isNavbarOpen = false;
 
-layer.addEventListener('click',toggleNavbar);
-navbarBtn.addEventListener('click',toggleNavbar);
+layer.addEventListener('click', toggleNavbar);
+navbarBtn.addEventListener('click', toggleNavbar);
 
 function toggleNavbar() {
     if (!isNavbarOpen) {
         navbarCollapse.classList.add('show');
         layer.classList.add('active');
-        isNavbarOpen=true;
+        isNavbarOpen = true;
     } else {
         navbarCollapse.classList.remove('show');
         layer.classList.remove('active');
-        isNavbarOpen=false;
-    }    
-console.log(isNavbarOpen);
+        isNavbarOpen = false;
+    }
 }
 
+/*** cursor  /**/
+var cursor = document.querySelector('.cursor');
+document.addEventListener('mousemove', function (e) {
+    var x = e.clientX;
+    var y = e.clientY;
+    cursor.style.left = x + 'px';
+    cursor.style.top = y + 'px';
+});
 
-
-//  Products slider
+/**  Products slider **/
 
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
@@ -70,7 +76,7 @@ var swiper = new Swiper(".mySwiper", {
     },
 });
 
-// Feedback slider
+/** Feedback slider **/
 
 var swiper = new Swiper(".myFeedback", {
     slidesPerView: "1",
@@ -80,10 +86,6 @@ var swiper = new Swiper(".myFeedback", {
         delay: 6000,
         disableOnInteraction: false,
     },
-    // pagination: {
-    //     el: ".swiper-pagination",
-    //     clickable: true,
-    // },
     navigation: {
         nextEl: ".next",
         prevEl: ".prev",
@@ -144,3 +146,59 @@ var swiper = new Swiper('.swiper-container', {
         },
     },
 });
+
+var swiper = new Swiper('.blog-slider', {
+    slidesPerView: 3,
+    loop: true,
+    spaceBetween: 10,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+        },
+
+        380: {
+            slidesPerView: 1,
+        },
+
+        425: {
+            slidesPerView: 1,
+        },
+
+        500: {
+            slidesPerView: 1,
+        },
+
+        576: {
+            slidesPerView: 1,
+        },
+
+        690: {
+            slidesPerView: 1,
+        },
+
+        768: {
+            slidesPerView: 2,
+        },
+
+        1000: {
+            slidesPerView: 2,
+        },
+
+        1150: {
+            slidesPerView: 2,
+        },
+
+        1250: {
+            slidesPerView: 2,
+        },
+
+        1400: {
+            slidesPerView: 3,
+        },
+    },
+});
+

@@ -23,6 +23,10 @@ $Kalameh: "Kalameh";
 $Gilroy: "Gilroy";
 
 // Mixin
+
+/* -------------------------------------------------------------------------- */
+/*                                     Btn                                    */
+/* -------------------------------------------------------------------------- */
 @mixin btn($color, $bgColor, $opacity: 100%) {
   color: $color;
   background-color: $bgColor;
@@ -31,6 +35,9 @@ $Gilroy: "Gilroy";
   font-size: 15px;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                 Btn Effect                                 */
+/* -------------------------------------------------------------------------- */
 @mixin btnEffect($shadow) {
   transition: 0.25s;
   box-shadow: 0 0 0 1em transparent;
@@ -76,6 +83,9 @@ $Gilroy: "Gilroy";
   }
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                   Border                                   */
+/* -------------------------------------------------------------------------- */
 @mixin border($height, $left, $bottom, $color, $opacity: 100%) {
   position: absolute;
   width: 408px;
@@ -87,14 +97,21 @@ $Gilroy: "Gilroy";
   opacity: $opacity;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                 Main Title                                 */
+/* -------------------------------------------------------------------------- */
 @mixin main-title($font, $color, $align: right) {
   font-size: $font;
   color: $color;
   font-family: $Kalameh;
   text-align: $align;
   animation: bounce 2s forwards;
+  animation-delay: 1s;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                 Main Border                                */
+/* -------------------------------------------------------------------------- */
 @mixin magic-border($width, $color, $duration, $direction) {
   position: relative;
   &:before {
@@ -105,13 +122,13 @@ $Gilroy: "Gilroy";
     top: calc(#{$width} / -1);
     left: calc(#{$width} / -1);
     background: linear-gradient(to right, $color 0%, $color 100%), linear-gradient(to top, $color 50%, transparent 50%),
-    linear-gradient(to top, $color 50%, transparent 50%), linear-gradient(to right, $color 0%, $color 100%),
-    linear-gradient(to left, $color 0%, $color 100%);
+      linear-gradient(to top, $color 50%, transparent 50%), linear-gradient(to right, $color 0%, $color 100%),
+      linear-gradient(to left, $color 0%, $color 100%);
     background-size: 100% $width, $width 200%, $width 200%, 0% $width, 0% $width;
     background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
     background-repeat: no-repeat, no-repeat;
     transition: transform $duration ease-in-out, background-position $duration ease-in-out,
-    background-size $duration ease-in-out;
+      background-size $duration ease-in-out;
     transform: scaleX(0) rotate(180deg * $direction);
     transition-delay: $duration * 2, $duration, 0s;
     z-index: -1;
@@ -126,6 +143,9 @@ $Gilroy: "Gilroy";
   }
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                 Border Link                                */
+/* -------------------------------------------------------------------------- */
 @mixin border-link($color) {
   &::after {
     display: block;
@@ -143,6 +163,9 @@ $Gilroy: "Gilroy";
   }
 }
 
+/* -------------------------------------------------------------------------- */
+/*                               Main Title Desc                              */
+/* -------------------------------------------------------------------------- */
 @mixin main-title-desc($borderColor) {
   position: relative;
   font-size: 14px;
@@ -161,6 +184,9 @@ $Gilroy: "Gilroy";
   }
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                    Input                                   */
+/* -------------------------------------------------------------------------- */
 @mixin input {
   background-color: $form;
   border-right: none;
@@ -179,6 +205,9 @@ $Gilroy: "Gilroy";
   }
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                 Border Title                               */
+/* -------------------------------------------------------------------------- */
 @mixin border-title {
   position: relative;
   font-weight: 700;
@@ -201,6 +230,9 @@ $Gilroy: "Gilroy";
   }
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                 Theme Colors                               */
+/* -------------------------------------------------------------------------- */
 @mixin theme-colors($light-theme: true) {
   @if $light-theme {
     background-color: $light-background !important;
@@ -211,6 +243,9 @@ $Gilroy: "Gilroy";
   }
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                 Change Colors                              */
+/* -------------------------------------------------------------------------- */
 @mixin change-color {
   .dark-theme {
     h1,
@@ -220,7 +255,7 @@ $Gilroy: "Gilroy";
     h5,
     h6,
     p,
-    span{
+    span {
       color: $white !important;
     }
 
@@ -229,15 +264,17 @@ $Gilroy: "Gilroy";
         fill: $white;
       }
     }
+
     .main-about-us {
-      .about-content{
-        ul{
-          li{
+      .about-content {
+        ul {
+          li {
             color: $white;
           }
         }
       }
     }
+
     .consulting-form {
       form {
         ::placeholder {
@@ -272,26 +309,30 @@ $Gilroy: "Gilroy";
         }
       }
     }
-    .products{
-      .products-item{
-        h3{
-          transition: .3s all linear;
-          &:hover{
-          color: $primary !important;
+
+    .products {
+      .products-item {
+        h3 {
+          transition: 0.3s all linear;
+
+          &:hover {
+            color: $primary !important;
+          }
         }
       }
-      }
     }
+
     .blog {
       .blog-item {
         background: $black;
 
-        h5{
-          transition: .3s all linear;
-          &:hover{
-          color: $primary !important;
+        h5 {
+          transition: 0.3s all linear;
+
+          &:hover {
+            color: $primary !important;
+          }
         }
-      }
       }
     }
 
@@ -302,14 +343,16 @@ $Gilroy: "Gilroy";
         .feedback-item {
           .feedback-desc {
             background: $black;
-    }
-    .feedback-author{ 
-      h5{
-        transition: .3s all linear;
-        &:hover{
-        color: $warning !important;
-      }
-    }
+          }
+
+          .feedback-author {
+            h5 {
+              transition: 0.3s all linear;
+
+              &:hover {
+                color: $warning !important;
+              }
+            }
           }
         }
       }
@@ -319,12 +362,13 @@ $Gilroy: "Gilroy";
       .departments-item {
         background: $black;
 
-        h3{
-          transition: .3s all linear;
-          &:hover{
-          color: $primary !important;
+        h3 {
+          transition: 0.3s all linear;
+
+          &:hover {
+            color: $primary !important;
+          }
         }
-      }
       }
     }
 
@@ -377,30 +421,32 @@ $Gilroy: "Gilroy";
       }
     }
 
-    .permissions{
-      .permissions-item{
-        a{
-          transition: .3s all linear;
-          &:hover{
-          color: $warning !important;
+    .permissions {
+      .permissions-item {
+        a {
+          transition: 0.3s all linear;
+
+          &:hover {
+            color: $warning !important;
+          }
         }
-      }
       }
     }
 
     .blog-content {
       background: $black;
 
-.main-articles{
-  .main-articles-item{ 
-    h5{
-      transition: .3s all linear;
-      &:hover{
-      color: $warning !important;
-    }
-  }
-  }
-}
+      .main-articles {
+        .main-articles-item {
+          h5 {
+            transition: 0.3s all linear;
+
+            &:hover {
+              color: $warning !important;
+            }
+          }
+        }
+      }
 
       .blog-articles {
         .blog-articles-item {
@@ -408,12 +454,14 @@ $Gilroy: "Gilroy";
           border: 1px solid $white;
           border-radius: 5px;
 
-          h5{
-            transition: .3s all linear;
-            &:hover{
-            color: $warning !important;
+          h5 {
+            transition: 0.3s all linear;
+
+            &:hover {
+              color: $warning !important;
+            }
           }
-        }
+
           svg path {
             fill: $white;
           }
@@ -453,14 +501,13 @@ $Gilroy: "Gilroy";
             }
           }
         }
-      
+
         .blog-header-select {
           select {
             background: $black !important;
             color: $white !important;
             border-left: 0 !important;
           }
-         
 
           span {
             background: $black !important;
@@ -504,22 +551,24 @@ $Gilroy: "Gilroy";
     }
 
     .article {
-      .bread-crumb{
-        ul{
-          li{
-            a{
+      .bread-crumb {
+        ul {
+          li {
+            a {
               color: $white;
             }
           }
         }
       }
-      .article-tags{
-        .tags{
-          a{
-            color:$primary
+
+      .article-tags {
+        .tags {
+          a {
+            color: $primary;
           }
         }
       }
+
       .article-content {
         .main-content {
           .tip {
@@ -539,7 +588,6 @@ $Gilroy: "Gilroy";
           background: $black;
           color: $white;
         }
-
 
         textarea {
           background: $black;
@@ -565,10 +613,11 @@ $Gilroy: "Gilroy";
     .products-header {
       .products-header-title {
         form {
-          ::placeholder{
+          ::placeholder {
             color: $white !important;
             opacity: 1 !important;
           }
+
           .products-header-search {
             input {
               background: $black !important;
@@ -603,41 +652,46 @@ $Gilroy: "Gilroy";
       }
     }
 
-.products-content{
-  .products-item{
-    h3{
-      transition: .3s all linear;
-      &:hover{
-      color: $primary !important;
+    .products-content {
+      .products-item {
+        h3 {
+          transition: 0.3s all linear;
+
+          &:hover {
+            color: $primary !important;
+          }
+        }
+      }
     }
-  }
-  }
-}
 
     .products-page-item-desc {
       background: $black;
     }
-    .products-page-links{
+
+    .products-page-links {
       ul {
-        li{
-          a{
+        li {
+          a {
             color: $white;
           }
         }
       }
     }
-    .products-page-item{
-      .item-content{
-        ul{
-          li{
+
+    .products-page-item {
+      .item-content {
+        ul {
+          li {
             color: $primary;
           }
         }
-        .btn{
+
+        .btn {
           background: $black;
         }
       }
     }
+
     .products-page-feedback {
       .feedback-content {
         .feedback-item {
@@ -655,17 +709,19 @@ $Gilroy: "Gilroy";
 
     .products-page-form {
       form {
-
-        input, select, span, textarea {
+        input,
+        select,
+        span,
+        textarea {
           background: black !important;
           color: $white;
           border-color: $white;
         }
 
-        ::placeholder{
-          color: $white !important; 
+        ::placeholder {
+          color: $white !important;
           opacity: 1 !important;
-         }
+        }
 
         span {
           svg path {
@@ -677,7 +733,10 @@ $Gilroy: "Gilroy";
 
     .contact-us-page {
       form {
-        input, select, span, textarea {
+        input,
+        select,
+        span,
+        textarea {
           background: black !important;
           color: $white;
           border-color: $white;
@@ -698,22 +757,29 @@ $Gilroy: "Gilroy";
       }
     }
 
-    .about-us{
-      .about-us-title{
-        ul{
-          li{
-            a{
+    .about-us {
+      .about-us-title {
+        ul {
+          li {
+            a {
               color: $white;
             }
           }
         }
       }
-      .about-us-picture{
-        svg{
-          path{
+
+      .about-us-picture {
+        svg {
+          path {
             fill: $white;
           }
         }
+      }
+    }
+
+    .modal {
+      .modal-content {
+        background: $dark;
       }
     }
   }

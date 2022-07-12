@@ -4,27 +4,27 @@
 
 // Yekan Bakh
 @font-face {
-    font-family: "Yekan Bakh";
-    src: url("../fonts/Yekan-Bakh/YekanBakh-Medium.eot") format("eot"),
-        url("../fonts/Yekan-Bakh/YekanBakh-Medium.ttf") format("ttf"),
-        url("../fonts/Yekan-Bakh/YekanBakh-Medium.woff") format("woff"),
-        url("../fonts/Yekan-Bakh/YekanBakh-Medium.woff2") format("woff2");
+  font-family: "Yekan Bakh";
+  src: url("../fonts/Yekan-Bakh/YekanBakh-Medium.eot") format("eot"),
+  url("../fonts/Yekan-Bakh/YekanBakh-Medium.ttf") format("ttf"),
+  url("../fonts/Yekan-Bakh/YekanBakh-Medium.woff") format("woff"),
+  url("../fonts/Yekan-Bakh/YekanBakh-Medium.woff2") format("woff2");
 }
 
 // Kalameh
 @font-face {
-    font-family: "Kalameh";
-    src: url("../fonts/Kalameh/Kalameh-Bold.eot") format("eot"), url("../fonts/Kalameh/Kalameh-Bold.ttf") format("ttf"),
-        url("../fonts/Kalameh/Kalameh-Bold.woff") format("woff"),
-        url("../fonts/Kalameh/Kalameh-Bold.woff2") format("woff2");
+  font-family: "Kalameh";
+  src: url("../fonts/Kalameh/Kalameh-Bold.eot") format("eot"), url("../fonts/Kalameh/Kalameh-Bold.ttf") format("ttf"),
+  url("../fonts/Kalameh/Kalameh-Bold.woff") format("woff"),
+  url("../fonts/Kalameh/Kalameh-Bold.woff2") format("woff2");
 }
 
 // Gilroy
 @font-face {
-    font-family: "Gilroy";
-    src: url("../fonts/Gilroy/Gilroy-Medium.eot") format("eot"), url("../fonts/Gilroy/Gilroy-Medium.ttf") format("ttf"),
-        url("../fonts/Gilroy/Gilroy-Medium.woff") format("woff"),
-        url("../fonts/Gilroy/Gilroy-Medium.woff2") format("woff2");
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy/Gilroy-Medium.eot") format("eot"), url("../fonts/Gilroy/Gilroy-Medium.ttf") format("ttf"),
+  url("../fonts/Gilroy/Gilroy-Medium.woff") format("woff"),
+  url("../fonts/Gilroy/Gilroy-Medium.woff2") format("woff2");
 }
 
 /* -------------------------------------------------------------------------- */
@@ -32,66 +32,66 @@
 /* -------------------------------------------------------------------------- */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    direction: rtl;
+  direction: rtl;
 }
 
 p {
-    font-family: $Yekan !important;
+  font-family: $Yekan !important;
 }
 
 ul,
 ol {
-    list-style: none;
-    padding: 0 !important;
-    font-family: $Yekan;
+  list-style: none;
+  padding: 0 !important;
+  font-family: $Yekan;
 }
 
 a {
-    text-decoration: none !important;
-    cursor: pointer;
-    font-family: $Yekan !important;
-    transition: color 0.2s linear;
+  text-decoration: none !important;
+  cursor: pointer;
+  font-family: $Yekan !important;
+  transition: color 0.2s linear;
 
-    &:hover {
-        color: $warning !important;
-    }
+  &:hover {
+    color: $warning !important;
+  }
 }
 
 button {
-    border: 0 !important;
-    outline: 0 !important;
-    cursor: pointer;
-    font-family: $Yekan !important;
+  border: 0 !important;
+  outline: 0 !important;
+  cursor: pointer;
+  font-family: $Yekan !important;
 }
 
 input,
 select,
 textarea {
-    border: 0;
-    outline: 0 !important;
-    box-shadow: none !important;
+  border: 0;
+  outline: 0 !important;
+  box-shadow: none !important;
 }
 
 textarea {
-    resize: none;
+  resize: none;
 }
 
 img {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 p {
-    font-family: $Yekan !important;
+  font-family: $Yekan !important;
 }
 
 /* -------------------------------------------------------------------------- */

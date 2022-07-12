@@ -1,4 +1,37 @@
 /* -------------------------------------------------------------------------- */
+/*                                     Btn                                    */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 Btn Effect                                 */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                   Border                                   */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 Main Title                                 */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 Main Border                                */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 Border Link                                */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                               Main Title Desc                              */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                    Input                                   */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 Border Title                               */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 Theme Colors                               */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 Change Colors                              */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
 /*                                    fontS                                   */
 /* -------------------------------------------------------------------------- */
 @font-face {
@@ -81,6 +114,42 @@ p {
 /* -------------------------------------------------------------------------- */
 /*                                 Base Styles                                */
 /* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                     Btn                                    */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 Btn Effect                                 */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                   Border                                   */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 Main Title                                 */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 Main Border                                */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 Border Link                                */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                               Main Title Desc                              */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                    Input                                   */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 Border Title                               */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 Theme Colors                               */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 Change Colors                              */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                   General                                  */
+/* -------------------------------------------------------------------------- */
 html {
   overflow-x: hidden;
 }
@@ -106,6 +175,22 @@ body {
   box-shadow: unset !important;
 }
 
+.cursor {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: #08c0f8;
+  opacity: 0.3;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: width 0.3s, height 0.3s, opacity 0.3s;
+  z-index: 100000000;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   Overlay                                  */
+/* -------------------------------------------------------------------------- */
 .overlay {
   position: fixed;
   top: 0;
@@ -283,6 +368,7 @@ body {
   font-family: "Gilroy";
   word-spacing: 3px;
   animation: bounce 2s forwards;
+  animation-delay: 1s;
 }
 .banner .banner-content p.banner-trust span, .banner .banner-content p.banner-trust .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .banner .banner-content p.banner-trust a {
   color: #08c0f8;
@@ -293,6 +379,7 @@ body {
   color: #ffffff;
   font-family: "Kalameh";
   animation: bounce 2s forwards;
+  animation-delay: 1s;
 }
 .banner .banner-content .banner-desc {
   width: 580px;
@@ -301,6 +388,7 @@ body {
   line-height: 1.8;
   margin-bottom: 50px;
   animation: bounce 2s forwards;
+  animation-delay: 1s;
   text-align: justify;
 }
 .banner .banner-content .banner-btn {
@@ -369,6 +457,47 @@ body {
   border: 0;
   outline: 0;
 }
+.banner .banner-content .banner-mouse .scroll-bottom {
+  bottom: 13px;
+  border-radius: 21px;
+  border: 2px solid #000;
+  -moz-transform: scale(0.75, 0.75);
+  -ms-transform: scale(0.75, 0.75);
+  -webkit-transform: scale(0.75, 0.75);
+  transform: scale(0.9, 0.9);
+}
+.banner .banner-content .banner-mouse .scroll-bottom {
+  position: absolute !important;
+  bottom: 12px;
+  left: 50%;
+  width: 27px;
+  height: 32px;
+  margin-left: -13px;
+  text-align: center;
+  z-index: 30;
+  cursor: pointer;
+}
+.banner .banner-content .banner-mouse .scroll-bottom div {
+  position: absolute;
+  top: 8px;
+  left: 11px;
+  width: 2px;
+  height: 4px;
+  background: #000000;
+  border-radius: 4px;
+  animation: scroll 2s infinite;
+}
+@keyframes scroll {
+  0% {
+    height: 5px;
+  }
+  50% {
+    height: 12px;
+  }
+  100% {
+    height: 5px;
+  }
+}
 
 /* -------------------------------------------------------------------------- */
 /*                                  About us                                  */
@@ -381,6 +510,7 @@ body {
 }
 .main-about-us .about-img img {
   animation: pulse 8s infinite;
+  animation-delay: 1s;
 }
 .main-about-us .about-img .img-border {
   position: absolute;
@@ -399,7 +529,9 @@ body {
   font-family: "Kalameh";
   text-align: right;
   animation: bounce 2s forwards;
+  animation-delay: 1s;
   animation: bounce 2s forwards;
+  animation-delay: 1s;
 }
 .main-about-us .about-content p {
   font-size: 15px;
@@ -408,6 +540,7 @@ body {
   line-height: 1.8;
   color: #a09cad;
   animation: bounce 2s forwards;
+  animation-delay: 1s;
 }
 .main-about-us .about-content ul {
   width: 60%;
@@ -415,6 +548,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   animation: bounce 2s forwards;
+  animation-delay: 1s;
 }
 .main-about-us .about-content ul li {
   font-size: 17px;
@@ -496,6 +630,7 @@ body {
   font-family: "Kalameh";
   text-align: center;
   animation: bounce 2s forwards;
+  animation-delay: 1s;
 }
 .consulting-form .consulting-title span, .consulting-form .consulting-title .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .consulting-form .consulting-title a {
   position: relative;
@@ -632,6 +767,7 @@ body {
 /* ----------------------------------------------------------------------- */
 .brands .brands-item {
   animation: bounceIn 2s forwards;
+  animation-delay: 1.5s;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -650,6 +786,7 @@ body {
   font-family: "Kalameh";
   text-align: center;
   animation: bounce 2s forwards;
+  animation-delay: 1s;
 }
 .products .products-title span, .products .products-title .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .products .products-title a {
   position: relative;
@@ -787,6 +924,7 @@ body {
   font-family: "Kalameh";
   text-align: center;
   animation: bounce 2s forwards;
+  animation-delay: 1s;
 }
 .feedback .feedback-title span, .feedback .feedback-title .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .feedback .feedback-title a {
   position: relative;
@@ -942,6 +1080,7 @@ body {
   font-family: "Kalameh";
   text-align: center;
   animation: bounce 2s forwards;
+  animation-delay: 1s;
 }
 .departments .departments-title span, .departments .departments-title .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .departments .departments-title a {
   position: relative;
@@ -966,6 +1105,7 @@ body {
   padding: 30px 40px 35px 40px;
   margin-bottom: 35px;
   animation: fadeInDown 2s forwards;
+  animation-delay: 1s;
   position: relative;
 }
 .departments .departments-item:before {
@@ -1091,6 +1231,7 @@ body {
   font-family: "Kalameh";
   text-align: center;
   animation: bounce 2s forwards;
+  animation-delay: 1s;
 }
 .permissions .permissions-title span, .permissions .permissions-title .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .permissions-title a {
   position: relative;
@@ -1115,6 +1256,7 @@ body {
   display: flex;
   align-items: center;
   animation: fadeInDown 2s forwards;
+  animation-delay: 1s;
   position: relative;
 }
 .permissions .permissions-item:before {
@@ -1234,6 +1376,7 @@ body {
   font-family: "Kalameh";
   text-align: right;
   animation: bounce 2s forwards;
+  animation-delay: 1s;
 }
 .satisfaction .satisfaction-desc span, .satisfaction .satisfaction-desc .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .satisfaction .satisfaction-desc a {
   font-family: "Yekan Bakh";
@@ -1326,6 +1469,7 @@ body {
   font-family: "Kalameh";
   text-align: center;
   animation: bounce 2s forwards;
+  animation-delay: 1s;
 }
 .blog .blog-title span, .blog .blog-title .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .blog .blog-title a {
   position: relative;
@@ -1491,6 +1635,60 @@ body {
   transform: scaleX(1);
 }
 
+.modal .modal-content {
+  border-radius: 0 !important;
+}
+.modal .modal-content .btn-close {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  top: 0;
+  color: #fff;
+  padding: 9px;
+  background: #08c0f8 !important;
+  border-radius: 0;
+}
+.modal .modal-content .product-modal {
+  padding: 10px;
+}
+.modal .modal-content .product-modal h1 {
+  font-family: "Kalameh";
+  font-weight: 700;
+  font-size: 40px;
+  color: #08c0f8;
+}
+.modal .modal-content .product-modal h3 {
+  font-family: "Yekan Bakh";
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 25px;
+}
+.modal .modal-content .product-modal h4 {
+  font-family: "Kalameh";
+  font-weight: 900;
+  font-size: 32px;
+}
+.modal .modal-content .product-modal p {
+  font-weight: 300;
+  font-size: 14px;
+  margin-bottom: 33px;
+}
+.modal .modal-content .product-modal a {
+  padding: 16px 25px;
+  background: #08c0f8;
+  border-radius: 2px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 23px;
+  color: #ffffff;
+}
+.modal .modal-content .product-modal a:hover {
+  background: transparent;
+  color: #08c0f8 !important;
+  border: 1px solid #08c0f8;
+  transition: 500ms;
+}
+
 /* ----------------------------------------------------------------------- */
 /*                                 Footer                                  */
 /* ----------------------------------------------------------------------- */
@@ -1508,6 +1706,7 @@ body {
   font-family: "Kalameh";
   text-align: right;
   animation: bounce 2s forwards;
+  animation-delay: 1s;
   margin-bottom: 0;
 }
 .footer .footer-desc .desc-title span, .footer .footer-desc .desc-title .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .footer .footer-desc .desc-title a {
@@ -1516,6 +1715,7 @@ body {
   font-family: "Kalameh";
   text-align: right;
   animation: bounce 2s forwards;
+  animation-delay: 1s;
 }
 .footer .footer-desc p {
   font-size: 16px;
@@ -1991,7 +2191,12 @@ body {
 .dark-theme .products-page-feedback .feedback-content .feedback-item .date svg path {
   fill: #ffffff;
 }
-.dark-theme .products-page-form form input, .dark-theme .products-page-form form select, .dark-theme .products-page-form form span, .dark-theme .products-page-form form .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .dark-theme .products-page-form form a, .dark-theme .products-page-form form textarea {
+.dark-theme .products-page-form form input,
+.dark-theme .products-page-form form select,
+.dark-theme .products-page-form form span,
+.dark-theme .products-page-form form .permissions .permissions-item .permissions-desc a,
+.permissions .permissions-item .permissions-desc .dark-theme .products-page-form form a,
+.dark-theme .products-page-form form textarea {
   background: black !important;
   color: #ffffff;
   border-color: #ffffff;
@@ -2003,7 +2208,12 @@ body {
 .dark-theme .products-page-form form span svg path, .dark-theme .products-page-form form .permissions .permissions-item .permissions-desc a svg path, .permissions .permissions-item .permissions-desc .dark-theme .products-page-form form a svg path {
   stroke: #ffffff;
 }
-.dark-theme .contact-us-page form input, .dark-theme .contact-us-page form select, .dark-theme .contact-us-page form span, .dark-theme .contact-us-page form .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .dark-theme .contact-us-page form a, .dark-theme .contact-us-page form textarea {
+.dark-theme .contact-us-page form input,
+.dark-theme .contact-us-page form select,
+.dark-theme .contact-us-page form span,
+.dark-theme .contact-us-page form .permissions .permissions-item .permissions-desc a,
+.permissions .permissions-item .permissions-desc .dark-theme .contact-us-page form a,
+.dark-theme .contact-us-page form textarea {
   background: black !important;
   color: #ffffff;
   border-color: #ffffff;
@@ -2020,7 +2230,46 @@ body {
 .dark-theme .about-us .about-us-picture svg path {
   fill: #ffffff;
 }
+.dark-theme .modal .modal-content {
+  background: #1c1c1f;
+}
 
+/* -------------------------------------------------------------------------- */
+/*                                     Btn                                    */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 Btn Effect                                 */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                   Border                                   */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 Main Title                                 */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 Main Border                                */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 Border Link                                */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                               Main Title Desc                              */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                    Input                                   */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 Border Title                               */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 Theme Colors                               */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 Change Colors                              */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                  Blog Header                               */
+/* -------------------------------------------------------------------------- */
 .blog-header {
   padding: 125px 0 115px 0;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)), url("../images/blog/blog-header.png");
@@ -2038,6 +2287,7 @@ body {
   font-family: "Kalameh";
   text-align: center;
   animation: bounce 2s forwards;
+  animation-delay: 1s;
   margin-left: 10px;
 }
 .blog-header .blog-header-title form {
@@ -2138,6 +2388,9 @@ body {
   font-weight: 400;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                 Blog Content                               */
+/* -------------------------------------------------------------------------- */
 .blog-content {
   background-color: #f9f9f9;
 }
@@ -2145,6 +2398,7 @@ body {
   margin-bottom: 75px;
   margin-top: -70px;
   animation: bounce 2s forwards;
+  animation-delay: 1s;
 }
 .blog-content .main-articles .main-articles-item {
   position: relative;
@@ -2527,7 +2781,12 @@ body {
 .dark-theme .products-page-feedback .feedback-content .feedback-item .date svg path {
   fill: #ffffff;
 }
-.dark-theme .products-page-form form input, .dark-theme .products-page-form form select, .dark-theme .products-page-form form span, .dark-theme .products-page-form form .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .dark-theme .products-page-form form a, .dark-theme .products-page-form form textarea {
+.dark-theme .products-page-form form input,
+.dark-theme .products-page-form form select,
+.dark-theme .products-page-form form span,
+.dark-theme .products-page-form form .permissions .permissions-item .permissions-desc a,
+.permissions .permissions-item .permissions-desc .dark-theme .products-page-form form a,
+.dark-theme .products-page-form form textarea {
   background: black !important;
   color: #ffffff;
   border-color: #ffffff;
@@ -2539,7 +2798,12 @@ body {
 .dark-theme .products-page-form form span svg path, .dark-theme .products-page-form form .permissions .permissions-item .permissions-desc a svg path, .permissions .permissions-item .permissions-desc .dark-theme .products-page-form form a svg path {
   stroke: #ffffff;
 }
-.dark-theme .contact-us-page form input, .dark-theme .contact-us-page form select, .dark-theme .contact-us-page form span, .dark-theme .contact-us-page form .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .dark-theme .contact-us-page form a, .dark-theme .contact-us-page form textarea {
+.dark-theme .contact-us-page form input,
+.dark-theme .contact-us-page form select,
+.dark-theme .contact-us-page form span,
+.dark-theme .contact-us-page form .permissions .permissions-item .permissions-desc a,
+.permissions .permissions-item .permissions-desc .dark-theme .contact-us-page form a,
+.dark-theme .contact-us-page form textarea {
   background: black !important;
   color: #ffffff;
   border-color: #ffffff;
@@ -2556,7 +2820,46 @@ body {
 .dark-theme .about-us .about-us-picture svg path {
   fill: #ffffff;
 }
+.dark-theme .modal .modal-content {
+  background: #1c1c1f;
+}
 
+/* -------------------------------------------------------------------------- */
+/*                                     Btn                                    */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 Btn Effect                                 */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                   Border                                   */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 Main Title                                 */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 Main Border                                */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 Border Link                                */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                               Main Title Desc                              */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                    Input                                   */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 Border Title                               */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 Theme Colors                               */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 Change Colors                              */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                Product Header                              */
+/* -------------------------------------------------------------------------- */
 .products-header {
   padding: 185px 0 115px 0;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)), url("../images/blog/blog-header.png");
@@ -2574,6 +2877,7 @@ body {
   font-family: "Kalameh";
   text-align: center;
   animation: bounce 2s forwards;
+  animation-delay: 1s;
   margin-left: 10px;
 }
 .products-header .products-header-title form {
@@ -2645,8 +2949,11 @@ body {
   padding: 0 10px;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                Product Content                              */
+/* -------------------------------------------------------------------------- */
 .products-content {
-  padding: 100px 0;
+  padding: 50px 0;
 }
 .products-content .products-item {
   width: fit-content;
@@ -2654,6 +2961,7 @@ body {
   border: 1.3px solid #eff1f8;
   text-align: center;
   animation: bounce 2s forwards;
+  animation-delay: 1s;
   position: relative;
 }
 .products-content .products-item:before {
@@ -2745,6 +3053,14 @@ body {
   line-height: 2.5;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                    Article                                 */
+/* -------------------------------------------------------------------------- */
+.article {
+  animation: bounce 2s forwards;
+  animation-delay: 1s;
+  margin-top: 145px;
+}
 .article .bread-crumb {
   margin: 60px 0 51px 0;
 }
@@ -2772,11 +3088,6 @@ body {
   line-height: 20px;
   color: #f88c3d;
   margin-right: 6px;
-}
-
-.article {
-  animation: bounce 2s forwards;
-  margin-top: 145px;
 }
 .article .article-title ul {
   display: flex;
@@ -2928,6 +3239,9 @@ body {
   display: flex;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                 Related Posts                              */
+/* -------------------------------------------------------------------------- */
 .related-posts .post {
   background: url("../images/related-posts.png") no-repeat;
   border-radius: 1px;
@@ -2992,6 +3306,9 @@ body {
   margin-bottom: 32px;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                 User Comments                              */
+/* -------------------------------------------------------------------------- */
 .user-comments {
   background: #f8f8f8;
 }
@@ -3106,6 +3423,9 @@ body {
   margin-top: 61px;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                              Submit Comment Form                           */
+/* -------------------------------------------------------------------------- */
 .submit-comment-form {
   margin-bottom: 122px;
 }
@@ -3486,7 +3806,12 @@ body {
 .dark-theme .products-page-feedback .feedback-content .feedback-item .date svg path {
   fill: #ffffff;
 }
-.dark-theme .products-page-form form input, .dark-theme .products-page-form form select, .dark-theme .products-page-form form span, .dark-theme .products-page-form form .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .dark-theme .products-page-form form a, .dark-theme .products-page-form form textarea {
+.dark-theme .products-page-form form input,
+.dark-theme .products-page-form form select,
+.dark-theme .products-page-form form span,
+.dark-theme .products-page-form form .permissions .permissions-item .permissions-desc a,
+.permissions .permissions-item .permissions-desc .dark-theme .products-page-form form a,
+.dark-theme .products-page-form form textarea {
   background: black !important;
   color: #ffffff;
   border-color: #ffffff;
@@ -3498,7 +3823,12 @@ body {
 .dark-theme .products-page-form form span svg path, .dark-theme .products-page-form form .permissions .permissions-item .permissions-desc a svg path, .permissions .permissions-item .permissions-desc .dark-theme .products-page-form form a svg path {
   stroke: #ffffff;
 }
-.dark-theme .contact-us-page form input, .dark-theme .contact-us-page form select, .dark-theme .contact-us-page form span, .dark-theme .contact-us-page form .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .dark-theme .contact-us-page form a, .dark-theme .contact-us-page form textarea {
+.dark-theme .contact-us-page form input,
+.dark-theme .contact-us-page form select,
+.dark-theme .contact-us-page form span,
+.dark-theme .contact-us-page form .permissions .permissions-item .permissions-desc a,
+.permissions .permissions-item .permissions-desc .dark-theme .contact-us-page form a,
+.dark-theme .contact-us-page form textarea {
   background: black !important;
   color: #ffffff;
   border-color: #ffffff;
@@ -3515,11 +3845,17 @@ body {
 .dark-theme .about-us .about-us-picture svg path {
   fill: #ffffff;
 }
+.dark-theme .modal .modal-content {
+  background: #1c1c1f;
+}
 
 body {
   background-color: #f3f3f3;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                             Products Page Links                            */
+/* -------------------------------------------------------------------------- */
 .products-page-links {
   padding: 17px 0;
   font-family: "Yekan Bakh";
@@ -3542,6 +3878,9 @@ body {
   color: #5a5a6b;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                             Products Page Item                             */
+/* -------------------------------------------------------------------------- */
 .products-page-item {
   font-family: "Yekan Bakh";
 }
@@ -3559,6 +3898,7 @@ body {
   justify-content: space-between;
   align-items: center;
   animation: bounce 2s forwards;
+  animation-delay: 1s;
 }
 .products-page-item .item-content .title h3 {
   font-weight: 900;
@@ -3571,6 +3911,7 @@ body {
   flex-wrap: wrap;
   gap: 15px 0;
   animation: bounce 2s forwards;
+  animation-delay: 1s;
 }
 .products-page-item .item-content ul.info li {
   margin-left: 15px;
@@ -3590,6 +3931,7 @@ body {
   line-height: 22px;
   color: #5b5b6b;
   animation: bounce 2s forwards;
+  animation-delay: 1s;
 }
 .products-page-item .item-content p.desc-content {
   font-weight: 500;
@@ -3599,6 +3941,7 @@ body {
   margin-bottom: 36px;
   text-align: justify;
   animation: bounce 2s forwards;
+  animation-delay: 1s;
 }
 .products-page-item .item-content .btn {
   background: #fcfcfd;
@@ -3606,6 +3949,7 @@ body {
   border-radius: 6px;
   padding: 8px;
   animation: bounce 2s forwards;
+  animation-delay: 1s;
 }
 .products-page-item .item-content .btn .price {
   font-style: normal;
@@ -3655,11 +3999,15 @@ body {
   margin-left: 10px;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                           Products Page Item Desc                          */
+/* -------------------------------------------------------------------------- */
 .products-page-item-desc {
   margin-top: 10px;
   padding: 40px 0;
   background-color: #ffffff;
   animation: bounce 2s forwards;
+  animation-delay: 1s;
 }
 .products-page-item-desc .item-desc-content {
   font-family: "Yekan Bakh";
@@ -3692,6 +4040,9 @@ body {
   color: #3f3c48;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                           Products Page Feedback                           */
+/* -------------------------------------------------------------------------- */
 .products-page-feedback {
   padding: 50px 0;
 }
@@ -4178,7 +4529,12 @@ body {
 .dark-theme .products-page-feedback .feedback-content .feedback-item .date svg path {
   fill: #ffffff;
 }
-.dark-theme .products-page-form form input, .dark-theme .products-page-form form select, .dark-theme .products-page-form form span, .dark-theme .products-page-form form .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .dark-theme .products-page-form form a, .dark-theme .products-page-form form textarea {
+.dark-theme .products-page-form form input,
+.dark-theme .products-page-form form select,
+.dark-theme .products-page-form form span,
+.dark-theme .products-page-form form .permissions .permissions-item .permissions-desc a,
+.permissions .permissions-item .permissions-desc .dark-theme .products-page-form form a,
+.dark-theme .products-page-form form textarea {
   background: black !important;
   color: #ffffff;
   border-color: #ffffff;
@@ -4190,7 +4546,12 @@ body {
 .dark-theme .products-page-form form span svg path, .dark-theme .products-page-form form .permissions .permissions-item .permissions-desc a svg path, .permissions .permissions-item .permissions-desc .dark-theme .products-page-form form a svg path {
   stroke: #ffffff;
 }
-.dark-theme .contact-us-page form input, .dark-theme .contact-us-page form select, .dark-theme .contact-us-page form span, .dark-theme .contact-us-page form .permissions .permissions-item .permissions-desc a, .permissions .permissions-item .permissions-desc .dark-theme .contact-us-page form a, .dark-theme .contact-us-page form textarea {
+.dark-theme .contact-us-page form input,
+.dark-theme .contact-us-page form select,
+.dark-theme .contact-us-page form span,
+.dark-theme .contact-us-page form .permissions .permissions-item .permissions-desc a,
+.permissions .permissions-item .permissions-desc .dark-theme .contact-us-page form a,
+.dark-theme .contact-us-page form textarea {
   background: black !important;
   color: #ffffff;
   border-color: #ffffff;
@@ -4207,7 +4568,13 @@ body {
 .dark-theme .about-us .about-us-picture svg path {
   fill: #ffffff;
 }
+.dark-theme .modal .modal-content {
+  background: #1c1c1f;
+}
 
+/* -------------------------------------------------------------------------- */
+/*                                     Dots                                   */
+/* -------------------------------------------------------------------------- */
 .dots {
   width: 95%;
   overflow: hidden;
@@ -4218,9 +4585,13 @@ body {
   margin-top: 15px;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                   About Us                                 */
+/* -------------------------------------------------------------------------- */
 .about-us {
   padding-bottom: 0 !important;
   animation: bounce 2s forwards;
+  animation-delay: 1s;
   margin-top: 85px;
 }
 .about-us .about-us-title {
@@ -4235,6 +4606,7 @@ body {
   text-align: right;
   color: #2abfed;
   animation: bounce 2s forwards;
+  animation-delay: 1s;
 }
 .about-us .about-us-title ul {
   display: flex;
@@ -4286,9 +4658,13 @@ body {
   max-width: 162px;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                  Target Us                                 */
+/* -------------------------------------------------------------------------- */
 .target-us {
   margin-top: 71px;
   animation: bounce 2s forwards;
+  animation-delay: 1s;
 }
 .target-us h1 {
   font-family: "Yekan Bakh";
@@ -4314,8 +4690,12 @@ body {
   margin-bottom: 27px;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                          Frequently Asked Questions                        */
+/* -------------------------------------------------------------------------- */
 .frequently-asked-questions {
   animation: bounce 2s forwards;
+  animation-delay: 1s;
 }
 .frequently-asked-questions h1 {
   font-family: "Yekan Bakh";
@@ -4380,6 +4760,9 @@ body {
   color: #5a5a6b;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                  Contact US                                */
+/* -------------------------------------------------------------------------- */
 .contact-us-page {
   margin-bottom: 93px;
 }
@@ -4664,7 +5047,6 @@ body {
   .banner .banner-content .banner-desc {
     width: 500px;
   }
-
   .feedback .prev {
     top: 65px;
     left: 125px !important;
@@ -4673,7 +5055,6 @@ body {
     top: 65px;
     right: 125px !important;
   }
-
   .container-article {
     max-width: 942px;
     --bs-gutter-x: 1.5rem;
@@ -4723,15 +5104,12 @@ body {
     margin-top: 20px;
     background-color: #92929d !important;
   }
-
   .banner-content .banner-img {
     display: none;
   }
-
   .brands .brands-item {
     direction: ltr !important;
   }
-
   .feedback .prev {
     top: 100px !important;
     left: 100px !important;
@@ -4740,14 +5118,12 @@ body {
     top: 100px !important;
     right: 100px !important;
   }
-
   .permissions .permissions-desc h5 {
     font-size: 15px !important;
   }
   .permissions .permissions-desc span, .permissions .permissions-item .permissions-desc a {
     font-size: 12px;
   }
-
   .satisfaction .satisfaction-desc {
     text-align: center;
     margin-bottom: 50px;
@@ -4759,11 +5135,9 @@ body {
     width: 100%;
     text-align: justify;
   }
-
   .contact-us .contact-info .info-item:first-child {
     margin-left: 20px !important;
   }
-
   .blog-header h3,
 .products-header h3 {
     width: 100%;
@@ -4774,7 +5148,6 @@ body {
     width: 100%;
     justify-content: center;
   }
-
   .products-page-item {
     padding: 0 15px;
   }
@@ -4788,7 +5161,6 @@ body {
   .contact-us-page .social-media {
     justify-content: center;
   }
-
   .blog-content .blog-articles .blog-articles-item {
     display: block;
   }
@@ -4796,15 +5168,12 @@ body {
     width: 100% !important;
     margin-bottom: 15px;
   }
-
   .main-about-us .about-content ul {
     width: 85% !important;
   }
-
   .products .products-item {
     margin: 0 auto;
   }
-
   .feedback .myFeedback {
     width: 90% !important;
   }
@@ -4817,7 +5186,6 @@ body {
   .feedback .next {
     display: none !important;
   }
-
   .products-page-item .item-content img {
     width: 100%;
   }
@@ -4834,7 +5202,6 @@ body {
   .banner .banner-content .banner-desc {
     width: 100%;
   }
-
   .blog-content .blog-articles .blog-articles-item {
     display: block;
   }
@@ -4842,36 +5209,29 @@ body {
     width: 100% !important;
     margin-bottom: 15px;
   }
-
   .contact-us-page .social-media {
     justify-content: center;
   }
-
   .banner {
     padding-left: 15px;
     padding-right: 15px;
   }
-
   .brands {
     padding-left: 15px;
     padding-right: 15px;
   }
-
   .main-about-us {
     padding-left: 15px;
     padding-right: 15px;
   }
-
   .consulting-form {
     padding-left: 15px;
     padding-right: 15px;
   }
-
   .blog {
     padding-left: 15px;
     padding-right: 15px;
   }
-
   .contact-us {
     padding-left: 15px;
     padding-right: 15px;
@@ -4884,17 +5244,14 @@ body {
     margin-bottom: 20px;
     margin-left: 0 !important;
   }
-
   .permissions {
     padding-left: 15px;
     padding-right: 15px;
   }
-
   .satisfaction {
     padding-left: 15px;
     padding-right: 15px;
   }
-
   .footer {
     padding-left: 15px;
     padding-right: 15px;
@@ -4923,7 +5280,6 @@ body {
     margin: 0 auto;
     margin-top: 20px;
   }
-
   .blog-header form,
 .products-header form {
     flex-wrap: wrap;
@@ -4938,22 +5294,18 @@ body {
 .products-header form .products-header-select {
     width: 100% !important;
   }
-
   .blog-articles-item img {
     margin-left: 15px !important;
     width: 125px !important;
   }
-
   .products-page-item .item-content .price {
     padding: 0 !important;
     margin: 0 0 15px 15px !important;
   }
-
   .contact-us-page .separator-contact-us {
     width: 100%;
     overflow-x: hidden;
   }
-
   .about-us .about-us-picture {
     animation: none;
   }
